@@ -238,6 +238,7 @@
 		32BC779F108508E3004F752F /* IPAIM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPAIM.h; path = IPAPaletteCM/IPAIM.h; sourceTree = "<group>"; };
 		32BC77A0108508E3004F752F /* IPAIM.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = IPAIM.c; path = IPAPaletteCM/IPAIM.c; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* IPAPalette_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAPalette_Prefix.pch; sourceTree = "<group>"; };
+		32D0964A135DED4C00D86037 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		32DC620E10D2EF6B008B5B1B /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = IPAServer/zh_TW.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32E102081110BFC100B1F030 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = IPAServer/fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32F9027F1076ACB2000D0404 /* InstallRegister */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = InstallRegister; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -453,6 +454,7 @@
 				328D1C8B122C08ED00FE6E3C /* Alts.strings */,
 				325554FE105AF4AD007222C6 /* Info.plist */,
 				322CA31F108650130044FA29 /* Info-CM.plist */,
+				32D0964A135DED4C00D86037 /* README.txt */,
 			);
 			name = IPAServer;
 			sourceTree = "<group>";
