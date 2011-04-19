@@ -1,4 +1,5 @@
 #include "IPAInstallRegister.h"
+#include <Carbon/Carbon.h>
 
 int main(int argc, char *argv[])
 {
