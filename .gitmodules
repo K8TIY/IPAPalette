@@ -1,0 +1,3 @@
+[submodule "Onizuka"]
+	path = Onizuka
+	url = git@github.com:K8TIY/Onizuka.git

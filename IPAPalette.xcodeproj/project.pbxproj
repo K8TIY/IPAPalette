@@ -422,9 +422,8 @@
 				32555505105AF4AD007222C6 /* Onizuka.h */,
 				32555506105AF4AD007222C6 /* Onizuka.m */,
 			);
-			name = Onizuka;
-			path = IPAServer/Onizuka;
-			sourceTree = SOURCE_ROOT;
+			path = Onizuka;
+			sourceTree = "<group>";
 		};
 		3280CC131083E74B0048B25D /* IPAServer */ = {
 			isa = PBXGroup;

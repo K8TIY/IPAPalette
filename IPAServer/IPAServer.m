@@ -494,18 +494,21 @@ NS_ENDHANDLER
   //NSLog(@">>%@<<==>>%@<<?", versHere, versThere);
   BOOL gotOne = ([versHere compare:versThere]==NSOrderedAscending);
   NSString* results;
+  NSString* fmt = nil;
   if (gotOne)
   {
-    results = [NSString stringWithFormat:[[Onizuka sharedOnizuka] bestLocalizedString:@"__HAVE_UPDATE__" value:@"There is a new version."], versThere];
+    fmt = [[Onizuka sharedOnizuka] copyLocalizedTitle:@"__HAVE_UPDATE__"];
+    results = [NSString stringWithFormat:fmt, versThere];
     [[Onizuka sharedOnizuka] localizeObject:_updateButton withTitle:@"__DOWNLOAD__"];
     [_updateButton setAction:@selector(downloadUpdatesAction:)];
   }
   else
   {
-    results = [NSString stringWithFormat:[[Onizuka sharedOnizuka] bestLocalizedString:@"__NO_UPDATE__" value:@"No update available."],
-              [[Onizuka sharedOnizuka] appVersion], versHere];
+    fmt = [[Onizuka sharedOnizuka] copyLocalizedTitle:@"__NO_UPDATE__"];
+    results = [NSString stringWithFormat:fmt, [[Onizuka sharedOnizuka] appVersion], versHere];
   }
-  [[Onizuka sharedOnizuka] localizeObject:_updateResults withTitle:results];
+  [fmt release];
+  [_updateResults setStringValue:results];
   [_updateData release];
   _updateData = nil;
   [_updateCheck release];
@@ -618,11 +621,11 @@ NS_ENDHANDLER
     longdesc = [udescs objectForKey:fb];
     if (!longdesc)
     {
-      longdesc = [[Onizuka sharedOnizuka] bestLocalizedString:codepoints value:codepoints];
-      if ([longdesc isEqual:codepoints])
+      longdesc = [[Onizuka sharedOnizuka] bestLocalizedString:codepoints];
+      if (!longdesc)
       {
-        longdesc = [[Onizuka sharedOnizuka] bestLocalizedString:fb value:fb];
-        if ([longdesc isEqual:fb])  longdesc = @"";
+        longdesc = [[Onizuka sharedOnizuka] bestLocalizedString:fb];
+        if (!longdesc)  longdesc = @"";
       }
     }
   }
