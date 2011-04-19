@@ -42,7 +42,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 -(void)dealloc
 {
   if (_font) [_font release];
-	[super dealloc];
+  [super dealloc];
 }
 
 #pragma mark State Setting

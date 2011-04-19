@@ -32,12 +32,12 @@ typedef double CGFloat;
 #define CGFLOAT_MIN DBL_MIN
 #define CGFLOAT_MAX DBL_MAX
 #define CGFLOAT_IS_DOUBLE 1
-#else	/* !defined(__LP64__) || !__LP64__ */
+#else /* !defined(__LP64__) || !__LP64__ */
 typedef float CGFloat;
 #define CGFLOAT_MIN FLT_MIN
 #define CGFLOAT_MAX FLT_MAX
 #define CGFLOAT_IS_DOUBLE 0
-#endif	/* !defined(__LP64__) || !__LP64__ */
+#endif /* !defined(__LP64__) || !__LP64__ */
 #define CGFLOAT_DEFINED 1
 #endif
 

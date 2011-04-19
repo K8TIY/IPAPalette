@@ -794,15 +794,15 @@ typedef struct
 #define kNudgeUp (2.0)
 -(void)drawString:(NSString*)str inRect:(CGRect)r inContext:(void*)ctx atSize:(double)size
 {
-	ATSUTextLayout				  layout;
-  UniCharArrayOffset		  layoutStart, currentStart, currentEnd;
-	UniCharCount				    layoutLength;
-  ByteCount					      sizes[2];
-  ATSUAttributeValuePtr		values[2];
-	Fixed						        lineWidth;
-  ItemCount					      nsb;
+  ATSUTextLayout          layout;
+  UniCharArrayOffset      layoutStart, currentStart, currentEnd;
+  UniCharCount            layoutLength;
+  ByteCount               sizes[2];
+  ATSUAttributeValuePtr   values[2];
+  Fixed                   lineWidth;
+  ItemCount               nsb;
   UniCharArrayOffset*     sbs;
-	int							        j;
+  int                     j;
 
   //NSLog(@"drawing '%@' in %@", str, NSStringFromRect(*(NSRect*)&r));
   ATSUFontID fid;
@@ -831,7 +831,7 @@ typedef struct
   err = ATSUSetTransientFontMatching(layout, true);
   if (err) NSLog(@"%d ATSUSetTransientFontMatching", err);
   lineWidth = X2Fix(r.size.width);
-	// In this example, we are breaking text into lines.
+  // In this example, we are breaking text into lines.
   // Therefore, we need to make sure the layout knows the width of the line.
   tags[0] = kATSULineWidthTag;
   sizes[0] = sizeof(Fixed);

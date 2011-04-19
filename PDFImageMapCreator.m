@@ -511,7 +511,7 @@ CGFloat PDFImageMapConsonantWidthPerHeight = 2.9f;
     CGContextStrokePath(_ctx);
   }
   CGRect chrect = CGRectMake(0.0f,0.0f,dx,dy);
-  CGFloat baseline = 0.0;
+  CGFloat baseline = 0.0f;
   CGFloat fontSize = 200.0f;
   NSArray* colArray;
   NSEnumerator* strEnumerator;

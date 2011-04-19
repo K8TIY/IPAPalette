@@ -164,24 +164,24 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 @implementation UserGlyphsTable
 -(void)keyDown:(NSEvent*)event
 {
-	NSString* characters = [event charactersIgnoringModifiers];
-	BOOL handled = NO;
-	if ([characters length] == 1)
-	{
-		unichar	c = [characters characterAtIndex:0];
-		if (c == NSDeleteFunctionKey || c == 0x7F)
-		{
-			handled = YES;
-			[[self delegate] delete:self];
-		}
+  NSString* characters = [event charactersIgnoringModifiers];
+  BOOL handled = NO;
+  if ([characters length] == 1)
+  {
+    unichar c = [characters characterAtIndex:0];
+    if (c == NSDeleteFunctionKey || c == 0x7F)
+    {
+      handled = YES;
+      [[self delegate] delete:self];
+    }
     /*else if (c == '\t')
     {
       handled = YES;
       if ([event modifierFlags] & NSShiftKeyMask) [[self window] selectPreviousKeyView:self];
       else [[self window] selectKeyViewFollowingView:self];
     }*/
-	}
-	if (!handled) [super keyDown:event];
+  }
+  if (!handled) [super keyDown:event];
 }
 
 -(BOOL)performKeyEquivalent:(NSEvent*)evt

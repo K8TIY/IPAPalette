@@ -26,9 +26,9 @@ int main(int argc, char *argv[])
   NSString* identifier = [[NSBundle mainBundle] bundleIdentifier];
   IMKServer* server = [[IMKServer alloc] initWithName:@"IPAPalette_1_Connection" bundleIdentifier:identifier];
   //load the bundle explicitly because in this case the input method is a background only application 
-	[NSBundle loadNibNamed:@"MainMenu" owner:[NSApplication sharedApplication]];
-	[[NSApplication sharedApplication] run];
-	[server release];
+  [NSBundle loadNibNamed:@"MainMenu" owner:[NSApplication sharedApplication]];
+  [[NSApplication sharedApplication] run];
+  [server release];
   [arp release];
   return 0;
 }

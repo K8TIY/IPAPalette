@@ -165,7 +165,7 @@ static OSStatus local_CoreTR(CGContextRef ctx, CGRect r, CFStringRef string, CFS
   CGFloat               txAsc = 0.0f;
   CGFloat               txDesc = 0.0f;
   ATSUFontID            fid;
-  ItemCount					    nsb;
+  ItemCount             nsb;
   UniCharArrayOffset*   sbs;
   ATSUFontFallbacks     fallbacks;
   unsigned              nfbfonts;
