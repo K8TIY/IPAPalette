@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>IPA Palette</string>
+	<key>CFBundleExecutable</key>
+	<string>IPAPalette</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blugs.IPAPalette</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>IPA Palette</string>
+	<key>CFBundlePackageType</key>
+	<string>thng</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.0b4</string>
+	<key>CFBundleSignature</key>
+	<string>ucpl</string>
+	<key>CFBundleVersion</key>
+	<string>2010.08.02</string>
+	<key>CSResourcesFileMapped</key>
+	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>© Brian S. Hall, 2005-2010</string>
+	<key>tsInputMethodIconFileKey</key>
+	<string>ipapalette.tif</string>
+</dict>
+</plist>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>IPA Palette</string>
+	<key>CFBundleExecutable</key>
+	<string>IPAPalette</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blugs.inputmethod.IPAPalette</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>IPA Palette</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.0</string>
+	<key>CFBundleSignature</key>
+	<string>IPA!</string>
+	<key>CFBundleVersion</key>
+	<string>2010.08.30</string>
+	<key>LSBackgroundOnly</key>
+	<string>1</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>© Brian S. Hall, 2005-2010</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>InputMethodConnectionName</key>
+	<string>IPAPalette_1_Connection</string>
+	<key>InputMethodServerControllerClass</key>
+	<string>IPAInputController</string>
+	<key>InputMethodType</key>
+	<string>palette</string>
+	<key>tsInputMethodIconFileKey</key>
+	<string>ipapalette.tif</string>
+</dict>
+</plist>

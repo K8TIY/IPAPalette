@@ -1,0 +1,3855 @@
+Glyph: U+0061
+loc_de: Offener vorderer ungerundeter Vokal
+loc_en: Open front unrounded vowel
+loc_es: Vocal abierta anterior no redondeada
+loc_fi: Etinen väljä lavea vokaali
+loc_fr: Voyelle ouverte antérieure non arrondie
+loc_it: Vocale anteriore aperta non arrotondata
+loc_ja: 開前舌非円唇母音
+loc_ko: 전설 비원순 저모음
+loc_nl: Ongeronde open voorklinker
+loc_ru: Неогубленный гласный переднего ряда нижнего подъёма
+loc_vi: Nguyên âm mở trước không làm tròn
+loc_zh_CN: 开前不圆唇元音
+loc_zh_TW: 開前不圓脣元音
+%%
+Glyph: U+0062
+loc_de: Stimmhafter bilabialer Plosiv
+loc_en: Voiced bilabial plosive
+loc_es: Oclusiva bilabial sonora
+loc_fi: Soinnillinen bilabiaalinen klusiili
+loc_fr: Consonne occlusive bilabiale voisée
+loc_it: Occlusiva bilabiale sonora
+loc_ja: 有声両唇破裂音
+loc_ko: 유성 양순 파열음
+loc_nl: Stemhebbende bilabiale plosief
+loc_ru: Звонкий губной-губной взрывной согласный
+loc_vi: Âm tắc đôi môi hữu thanh
+loc_zh_CN: 浊双唇塞音
+loc_zh_TW: 濁雙脣塞音
+%%
+Glyph: U+0063
+loc_de: Stimmloser palataler Plosiv
+loc_en: Voiceless palatal plosive
+loc_es: Oclusiva palatal sorda
+loc_fi: Soinniton palataalinen klusiili
+loc_fr: Consonne occlusive palatale sourde
+loc_it: Occlusiva palatale sorda
+loc_ja: 無声硬口蓋破裂音
+loc_ko: 무성 경구개 파열음
+loc_nl: Stemloze palatale plosief
+loc_ru: Палатальный взрывной согласный
+loc_vi: Âm tắc vòm vô thanh
+loc_zh_CN: 清硬颚塞音
+loc_zh_TW: 清硬顎塞音
+%%
+Glyph: U+0064
+loc_de: Stimmhafter alveolarer Plosiv
+loc_en: Voiced alveolar plosive
+loc_es: Oclusiva alveolar sonora
+loc_fi: Soinnillinen alveolaarinen klusiili
+loc_fr: Consonne occlusive alvéolaire voisée
+loc_it: Occlusiva alveolare sonora
+loc_ja: 有声歯或は歯茎破裂音
+loc_ko: 유성 치경 파열음
+loc_nl: Stemhebbende alveolaire plosief
+loc_ru: Звонкий альвелярный взрывной согласный
+loc_vi: Âm tắc chân răng hữu thanh
+loc_zh_CN: 浊齿龈塞音
+loc_zh_TW: 濁齒齦塞音
+%%
+Glyph: U+0065
+loc_de: Halbgeschlossener vorderer ungerundeter Vokal
+loc_en: Close-mid front unrounded vowel
+loc_es: Vocal semicerrada anterior no redondeada
+loc_fi: Etinen puolisuppea lavea vokaali
+loc_fr: Voyelle mi-fermée antérieure non arrondie
+loc_it: Vocale anteriore semichiusa non arrotondata
+loc_ja: 半狭前舌非円唇母音
+loc_ko: 전설 비원순 중고모음
+loc_nl: Ongeronde halfgesloten voorklinker
+loc_ru: Неогубленный гласный переднего ряда средне-верхнего подъёма
+loc_vi: Nguyên âm nửa đóng trước không làm tròn
+loc_zh_CN: 半闭前不圆唇元音
+loc_zh_TW: 半閉前不圓脣元音
+%%
+Glyph: U+0066
+loc_de: Stimmloser labiodentaler Frikativ
+loc_en: Voiceless labiodental fricative
+loc_es: Fricativa labiodental sorda
+loc_fi: Soinniton labiodentaalinen frikatiivi
+loc_fr: Consonne fricative labio-dentale sourde
+loc_it: Fricativa labiodentale sorda
+loc_ja: 無声唇歯摩擦音
+loc_ko: 무성 순치 마찰음
+loc_nl: Stemloze labiodentale fricatief
+loc_ru: Глухой губно-зубной щелевой согласный
+loc_vi: Âm sát môi răng vô thanh
+loc_zh_CN: 清唇齿擦音
+loc_zh_TW: 清脣齒擦音
+%%
+Glyph: U+0068
+loc_de: Stimmloser glottaler Frikativ
+loc_en: Voiceless glottal fricative
+loc_es: Fricativa glotal sorda
+loc_fi: Soinniton glottaalinen frikatiivi
+loc_fr: Consonne fricative glottale sourde
+loc_it: Fricativa glottidale sorda
+loc_ja: 無声声門摩擦音
+loc_ko: 무성 성문 마찰음
+loc_nl: Stemloze glottale fricatief
+loc_ru: Глухой глоттальный щелевой согласный
+loc_vi: Âm sát họng vô thanh
+loc_zh_CN: 清喉擦音
+loc_zh_TW: 清喉擦音
+%%
+Glyph: U+0069
+loc_de: Geschlossener vorderer ungerundeter Vokal
+loc_en: Close front unrounded vowel
+loc_es: Vocal cerrada anterior no redondeada
+loc_fi: Etinen suppea lavea vokaali
+loc_fr: Voyelle fermée antérieure non arrondie
+loc_it: Vocale anteriore chiusa non arrotondata
+loc_ja: 狭前舌非円唇母音
+loc_ko: 전설 비원순 고모음
+loc_nl: Ongeronde gesloten voorklinker
+loc_ru: Неогубленный гласный переднего ряда верхнего подъёма
+loc_vi: Nguyên âm đóng trước không làm tròn
+loc_zh_CN: 闭前不圆唇元音
+loc_zh_TW: 閉前不圓脣元音
+%%
+Glyph: U+006A
+loc_de: Stimmhafter palataler Approximant
+loc_en: Voiced palatal approximant
+loc_es: Aproximante palatal sonora
+loc_fi: Soinnillinen palataalinen approksimantti
+loc_fr: Consonne spirante palatale voisée
+loc_it: Approssimante palatale sonora
+loc_ja: 有声硬口蓋接近音
+loc_ko: 유성 경구개 접근음
+loc_nl: Stemhebbende palatale approximant
+loc_ru: Звонкий палатальный аппроксимант
+loc_vi: Âm tiếp cận vòm
+loc_zh_CN: 浊喉擦音
+loc_zh_TW: 濁喉擦音
+%%
+Glyph: U+006B
+loc_de: Stimmloser velarer Plosiv
+loc_en: Voiceless velar plosive
+loc_es: Oclusiva velar sorda
+loc_fi: Soinniton velaarinen klusiili
+loc_fr: Consonne occlusive vélaire sourde
+loc_it: Occlusiva velare sorda
+loc_ja: 無声軟口蓋破裂音
+loc_ko: 무성 연구개 파열음
+loc_nl: Stemloze velaire plosief
+loc_ru: Глухой велярный взрывной согласный
+loc_vi: Âm tắc vòm mềm vô thanh
+loc_zh_CN: 清软颚塞音
+loc_zh_TW: 清軟顎塞音
+%%
+Glyph: U+006C
+loc_de: Stimmhafter alveolarer lateraler Approximant
+loc_en: Voiced alveolar lateral approximant
+loc_es: Aproximante lateral alveolar sonora
+loc_fi: Soinnillinen alveolaarinen lateraalinen approksimantti
+loc_fr: Consonne spirante latérale alvéolaire voisée
+loc_it: Approssimante lateral alveolare sonora
+loc_ja: 有声歯或は歯茎側面接近音
+loc_ko: 유성 자음 설측 접근음
+loc_nl: Stemhebbende alveolaire laterale approximant
+loc_ru: Звонкий альвеолярный латеральный аппроксимант
+loc_vi: Âm tiếp cận cạnh chân răng
+loc_zh_CN: 浊齿龈边音
+loc_zh_TW: 濁齒齦邊音
+%%
+Glyph: U+006D
+loc_de: Stimmhafter bilabialer Nasal
+loc_en: Voiced bilabial nasal
+loc_es: Nasal bilabial sonora
+loc_fi: Soinnillinen bilabiaalinen nasaali
+loc_fr: Consonne occlusive nasale bilabiale voisée
+loc_it: Nasale bilabiale sonora
+loc_ja: 有声両唇鼻音
+loc_ko: 유성 양순 비음
+loc_nl: Stemhebbende bilabiale nasaal
+loc_ru: Звонкий билабиальный носовой согласный
+loc_vi: Âm mũi đôi môi
+loc_zh_CN: 浊双唇鼻音
+loc_zh_TW: 濁雙唇鼻音
+%%
+Glyph: U+006E
+loc_de: Stimmhafter alveolarer Nasal
+loc_en: Voiced alveolar nasal
+loc_es: Nasal alveolar sonora
+loc_fi: Soinnillinen alveolaarinen nasaali
+loc_fr: Consonne occlusive nasale alvéolaire voisée
+loc_it: Nasale alveolare sonora
+loc_ja: 有声歯或は歯茎鼻音
+loc_ko: 유성 치경 비음
+loc_nl: Stemhebbende alveolaire nasaal
+loc_ru: Звонкий переднеязычный носовой согласный
+loc_vi: Âm mũi chân răng
+loc_zh_CN: 浊齿龈鼻音
+loc_zh_TW: 濁齒齦鼻音
+%%
+Glyph: U+006F
+loc_de: Halbgeschlossener hinterer gerundeter Vokal
+loc_en: Close-mid back rounded vowel
+loc_es: Vocal semicerrada posterior redondeada
+loc_fi: Takainen puolisuppea pyöreä vokaali
+loc_fr: Voyelle mi-fermée postérieure arrondie
+loc_it: Vocale posteriore semichiusa arrotondata
+loc_ja: 半狭後舌円唇母音
+loc_ko: 후설 원순 중고모음
+loc_nl: Geronde halfgesloten achterklinker
+loc_ru: Огубленный гласный заднего ряда средне-верхнего подъёма
+loc_vi: Nguyên âm nửa đóng sau làm tròn
+loc_zh_CN: 半闭后圆唇元音
+loc_zh_TW: 半閉後圓唇元音
+%%
+Glyph: U+0070
+loc_de: Stimmloser bilabialer Plosiv
+loc_en: Voiceless bilabial plosive
+loc_es: Oclusiva bilabial sorda
+loc_fi: Soinniton bilabiaalinen klusiili
+loc_fr: Consonne occlusive bilabiale sourde
+loc_it: Occlusiva bilabiale sorda
+loc_ja: 無声両唇破裂音
+loc_ko: 무성 양순 파열음
+loc_nl: Stemloze bilabiale plosief
+loc_ru: Глухой билабиальный взрывной
+loc_vi: Âm tắc đôi môi vô thanh
+loc_zh_CN: 清双唇塞音
+loc_zh_TW: 清雙唇塞音
+%%
+Glyph: U+0071
+loc_de: Stimmloser uvularer Plosiv
+loc_en: Voiceless uvular plosive
+loc_es: Oclusiva uvular sorda
+loc_fi: Soinniton uvulaarinen klusiili
+loc_fr: Consonne occlusive uvulaire sourde
+loc_it: Occlusiva uvulare sorda
+loc_ja: 無声口蓋垂破裂音
+loc_ko: 무성 구개수 파열음
+loc_nl: Stemloze uvulaire plosief
+loc_ru: Глухой увулярный взрывной согласный
+loc_vi: Âm tắc lưỡi nhỏ vô thanh
+loc_zh_CN: 清小舌塞音
+loc_zh_TW: 清小舌塞音
+%%
+Glyph: U+0072
+loc_de: Stimmhafter alveolarer Trill
+loc_en: Voiced alveolar trill
+loc_es: Vibrant múltiple alveolar sonora
+loc_fi: Soinnillinen alveolaarinen tremulantti
+loc_fr: Consonne roulée alvéolaire voisée
+loc_it: Vibrante alveolare sonora
+loc_ja: 有声歯或は歯茎震え音
+loc_ko: 유성 치경 전동음
+loc_nl: Stemhebbende alveolaire tril
+loc_ru: Звонкий aльвеолярный дрожащий согласный
+loc_vi: Âm rung chân răng
+loc_zh_CN: 浊齿龈颤音
+loc_zh_TW: 濁齒齦顫音
+%%
+Glyph: U+0073
+loc_de: Stimmloser alveolarer Frikativ
+loc_en: Voiceless alveolar fricative
+loc_es: Fricativa alveolar sorda
+loc_fi: Soinnillinen alveolaarinen frikatiivi
+loc_fr: Consonne fricative alvéolaire sourde
+loc_it: Fricativa alveolare sorda
+loc_ja: 無声歯茎摩擦音
+loc_ko: 무성 자음 마찰음
+loc_nl: Stemloze alveolaire fricatief
+loc_ru: Глухой альвеолярный щелевой согласный
+loc_vi: Âm sát chân răng vô thanh
+loc_zh_CN: 清齿龈擦音
+loc_zh_TW: 清齒齦擦音
+%%
+Glyph: U+0074
+loc_de: Stimmloser alveolarer Plosiv
+loc_en: Voiceless alveolar plosive
+loc_es: Oclusiva alveolar sorda
+loc_fi: Soinniton alveolaarinen klusiili
+loc_fr: Consonne occlusive alvéolaire sourde
+loc_it: Occlusiva alveolare sorda
+loc_ja: 無声歯或は歯茎破裂音
+loc_ko: 무성 치경 파열음
+loc_nl: Stemloze alveolaire plosief
+loc_ru: Глухой альвеолярный взрывной согласный
+loc_vi: Âm tắc chân răng vô thanh
+loc_zh_CN: 清齿龈塞音
+loc_zh_TW: 清齒齦塞音
+%%
+Glyph: U+0075
+loc_de: Geschlossener hinterer gerundeter Vokal
+loc_en: Close back rounded vowel
+loc_es: Vocal cerrada posterior redondeada
+loc_fi: Takainen suppea pyöreä vokaali
+loc_fr: Voyelle fermée postérieure arrondie
+loc_it: Vocale posteriore chiusa arrotondata
+loc_ja: 狭後舌円唇母音
+loc_ko: 후설 원순 고모음
+loc_nl: Geronde gesloten achterklinker
+loc_ru: Огубленный гласный заднего ряда верхнего подъёма
+loc_vi: Nguyên âm đóng sau làm tròn
+loc_zh_CN: 闭后圆脣元音
+loc_zh_TW: 閉後圓脣元音
+%%
+Glyph: U+0076
+loc_de: Stimmhafter labiodentaler Frikativ
+loc_en: Voiced labiodental fricative
+loc_es: Fricativa labiodental sonora
+loc_fi: Soinnillinen labiodentaalinen frikatiivi
+loc_fr: Consonne fricative labio-dentale voisée
+loc_it: Fricativa labiodentale sonora
+loc_ja: 有声唇歯摩擦音
+loc_ko: 유성 순치 마찰음
+loc_nl: Stemhebbende labiodentale fricatief
+loc_ru: Звонкий губно-зубной щелевой согласный
+loc_vi: Âm sát môi răng hữu thanh
+loc_zh_CN: 浊唇齿擦音
+loc_zh_TW: 濁唇齒擦音
+%%
+Glyph: U+0077
+loc_de: Stimmhafter labial-velarer Approximant
+loc_en: Voiced labial-velar approximant
+loc_es: Aproximante labial-velar sonora
+loc_fi: Soinnillinen labiovelaarinen approksimantti
+loc_fr: Consonne spirante labio-vélaire voisée
+loc_it: Approssimante labiovelare sonora
+loc_ja: 有声唇軟口蓋接近音
+loc_ko: 유성 양순 연구개 접근음
+loc_nl: Stemhebbende labio-velaire approximant
+loc_ru: Звонкий лабиализованный велярный апроксимант
+loc_vi: Âm tiếp cận môi vòm mềm
+loc_zh_CN: 浊唇软腭通音
+loc_zh_TW: 濁唇軟腭通音
+%%
+Glyph: U+0078
+loc_de: Stimmloser velarer Frikativ
+loc_en: Voiceless velar fricative
+loc_es: Fricativa velar sorda
+loc_fi: Soinniton velaarinen frikatiivi
+loc_fr: Consonne fricative vélaire sourde
+loc_it: Fricativa velare sorda
+loc_ja: 無声軟口蓋摩擦音
+loc_ko: 무성 연구개 마찰음
+loc_nl: Stemloze velaire fricatief
+loc_ru: Глухой велярный щелевой согласный
+loc_vi: Âm sát vòm mềm vô thanh
+loc_zh_CN: 清软颚擦音
+loc_zh_TW: 清軟顎擦音
+%%
+Glyph: U+0079
+loc_de: Geschlossener vorderer gerundeter Vokal
+loc_en: Close front rounded vowel
+loc_es: Vocal cerrada anterior redondeada
+loc_fi: Etinen suppea pyöreä vokaali
+loc_fr: Voyelle fermée antérieure arrondie
+loc_it: Vocale anteriore chiusa arrotondata
+loc_ja: 狭前舌円唇母音
+loc_ko: 전설 원순 고모음
+loc_nl: Geronde gesloten voorklinker
+loc_ru: Огубленный гласный переднего ряда верхнего подъёма
+loc_vi: Nguyên âm đóng trước làm tròn
+loc_zh_CN: 闭前圆脣元音
+loc_zh_TW: 閉前圓脣元音
+%%
+Glyph: U+007A
+loc_de: Stimmhafter alveolarer Frikativ
+loc_en: Voiced alveolar fricative
+loc_es: Fricativa alveolar sonora
+loc_fi: Soinnillinen alveolaarinen frikatiivi
+loc_fr: Consonne fricative alvéolaire voisée
+loc_it: Fricativa alveolare sonora
+loc_ja: 有声歯茎摩擦音
+loc_ko: 유성 자음 마찰음
+loc_nl: Stemhebbende alveolaire fricatief
+loc_ru: Звонкий альвеолярный щелевой согласный
+loc_vi: Âm sát chân răng hữu thanh
+loc_zh_CN: 浊齿龈擦音
+loc_zh_TW: 濁齒齦擦音
+%%
+Glyph: U+007C
+loc_de: Untergeordnete Intonationsgruppe
+loc_en: Minor (foot) group
+loc_es: Grupo menor
+loc_fi: Tahtijakso
+loc_fr: Groupe mineur (pied)
+loc_it: Gruppo secondario
+loc_ja: 小さな(韻脚の)纏り
+loc_ko: 작은 그룹
+loc_nl: Onbelangrijk (intonatie) groep
+loc_ru: Незначительный разрыв
+loc_vi: Nhóm nhỏ (âm tiết)
+loc_zh_CN: 小句（音步）组
+loc_zh_TW: 小句（音步）組
+%%
+Glyph: U+00A1
+loc_de: Sublaminaler tiefer alveolarer perkussiver Klick
+loc_en: Sublaminal lower alveolar percussive click
+loc_es: Clic de percusión sublaminal alveolar baja
+loc_fi: Sublaminaalinen ala-alveolaarinen iskuavulsiivi
+loc_fr: Clic percussif alvéolaire inférieur sous-laminal
+loc_it: Clic a percussione sublaminale alveolare inferiore
+loc_ja: 舌端下部と下あご歯茎との衝突性吸着音
+loc_ko: 혀아래 낮은 치경 충돌 흡착음
+loc_nl: Sublaminale lager alveolaire percussieve klik
+loc_ru: Субламинальный нижний альвеолярный ударный щелчок
+loc_vi: Âm mút va đập chân răng dưới phiến lưỡi dưới
+loc_zh_CN: 舌底下齿龈碰击嗒嘴音
+loc_zh_TW: 舌底下齒齦掽擊嗒嘴音
+%%
+Glyph: U+00E6
+loc_de: Fastoffener vorderer ungerundeter Vokal
+loc_en: Near-open front unrounded vowel
+loc_es: Vocal casi abierta anterior no redondeada
+loc_fi: Etinen lähiväljä lavea vokaali
+loc_fr: Voyelle pré-ouverte antérieure non arrondie
+loc_it: Vocale anteriore quasi aperta non arrotondata
+loc_ja: 準開前舌非円唇母音
+loc_ko: 전설 비원순 근저모음
+loc_nl: Ongeronde bijna-open voorklinker
+loc_ru: Ненапряжённый гласный переднего ряда нижнего подъёма
+loc_vi: Nguyên âm gần mở trước không làm tròn
+loc_zh_CN: 次开前不圆唇元音
+loc_zh_TW: 次開前不圓唇元音
+%%
+Glyph: U+00E7
+loc_de: Stimmloser palataler Frikativ
+loc_en: Voiceless palatal fricative
+loc_es: Fricativa palatal sorda
+loc_fi: Soinniton palataalinen frikatiivi
+loc_fr: Consonne fricative palatale sourde
+loc_it: Fricativa palatale sorda
+loc_ja: 無声硬口蓋摩擦音
+loc_ko: 무성 경구개 마찰음
+loc_nl: Stemloze palatale fricatief
+loc_ru: Глухой палатальный щелевой согласный
+loc_vi: Âm sát vòm vô thanh
+loc_zh_CN: 清硬颚擦音
+loc_zh_TW: 清硬顎擦音
+%%
+Glyph: U+00F0
+loc_de: Stimmhafter dentaler Frikativ
+loc_en: Voiced dental fricative
+loc_es: Fricativa dental sonora
+loc_fi: Soinnillinen dentaalinen frikatiivi
+loc_fr: Consonne fricative dentale voisée
+loc_it: Fricativa dentale sonora
+loc_ja: 有声歯摩擦音
+loc_ko: 유성 치 마찰음
+loc_nl: Stemhebbende dentale fricatief
+loc_ru: Звонкий зубной щелевой согласный
+loc_vi: Âm sát răng hữu thanh
+loc_zh_CN: 浊齿擦音
+loc_zh_TW: 濁齒擦音
+%%
+Glyph: U+00F8
+loc_de: Halbgeschlossener vorderer gerundeter Vokal
+loc_en: Close-mid front rounded vowel
+loc_es: Vocal semicerrada anterior redondeada
+loc_fi: Etinen puolisuppea pyöreä vokaali
+loc_fr: Voyelle mi-fermée antérieure arrondie
+loc_it: Vocale anteriore semichiusa arrotondata
+loc_ja: 半狭前舌円唇母音
+loc_ko: 전설 원순 중고모음
+loc_nl: Geronde halfgesloten voorklinker
+loc_ru: Огубленный гласный переднего ряда средне-верхнего подъёма
+loc_vi: Nguyên âm nửa đóng trước làm tròn
+loc_zh_CN: 半闭前圆唇元音
+loc_zh_TW: 半閉前圓唇元音
+%%
+Glyph: U+0127
+loc_de: Stimmloser pharyngealer Frikativ
+loc_en: Voiceless pharyngeal fricative
+loc_es: Fricativa faríngea sorda
+loc_fi: Soinniton faryngaalinen frikatiivi
+loc_fr: Consonne fricative pharyngale sourde
+loc_it: Fricativa faringale sorda
+loc_ja: 無声咽頭摩擦音
+loc_ko: 무성 인두 마찰음
+loc_nl: Stemloze faryngale fricatief
+loc_ru: Глухой фарингальный щелевой согласный
+loc_vi: Âm sát yết hầu vô thanh
+loc_zh_CN: 清咽擦音
+loc_zh_TW: 清咽擦音
+%%
+Glyph: U+014B
+loc_de: Stimmhafter velarer Nasal
+loc_en: Voiced velar nasal
+loc_es: Nasal velar sonora
+loc_fi: Soinnillinen velaarinen nasaali
+loc_fr: Consonne occlusive nasale vélaire voisée
+loc_it: Nasale velare sonora
+loc_ja: 有声軟口蓋鼻音
+loc_ko: 유성 연구개 비음
+loc_nl: Stemhebbende velaire nasaal
+loc_ru: Звонкий белярный носовой согласный
+loc_vi: Âm mũi vòm mềm
+loc_zh_CN: 浊软颚鼻音
+loc_zh_TW: 濁軟顎鼻音
+%%
+Glyph: U+0152
+loc_de: Ösophagusstimme
+loc_en: Esophageal speech
+loc_en_GB: Oesophageal speech
+loc_es: Discurso de esofágica
+loc_fi: Ruokatorven puhe
+loc_fr: Parole œsophagienne
+loc_it: Discorso esofagea
+loc_ja: 食道の音声
+loc_ko: 식도 음성
+loc_nl: Oesofageale stem
+loc_ru: Пищеводный звук
+loc_vi: Lời nói thực quản
+loc_zh_CN: 食管言语
+loc_zh_TW: 食管言語
+%%
+Glyph: U+0153
+loc_de: Halboffener vorderer gerundeter Vokal
+loc_en: Open-mid front rounded vowel
+loc_es: Vocal semiabierta anterior redondeada
+loc_fi: Etinen puoliväljä pyöreä vokaali
+loc_fr: Voyelle mi-ouverte antérieure arrondie
+loc_it: Vocale anteriore semiaperta arrotondata
+loc_ja: 半開前舌円唇母音
+loc_ko: 전설 원순 중저모음
+loc_nl: Geronde halfopen voorklinker
+loc_ru: Огубленный гласный переднего ряда средне-нижнего подъёма
+loc_vi: Nguyên âm nửa mở trước làm tròn
+loc_zh_CN: 半开前圆唇元音
+loc_zh_TW: 半開前圓唇元音
+%%
+Glyph: U+01C0
+loc_de: Dentaler Klick
+loc_en: Dental click
+loc_es: Clic dental
+loc_fi: Dentaalinen avulsiivi
+loc_fr: Clic dental
+loc_it: Clic dentale
+loc_ja: 歯吸着音
+loc_ko: 치 흡착음
+loc_nl: Laminale alveolaire klik
+loc_ru: Зубной щелчок
+loc_vi: Âm mút răng
+loc_zh_CN: 齿嗒嘴音
+loc_zh_TW: 齒嗒嘴音
+%%
+Glyph: U+01C1
+loc_de: Alveolarer lateraler Klick
+loc_en: Alveolar lateral click
+loc_es: Clic lateral alveolar
+loc_fi: Alveolaarinen lateraalinen avulsiivi
+loc_fr: Clic alvéolaire latéral
+loc_it: Clic laterale alveolare
+loc_ja: 歯茎側面吸着音
+loc_ko: 치경 설측흡착음
+loc_nl: Laterale coronaal klik
+loc_ru: Латеральный альвеолярный щелчок
+loc_vi: Âm mút cạnh chân răng
+loc_zh_CN: 齿龈边嗒嘴音
+loc_zh_TW: 齒齦邊嗒嘴音
+%%
+Glyph: U+01C2
+loc_de: Palatoalveolarer Klick
+loc_en: Palatoalveolar click
+loc_es: Clic palatoalveolar
+loc_fi: Palatoalveolaarinen avulsiivi
+loc_fr: Clic alvéolo-palatal
+loc_it: Clic palatoalveolar
+loc_ja: 硬口蓋歯茎吸着音
+loc_ko: 경구개치경 흡착음
+loc_nl: Laminaal postalveolaar klik
+loc_ru: Палатальный щелчок
+loc_vi: Âm mút vòm
+loc_zh_CN: 硬颚搭嘴音
+loc_zh_TW: 硬顎搭嘴音
+%%
+Glyph: U+01C3
+loc_de: (Post)alveolarer Klick
+loc_en: (Post)alveolar click
+loc_es: Clic (post-)alveolar
+loc_fi: (Post)alveolaarinen avulsiivi
+loc_fr: Clic post-alvéolaire
+loc_it: Clic postalveolare
+loc_ja: (後部)歯茎吸着音
+loc_ko: (후)치경 흡착음
+loc_nl: Apical (post-) alveolaar klik
+loc_ru: Постальвеолярный щелчок
+loc_vi: Âm mút chân răng sau
+loc_zh_CN: 齿龈（後）嗒嘴音
+loc_zh_TW: 齒齦（後）嗒嘴音
+%%
+Glyph: U+01C3 U+00A1
+loc_de: Alveolarer und sublaminaler Klick ('Klack-Klick')
+loc_en: Alveolar and sublaminal click ('cluck-click')
+loc_es: Clic combinato sublaminal y alveolar
+loc_fi: Alveolaarinen ja sublaminaalinen avulsiivi
+loc_fr: Clic alveolaire et sous-laminal
+loc_it: Clic combinato sublaminal e alveolare
+loc_ja: 歯茎と舌端下部との吸着音（下打ち）
+loc_ko: 치경와 혀아래 흡착음
+loc_nl: Alveolaire en sublaminale klik ( 'klak-klik')
+loc_ru: Альвеолярных и билабиальный  щелчок
+loc_vi: Âm mút chân răng và phiến lưỡi dưới
+loc_zh_CN: 齿龈及舌底嗒嘴音
+loc_zh_TW: 齒齦及舌底嗒嘴音
+%%
+Glyph: U+0250
+loc_de: Fastoffener zentraler Vokal
+loc_en: Near-open central vowel
+loc_es: Casi abierta central vocal
+loc_fi: Keskinen lähiväljä vokaali
+loc_fr: Voyelle pré-ouverte centrale
+loc_it: Centrale quasi aperta vocale
+loc_ja: 準開中舌母音
+loc_ko: 중설 근저모음
+loc_nl: Centrale bijna-open klinker
+loc_ru: Ненапряжённый гласный среднего ряда нижнего подъёма
+loc_vi: Nguyên âm gần mở giữa
+loc_zh_CN: 次开央元音
+loc_zh_TW: 次開央元音
+%%
+Glyph: U+0251
+loc_de: Offener hinterer ungerundeter Vokal
+loc_en: Open back unrounded vowel
+loc_es: Vocal abierta posterior no redondeada
+loc_fi: Takainen väljä lavea vokaali
+loc_fr: Voyelle ouverte postérieure non arrondie
+loc_it: Vocale posteriore aperta non arrotondata
+loc_ja: 開後舌非円唇母音
+loc_ko: 후설 원순 저모음
+loc_nl: Ongeronde open achterklinker
+loc_ru: Неогубленный гласный заднего ряда нижнего подъёма
+loc_vi: Nguyên âm mở sau không làm tròn
+loc_zh_CN: 开后不圆唇元音
+loc_zh_TW: 開後不圓唇元音
+%%
+Glyph: U+0252
+loc_de: Offener hinterer gerundeter Vokal
+loc_en: Open back rounded vowel
+loc_es: Vocal abierta posterior redondeada
+loc_fi: Takainen väljä pyöreä vokaali
+loc_fr: Voyelle ouverte postérieure arrondie
+loc_it: Vocale posteriore aperta arrotondata
+loc_ja: 開後舌円唇母音
+loc_ko: 후설 비원순 저모음
+loc_nl: Geronde open achterklinker
+loc_ru: Огубленный гласный заднего ряда нижнего подъёма
+loc_vi: Nguyên âm mở sau làm tròn
+loc_zh_CN: 开后圆唇元音
+loc_zh_TW: 開後圓唇元音
+%%
+Glyph: U+0253
+loc_de: Stimmhafter bilabialer Implosiv
+loc_en: Voiced bilabial implosive
+loc_es: Implosiva bilabial sonora
+loc_fi: Soinnillinen bilabiaalinen implosiivi
+loc_fr: Consonne occlusive injective bilabiale voisée
+loc_it: Implosive bilabiale sonora
+loc_ja: 有声両唇入破音
+loc_ko: 유성 양순 내파음
+loc_nl: Stemhebbende bilabiale implosief
+loc_ru: Звонкий билабиальный имплозив
+loc_vi: Âm khép đôi môi hữu thanh
+loc_zh_CN: 浊双唇內爆音
+loc_zh_TW: 濁雙唇內爆音
+%%
+Glyph: U+0254
+loc_de: Halboffener hinterer gerundeter Vokal
+loc_en: Open-mid back rounded vowel
+loc_es: Vocal semiabierta posterior redondeada
+loc_fi: Takainen puoliväljä pyöreä vokaali
+loc_fr: Voyelle mi-ouverte postérieure arrondie
+loc_it: Vocale posteriore semiaperta arrotondata
+loc_ja: 半開後舌円唇母音
+loc_ko: 후설 원순 중저모음
+loc_nl: Geronde halfopen achterklinker
+loc_ru: Огубленный гласный заднего ряда средне-нижнего подъёма
+loc_vi: Nguyên âm nửa mở sau làm tròn
+loc_zh_CN: 半开后圆唇元音
+loc_zh_TW: 半開後圓唇元音
+%%
+Glyph: U+0255
+loc_de: Stimmloser alveolo-palataler Frikativ
+loc_en: Voiceless alveolo-palatal fricative
+loc_es: Fricativa alveolo-palatal sorda
+loc_fi: Soinniton palatoalveolaarinen frikatiivi
+loc_fr: Consonne fricative alvéolo-palatale sourde
+loc_it: Fricativa alveopalatale sorda
+loc_ja: 無声歯茎硬口蓋摩擦音
+loc_ko: 무성 치경구개 마찰음
+loc_nl: Stemloze alveolo-palatale fricatief
+loc_ru: Глухой палатализованный альвеоло-палатальный фрикатив
+loc_vi: Âm sát chân răng vòm vô thanh
+loc_zh_CN: 清龈腭擦音
+loc_zh_TW: 清齦腭擦音
+%%
+Glyph: U+0256
+loc_de: Stimmhafter retroflexer Plosiv
+loc_en: Voiced retroflex plosive
+loc_es: Oclusiva retrofleja sonora
+loc_fi: Soinnillinen retroflektinen klusiili
+loc_fr: Consonne occlusive rétroflexe voisée
+loc_it: Occlusiva retroflessa sonora
+loc_ja: 有声反り舌破裂音
+loc_ko: 유성 권설 파열음
+loc_nl: Stemhebbende retroflexe plosief
+loc_ru: Звонкий ретрофлексный взрывной согласный
+loc_vi: Sửa đổi Âm tắc quặt lưỡi hữu thanh
+loc_zh_CN: 浊卷舌塞音
+loc_zh_TW: 濁捲舌塞音
+%%
+Glyph: U+0257
+loc_de: Stimmhafter alveolarer Implosiv
+loc_en: Voiced alveolar implosive
+loc_es: Implosiva alveolar sonora
+loc_fi: Soinnillinen alveolaarinen implosiivi
+loc_fr: Consonne occlusive injective alvéolaire
+loc_it: Implosive alveolare sonora
+loc_ja: 有声歯或は歯茎入破音
+loc_ko: 유성 치경 내파음
+loc_nl: Stemhebbende alveolaire implosief
+loc_ru: Звонкий альвеолярный имплозивный согласный
+loc_vi: Sửa đổi Âm khép chân răng hữu thanh
+loc_zh_CN: 浊齿龈內爆音
+loc_zh_TW: 濁齒齦內爆音
+%%
+Glyph: U+0258
+loc_de: Halbgeschlossener zentraler ungerundeter Vokal
+loc_en: Close-mid central unrounded vowel
+loc_es: Vocal semicerrada central no redondeada
+loc_fi: Keskinen puolisuppea lavea vokaali
+loc_fr: Voyelle mi-fermée centrale non arrondie
+loc_it: Vocale centrale semichiusa non arrotondata
+loc_ja: 半狭中舌非円唇母音
+loc_ko: 중설 비원순 중고모음
+loc_nl: Ongeronde halfgesloten middenklinker
+loc_ru: Неогубленный гласный среднего ряда средне-верхнего подъёма
+loc_vi: Nguyên âm nửa đóng giữa không làm tròn
+loc_zh_CN: 半闭央不圆唇元音
+loc_zh_TW: 半閉央不圓唇元音
+%%
+Glyph: U+0259
+loc_de: Mittlerer zentraler Vokal
+loc_en: Mid central vowel
+loc_es: Intermedia central vocal
+loc_fi: Keskinen välinen vokaali
+loc_fr: Voyelle moyenne centrale
+loc_it: Centrale media vocale
+loc_ja: 中段中舌母音
+loc_ko: 중설 중모음
+loc_nl: Centrale middenklinker
+loc_ru: Ненапряжённый гласный среднего ряда среднего подъёма
+loc_vi: Nguyên âm giữa
+loc_zh_CN: 中央元音
+loc_zh_TW: 中央元音
+%%
+Glyph: U+025A
+loc_de: Mittlerer zentraler rhotischer Vokal
+loc_en: Mid central vowel with rhoticity
+loc_es: Intermedia central vocal con rotización
+loc_fi: Keskinen välinen roottinen vokaali
+loc_fr: Voyelle moyenne centrale rhotacisé
+loc_it: Vocale centrale media con accento rotico
+loc_ja: R音性中段中舌母音
+loc_ko: r-착색된 중설 중모음
+loc_nl: Centrale rhotic middenklinker
+loc_ru: Ненапряжённый гласный среднего ряда среднего подъёма с эризованный
+loc_vi: Nguyên âm giữa âm R
+loc_zh_CN: 卷舌中央元音
+loc_zh_TW: 捲舌中央元音
+%%
+Glyph: U+025B
+loc_de: Halboffener vorderer ungerundeter Vokal
+loc_en: Open-mid front unrounded vowel
+loc_es: Vocal semiabierta anterior no redondeada
+loc_fi: Etinen puoliväljä lavea vokaali
+loc_fr: Voyelle mi-ouverte antérieure non arrondie
+loc_it: Vocale anteriore semiaperta non arrotondata
+loc_ja: 半開前舌非円唇母音
+loc_ko: 전설 비원순 중저모음
+loc_nl: Ongeronde halfopen voorklinker
+loc_ru: Неогубленный гласный переднего ряда средне-нижнего подъёма
+loc_vi: Nguyên âm nửa mở trước không làm tròn
+loc_zh_CN: 半开前不圆唇元音
+loc_zh_TW: 半開前不圓唇元音
+%%
+Glyph: U+025C
+loc_de: Halboffener zentraler ungerundeter Vokal
+loc_en: Open-mid central unrounded vowel
+loc_es: Vocal semiabierta central no redondeada
+loc_fi: Keskinen puoliväljä lavea vokaali
+loc_fr: Voyelle mi-ouverte centrale non arrondie
+loc_it: Vocale centrale semiaperta non arrotondata
+loc_ja: 半開中舌非円唇母音
+loc_ko: 중설 비원순 중저모음
+loc_nl: Ongeronde halfopen centrale klinker
+loc_ru: Неогубленный гласный среднего ряда средне-нижнего подъёма
+loc_vi: Nguyên âm nửa mở giữa không làm tròn
+loc_zh_CN: 半开央不圆唇元音
+loc_zh_TW: 半開央不圓唇元音
+%%
+Glyph: U+025D
+loc_de: Halboffener zentraler ungerundeter rhotischer Vokal
+loc_en: Open-mid central unrounded vowel with rhoticity
+loc_es: Vocal semiabierta central no redondeada con rotización
+loc_fi: Keskinen puoliväljä lavea roottinen vokaali
+loc_fr: Voyelle mi-ouverte centrale rhotacisé non arrondie
+loc_it: Vocale centrale semiaperta non arrotondata con accento rotico
+loc_ja: R音性半開中舌非円唇母音
+loc_ko: r-착색된 중설 비원순 중저모음
+loc_nl: Ongeronde halfopen rhotic middenklinker
+loc_ru: Неогубленный гласный среднего ряда средне-нижнего подъёма с эризацией
+loc_vi: Nguyên âm nửa mở giữa không làm tròn âm R
+loc_zh_CN: 卷舌半开央不圆唇元音
+loc_zh_TW: 捲舌半開央不圓唇元音
+%%
+Glyph: U+025E
+loc_de: Halboffener zentraler gerundeter Vokal
+loc_en: Open-mid central rounded vowel
+loc_es: Vocal semiabierta central redondeada
+loc_fi: Keskinen puoliväljä pyöreä vokaali
+loc_fr: Voyelle mi-ouverte centrale arrondie
+loc_it: Vocale centrale semiaperta arrotondata
+loc_ja: 半開中舌円唇母音
+loc_ko: 중설 원순 중저모음
+loc_nl: Geronde halfopen middenklinker
+loc_ru: Огубленный гласный среднего ряда средне-нижнего подъёма
+loc_vi: Nguyên âm nửa mở giữa làm tròn
+loc_zh_CN: 半开央圆唇元音
+loc_zh_TW: 半開央圓唇元音
+%%
+Glyph: U+025F
+loc_de: Stimmhafter palataler Plosiv
+loc_en: Voiced palatal plosive
+loc_es: Oclusiva palatal sonora
+loc_fi: Soinnillinen palataalinen klusiili
+loc_fr: Consonne occlusive palatale voisée
+loc_it: Occlusiva palatale sonora
+loc_ja: 有声硬口蓋破裂音
+loc_ko: 유성 경구개 파열음
+loc_nl: Stemhebbende palatale plosief
+loc_ru: Звонкий палатальный взрывной согласный
+loc_vi: Âm tắc vòm hữu thanh
+loc_zh_CN: 浊硬颚塞音
+loc_zh_TW: 濁硬顎塞音
+%%
+Glyph: U+0260
+loc_de: Stimmhafter velarer Implosiv
+loc_en: Voiced velar implosive
+loc_es: Implosiva velar sonora
+loc_fi: Soinnillinen velaarinen implosiivi
+loc_fr: Consonne occlusive injective vélaire
+loc_it: Implosive velare sonora
+loc_ja: 有声軟口蓋入破音
+loc_ko: 유성 연구개 내파음
+loc_nl: Stemhebbende velaire implosief
+loc_ru: Звонкий велярный имплозивный согласный
+loc_vi: Âm khép vòm mềm hữu thanh
+loc_zh_CN: 浊软颚內爆音
+loc_zh_TW: 濁軟顎內爆音
+%%
+Glyph: U+0261
+loc_de: Stimmhafter velarer Plosiv
+loc_en: Voiced velar plosive
+loc_es: Oclusiva velar sonora
+loc_fi: Soinnillinen velaarinen klusiili
+loc_fr: Consonne occlusive vélaire voisée
+loc_it: Occlusiva velare sonora
+loc_ja: 有声軟口蓋破裂音
+loc_ko: 유성 연구개 파열음
+loc_nl: Stemhebbende velaire plosief
+loc_ru: Звонкий велярный взрывной согласный
+loc_vi: Âm tắc vòm mềm hữu thanh
+loc_zh_CN: 浊软颚塞音
+loc_zh_TW: 濁軟顎塞音
+%%
+Glyph: U+0262
+loc_de: Stimmhafter uvularer Plosiv
+loc_en: Voiced uvular plosive
+loc_es: Oclusiva uvular sonora
+loc_fi: Soinnillinen uvulaarinen klusiili
+loc_fr: Consonne occlusive uvulaire voisée
+loc_it: Occlusiva uvulare sonora
+loc_ja: 有声口蓋垂破裂音
+loc_ko: 유성 구개수 파열음
+loc_nl: Stemhebbende uvulaire plosief
+loc_ru: Звонкий увулярный взрывной согласный
+loc_vi: Âm tắc lưỡi nhỏ hữu thanh
+loc_zh_CN: 浊小舌塞音
+loc_zh_TW: 濁小舌塞音
+%%
+Glyph: U+0263
+loc_de: Stimmhafter velarer Frikativ
+loc_en: Voiced velar fricative
+loc_es: Fricativa velar sonora
+loc_fi: Soinnillinen velaarinen frikatiivi
+loc_fr: Consonne fricative vélaire voisée
+loc_it: Fricativa velare sonora
+loc_ja: 有声軟口蓋摩擦音
+loc_ko: 유성 연구개 마찰음
+loc_nl: Stemhebbende velaire fricatief
+loc_ru: Звонкий велярный щелевой согласный
+loc_vi: Âm sát vòm mềm hữu thanh
+loc_zh_CN: 浊软颚擦音
+loc_zh_TW: 濁軟顎擦音
+%%
+Glyph: U+0264
+loc_de: Halbgeschlossener hinterer ungerundeter Vokal
+loc_en: Close-mid back unrounded vowel
+loc_es: Vocal semicerrada posterior no redondeada
+loc_fi: Takainen puolisuppea lavea vokaali
+loc_fr: Voyelle mi-fermée postérieure non arrondie
+loc_it: Vocale posteriore semichiusa non arrotondata
+loc_ja: 半狭後舌非円唇母音
+loc_ko: 후설 비원순 중고모음
+loc_nl: Oongeronde halfgesloten achterklinker
+loc_ru: Неогубленный гласный заднего ряда средне-верхнего подъёма
+loc_vi: Nguyên âm nửa đóng sau không làm tròn
+loc_zh_CN: 半闭后不圆唇元音
+loc_zh_TW: 半閉後不圓唇元音
+%%
+Glyph: U+0265
+loc_de: Stimmhafter labial-palataler Approximant
+loc_en: Voiced labial-palatal approximant
+loc_es: Aproximante palatal labializada sonora
+loc_fi: Soinnillinen labiopalataalinen approksimantti
+loc_fr: Consonne spirante labio-palatale voisée
+loc_it: Approssimante labio-palatale sonora  	
+loc_ja: 有声唇硬口蓋接近音
+loc_ko: 유성 양순 경구개 접근음
+loc_nl: Stemhebbende labiaal-palatale approximant
+loc_ru: Звонкий лабиализованный палатальный апроксимант
+loc_vi: Âm tiếp cận môi vòm
+loc_zh_CN: 浊唇硬腭通音
+loc_zh_TW: 濁唇硬腭通音
+%%
+Glyph: U+0266
+loc_de: Stimmhafter glottaler Frikativ
+loc_en: Voiced glottal fricative
+loc_es: Fricativa glotal sonora
+loc_fi: Soinnillinen glottaalinen frikatiivi
+loc_fr: Consonne fricative glottale voisée
+loc_it: Fricativa glottidale sonora
+loc_ja: 有声声門摩擦音
+loc_ko: 유성 성문 마찰음
+loc_nl: Stemhebbende glottale fricatief
+loc_ru: Звонкий глоттальный щелевой согласный
+loc_vi: Âm sát họng hữu thanh
+loc_zh_CN: 浊声门擦音
+loc_zh_TW: 濁聲門擦音
+%%
+Glyph: U+0267
+loc_de: Zeitgleicher postalveolarer und velarer stimmloser Frikativ
+loc_en: Voiceless simultaneous postalveolar and velar fricative
+loc_es: Fricativa palatal-velar sorda
+loc_fi: Yhtäaikaiset /ʃ/ ja /x/
+loc_fr: Consonne fricative post-alvéolo-vélaire sourde
+loc_it: /ʃ/ e /x/ simultanee
+loc_ja: 無声後部歯茎・軟口蓋摩擦音
+loc_ko: 무성 치조후 연구개 마찰음
+loc_nl: Stemloze palataal-velaire fricatief
+loc_ru: Глухой палатально-велярный фрикатив
+loc_vi: Âm sát vòm - vòm mềm vô thanh
+loc_zh_CN: 清硬颚软颚擦音
+loc_zh_TW: 清硬顎軟顎擦音
+%%
+Glyph: U+0268
+loc_de: Geschlossener zentraler ungerundeter Vokal
+loc_en: Close central unrounded vowel
+loc_es: Vocal cerrada central no redondeada
+loc_fi: Keskinen suppea lavea vokaali
+loc_fr: Voyelle fermée centrale non arrondie
+loc_it: Vocale centrale chiusa non arrotondata
+loc_ja: 狭中舌非円唇母音
+loc_ko: 중설 비원순 고모음
+loc_nl: Ongeronde gesloten middenklinker
+loc_ru: Неогубленный гласный среднего ряда верхнего подъёма
+loc_vi: Nguyên âm đóng giữa không làm tròn
+loc_zh_CN: 闭央不圆脣元音
+loc_zh_TW: 閉央不圓脣元音
+%%
+Glyph: U+026A
+loc_de: Fastgeschlossener fastvorderer ungerundeter Vokal
+loc_en: Near-close near-front unrounded vowel
+loc_es: Vocal casi cerrada semianterior no redondeada
+loc_fi: Lähietinen lähisuppea lavea vokaali
+loc_fr: Voyelle pré-fermée antérieure non arrondie
+loc_it: Vocale quasi anteriore quasi chiusa non arrotondata
+loc_ja: 準狭準前舌非円唇母音
+loc_ko: 근전설 비원순 근고모음
+loc_nl: Ongeronde gecentraliseerde bijna-gesloten voorklinker
+loc_ru: Ненапряжённый неогубленный гласный переднего ряда верхнего подъёма
+loc_vi: Nguyên âm gần đóng gần trước không làm tròn
+loc_zh_CN: 次闭次前不圆唇元音
+loc_zh_TW: 次閉次前不圓唇元音
+%%
+Glyph: U+026B
+loc_de: Stimmhafter velarerisierter/pharyngealisierter alveolarer lateraler Approximant
+loc_en: Voiced velarized/pharyngealized alveolar lateral approximant
+loc_en_GB: Voiced velarised/pharyngealised alveolar lateral approximant
+loc_es: Aproximante lateral alveolar sonora velarizada o faringealizada
+loc_fi: Soinnillinen velaaristunut tai faryngaalistunut alveolaarinen lateraalinen approksimantti
+loc_fr: Consonne spirante latérale alvéolaire vélarisée/pharyngalisée voisée
+loc_it: Approssimante laterale alveolare sonora velarizzata  o faringalizzata
+loc_ja: 軟口蓋化有声歯或は歯茎側面接近音
+loc_ko: 유성 연구개음화 또는 인두음화 자음 설측 접근음
+loc_nl: Stemhebbende gevelariseerde/gefaryngealiseerde alveolaire laterale approximant
+loc_ru: Звонкий веляризованный или фарингализованный альвеолярный латеральный аппроксимант
+loc_vi: Âm tiếp cận cạnh chân răng vòm mềm hoặc yết hầu hữu thanh
+loc_zh_CN: 浊软颚化齿龈边音
+loc_zh_TW: 濁軟顎化齒齦邊音
+%%
+Glyph: U+026C
+loc_de: Stimmloser alveolarer lateraler Frikativ
+loc_en: Voiceless alveolar lateral fricative
+loc_es: Fricativa lateral alveolar sorda
+loc_fi: Soinniton alveolaarinen lateraalinen frikatiivi
+loc_fr: Consonne fricative latérale alvéolaire sourde
+loc_it: Laterale fricativa alveolare sorda
+loc_ja: 無声歯或は歯茎側面摩擦音
+loc_ko: 무성 자음 설측 마찰음
+loc_nl: Stemloze alveolaire laterale fricatief
+loc_ru: Глухой альвеолярный латеральный щелевой согласный
+loc_vi: Âm sát cạnh chân răng vô thanh
+loc_zh_CN: 清齿龈边擦音
+loc_zh_TW: 清齒齦邊擦音
+%%
+Glyph: U+026D
+loc_de: Stimmhafter retroflexer lateraler Approximant
+loc_en: Voiced retroflex lateral approximant
+loc_es: Aproximante lateral retrofleja sonora
+loc_fi: Soinnillinen retroflektinen lateraalinen approksimantti
+loc_fr: Consonne spirante latérale rétroflexe voisée
+loc_it: Approssimante lateral retroflessa sonora
+loc_ja: 有声反り舌側面接近音
+loc_ko: 유성 권설 설측 접근음
+loc_nl: Stemhebbende retroflexe laterale approximant
+loc_ru: Звонкий ретрофлексный латеральный аппроксимант
+loc_vi: Âm tiếp cận cạnh quặt lưỡi
+loc_zh_CN: 浊卷舌边音
+loc_zh_TW: 濁捲舌邊音
+%%
+Glyph: U+026E
+loc_de: Stimmhafter alveolarer lateraler Frikativ
+loc_en: Voiced alveolar lateral fricative
+loc_es: Fricativa lateral alveolar sonora
+loc_fi: Soinnillinen alveolaarinen lateraalinen frikatiivi
+loc_fr: Consonne fricative latérale alvéolaire voisée
+loc_it: Laterale fricativa alveolare sonora
+loc_ja: 有声歯或は歯茎側面摩擦音
+loc_ko: 유성 자음 설측 마찰음
+loc_nl: Stemhebbende alveolaire laterale fricatief
+loc_ru: Звонкий альвеолярный латеральный щелевой согласный
+loc_vi: Âm sát cạnh chân răng hữu thanh
+loc_zh_CN: 浊齿龈边擦音
+loc_zh_TW: 濁齒齦邊擦音
+%%
+Glyph: U+026F
+loc_de: Geschlossener hinterer ungerundeter Vokal
+loc_en: Close back unrounded vowel
+loc_es: Vocal cerrada posterior no redondeada
+loc_fi: Takainen suppea lavea vokaali
+loc_fr: Voyelle fermée postérieure non arrondie
+loc_it: Vocale posteriore chiusa non arrotondata
+loc_ja: 狭後舌非円唇母音
+loc_ko: 후설 비원순 고모음
+loc_nl: Ongeronde geloten achterklinker
+loc_ru: Неогубленный гласный заднего ряда верхнего подъёма
+loc_vi: Nguyên âm đóng sau không làm tròn
+loc_zh_CN: 闭后不圆脣元音
+loc_zh_TW: 閉後不圓脣元音
+%%
+Glyph: U+0270
+loc_de: Stimmhafter velarer Approximant
+loc_en: Voiced velar approximant
+loc_es: Aproximante velar sonora
+loc_fi: Soinnillinen velaarinen approksimantti
+loc_fr: Consonne spirante vélaire voisée
+loc_it: Approssimante velare sonora
+loc_ja: 有声軟口蓋接近音
+loc_ko: 유성 연구개 접근음
+loc_nl: Stemhebbende velaire approximant
+loc_ru: Звонкий велярный аппроксимант
+loc_vi: Âm tiếp cận vòm mềm
+loc_zh_CN: 浊软颚近音
+loc_zh_TW: 濁軟顎近音
+%%
+Glyph: U+0271
+loc_de: Stimmhafter labiodentaler Nasal
+loc_en: Voiced labiodental nasal
+loc_es: Nasal labiodental sonora
+loc_fi: Soinnillinen labiodentaalinen nasaali
+loc_fr: Consonne occlusive nasale labio-dentale voisée
+loc_it: Nasale labiodentale sonora
+loc_ja: 有声唇歯鼻音
+loc_ko: 유성 순치 비음
+loc_nl: Stemhebbende labiodentale nasaal
+loc_ru: Звонкий губно-зубной носовой согласный
+loc_vi: Âm mũi môi răng
+loc_zh_CN: 浊唇齿鼻音
+loc_zh_TW: 濁唇齒鼻音
+%%
+Glyph: U+0272
+loc_de: Stimmhafter palataler Nasal
+loc_en: Voiced palatal nasal
+loc_es: Nasal palatal sonora
+loc_fi: Soinnillinen palataalinen nasaali
+loc_fr: Consonne occlusive nasale palatale voisée
+loc_it: Nasale palatale sonora
+loc_ja: 有声硬口蓋鼻音
+loc_ko: 유성 경구개 비음
+loc_nl: Stemhebbende palatale nasaal
+loc_ru: Звонкий палатальный носовой согласный
+loc_vi: Âm mũi vòm
+loc_zh_CN: 浊硬颚鼻音
+loc_zh_TW: 濁硬顎鼻音
+%%
+Glyph: U+0273
+loc_de: Stimmhafter retroflexer Nasal
+loc_en: Voiced retroflex nasal
+loc_es: Nasal retrofleja sonora
+loc_fi: Soinnillinen retroflektinen nasaali
+loc_fr: Consonne occlusive nasale rétroflexe voisée
+loc_it: Nasale retroflessa sonora
+loc_ja: 有声反り舌鼻音
+loc_ko: 유성 권설 비음
+loc_nl: Stemhebbende retroflexe nasaal
+loc_ru: Звонкий ретрофлексный носовой согласный
+loc_vi: Âm mũi quặt lưỡi
+loc_zh_CN: 浊卷舌鼻音
+loc_zh_TW: 濁捲舌鼻音
+%%
+Glyph: U+0274
+loc_de: Stimmhafter uvularer Nasal
+loc_en: Voiced uvular nasal
+loc_es: Nasal uvular sonora
+loc_fi: Soinnillinen uvulaarinen nasaali
+loc_fr: Consonne occlusive nasale uvulaire voisée
+loc_it: Nasale uvulare sonora
+loc_ja: 有声口蓋垂鼻音
+loc_ko: 유성 구개수 비음
+loc_nl: Stemhebbende uvulaire nasaal
+loc_ru: Звонкий увулярный носовой согласный
+loc_vi: Âm mũi lưỡi nhỏ
+loc_zh_CN: 浊小舌鼻音
+loc_zh_TW: 濁小舌鼻音
+%%
+Glyph: U+0275
+loc_de: Halbgeschlossener zentraler gerundeter Vokal
+loc_en: Close-mid central rounded vowel
+loc_es: Vocal semicerrada central redondeada
+loc_fi: Keskinen poulisuppea pyöreä vokaali
+loc_fr: Voyelle mi-fermée centrale arrondie
+loc_it: Vocale centrale semichiusa arrotondata
+loc_ja: 半狭中舌円唇母音
+loc_ko: 중설 원순 중고모음
+loc_nl: Geronde halfgesloten middenklinker
+loc_ru: Огубленный гласный среднего ряда средне-верхнего подъёма
+loc_vi: Nguyên âm nửa đóng giữa làm tròn
+loc_zh_CN: 半闭央圆唇元音
+loc_zh_TW: 半閉央圓唇元音
+%%
+Glyph: U+0276
+loc_de: Offener vorderer gerundeter Vokal
+loc_en: Open front rounded vowel
+loc_es: Vocal abierta anterior redondeada
+loc_fi: Etinen väljä pyöreä vokaali
+loc_fr: Voyelle ouverte antérieure arrondie
+loc_it: Vocale anteriore aperta arrotondata
+loc_ja: 開前舌円唇母音
+loc_ko: 전설 원순 저모음
+loc_nl: Geronde open voorklinker
+loc_ru: Огубленный гласный переднего ряда нижнего подъёма
+loc_vi: Nguyên âm mở trước làm tròn
+loc_zh_CN: 开前圆唇元音
+loc_zh_TW: 開前圓唇元音
+%%
+Glyph: U+0278
+loc_de: Stimmloser bilabialer Frikativ
+loc_en: Voiceless bilabial fricative
+loc_es: Fricativa bilabial sorda
+loc_fi: Soinniton bilabiaalinen frikatiivi
+loc_fr: Consonne fricative bilabiale sourde
+loc_it: Fricativa bilabiale sorda
+loc_ja: 無声両唇摩擦音
+loc_ko: 무성 양순 마찰음
+loc_nl: Stemloze bilabiale fricatief
+loc_ru: Глухой билабиальный щелевой согласный
+loc_vi: Âm sát đôi môi vô thanh
+loc_zh_CN: 清双唇擦音
+loc_zh_TW: 清雙唇擦音
+%%
+Glyph: U+0279
+loc_de: Stimmhafter alveolarer Approximant
+loc_en: Voiced alveolar approximant
+loc_es: Aproximante alveolar sonora
+loc_fi: Soinnillinen alveolaarinen approksimantti
+loc_fr: Consonne spirante alvéolaire voisée
+loc_it: Approssimante alveolare sonora
+loc_ja: 有声歯或は歯茎接近音
+loc_ko: 유성 자음 접근음
+loc_nl: Stemhebbende alveolaire approximant
+loc_ru: Звонкий альвеолярный аппроксимант
+loc_vi: Âm tiếp cận chân răng
+loc_zh_CN: 浊齿龈近音
+loc_zh_TW: 濁齒齦近音
+%%
+Glyph: U+027A
+loc_de: Stimmhafter alveolarer lateraler Flap
+loc_en: Voiced alveolar lateral flap
+loc_es: Vibrante simple lateral alveolar sonora
+loc_fi: Soinnillinen lateraalinen alveolaarinen yksitäryinen tremulantti
+loc_fr: Consonne battue latérale alvéolaire voisée
+loc_it: Monovibrante laterale alveolare sonora
+loc_ja: 有声歯茎側面弾き音
+loc_ko: 유성 치경 설측 탄음
+loc_nl: Stemhebbende alveolaire laterale flap
+loc_ru: Звонкий альвеолярные латеральный одноударный согласный
+loc_vi: Âm vỗ cạnh chân răng
+loc_zh_CN: 浊龈边弹音
+loc_zh_TW: 濁齦邊彈音
+%%
+Glyph: U+027B
+loc_de: Stimmhafter retroflexer Approximant
+loc_en: Voiced retroflex approximant
+loc_es: Aproximante retrofleja sonora
+loc_fi: Soinnillinen retroflektinen approksimantti
+loc_fr: Consonne spirante rétroflexe voisée
+loc_it: Approssimante retroflessa sonora
+loc_ja: 有声反り舌接近音
+loc_ko: 유성 권설 접근음
+loc_nl: Stemhebbende retroflexe approximant
+loc_ru: Звонкий ретрофлексный аппроксимант
+loc_vi: Âm tiếp cận quặt lưỡi
+loc_zh_CN: 浊卷舌近音
+loc_zh_TW: 濁捲舌近音
+%%
+Glyph: U+027D
+loc_de: Stimmhafter retroflexer Flap
+loc_en: Voiced retroflex flap
+loc_es: Vibrante simple retrofleja sonora
+loc_fi: Soinnillinen retroflektinen yksitäryinen tremulantti
+loc_fr: Consonne battue rétroflexe voisée
+loc_it: Monovibrante retroflessa sonora
+loc_ja: 有声反り舌弾き音
+loc_ko: 유성 권설 탄음
+loc_nl: Stemhebbende retroflexe flap
+loc_ru: Звонкий ретрофлексный одноударный согласный
+loc_vi: Âm vỗ quặt lưỡi
+loc_zh_CN: 浊卷舌闪音
+loc_zh_TW: 濁捲舌閃音
+%%
+Glyph: U+027E
+loc_de: Stimmhafter alveolarer Flap
+loc_en: Voiced alveolar flap
+loc_es: Vibrante simple alveolar sonora
+loc_fi: Soinnillinen alveolaarinen yksitäryinen tremulantti
+loc_fr: Consonne battue alvéolaire voisée
+loc_it: Monovibrante alveolare sonora
+loc_ja: 有声歯或は歯茎叩き音
+loc_ko: 유성 치경 탄음
+loc_nl: Stemhebbende alveolaire flap
+loc_ru: Звонкий альвеолярный одноударный согласный
+loc_vi: Âm vỗ chân răng
+loc_zh_CN: 浊齿龈闪音
+loc_zh_TW: 濁齒齦閃音
+%%
+Glyph: U+0280
+loc_de: Stimmhafter uvularer Trill
+loc_en: Voiced uvular trill
+loc_es: Vibrant múltiple uvular sonora
+loc_fi: Soinnillinen uvulaarinen tremulantti
+loc_fr: Consonne roulée uvulaire voisée
+loc_it: Vibrante uvulare sonora
+loc_ja: 有声口蓋垂震え音
+loc_ko: 유성 구개수 전동음
+loc_nl: Stemhebbende uvulaire tril
+loc_ru: Звонкий увулярный дрожащий согласный
+loc_vi: Âm rung lưỡi nhỏ
+loc_zh_CN: 浊小舌颤音
+loc_zh_TW: 濁小舌顫音
+%%
+Glyph: U+0281
+loc_de: Stimmhafter uvularer Frikativ
+loc_en: Voiced uvular fricative
+loc_es: Fricativa uvular sonora
+loc_fi: Soinnillinen uvulaarinen frikatiivi
+loc_fr: Consonne fricative uvulaire voisée
+loc_it: Fricativa uvulare sonora
+loc_ja: 有声口蓋垂摩擦音
+loc_ko: 유성 구개수 마찰음
+loc_nl: Stemhebbende uvulaire fricatief
+loc_ru: Звонкий увулярный щелевой согласный
+loc_vi: Âm sát lưỡi nhỏ hữu thanh
+loc_zh_CN: 浊小舌擦音
+loc_zh_TW: 濁小舌擦音
+%%
+Glyph: U+0282
+loc_de: Stimmloser retroflexer Frikativ
+loc_en: Voiceless retroflex fricative
+loc_es: Fricativa retrofleja sorda
+loc_fi: Soinnillinen uvulaarinen frikatiivi
+loc_fr: Consonne fricative rétroflexe sourde
+loc_it: Fricativa retroflessa sorda
+loc_ja: 無声反り舌摩擦音
+loc_ko: 무성 권설 마찰음
+loc_nl: Stemloze retroflexe fricatief
+loc_ru: Глухой ретрофлексный щелевой согласный
+loc_vi: Âm sát quặt lưỡi vô thanh
+loc_zh_CN: 清卷舌擦音
+loc_zh_TW: 清捲舌擦音
+%%
+Glyph: U+0283
+loc_de: Stimmloser postalveolarer Frikativ
+loc_en: Voiceless postalveolar fricative
+loc_es: Fricativa postalveolar sorda
+loc_fi: Soinnillinen postalveolaarinen frikatiivi
+loc_fr: Consonne fricative post-alvéolaire sourde
+loc_it: Fricativa postalveolare sorda
+loc_ja: 無声後部歯茎摩擦音
+loc_ko: 무성 후치경 마찰음
+loc_nl: Stemloze postalveolaire fricatief
+loc_ru: Глухой постальвеолярный щелевой согласный
+loc_vi: Âm sát chân răng sau vô thanh
+loc_zh_CN: 清龈后擦音
+loc_zh_TW: 清齦後擦音
+%%
+Glyph: U+0284
+loc_de: Stimmhafter palataler Implosiv
+loc_en: Voiced palatal implosive
+loc_es: Implosiva palatal sonora
+loc_fi: Soinnillinen palataalinen implosiivi
+loc_fr: Consonne occlusive injective palatale
+loc_it: Implosive palatale sonora
+loc_ja: 有声硬口蓋入破音
+loc_ko: 유성 경구개 내파음
+loc_nl: Stemhebbende palatale implosief
+loc_ru: Звонкий палатальный имплоизвный согласный
+loc_vi: Âm khép vòm hữu thanh
+loc_zh_CN: 浊硬颚內爆音
+loc_zh_TW: 濁硬顎內爆音
+%%
+Glyph: U+0288
+loc_de: Stimmloser retroflexer Plosiv
+loc_en: Voiceless retroflex plosive
+loc_es: Oclusiva retrofleja sorda
+loc_fi: Soinniton retroflektinen klusiili
+loc_fr: Consonne occlusive rétroflexe sourde
+loc_it: Occlusiva retroflessa sorda
+loc_ja: 無声反り舌破裂音
+loc_ko: 무성 권설 파열음
+loc_nl: Stemloze retroflexe plosief
+loc_ru: Глухой ретрофлексный взрывной согласный
+loc_vi: Âm tắc quặt lưỡi vô thanh
+loc_zh_CN: 清卷舌塞音
+loc_zh_TW: 清捲舌塞音
+%%
+Glyph: U+0289
+loc_de: Geschlossener zentraler gerundeter Vokal
+loc_en: Close central rounded vowel
+loc_es: Vocal cerrada central redondeada
+loc_fi: Keskinen suppea pyöreä vokaali
+loc_fr: Voyelle fermée centrale arrondie
+loc_it: Vocale centrale chiusa arrotondata
+loc_ja: 狭中舌円唇母音
+loc_ko: 중설 원순 고모음
+loc_nl: Geronde gesloten middenklinker
+loc_ru: Огубленный гласный среднего ряда верхнего подъёма
+loc_vi: Nguyên âm đóng giữa làm tròn
+loc_zh_CN: 闭央圆脣元音
+loc_zh_TW: 閉央圓脣元音
+%%
+Glyph: U+028A
+loc_de: Fatsgeschlossener fasthinterer gerundeter Vokal
+loc_en: Near-close near-back rounded vowel
+loc_es: Vocal casi cerrada semiposterior redondeada
+loc_fi: Lähitakainen lähisuppea pyöreä vokaali
+loc_fr: Voyelle pré-fermée postérieure arrondie
+loc_it: Vocale quasi posteriore quasi chiusa arrotondata
+loc_ja: 準狭準後舌円唇母音
+loc_ko: 근후설 원순 근고모음
+loc_nl: Geronde bijna-achterste bijna-gesloten klinker
+loc_ru: Ненапряжённый огубленный гласный заднего ряда верхнего подъёма
+loc_vi: Nguyên âm gần đóng gần sau làm tròn
+loc_zh_CN: 次闭次后圆唇元音
+loc_zh_TW: 次閉次後圓唇元音
+%%
+Glyph: U+028B
+loc_de: Stimmhafter labiodentaler Approximant
+loc_en: Voiced labiodental approximant
+loc_es: Aproximante labiodental sonora
+loc_fi: Soinnillinen labiodentaalinen approksimantti
+loc_fr: Consonne spirante labio-dentale voisée
+loc_it: Approssimante labiodentale sonora
+loc_ja: 有声唇歯接近音
+loc_ko: 유성 순치 접근음
+loc_nl: Stemhebbende labiodentale approximant
+loc_ru: Звонкий губной-зубной аппроксимант
+loc_vi: Âm tiếp cận môi răng
+loc_zh_CN: 浊唇齿近音
+loc_zh_TW: 濁唇齒近音
+%%
+Glyph: U+028C
+loc_de: Halboffener hinterer ungerundeter Vokal
+loc_en: Open-mid back unrounded vowel
+loc_es: Vocal semiabierta posterior no redondeada
+loc_fi: Takainen puoliväljä lavea vokaali
+loc_fr: Voyelle mi-ouverte postérieure non arrondie
+loc_it: Vocale posteriore semiaperta non arrotondata
+loc_ja: 半開後舌非円唇母音
+loc_ko: 후설 비원순 중저모음
+loc_nl: Ongeronde halfopen achterlinker
+loc_ru: Неогубленный гласный заднего ряда средне-нижнего подъёма
+loc_vi: Nguyên âm nửa mở sau không làm tròn
+loc_zh_CN: 半开后不圆唇元音
+loc_zh_TW: 半開後不圓唇元音
+%%
+Glyph: U+028D
+loc_de: Stimmloser labial-velarer Frikativ
+loc_en: Voiceless labial-velar fricative
+loc_es: Fricativa labial-velar sorda
+loc_fi: Soinniton labiovelaarinen frikatiivi
+loc_fr: Consonne fricative labio-vélaire sourde
+loc_it: Fricativa labiovelare sorda
+loc_ja: 無声唇軟口蓋摩擦音
+loc_ko: 무성 양순 연구개 접근음
+loc_nl: Stemloze labiovelaire approximant
+loc_ru: Глухой лабиовелярный аппроксимант
+loc_vi: Âm sát môi vòm mềm
+loc_zh_CN: 清脣软腭擦音
+loc_zh_TW: 清脣軟腭擦音
+%%
+Glyph: U+028E
+loc_de: Stimmhafter palataler lateraler Approximant
+loc_en: Voiced palatal lateral approximant
+loc_es: Aproximante lateral palatal sonora
+loc_fi: Soinnillinen palataalinen lateraalinen approksimantti
+loc_fr: Consonne spirante latérale palatale voisée
+loc_it: Approssimante lateral palatale sonora
+loc_ja: 有声硬口蓋側面接近音
+loc_ko: 유성 경구개 설측 접근음
+loc_nl: Stemhebbende palatale laterale approximant
+loc_ru: Звонкий палатальный латеральный аппроксимант
+loc_vi: Âm tiếp cận cạnh vòm
+loc_zh_CN: 浊脣软腭通音
+loc_zh_TW: 濁脣軟腭通音
+%%
+Glyph: U+028F
+loc_de: Fastgeschlossener fastvorderer gerundeter Vokal
+loc_en: Near-close near-front rounded vowel
+loc_es: Vocal casi cerrada semianterior redondeada
+loc_fi: Lähietinen lähisuppea pyöreä vokaali
+loc_fr: Voyelle pré-fermée antérieure arrondie
+loc_it: Vocale quasi anteriore quasi chiusa arrotondata
+loc_ja: 準狭準前舌円唇母音
+loc_ko: 근전설 원순 근고모음
+loc_nl: Geronde gecentraliseerde bijna-gesloten voorklinker
+loc_ru: Ненапряжённый огубленный гласный переднего ряда верхнего подъёма
+loc_vi: Nguyên âm gần đóng gần trước làm tròn
+loc_zh_CN: 次闭次前圆唇元音
+loc_zh_TW: 次閉次前圓唇元音
+%%
+Glyph: U+0290
+loc_de: Stimmhafter retroflexer Frikativ
+loc_en: Voiced retroflex fricative
+loc_es: Fricativa retrofleja sonora
+loc_fi: Soinnillinen retroflektinen frikatiivi
+loc_fr: Consonne fricative rétroflexe voisée
+loc_it: Fricativa retroflessa sonora
+loc_ja: 有声反り舌摩擦音
+loc_ko: 유성 권설 마찰음
+loc_nl: Stemhebbende retroflexe fricatief
+loc_ru: Звонкий ретрофлексный щелевой согласный
+loc_vi: Âm sát quặt lưỡi hữu thanh
+loc_zh_CN: 浊卷舌擦音
+loc_zh_TW: 濁捲舌擦音
+%%
+Glyph: U+0291
+loc_de: Stimmhafter alveolo-palataler Frikativ
+loc_en: Voiced alveolo-palatal fricative
+loc_es: Fricativa alveolo-palatal sonora
+loc_fi: Soinnillinen palatoalveolaarinen frikatiivi
+loc_fr: Consonne fricative alvéolo-palatale voisée
+loc_it: Fricativa alveopalatale sonora
+loc_ja: 有声歯茎硬口蓋摩擦音
+loc_ko: 유성 치경구개 마찰음
+loc_nl: Stemhebbende alveolo-palatale fricatief
+loc_ru: Звонкий палатализованный альвеоло-палатальный фрикатив
+loc_vi: Âm sát chân răng vòm hữu thanh
+loc_zh_CN: 浊龈腭擦音
+loc_zh_TW: 濁齦腭擦音
+%%
+Glyph: U+0292
+loc_de: Stimmhafter postalveolarer Frikativ
+loc_en: Voiced postalveolar fricative
+loc_es: Fricativa postalveolar sonora
+loc_fi: Soinnillinen postalveolaarinen frikatiivi
+loc_fr: Consonne fricative post-alvéolaire voisée
+loc_it: Fricativa postalveolare sonora
+loc_ja: 有声後部歯茎摩擦音
+loc_ko: 유성 후치경 마찰음
+loc_nl: Stemhebbende postalveolaire fricatief
+loc_ru: Звонкий постальвеолярный щелевой согласный
+loc_vi: Âm sát chân răng sau hữu thanh
+loc_zh_CN: 浊龈后擦音
+loc_zh_TW: 濁齦後擦音
+%%
+Glyph: U+0294
+loc_de: Stimmloser glottaler Plosiv
+loc_en: Voiceless glottal plosive
+loc_es: Oclusiva glotal sorda
+loc_fi: Soinniton glottaalinen klusiili
+loc_fr: Consonne occlusive glottale sourde
+loc_it: Occlusiva glottidale sorda
+loc_ja: 声門破裂音
+loc_ko: 무성 성문 파열음
+loc_nl: Stemloze glottisslag
+loc_ru: Глухой гортанная смычка
+loc_vi: Âm tắc cổ họng vô thanh
+loc_zh_CN: 清声门塞音
+loc_zh_TW: 清聲門塞音
+%%
+Glyph: U+0295
+loc_de: Stimmhafter pharyngealer Frikativ
+loc_en: Voiced pharyngeal fricative
+loc_es: Fricativa faríngea sonora
+loc_fi: Soinnillinen faryngaalinen frikatiivi
+loc_fr: Consonne fricative pharyngale voisée
+loc_it: Fricativa faringale sonora
+loc_ja: 有声咽頭摩擦音或は接近音
+loc_ko: 유성 인두 마찰음
+loc_nl: Stemhebbende faryngale fricatief
+loc_ru: Звонкий фарингальный щелевой согласный
+loc_vi: Âm sát yết hầu hữu thanh
+loc_zh_CN: 浊咽擦音
+loc_zh_TW: 濁咽擦音
+%%
+Glyph: U+0298
+loc_de: Bilabialer Klick
+loc_en: Bilabial click
+loc_es: Clic bilabial
+loc_fi: Bilabiaalinen avulsiivi
+loc_fr: Clic bilabial
+loc_it: Clic bilabiale
+loc_ja: 両唇吸着音
+loc_ko: 양순 흡착음
+loc_nl: Bilabiale klik
+loc_ru: Билабиальный щелчок
+loc_vi: Âm mút đôi môi
+loc_zh_CN: 双脣搭嘴音
+loc_zh_TW: 雙脣搭嘴音
+%%
+Glyph: U+0299
+loc_de: Stimmhafter bilabialer Trill
+loc_en: Voiced bilabial trill
+loc_es: Vibrant múltiple bilabial sonora
+loc_fi: Soinnillinen bilabiaalinen tremulantti
+loc_fr: Consonne roulée bilabiale voisée
+loc_it: Vibrante bilabiale sonora
+loc_ja: 有声両唇震え音
+loc_ko: 유성 양순 전동음
+loc_nl: Stemhebbende  bilabiale tril
+loc_ru: Звонкий билабиальный дрожащий согласный
+loc_vi: Âm rung đôi môi
+loc_zh_CN: 浊双唇颤音
+loc_zh_TW: 濁雙唇顫音
+%%
+Glyph: U+029B
+loc_de: Stimmhafter uvularer Implosiv
+loc_en: Voiced uvular implosive
+loc_es: Implosiva uvular sonora
+loc_fi: Soinnillinen uvulaarinen implosiivi
+loc_fr: Consonne occlusive injective uvulaire
+loc_it: Implosive uvulare sonora
+loc_ja: 有声口蓋垂入破音
+loc_ko: 유성 구개수 내파음
+loc_nl: Stemhebbende uvulaire implosief
+loc_ru: Звонкий увулярный имплозивный согласный
+loc_vi: Âm khép lưỡi nhỏ hữu thanh
+loc_zh_CN: 浊小舌內爆音
+loc_zh_TW: 濁小舌內爆音
+%%
+Glyph: U+029C
+loc_de: Stimmloser epiglottaler Frikativ
+loc_en: Voiceless epiglottal fricative
+loc_es: Fricativa epiglotal sorda
+loc_fi: Soinniton epiglottaalinen frikatiivi
+loc_fr: Consonne fricative épiglottale sourde
+loc_it: Fricativa epiglottale sorda
+loc_ja: 無声喉頭蓋摩擦音
+loc_ko: 무성 후두개 마찰음
+loc_nl: Stemloze epiglottale fricatief
+loc_ru: Глухой эпиглоттальный щелевой согласный
+loc_vi: Âm sát thanh quản vô thanh
+loc_zh_CN: 清会厌擦音
+loc_zh_TW: 清會厭擦音
+%%
+Glyph: U+029D
+loc_de: Stimmloser palataler Frikativ
+loc_en: Voiced palatal fricative
+loc_es: Fricativa palatal sonora
+loc_fi: Soinniton palataalinen frikatiivi
+loc_fr: Consonne fricative palatale voisée
+loc_it: Fricativa palatale sonora
+loc_ja: 有声硬口蓋摩擦音
+loc_ko: 무성 경구개 마찰음
+loc_nl: Stemhebbende palatale fricatief
+loc_ru: Звонкий палатальный щелевой согласный
+loc_vi: Âm sát vòm hữu thanh
+loc_zh_CN: 浊硬颚擦音
+loc_zh_TW: 濁硬顎擦音
+%%
+Glyph: U+029F
+loc_de: Stimmhafter velarer lateraler Approximant
+loc_en: Voiced velar lateral approximant
+loc_es: Aproximante lateral velar sonora
+loc_fi: Soinnillinen velaarinen lateraalinen approksimantti
+loc_fr: Consonne spirante latérale vélaire voisée
+loc_it: Approssimante lateral velare sonora
+loc_ja: 有声軟口蓋側面接近音
+loc_ko: 유성 연구개 설측 접근음
+loc_nl: Stemhebbende velaire laterale approximant
+loc_ru: Звонкий велярный латеральный аппроксимант
+loc_vi: Âm tiếp cận cạnh vòm mềm
+loc_zh_CN: 浊软颚边音
+loc_zh_TW: 濁軟顎邊音
+%%
+Glyph: U+02A1
+loc_de: Epiglottaler Plosiv
+loc_en: Epiglottal plosive
+loc_es: Oclusiva epiglotal
+loc_fi: Epiglottaalinen klusiili
+loc_fr: Consonne occlusive épiglottale
+loc_it: Occlusiva epiglottale
+loc_ja: 喉頭蓋破裂音
+loc_ko: 후두개 파열음
+loc_nl: Epiglottale plosief
+loc_ru: Эпиглоттальный взрывной согласный
+loc_vi: Âm tắc thanh quản
+loc_zh_CN: 会厌塞音
+loc_zh_TW: 會厭塞音
+%%
+Glyph: U+02A2
+loc_de: Stimmhafter epiglottaler Frikativ
+loc_en: Voiced epiglottal fricative
+loc_es: Fricativa epiglotal sonora
+loc_fi: Soinnillinen epiglottaalinen frikatiivi
+loc_fr: Consonne fricative épiglottale voisée
+loc_it: Fricativa epiglottale sonora
+loc_ja: 有声喉頭蓋摩擦音或は接近音
+loc_ko: 유성 후두개 마찰음
+loc_nl: Stemhebbende epiglottale fricatief
+loc_ru: Звонкий эпиглоттальный щелевой согласный
+loc_vi: Âm sát thanh quản hữu thanh
+loc_zh_CN: 浊会厌擦音
+loc_zh_TW: 濁會厭擦音
+%%
+Glyph: U+02A9
+loc_de: Velopharyngealer Frikativ
+loc_en: Velopharyngeal fricative
+loc_es: Fricativa de velopharyngeal
+loc_fi: Velofaryngaalinen frikatiivi
+loc_fr: Fricative vélopharyngale
+loc_it: Fricativa velofaringale
+loc_ja: 口蓋帆咽頭摩擦音
+loc_ko: 구개범인두 마찰음
+loc_nl: Velofaryngale fricatief
+loc_ru: Щелевой небно-глоточный
+loc_vi: Âm sát thuộc màng hầu - hầu
+loc_zh_CN: 齶咽摩擦音
+loc_zh_TW: 齶咽摩擦音
+%%
+Glyph: U+02AA
+loc_de: Stimmloser lateralerized alveolarer Frikativ
+loc_en: Voiceless lateralized alveolar fricative
+loc_en_GB: Voiceless lateralised alveolar fricative
+loc_es: Fricativa alveolar sorda lateralizada
+loc_fi: Soinniton lateraalistnut alveolaarinen frikatiivi
+loc_fr: Consonne fricative alvéolaire sourde latéralisé
+loc_it: Laterale fricativa alveolare sorda
+loc_ja: 側音化した［ｓ］
+loc_ko: 무성 설측음화 자음 마찰음
+loc_nl: Stemloze gelateraliseerde alveolaire fricatief
+loc_ru: Глухой альвеолярный латерализованный щелевой согласный
+loc_vi: Âm sát chân răng bên vô thanh
+loc_zh_CN: 清边央齿龈擦音
+loc_zh_TW: 清邊央齒齦擦音
+%%
+Glyph: U+02AB
+loc_de: Stimmhafter lateralerized alveolarer Frikativ
+loc_en: Voiced lateralized alveolar fricative
+loc_en_GB: Voiced lateralised alveolar fricative
+loc_es: Fricativa alveolar sonora lateralizada
+loc_fi: Soinnillinen lateraalistnut alveolaarinen frikatiivi
+loc_fr: Consonne fricative alvéolaire voisée latéralisé
+loc_it: Laterale fricativa alveolare sonora
+loc_ja: 側音化した［ｚ］
+loc_ko: 유성 설측음화 자음 마찰음
+loc_nl: Stemhebbende gelateraliseerde alveolaire fricatief
+loc_ru: Звонкий альвеолярный латерализованный щелевой согласный
+loc_vi: Âm sát chân răng bên hữu thanh
+loc_zh_CN: 浊边央齿龈擦音
+loc_zh_TW: 濁邊央齒齦擦音
+%%
+Glyph: U+02AC
+loc_de: Bilabialer Schlag
+loc_en: Bilabial percussive
+loc_es: Bilabial de percusión
+loc_fi: Bilabiaalinen isku
+loc_fr: Percussion bilabiale
+loc_it: Percussiva bilabiale
+loc_ja: 両唇打撃音
+loc_ko: 양순 충돌음
+loc_nl: Bilabiale klap
+loc_ru: Губной удар
+loc_vi: Âm va đập đôi môi
+loc_zh_CN: 双唇碰击
+loc_zh_TW: 雙唇碰擊
+%%
+Glyph: U+02AD
+loc_de: Bidentaler Schlag
+loc_en: Bidental percussive
+loc_es: Bidental de percusión
+loc_fi: Bidentaalinen isku
+loc_fr: Percussion bidentale
+loc_it: Percussiva dentale
+loc_ja: 両歯打撃音
+loc_ko: 쌍치 충돌음
+loc_nl: Bidentale klap
+loc_ru: Двузубый удар
+loc_vi: Âm va đập hai răng
+loc_zh_CN: 双齿碰击
+loc_zh_TW: 雙齒碰擊
+%%
+Glyph: U+02B0
+loc_de: Aspiriert
+loc_en: Aspirated
+loc_es: Aspirada
+loc_fi: Aspiritou
+loc_fr: Aspiré
+loc_it: Aspirato
+loc_ja: 帯気音
+loc_ko: 유기음화
+loc_nl: Geaspireerd
+loc_ru: Аспирированный
+loc_vi: Bật hơi hóa
+loc_zh_CN: 送气
+loc_zh_TW: 送氣
+%%
+Glyph: U+02B2
+loc_de: Palatalisiert
+loc_en: Palatalized
+loc_en_GB: Palatalised
+loc_es: Palatalizada
+loc_fi: Palataalistunut
+loc_fr: Palatalisé
+loc_it: Palatalizzato
+loc_ja: 硬口蓋化音
+loc_ko: 경구개음화
+loc_nl: Gepalataliseerd
+loc_ru: Палатализованный
+loc_vi: Vòm hoá
+loc_zh_CN: 腭化
+loc_zh_TW: 腭化
+%%
+Glyph: U+02B6
+loc_de: Uvularisiert
+loc_en: Uvularized
+loc_en_GB: Uvularised
+loc_es: Uvularizada
+loc_fi: Uvulaaristunut
+loc_fr: Uvularisé
+loc_it: Uvularizzato
+loc_ja: 口蓋垂化音
+loc_ko: 구개수음화
+loc_nl: Geuvulariseerde
+loc_ru: Увуляризованный
+loc_vi: Lưỡi nhỏ hóa
+loc_zh_CN: 小舌化
+loc_zh_TW: 小舌化
+%%
+Glyph: U+02B7
+loc_de: Labialisiert
+loc_en: Labialized
+loc_en_GB: Labialised
+loc_es: Labializada
+loc_fi: Labiaalistunut
+loc_fr: Labialisé
+loc_it: Labializzato
+loc_ja: 円唇化音
+loc_ko: 순음화
+loc_nl: Gelabialiseerde
+loc_ru: Лабиализованный
+loc_vi: Âm môi hóa
+loc_zh_CN: 唇化
+loc_zh_TW: 唇化
+%%
+Glyph: U+02BC
+loc_de: Ejektivisiert
+loc_en: Ejective
+loc_es: Eyectiva
+loc_fi: Ejectiivi
+loc_fr: Éjective
+loc_it: Eiettive
+loc_ja: 放出音
+loc_ko: 방출음화
+loc_nl: Ejectief
+loc_ru: Абруптивы
+loc_vi: Tống ra
+loc_zh_CN: 挤喉音
+loc_zh_TW: 擠喉音
+%%
+Glyph: U+02C8
+loc_de: Hauptbetonung
+loc_en: Primary stress
+loc_es: Acento primario
+loc_fi: Pääpaino
+loc_fr: Accent primaire
+loc_it: Accento primario
+loc_ja: 第一ストレス
+loc_ko: 제1 강세
+loc_nl: Primaire klemtoon
+loc_ru: Основное ударение
+loc_vi: Trọng âm chính
+loc_zh_CN: 主重音
+loc_zh_TW: 主重音
+%%
+Glyph: U+02CC
+loc_de: Nebenbetonung
+loc_en: Secondary stress
+loc_es: Acento secundario
+loc_fi: Sivupaino
+loc_fr: Accent secondaire
+loc_it: Accento secondario
+loc_ja: 第二ストレス
+loc_ko: 제2 강세
+loc_nl: Secundaire klemtoon
+loc_ru: Дополнительное ударение
+loc_vi: Trọng âm phụ
+loc_zh_CN: 次重音
+loc_zh_TW: 次重音
+%%
+Glyph: U+02D0
+loc_de: Lang
+loc_en: Long
+loc_es: Larga
+loc_fi: Pitkä
+loc_fr: Longueur
+loc_it: Lungo
+loc_ja: 長
+loc_ko: 긴
+loc_nl: Lange
+loc_ru: Долгая гласная
+loc_vi: Dài
+loc_zh_CN: 长音
+loc_zh_TW: 長音
+%%
+Glyph: U+02D1
+loc_de: Halblang
+loc_en: Half-long
+loc_es: Semilarga
+loc_fi: Puolipitkä
+loc_fr: Mi-longueur
+loc_it: Mezzo lungo
+loc_ja: 半長
+loc_ko: 반장음
+loc_nl: Halflange
+loc_ru: Полудолгий звук
+loc_vi: Nửa dài
+loc_zh_CN: 半长音
+loc_zh_TW: 半長音
+%%
+Glyph: U+02D4
+loc_de: Erhöht
+loc_en: Raised
+loc_es: Levantada
+loc_fi: Suppeampi
+loc_fr: Monté
+loc_it: Innalzato
+loc_ja: 上寄り
+loc_ko: 올린
+loc_nl: Verhoogt
+loc_ru: Поднятый
+loc_vi: Nâng lên
+loc_zh_CN: 较高（抬）
+loc_zh_TW: 較高（抬）
+%%
+Glyph: U+02D5
+loc_de: Erniedrigt
+loc_en: Lowered
+loc_es: Bajada
+loc_fi: Väljempi
+loc_fr: Abaissé
+loc_it: Abbassato
+loc_ja: 下寄り
+loc_ko: 낮게 한
+loc_nl: Vernederd
+loc_ru: Опущенный
+loc_vi: Hạ xuống
+loc_zh_CN: 较低（降）
+loc_zh_TW: 較低（降）
+%%
+Glyph: U+02DE
+loc_de: Rhotizität
+loc_en: Rhotic
+loc_es: Rotización
+loc_fi: Roottinen
+loc_fr: Rhotique
+loc_it: Rotacizzato
+loc_ja: R音性
+loc_ko: R-착색된
+loc_nl: Rhotic
+loc_ru: Эризованный
+loc_vi: Âm R
+loc_zh_CN: 卷舌化
+loc_zh_TW: 捲舌化
+%%
+Glyph: U+02E0
+loc_de: Velarisiert
+loc_en: Velarized
+loc_en_GB: Velarised
+loc_es: Velarizada
+loc_fi: Velaaristunut
+loc_fr: Vélarisé
+loc_it: Velarizzato
+loc_ja: 軟口蓋化音
+loc_ko: 연구개음화
+loc_nl: Gevelariseerde
+loc_ru: Веляризованный
+loc_vi: Vòm mềm hóa
+loc_zh_CN: 软腭化
+loc_zh_TW: 軟腭化
+%%
+Glyph: U+02E1
+loc_de: Laterale Verschlusslösung
+loc_en: Lateral release
+loc_es: Soltamiento lateral
+loc_fi: Lateraalilaukeama
+loc_fr: Relâchement latéral
+loc_it: Rilascio laterale
+loc_ja: 側面開放
+loc_ko: 측음 방출
+loc_nl: Laterale vrijlating
+loc_ru: Латеральный отступ
+loc_vi: Thoát cạnh lưỡi
+loc_zh_CN: 边音除阻
+loc_zh_TW: 邊音除阻
+%%
+Glyph: U+02E4
+loc_de: Pharyngealisiert
+loc_en: Pharyngealized
+loc_en_GB: Pharyngealised
+loc_es: Faringealizada
+loc_fi: Faryngaalistunut
+loc_fr: Pharyngalisé
+loc_it: Faringalizzato
+loc_ja: 咽頭化音
+loc_ko: 인두음화
+loc_nl: Gefaryngealiseerde
+loc_ru: Фарингализованный
+loc_vi: Yết hầu hóa
+loc_zh_CN: 咽化
+loc_zh_TW: 咽化
+%%
+Glyph: U+02E5
+loc_de: Extrahoch
+loc_en: Extra high
+loc_es: Extra alto
+loc_fi: Erityis-korkea
+loc_fr: Ultra-haut
+loc_it: Altissimo
+loc_ja: 超高平版
+loc_ko: 특별히 높은
+loc_nl: Extra hoog
+loc_ru: Очень высокий
+loc_vi: Rất lên
+loc_zh_CN: 高
+loc_zh_TW: 高
+%%
+Glyph: U+02E6
+loc_de: Hoch
+loc_en: High
+loc_es: Alto
+loc_fi: Korkea
+loc_fr: Haut
+loc_it: Alto
+loc_ja: 高平版
+loc_ko: 높은
+loc_nl: Hoog
+loc_ru: Высокий
+loc_vi: Cao
+loc_zh_CN: 中高
+loc_zh_TW: 中高
+%%
+Glyph: U+02E7
+loc_de: Mittel
+loc_en: Mid
+loc_es: Medio
+loc_fi: Keski
+loc_fr: Moyen
+loc_it: Medio
+loc_ja: 中平版
+loc_ko: 중간
+loc_nl: Midden
+loc_ru: Средний
+loc_vi: Giữa
+loc_zh_CN: 中
+loc_zh_TW: 中
+%%
+Glyph: U+02E8
+loc_de: Tief
+loc_en: Low
+loc_es: Bajo
+loc_fi: Matala
+loc_fr: Bas
+loc_it: Basso
+loc_ja: 低平版
+loc_ko: 낮은
+loc_nl: Laag
+loc_ru: Низкий
+loc_vi: Nặng
+loc_zh_CN: 中低
+loc_zh_TW: 中低
+%%
+Glyph: U+02E9
+loc_de: Extratief
+loc_en: Extra low
+loc_es: Extra bajo
+loc_fi: Erityis-matala
+loc_fr: Ultra-bas
+loc_it: Bassissimo
+loc_ja: 超低平版
+loc_ko: 특별히 낮은
+loc_nl: Extra laag
+loc_ru: Очень низкий
+loc_vi: Rất nặng
+loc_zh_CN: 低
+loc_zh_TW: 低
+%%
+Glyph: U+02EC
+loc_de: Stimmhafter
+loc_en: Voiced
+loc_es: Sonora
+loc_fi: Soinnillinen
+loc_fr: Voisée
+loc_it: Sonora
+loc_ja: 有声化
+loc_ko: 유성음화
+loc_nl: Stemhebbende
+loc_ru: Озвончение
+loc_vi: Hữu thanh hóa
+loc_zh_CN: 浊化
+loc_zh_TW: 濁化
+%%
+Glyph: U+02ED
+loc_de: Unaspiriert
+loc_en: Unaspirated
+loc_es: No aspirada
+loc_fi: Aspiroimaton
+loc_fr: Non-aspiré
+loc_it: Non aspirato
+loc_ja: 無帯気音
+loc_ko: 무기음화
+loc_nl: Non-geaspireerd
+loc_ru: Непридыхательный
+loc_vi: Không bật hơi hóa
+loc_zh_CN: 不送气
+loc_zh_TW: 不送氣
+%%
+Glyph: U+0300
+loc_de: Tief
+loc_en: Low
+loc_es: Bajo
+loc_fi: Matala
+loc_fr: Bas
+loc_it: Basso
+loc_ja: 低平版
+loc_ko: 낮은
+loc_nl: Laag
+loc_ru: Низкий
+loc_vi: Nặng
+loc_zh_CN: 中低
+loc_zh_TW: 中低
+%%
+Glyph: U+0301
+loc_de: Hoch
+loc_en: High
+loc_es: Alto
+loc_fi: Korkea
+loc_fr: Haut
+loc_it: Alto
+loc_ja: 高平版
+loc_ko: 높은
+loc_nl: Hoog
+loc_ru: Высокий
+loc_vi: Cao
+loc_zh_CN: 中高
+loc_zh_TW: 中高
+%%
+Glyph: U+0302
+loc_de: Fallend
+loc_en: Falling
+loc_es: Caída
+loc_fi: Laskeva
+loc_fr: Descendant
+loc_it: Discendente
+loc_ja: 下降曲線
+loc_ko: 내려간다
+loc_nl: Vallend
+loc_ru: Снижение
+loc_vi: Đi xuống
+loc_zh_CN: 降调
+loc_zh_TW: 降調
+%%
+Glyph: U+0303
+loc_de: Nasaliert
+loc_en: Nasalized
+loc_en_GB: Nasalised
+loc_es: Nasalizada
+loc_fi: Nasaalistunut
+loc_fr: Nasalisé
+loc_it: Nasalizzato
+loc_ja: 鼻音化音
+loc_ko: 비음화
+loc_nl: Genasaliseerd
+loc_ru: Назализованный
+loc_vi: Mũi hoá
+loc_zh_CN: 鼻音化
+loc_zh_TW: 鼻音化
+%%
+Glyph: U+0304
+loc_de: Mittel
+loc_en: Mid
+loc_es: Intermedia
+loc_fi: Keski
+loc_fr: Moyen
+loc_it: Media
+loc_ja: 中平版
+loc_ko: 중간
+loc_nl: Midden
+loc_ru: Средний
+loc_vi: Giữa
+loc_zh_CN: 中
+loc_zh_TW: 中
+%%
+Glyph: U+0306
+loc_de: Extrakurz
+loc_en: Extra-short
+loc_es: Extra breve
+loc_fi: Erityisen lyhyt
+loc_fr: Brièveté
+loc_it: Brevissimo
+loc_ja: 超短
+loc_ko: 특별히 짧은
+loc_nl: Extra-kort
+loc_ru: Сверхкраткий звук
+loc_vi: Rất ngắn
+loc_zh_CN: 特短
+loc_zh_TW: 特短
+%%
+Glyph: U+0307
+loc_de: Geflüsterte Stimme
+loc_en: Whispery voiced
+loc_es: Voz susurrante
+loc_fi: Kuiskailevasoinnillinen
+loc_fr: Voix murmurée
+loc_it: Voce sussurrante
+loc_ja: ささやき声
+loc_ko: 속삭이는 목소리
+loc_nl: Fluisterend stem
+loc_ru: Шепчущий голос
+loc_vi: Tiếng thầm
+loc_zh_CN: 飒飒的声音
+loc_zh_TW: 颯颯的聲音
+%%
+Glyph: U+0308
+loc_de: Zentralisiert
+loc_en: Centralized
+loc_en_GB: Centralised
+loc_es: Centralizada
+loc_fi: Keskisempi
+loc_fr: Centralisée
+loc_it: Centralizzato
+loc_ja: 中舌寄り
+loc_ko: 중설화
+loc_nl: Gecentraliseerde
+loc_ru: Централизованный
+loc_vi: Hướng giữa
+loc_zh_CN: 较央
+loc_zh_TW: 較央
+%%
+Glyph: U+030A
+loc_de: Stimmlos
+loc_en: Voiceless
+loc_es: Sorda
+loc_fi: Soinniton
+loc_fr: Sourd
+loc_it: Sorda
+loc_ja: 無声音
+loc_ko: 무성음화
+loc_nl: Stemloze
+loc_ru: Глухой
+loc_vi: Không kêu
+loc_zh_CN: 清化
+loc_zh_TW: 清化
+%%
+Glyph: U+030B
+loc_de: Extrahoch
+loc_en: Extra high
+loc_es: Extra alto
+loc_fi: Erityis-korkea
+loc_fr: Ultra-haut
+loc_it: Altissimo
+loc_ja: 超高平版
+loc_ko: 특별히 높은
+loc_nl: Extra hoog
+loc_ru: Очень высокий
+loc_vi: Rất lên
+loc_zh_CN: 高
+loc_zh_TW: 高
+%%
+Glyph: U+030C
+loc_de: Steigend
+loc_en: Rising
+loc_es: Subida
+loc_fi: Nouseva
+loc_fr: Montant
+loc_it: Ascendente
+loc_ja: 上昇曲線
+loc_ko: 올라간다
+loc_nl: Hoog
+loc_ru: Подъём
+loc_vi: Đi lên
+loc_zh_CN: 升调
+loc_zh_TW: 升調
+%%
+Glyph: U+030D
+loc_de: Silbisch
+loc_en: Syllabic
+loc_es: Silábica
+loc_fi: Syllabinen
+loc_fr: Syllabique
+loc_it: Sillabico
+loc_ja: 音節主音
+loc_ko: 음절 문자화
+loc_nl: Syllabische
+loc_ru: Слоговой
+loc_vi: Âm tiết tính
+loc_zh_CN: 成音节
+loc_zh_TW: 成音節
+%%
+Glyph: U+030F
+loc_de: Extratief
+loc_en: Extra low
+loc_es: Extra bajo
+loc_fi: Erityis-matala
+loc_fr: Ultra-bas
+loc_it: Bassissimo
+loc_ja: 超低平版
+loc_ko: 특별히 낮은
+loc_nl: Extra laag
+loc_ru: Очень низкий
+loc_vi: Rất nặng
+loc_zh_CN: 低
+loc_zh_TW: 低
+%%
+Glyph: U+0311
+loc_de: Nichtsilbisch
+loc_en: Non-syllabic
+loc_es: No silábica
+loc_fi: Epäsyllabinen
+loc_fr: Non-syllabique
+loc_it: Non sillabico
+loc_ja: 音節副音
+loc_ko: 비-음절 문자화
+loc_nl: Non-syllabische
+loc_ru: Неслоговой
+loc_vi: Không âm tiết hoá
+loc_zh_CN: 不成音节
+loc_zh_TW: 不成音節
+%%
+Glyph: U+0318
+loc_de: Vorverlagerte Zungenwurzel
+loc_en: Advanced tongue root
+loc_es: Raíz de la lengua avanzada
+loc_fi: Etisempi kielen tyvi
+loc_fr: Racine linguale avancée
+loc_it: Radice della lingua avanzata
+loc_ja: 舌根前進
+loc_ko: 혀뿌리 전진
+loc_nl: Verplaatst vooruit tong
+loc_ru: Продвинутый корень языка
+loc_vi: Gốc lưỡi đưa về  trước
+loc_zh_CN: 舌根前移
+loc_zh_TW: 舌根前移
+%%
+Glyph: U+0319
+loc_de: Zurückverlagerte Zungenwurzel
+loc_en: Retracted tongue root
+loc_es: Raíz de la lengua retraída
+loc_fi: Takaisempi kielen tyvi
+loc_fr: Racine linguale rétractée
+loc_it: Radice della lingua arretrata
+loc_ja: 舌根後退
+loc_ko: 혀뿌리 뒤로
+loc_nl: Verplaatst achter tong
+loc_ru: Отодвинутый корень языка
+loc_vi: Gốc lưỡi đưa về co
+loc_zh_CN: 舌根后移
+loc_zh_TW: 舌根後移
+%%
+Glyph: U+031A
+loc_de: Nichthörbare Verschlusslösung (ungelöst)
+loc_en: No audible release
+loc_es: Sin soltamiento perceptible
+loc_fi: Hiljainen laukeama
+loc_fr: Sans relâchement audible
+loc_it: Rilascio non udibile
+loc_ja: 無開放
+loc_ko: 비 가청 방출
+loc_nl: Niet-hoorbare vrijlating
+loc_ru: Неразомкнутый
+loc_vi: Không thoát được ra âm thanh
+loc_zh_CN: 无声除阻
+loc_zh_TW: 無聲除阻
+%%
+Glyph: U+031C
+loc_de: Weniger gerundet
+loc_en: Less rounded
+loc_es: Menos redondeada
+loc_fi: Vähemmän pyöreämpi
+loc_fr: Moins arrondi
+loc_it: Meno arrotondato
+loc_ja: 円唇性弱
+loc_ko: 평순화
+loc_nl: Minder afgerond
+loc_ru: Менее огубленный
+loc_vi: Chưa tròn môi
+loc_zh_CN: 更展
+loc_zh_TW: 更展
+%%
+Glyph: U+031D
+loc_de: Erhöht
+loc_en: Raised
+loc_es: Levantada
+loc_fi: Suppeampi
+loc_fr: Monté
+loc_it: Innalzato
+loc_ja: 上寄り
+loc_ko: 올린
+loc_nl: Opgeheven
+loc_ru: Поднятый
+loc_vi: Nâng lên
+loc_zh_CN: 较高（抬）
+loc_zh_TW: 較高（抬）
+%%
+Glyph: U+031E
+loc_de: Erniedrigt
+loc_en: Lowered
+loc_es: Bajada
+loc_fi: Väljempi
+loc_fr: Abaissé
+loc_it: Abbassato
+loc_ja: 下寄り
+loc_ko: 낮게 한
+loc_nl: Verlaagd
+loc_ru: Опущенный
+loc_vi: Hạ xuống
+loc_zh_CN: 较低（降）
+loc_zh_TW: 較低（降）
+%%
+Glyph: U+031F
+loc_de: Vorverlagert
+loc_en: Advanced
+loc_es: Avanzada
+loc_fi: Etisempi
+loc_fr: Avancé
+loc_it: Avanzato
+loc_ja: 前寄り
+loc_ko: 전설화
+loc_nl: Verplaatst vooruit
+loc_ru: Продвинутый вперёд
+loc_vi: Đưa về trước
+loc_zh_CN: 较前
+loc_zh_TW: 較前
+%%
+Glyph: U+0320
+loc_de: Zurückverlagert
+loc_en: Retracted
+loc_es: Retraída
+loc_fi: Takaisempi
+loc_fr: Rétracté
+loc_it: Arretrato
+loc_ja: 後ろ寄り
+loc_ko: 후설화
+loc_nl: Verplaatst achter
+loc_ru: Отодвинутый назад
+loc_vi: Đưa về co
+loc_zh_CN: 较后
+loc_zh_TW: 較後
+%%
+Glyph: U+0323
+loc_de: Geflüsterte Stimme
+loc_en: Whispery voiced
+loc_es: Voz susurrante
+loc_fi: Kuiskailevasoinnillinen
+loc_fr: Voix murmurée
+loc_it: Voce sussurrante
+loc_ja: ささやき声
+loc_ko: 속삭이는 목소리
+loc_nl: Fluisterend stem
+loc_ru: Шепчущий голос
+loc_vi: Tiếng thầm
+loc_zh_CN: 飒飒的声音
+loc_zh_TW: 颯颯的聲音
+%%
+Glyph: U+0324
+loc_de: Behaucht
+loc_en: Breathy voiced
+loc_es: Voz murmurada
+loc_fi: Henkäyssoinnillinen
+loc_fr: Voix soufflée
+loc_it: Mormorato
+loc_ja: 息漏れ声
+loc_ko: 숨소리
+loc_nl: Aanzuiging
+loc_ru: Придыхательный голос
+loc_vi: Tiếng thều thào
+loc_zh_CN: 漏气音
+loc_zh_TW: 漏氣音
+%%
+Glyph: U+0325
+loc_de: Stimmlos
+loc_en: Voiceless
+loc_es: Voz floja
+loc_fi: Soinniton
+loc_fr: Dévoisé
+loc_it: Sorda
+loc_ja: 無声音
+loc_ko: 무성음화
+loc_nl: Stemloze
+loc_ru: Глухой
+loc_vi: Không kêu
+loc_zh_CN: 清化
+loc_zh_TW: 清化
+%%
+Glyph: U+0329
+loc_de: Silbisch
+loc_en: Syllabic
+loc_es: Silábica
+loc_fi: Syllabinen
+loc_fr: Syllabique
+loc_it: Sillabico
+loc_ja: 音節主音
+loc_ko: 음절 문자화
+loc_nl: Syllabische
+loc_ru: Слоговой
+loc_vi: Âm tiết hoá
+loc_zh_CN: 成音节
+loc_zh_TW: 成音節
+%%
+Glyph: U+032A
+loc_de: Dentalasiert
+loc_en: Dental
+loc_es: Dental
+loc_fi: Dentaalinen
+loc_fr: Dental << Univ Lyon IPA chart
+loc_it: Dentale
+loc_ja: 歯音
+loc_ko: 치음화
+loc_nl: Gedentaliseerde
+loc_ru: Дентальный
+loc_vi: Răng thuộc
+loc_zh_CN: 齿化
+loc_zh_TW: 齒化
+%%
+Glyph: U+032C
+loc_de: Stimmhaft
+loc_en: Voiced
+loc_es: Sonora
+loc_fi: Soinnillinen
+loc_fr: Voicé
+loc_it: Sonora
+loc_ja: 有声音
+loc_ko: 유성음화
+loc_nl: Stemhebbende
+loc_ru: Звонкий
+loc_vi: Kêu
+loc_zh_CN: 浊化
+loc_zh_TW: 濁化
+%%
+Glyph: U+032E
+loc_de: Extrakurz
+loc_en: Extra-short
+loc_es: Extra breve
+loc_fi: Erityisen lyhyt
+loc_fr: Brièveté
+loc_it: Brevissimo
+loc_ja: 超短
+loc_ko: 특별히 짧은
+loc_nl: Extra-kort
+loc_ru: Сверхкраткий звук
+loc_vi: Rất ngắn
+loc_zh_CN: 特短
+loc_zh_TW: 特短
+%%
+Glyph: U+032F
+loc_de: Nichtsilbisch
+loc_en: Non-syllabic
+loc_es: No silábica
+loc_fi: Epäsyllabinen
+loc_fr: Non-syllabique
+loc_it: Non sillabico
+loc_ja: 音節副音
+loc_ko: 비-음절 문자화
+loc_nl: Non-syllabische
+loc_ru: Неслоговой
+loc_vi: Phi âm tiết tính
+loc_zh_CN: 不成音节
+loc_zh_TW: 不成音節
+%%
+Glyph: U+0330
+loc_de: Laryngalisiert
+loc_en: Creaky voiced
+loc_es: Voz rechinada
+loc_fi: Nariseva
+loc_fr: Voix craquée
+loc_it: Laringalizzato
+loc_ja: 軋み声
+loc_ko: 삐걱거리는 소리
+loc_nl: Krakende stem
+loc_ru: Скрипучий голос
+loc_vi: Tiếng kẹt hoá
+loc_zh_CN: 吱嘎音
+loc_zh_TW: 吱嘎音
+%%
+Glyph: U+0334
+loc_de: Velarisiert oder pharyngealisiert
+loc_en: Velarized or pharyngealized
+loc_en_GB: Velarised or pharyngealised
+loc_es: Velarizada o faringealizada
+loc_fi: Velaaristunut tai faryngaalistunut
+loc_fr: Velarisé ou pharyngalisé
+loc_it: Velarizzato o faringalizzato
+loc_ja: 軟口蓋化音或は咽頭化音
+loc_ko: 연구개음화 또는 인두음화
+loc_nl: Gevelariseerde of gefaryngealiseerde
+loc_ru: Веляризованный или фарингализованный
+loc_vi: Vòm mềm hóa hoặc yết hầu hóa
+loc_zh_CN: 软腭化或咽化
+loc_zh_TW: 軟腭化或咽化
+%%
+Glyph: U+0339
+loc_de: Gerundeter
+loc_en: More rounded
+loc_es: Más redondeada
+loc_fi: Pyöreämpi
+loc_fr: Plus arrondi
+loc_it: Più arrotondato
+loc_ja: 円唇性強
+loc_ko: 원순화
+loc_nl: Weinig afgerond
+loc_ru: Более огубленный
+loc_vi: Tròn môi hơn
+loc_zh_CN: 更圆
+loc_zh_TW: 更圓
+%%
+Glyph: U+033A
+loc_de: Apikal
+loc_en: Apical
+loc_es: Apical
+loc_fi: Apikaalinen
+loc_fr: Apical
+loc_it: Apicale
+loc_ja: 舌尖音
+loc_ko: 설첨음화
+loc_nl: Apicale
+loc_ru: Апикальный
+loc_vi: Đầu lưỡi
+loc_zh_CN: 舌尖化
+loc_zh_TW: 舌尖化
+%%
+Glyph: U+033B
+loc_de: Laminal
+loc_en: Laminal
+loc_es: Laminal
+loc_fi: Laminaalinen
+loc_fr: Laminal
+loc_it: Laminale
+loc_ja: 舌端音
+loc_ko: 설단음화
+loc_nl: Laminale
+loc_ru: Ламинальный
+loc_vi: Phiến lưỡi
+loc_zh_CN: 舌叶化
+loc_zh_TW: 舌葉化
+%%
+Glyph: U+033C
+loc_de: Linguolabialer
+loc_en: Linguolabial
+loc_es: Linguolabial
+loc_fi: Linguolabiaalinen
+loc_fr: Linguolabial
+loc_it: Linguolabiale
+loc_ja: 舌唇音
+loc_ko: 설순음화
+loc_nl: Linguolabiale
+loc_ru: Язычногубной
+loc_vi: Lưỡi môi
+loc_zh_CN: 舌唇化
+loc_zh_TW: 舌脣化
+%%
+Glyph: U+033D
+loc_de: Zur Mitte zentralisiert
+loc_en: Mid-centralized
+loc_en_GB: Mid-centralised
+loc_es: Medio centralizada
+loc_fi: Redusoitunut
+loc_fr: Semi-centralisé
+loc_it: Semi-centralizzato
+loc_ja: 中段中舌寄り
+loc_ko: 반-중설화
+loc_nl: Halverwege gecentraliseerde
+loc_ru: Средне-централизованный
+loc_vi: Hướng giữa trung
+loc_zh_CN: 中央化
+loc_zh_TW: 中央化
+%%
+Glyph: U+0346
+loc_de: Dentolabialisert
+loc_en: Dentolabial
+loc_es: Dentolabial
+loc_fi: Dentolabiaalinen
+loc_fr: Dentilabiale
+loc_it: Dentolabiale
+loc_ja: 歯唇音
+loc_ko: 치순음
+loc_nl: Dentolabiale
+loc_ru: Зубогубной
+loc_vi: Răng môi
+loc_zh_CN: 齿脣化
+loc_zh_TW: 齒脣化
+%%
+Glyph: U+0346 U+032A
+loc_de: Interdental/bidental
+loc_en: Interdental/bidental
+loc_es: Interdental/bidental
+loc_fi: Interdentallinen/bidentaalinen
+loc_fr: Interdentaire/bidental
+loc_it: Interdentale/bidental
+loc_ja: 歯間音・両歯音
+loc_ko: 치간/쌍치
+loc_nl: Interdentale/bidentale
+loc_ru: Межзубных/двузубый
+loc_vi: Khe răng / hai răng
+loc_zh_CN: 齿间／双齿
+loc_zh_TW: 齒間／雙齒
+%%
+Glyph: U+0347
+loc_de: Alveolar
+loc_en: Alveolar
+loc_es: Alveolar
+loc_fi: Alveolaarinen
+loc_fr: Alvéolaire
+loc_it: Alveolare
+loc_ja: 歯茎化音
+loc_ko: 치경음
+loc_nl: Alveolaar
+loc_ru: Альвеолярный
+loc_vi: Chân răng
+loc_zh_CN: 齿龈化
+loc_zh_TW: 齒齦化
+%%
+Glyph: U+0348
+loc_de: Starke Artikulation
+loc_en: Strong articulation
+loc_es: Articulación fuerte
+loc_fi: Vahva artikulaatio
+loc_fr: Articulation forte
+loc_it: Articolazione forte
+loc_ja: 強めの調音
+loc_ko: 경음화
+loc_nl: Sterke articulatie
+loc_ru: Сильная артикуляция
+loc_vi: Câu âm mạnh
+loc_zh_CN: 強发音
+loc_zh_TW: 強發音
+%%
+Glyph: U+0349
+loc_de: Schwache Artikulation
+loc_en: Weak articulation
+loc_es: Articulación débil
+loc_fi: Heikko artikulaatio
+loc_fr: Articulation faible
+loc_it: Articolazione debole
+loc_ja: 弱め調音
+loc_ko: 연음화
+loc_nl: Zwakke articulatie
+loc_ru: Слабая артикуляция
+loc_vi: Câu âm yếu
+loc_zh_CN: 弱发音
+loc_zh_TW: 弱發音
+%%
+Glyph: U+034A
+loc_de: Denasaliert
+loc_en: Denasal
+loc_es: Denasal
+loc_fi: Denasaalistuminen
+loc_fr: Dénasale
+loc_it: Denasal
+loc_ja: 非鼻音化
+loc_ko: 비비음화
+loc_nl: Denasale
+loc_ru: Деназализация
+loc_vi: Hiện tượng mất mũi hoá
+loc_zh_CN: 去鼻音化
+loc_zh_TW: 去鼻音化
+%%
+Glyph: U+034B
+loc_de: Nasaler Durchschlag
+loc_en: Nasal escape
+loc_es: Fricativa nasal o frication
+loc_fi: Nasaalinen vuoto
+loc_fr: Nasillement
+loc_it: Fricative nasale o frication
+loc_ja: 鼻腔流出
+loc_ko: 비강 누출
+loc_nl: Nasale ontsnapping
+loc_ru: Закрытая гнусавость
+loc_vi: Giọng mũi
+loc_zh_CN: 鼻腔洩气
+loc_zh_TW: 鼻腔洩氣
+%%
+Glyph: U+034C
+loc_de: Velopharyngeale Reibung
+loc_en: Velopharyngeal friction
+loc_es: Fricativa de velopharyngeal
+loc_fi: Velofaryngaalinen hankaus
+loc_fr: Friction vélopharyngale
+loc_it: Frizione velofaringale
+loc_ja: 口蓋帆咽頭摩擦音
+loc_ko: 구개범인두 마찰
+loc_nl: Velofaryngale wrijving
+loc_ru: Небно-глоточная фрикация
+loc_vi: Tiếng xát thuộc màng hầu - hầu
+loc_zh_CN: 齶咽摩擦
+loc_zh_TW: 齶咽摩擦
+%%
+Glyph: U+034D
+loc_de: Labiale spreading
+loc_en: Labial spreading
+loc_es: El separarse de labial 
+loc_fi: Labiaalinen leviäminen
+loc_fr: Écartement labial
+loc_it: Diffusione labiale
+loc_ja: 張唇
+loc_ko: 스트레칭 순음
+loc_nl: Labiaal verspreiding
+loc_ru: Распространённый губной
+loc_vi: Lan rộng môi
+loc_zh_CN: 唇部伸展
+loc_zh_TW: 唇部伸展
+%%
+Glyph: U+034E
+loc_de: Gepfiffene Artikulation
+loc_en: Whistled articulation
+loc_es: Silbado articulación
+loc_fi: Viheltävä artikulaatio
+loc_fr: Articulation siflée
+loc_it: Fischiato articolazione
+loc_ja: 口笛を含む調音
+loc_ko: 휘파람 조음
+loc_nl: Floot articulatie
+loc_ru: Свистящая артикуляция
+loc_vi: Câu âm huýt sáo
+loc_zh_CN: 哨子音
+loc_zh_TW: 哨子音
+%%
+Glyph: U+0351
+loc_de: Weniger gerundet
+loc_en: Less rounded
+loc_es: Menos redondeada
+loc_fi: Vähemmän pyöreämpi
+loc_fr: Moins arrondi
+loc_it: Meno arrotondato
+loc_ja: 円唇性弱
+loc_ko: 평순화
+loc_nl: Minder afgerond
+loc_ru: Менее огубленный
+loc_vi: Chưa tròn môi
+loc_zh_CN: 更展
+loc_zh_TW: 更展
+%%
+Glyph: U+0353
+loc_de: Zur Mitte zentralisiert
+loc_en: Mid-centralized
+loc_en_GB: Mid-centralised
+loc_es: Medio centralizada
+loc_fi: Redusoitunut
+loc_fr: Mi-centralisé
+loc_it: Semi-centralizzato
+loc_ja: 中段中舌寄り
+loc_ko: 반-중설화
+loc_nl: Halverwege gecentraliseerde
+loc_ru: Средне-централизованный
+loc_vi: Hướng giữa trung
+loc_zh_CN: 中央化
+loc_zh_TW: 中央化
+%%
+Glyph: U+0354
+loc_de: Lateral-beginnender Offset
+loc_en: Laterally offset left
+loc_es: Compensada lateralmente el al izquierdo
+loc_fi: Sivuttain vasemmalle
+loc_fr: Latéralement décentré à gauche
+loc_it: Offset lateralmente a sinistra
+loc_ja: 左側に偏った
+loc_ko: 왼쪽에 치우친
+loc_nl: Lateraal offset links
+loc_ru: Латеральное смещение влево
+loc_vi: Chuyển vị ngang trái
+loc_zh_CN: 偏向左侧
+loc_zh_TW: 偏向左側
+%%
+Glyph: U+0355
+loc_de: Lateral-endender Offset
+loc_en: Laterally offset right
+loc_es: Compensada lateralmente el al derecho
+loc_fi: Sivuttain oikealle
+loc_fr: Latéralement décentré à droite
+loc_it: Offset lateralmente a destra
+loc_ja: 右側に偏った
+loc_ko: 오른쪽에 치우친
+loc_nl: Lateraal offset rechts
+loc_ru: Латеральное смещение вправо
+loc_vi: Chuyển vị ngang phải
+loc_zh_CN: 偏向右侧
+loc_zh_TW: 偏向右側
+%%
+Glyph: U+0357
+loc_de: Gerundeter
+loc_en: More rounded
+loc_es: Más redondeada
+loc_fi: Pyöreämpi
+loc_fr: Plus arrondi
+loc_it: Più arrotondato
+loc_ja: 円唇性強
+loc_ko: 원순화
+loc_nl: Weinig afgerond
+loc_ru: Более огубленный
+loc_vi: Tròn môi hơn
+loc_zh_CN: 更圆
+loc_zh_TW: 更圓
+%%
+Glyph: U+035C
+loc_de: Affrikative oder doppelte Artikulation (Lautverbindung/Liaison)
+loc_en: Affricate or double articulation
+loc_es: Africada o oclusiva de doble articulación
+loc_fi: Affrikaatta ja kaksoiartikulaatio
+loc_fr: Affriquée ou articulation double
+loc_it: Affricata o coarticolazione
+loc_ja: 破擦音或は二重調音
+loc_ko: 파찰음 또는 이중조음
+loc_nl: Affrikative of dubbele articulatie
+loc_ru: Аффрикаты или двойная артикуляция
+loc_vi: Tắc xát hoặc câu âm đôi
+loc_zh_CN: 塞擦音或双连音
+loc_zh_TW: 塞擦音或雙連音
+%%
+Glyph: U+0361
+loc_de: Affrikative oder doppelte Artikulation (Lautverbindung/Liaison)
+loc_en: Affricate or double articulation
+loc_es: Africada o oclusiva de doble articulación
+loc_fi: Affrikaatta ja kaksoiartikulaatio
+loc_fr: Affriquée ou articulation double
+loc_it: Affricata o coarticolazione
+loc_ja: 破擦音或は二重調音
+loc_ko: 파찰음 또는 이중조음
+loc_nl: Affrikative of dubbele articulatie
+loc_ru: Аффрикаты или двойная артикуляция
+loc_vi: Tắc xát hoặc câu âm đôi
+loc_zh_CN: 塞擦音或双连音
+loc_zh_TW: 塞擦音或雙連音
+%%
+Glyph: U+0362
+loc_de: Gleitende Artikulation
+loc_en: Sliding articulation
+loc_es: Articulación de slurred
+loc_fi: Liukuva artikulaatio
+loc_fr: Articulation glissante
+loc_it: Articolazione fare scorrere
+loc_ja: 滑り調音
+loc_ko: 미끄러져 움직이는 조음
+loc_nl: Glijdende articulatie
+loc_ru: Скользящая артикуляция
+loc_vi: Câu âm trượt
+loc_zh_CN: 发音滑换
+loc_zh_TW: 發音滑換
+%%
+Glyph: U+0398
+loc_de: Interdentale Artikulation als Langzeitmerkmal
+loc_en: Protruded tongue voice
+loc_es: Voz de lengua salía
+loc_fi: Työntyvän kielen puhe
+loc_fr: Parole interdentaire de longue durée
+loc_it: Voce di lingua sporgente
+loc_ja: 舌を突き出して発した声
+loc_ko: 혀 돌출 목소리
+loc_nl: Interdentale articulatie als een lange feature
+loc_ru: Межзубная артикуляция
+loc_vi: Lời nói lưỡi nhô
+loc_zh_CN: 舌凸出声音
+loc_zh_TW: 舌凸出聲音
+%%
+Glyph: U+03B2
+loc_de: Stimmhafter bilabialer Frikativ
+loc_en: Voiced bilabial fricative
+loc_es: Fricativa bilabial sonora
+loc_fi: Soinnillinen bilabiaalinen frikatiivi
+loc_fr: Consonne fricative bilabiale voisée
+loc_it: Fricativa bilabiale sonora
+loc_ja: 有声両唇摩擦音
+loc_ko: 유성 양순 마찰음
+loc_nl: Stemhebbende bilabiale fricatief
+loc_ru: Звонкий билабиальный щелевой согласный
+loc_vi: Âm sát đôi môi hữu thanh
+loc_zh_CN: 浊双唇擦音
+loc_zh_TW: 濁雙唇擦音
+%%
+Glyph: U+03B8
+loc_de: Stimmloser dentaler Frikativ
+loc_en: Voiceless dental fricative
+loc_es: Fricativa dental sorda
+loc_fi: Soinniton dentaalinen frikatiivi
+loc_fr: Consonne fricative dentale sourde
+loc_it: Fricativa dentale sorda
+loc_ja: 無声歯摩擦音
+loc_ko: 무성 치 마찰음
+loc_nl: Stemloze dentale fricatief
+loc_ru: Глухой зубной щелевой согласный
+loc_vi: Âm sát răng vô thanh
+loc_zh_CN: 清齿擦音
+loc_zh_TW: 清齒擦音
+%%
+Glyph: U+03C7
+loc_de: Stimmloser uvularer Frikativ
+loc_en: Voiceless uvular fricative
+loc_es: Fricativa uvular sorda
+loc_fi: Soinniton uvulaarinen frikatiivi
+loc_fr: Consonne fricative uvulaire sourde
+loc_it: Fricativa uvulare sorda
+loc_ja: 無声口蓋垂摩擦音
+loc_ko: 무성 구개수 마찰음
+loc_nl: Stemloze uvulaire fricatief
+loc_ru: Глухой увулярный щелевой согласный
+loc_vi: Âm sát lưỡi nhỏ vô thanh
+loc_zh_CN: 清小舌擦音
+loc_zh_TW: 清小舌擦音
+%%
+Glyph: U+0418
+loc_de: Elektrolarynxstimme
+loc_en: Electrolarynx speech
+loc_es: Discurso de electrolaringe
+loc_fi: Keinotekoista kurkunpäätä puhe
+loc_fr: Parole électrolaryngienne
+loc_it: Discorso electrolarynx
+loc_ja: 電子喉頭の音声
+loc_ko: 인공후두 음성
+loc_nl: Elektrolarynxstem
+loc_ru: Электрогортанный звук
+loc_vi: Lời nói thanh quản điện
+loc_zh_CN: 人工喉言语
+loc_zh_TW: 人工喉言語
+%%
+Glyph: U+042E
+loc_de: Tracheo-Ösophagusstimme
+loc_en: Tracheo-esophageal speech
+loc_en_GB: Tracheo-oesophageal speech
+loc_es: Discurso de traqueo-esofágico
+loc_fi: Henkitorven ja ruokatorven puhe
+loc_fr: Parole trachée-œsophagienne
+loc_it: Discorso tracheoesofagea
+loc_ja: 気管食道発声法 << KOKG derived, checked web
+loc_ko: 도관식도 음성
+loc_nl: Tracheooesofageale stem
+loc_ru: Трахеоэзофагеальный звук
+loc_vi: Lời nói khí thực quản
+loc_zh_CN: 气管食管言语
+loc_zh_TW: 氣管食管言語
+%%
+Glyph: U+1DB9
+loc_de: Labiodentalisiert
+loc_en: Labiodentalized
+loc_en_GB: Labiodentalised
+loc_es: Labiodentalizada
+loc_fi: Labiodentaalistunut
+loc_fr: Labiodentalisé
+loc_it: Labiodentalizzato
+loc_ja: 唇歯化音
+loc_ko: 순치음화
+loc_nl: Gelabiodentaliseerde
+loc_ru: Лабио-дентализованный
+loc_vi: Môi răng hoá
+loc_zh_CN: 唇齿化
+loc_zh_TW: 唇齒化
+%%
+Glyph: U+1DC4
+loc_de: Hochsteigend
+loc_en: High rising
+loc_es: Alto subida
+loc_fi: Korkea nouseva
+loc_fr: Haut montant
+loc_it: Alto ascendente
+loc_ja: 高上昇曲線
+loc_ko: 높은 상승
+loc_nl: Hoog stijgende
+loc_ru: Высокий восходящий
+loc_vi: Cao lên
+loc_zh_CN: 高升调
+loc_zh_TW: 高升調
+%%
+Glyph: U+1DC5
+loc_de: Tiefsteigend
+loc_en: Low rising
+loc_es: Bajo subida
+loc_fi: Matala nouseva
+loc_fr: Bas montant
+loc_it: Basso ascendente
+loc_ja: 低上昇曲線
+loc_ko: 낮은 상승
+loc_nl: Laag stijgende
+loc_ru: Низкий восходящий
+loc_vi: Nặng lên
+loc_zh_CN: 低升调
+loc_zh_TW: 低升調
+%%
+Glyph: U+1DC6
+loc_de: Tieffallend
+loc_en: Low falling
+loc_es: Bajo caída
+loc_fi: Matala laskeva
+loc_fr: Bas descendant
+loc_it: Basso discendente
+loc_ja: 低下降曲線
+loc_ko: 낮은 떨어지고
+loc_nl: Laag fallend
+loc_ru: Низкий нисходящий
+loc_vi: Nặng xuống
+loc_zh_CN: 低降调
+loc_zh_TW: 低降調
+%%
+Glyph: U+1DC7
+loc_de: Hochfallend
+loc_en: High falling
+loc_es: Alto caída
+loc_fi: Korkea laskeva
+loc_fr: Haut descendant
+loc_it: Alto discendente
+loc_ja: 高下降曲線
+loc_ko: 높은 떨어지고
+loc_nl: Hoog fallend
+loc_ru: Высокий нисходящий
+loc_vi: Cao xuống
+loc_zh_CN: 高降调
+loc_zh_TW: 高降調
+%%
+Glyph: U+1DC8
+loc_de: Erhöht
+loc_en: Peaking
+loc_es: Subida caída
+loc_fi: Nouseva-laskeva
+loc_fr: Montant descendant
+loc_it: Ascendente discendente
+loc_ja: 下昇上降曲線
+loc_ko: 상승 떨어지고
+loc_nl: Stijgende fallende
+loc_ru: Восходящий-нисходящий
+loc_vi: Lên xuống
+loc_zh_CN: 升降调
+loc_zh_TW: 升降調
+%%
+Glyph: U+1DC9
+loc_de: Abgesenkt
+loc_en: Dipping
+loc_es: Caída subida
+loc_fi: Laskeva-nouseva
+loc_fr: Descendant montant
+loc_it: Discendente ascendente
+loc_ja: 上昇下降曲線
+loc_ko: 떨어지고 상승
+loc_nl: Fallende stijgende
+loc_ru: Нисходящий-восходящий
+loc_vi: Xuống lên
+loc_zh_CN: 降升调
+loc_zh_TW: 降升調
+%%
+Glyph: U+2016
+loc_de: Übergeordnete Intonationsgruppe
+loc_en: Major (intonation) group
+loc_es: Grupo mayor
+loc_fi: Rytmijakso
+loc_fr: Groupe majeur (intonation)
+loc_it: Gruppo principale
+loc_ja: 大きな(イントネーションの)纏り
+loc_ko: 큰 그룹
+loc_nl: Belangrijk (intonatie) groep
+loc_ru: Значительный разрыв
+loc_vi: Nhóm lớn (ngữ điệu)
+loc_zh_CN: 主句（语调）组
+loc_zh_TW: 主句（語調）組
+%%
+Glyph: U+203C
+loc_de: Taschenfaltenstimme
+loc_en: Ventricular phonation
+loc_es: Vibración ventricular
+loc_fi: Ventrikulaarinen fonaatio
+loc_fr: Voisement ventriculaire
+loc_it: Fonazione ventricolare
+loc_ja: 仮声帯音
+loc_ko: 허위 유성음 발성
+loc_nl: Vestibulaire plooien stem
+loc_ru: Вентрикулярный голос
+loc_vi: Sự phát âm dây thanh âm giả
+loc_zh_CN: 假声带音
+loc_zh_TW: 假聲帶音
+%%
+Glyph: U+203F
+loc_de: Ununterbrochene Lautverbindung
+loc_en: Linking (absence of a break)
+loc_es: Ausencia de ruptura
+loc_fi: Yhteys (ei taukoa)
+loc_fr: Liaison (absence d'une pause)
+loc_it: Collegamento (assenza di una rottura)
+loc_ja: 連結（切れ目無し）
+loc_ko: 연결 (경계 없음)
+loc_nl: Continue sound groep
+loc_ru: Связывание (Отсутствие перерыва)
+loc_vi: Sự nối (không sự ngắt)
+loc_zh_CN: 连接（不间断）
+loc_zh_TW: 連接（不間斷）
+%%
+Glyph: U+207F
+loc_de: Nasale Verschlusslösung
+loc_en: Nasal release
+loc_es: Soltamiento nasal
+loc_fi: Nasaalilaukeama
+loc_fr: Relâchement nasal
+loc_it: Rilascio nasale
+loc_ja: 鼻腔開放
+loc_ko: 비음 방출
+loc_nl: Nasale vrijlating
+loc_ru: Назальный отступ
+loc_vi: Thoát mũi
+loc_zh_CN: 鼻音除阻
+loc_zh_TW: 鼻音除阻
+%%
+Glyph: U+208D
+loc_de: Teilweise beginnend (Stimmhaftigkeit/Sonoritätsschwund)
+loc_en: Initial partial (voicing/devoicing)
+loc_es: Inicial parcial (voicing/devoicing)
+loc_fi: Ensimmäinen osittainen (soinnillinen/ei-soinnillinen)
+loc_fr: (Voisement/dévoisement) initial partiel
+loc_it: Iniziale parziale (voicing/devoicing)
+loc_ja: 初期部分（有声化・無声化）
+loc_ko: 초기 부분 (유성음화/무성음화)
+loc_nl: Initieel gedeeltelijke (voicing/devoicing)
+loc_ru: Первоначальные частичные (озвончение/оглушение)
+loc_vi: (hữu thanh hóa / mất thanh hóa) ban đầu một phần
+loc_zh_CN: 初部分（清化／浊化）
+loc_zh_TW: 初部分（清化／濁化）
+%%
+Glyph: U+208E
+loc_de: Teilweise endend (Stimmhaftigkeit/Sonoritätsschwund)
+loc_en: Final partial (voicing/devoicing)
+loc_es: Parcial del final (voicing/devoicing)
+loc_fi: Lopullinen osittainen (soinnillinen/ei-soinnillinen)
+loc_fr: (Voisement/dévoisement) final partiel
+loc_it: Finale parziale (voicing/devoicing)
+loc_ja: 最終部分（有声化・無声化）
+loc_ko: 마지막 부분 (유성음화/무성음화)
+loc_nl: Finaal gedeeltelijke (voicing/devoicing)
+loc_ru: Заключительный частичное (озвончение/оглушение)
+loc_vi: (hữu thanh hóa / mất thanh hóa) cuối cùng một phần
+loc_zh_CN: 末部分（清化／浊化）
+loc_zh_TW: 末部分（清化／濁化）
+%%
+Glyph: U+2191
+loc_de: Egressiver Luftstrom
+loc_en: Egressive airflow
+loc_es: Circulación de aire de engressive
+loc_fi: Egressiivinen ilmavirta
+loc_fr: Flux d’air égressif
+loc_it: Flusso d'aria egressiva
+loc_ja: 呼気
+loc_ko: 호기
+loc_nl: Egressive luchtstroom
+loc_ru: Воздушный поток экспираторный
+loc_vi: Dòng không khí sự chảy
+loc_zh_CN: 呼气
+loc_zh_TW: 呼氣
+%%
+Glyph: U+2193
+loc_de: Ingressiver Luftstrom
+loc_en: Ingressive airflow
+loc_es: Circulación de aire ingressive
+loc_fi: Ingressiivinen ilmavirta
+loc_fr: Flux d’air ingressif
+loc_it: Flusso d'aria ingressiva
+loc_ja: 吸気
+loc_ko: 흡기
+loc_nl: Ingressive luchtstroom
+loc_ru: Воздушный поток ингрессивный
+loc_vi: Dòng không khí hút
+loc_zh_CN: 吸气
+loc_zh_TW: 吸氣
+%%
+Glyph: U+2197
+loc_de: Global steigend
+loc_en: Global rise
+loc_es: Subida global
+loc_fi: Ylainen nousu
+loc_fr: Montée global
+loc_it: Aumento globale
+loc_ja: 全体的上昇
+loc_ko: 전체적인 상승
+loc_nl: Wereldwijd groeit
+loc_ru: Общий подъём
+loc_vi: Tổng thể gia tăng
+loc_zh_CN: 升语调
+loc_zh_TW: 升語調
+%%
+Glyph: U+2198
+loc_de: Global fallend
+loc_en: Global fall
+loc_es: Bajada global
+loc_fi: Ylainen laksu
+loc_fr: Descente globale
+loc_it: Caduta globale
+loc_ja: 全体的下降
+loc_ko: 전체적인 하강
+loc_nl: Wereldwijd val
+loc_ru: Общее снижение
+loc_vi: Tổng thể từ chối
+loc_zh_CN: 降语调
+loc_zh_TW: 降語調
+%%
+Glyph: U+274D
+loc_de: Nichtbestimmtes Segment(e)
+loc_en: Unidentified segment(s)
+loc_es: Segmento(s) no identificados
+loc_fi: Tunnistamaton segmentin(t)
+loc_fr: Segment(s) non identifié
+loc_it: Segmento/i non identificati
+loc_ja: 確認されない分節
+loc_ko: 확인되지 않는 부품
+loc_nl: Onbepaald segment(en)
+loc_ru: Неизвестные сегменты
+loc_vi: Đoạn không nhận biết được
+loc_zh_CN: 身份不明的部分
+loc_zh_TW: 身份不明的部分
+%%
+Glyph: U+2C71
+loc_de: Stimmhafter labiodentaler Flap
+loc_en: Voiced labiodental flap
+loc_es: Vibrante simple labiodental sonora
+loc_fi: Soinnillinen labiodentaalinen yksitäryinen tremulantti
+loc_fr: Consonne battue labio-dentale voisée
+loc_it: Monovibrante labiodentale sonora
+loc_ja: 有声唇歯叩き音
+loc_ko: 유성 순치 탄음
+loc_nl: Stemhebbende labiodentale flap
+loc_ru: Звонкий губно-зубной одноударный согласный
+loc_vi: Âm vỗ môi răng
+loc_zh_CN: 浊唇齿闪音
+loc_zh_TW: 濁唇齒閃音
+%%
+Glyph: U+A71B
+loc_de: Upstep
+loc_en: Upstep
+loc_es: Ascendente
+loc_fi: Askel ylös
+loc_fr: Élévation tonale
+loc_it: Upstep
+loc_ja: 高目
+loc_ko: 업스텝
+loc_nl: Upstep <<
+loc_ru: Шаг вверх
+loc_vi: Tăng giọng điệu
+loc_zh_CN: 升阶
+loc_zh_TW: 升階
+%%
+Glyph: U+A71C
+loc_de: Downstep
+loc_en: Downstep
+loc_es: Descendente
+loc_fi: Askel alas
+loc_fr: Faille tonale
+loc_it: Downstep
+loc_ja: 低目
+loc_ko: 다운스텝
+loc_nl: Downstep <<
+loc_ru: Шаг вниз
+loc_vi: Giảm giọng điệu
+loc_zh_CN: 降阶
+loc_zh_TW: 降階
+%%
+Glyph: Unsupported
+loc_de: Das aktuelle Programm unterstützt keine reinen Unicode-Zeichen.
+loc_en: The current application does not support this Unicode-only character.
+loc_es: Esta aplicación no permite usar este carácter exclusivo de Unicode.
+loc_fi: Ohjelma ei tue tätä Unicode-merkkiä.
+loc_fr: L’application actuelle ne gère pas ce caractère Unicode pur.
+loc_it: L'applicazione in uso non supporta questo carattere unico di Unicode.
+loc_ja: 現在のアプリケーションは、この Unicode 専用の文字に対応していません。
+loc_ko: 현재 응용 프로그램은 이 유니코드 전용 문자를 지원하지 않습니다.
+loc_nl: Het huidige programma ondersteunt dit teken niet, omdat het alleen in Unicode voorkomt
+loc_ru: Текущая программа не поддерживает этот только-Unicode символ.
+loc_vi: Ứng dụng hiện tại không hỗ trợ Unicode chỉ ký tự.
+loc_zh_CN: 当前应用程序不支持仅为 Unicode 的字符。
+loc_zh_TW: 目前所用的應用程式不支援這個 Unicode 獨有的字元。
+%%
+Glyph: __ADD_SYMBOL__
+loc_de: Angepasstes…
+loc_en: Custom Symbols…
+loc_es: Símbolos personalizados…
+loc_fi: Mukautettu…
+loc_fr: Personnaliser…
+loc_it: Segni ad hoc…
+loc_ja: カスタム⋯
+loc_ko: 사용자화…
+loc_nl: Aangepast…
+loc_ru: Пользовательские…
+loc_vi: Riêng…
+loc_zh_CN: 自定⋯
+loc_zh_TW: 自定⋯
+%%
+Glyph: __CANCEL__
+loc_de: Abbrechen
+loc_en: Cancel
+loc_es: Cancelar
+loc_fi: Kumoa
+loc_fr: Annuler
+loc_it: Annulla
+loc_ja: キャンセル
+loc_ko: 취소
+loc_nl: Annuleer
+loc_ru: Отменить
+loc_vi: Hủy bỏ
+loc_zh_CN: 取消 
+loc_zh_TW: 取消
+%%
+Glyph: __CHARTS__
+loc_de: Tabellen
+loc_en: Tables
+loc_es: Tablas
+loc_fi: Kaavioiden
+loc_fr: Tableaux
+loc_it: Tabelle
+loc_ja: 図
+loc_ko: 도표
+loc_nl: Tabellen
+loc_ru: Таблицы
+loc_vi: Bảng
+loc_zh_CN: 图
+loc_zh_TW: 圖
+%%
+Glyph: __COMPONENT_DEBUGGING__
+loc_de: Komponent-Debugger
+loc_en: Component Debug
+loc_es: Depuración de componente
+loc_fi: Komponentti-vianetsintä
+loc_fr: Composant Déboguer
+loc_it: Debug di componente
+loc_ja: コンポーネントのデバッグ
+loc_ko: 구성요소 디버그
+loc_nl: Component-Debugger
+loc_ru: Отладка компонента
+loc_vi: Gỡ lỗi Component
+loc_zh_CN: Component调试
+loc_zh_TW: Component調試
+%%
+Glyph: __CONS__
+loc_de: Konsonant
+loc_en: Consonant
+loc_es: Consonante
+loc_fi: Konsonantti
+loc_fr: Consonne
+loc_it: Consonante
+loc_ja: 子音
+loc_ko: 닿소리
+loc_nl: Medeklinker
+loc_ru: Согласные
+loc_vi: Phụ âm
+loc_zh_CN: 辅音
+loc_zh_TW: 輔音
+%%
+Glyph: __DEBUGGING__
+loc_de: Debugger
+loc_en: Debug
+loc_es: Depurar
+loc_fi: Vianetsintä
+loc_fr: Déboguer
+loc_it: Debug
+loc_ja: デバッグ
+loc_ko: 디버그
+loc_nl: Debugger
+loc_ru: Отладка
+loc_vi: Gỡ lỗi
+loc_zh_CN: 调试
+loc_zh_TW: 調試
+%%
+Glyph: __DEBUG__
+loc_de: Normal
+loc_en: Debug
+loc_es: Depurar
+loc_fi: Vianetsintä
+loc_fr: Déboguer
+loc_it: Debug
+loc_ja: デバッグ
+loc_ko: 디버그
+loc_nl: Debugger
+loc_ru: Отладка
+loc_vi: Gỡ lỗi
+loc_zh_CN: 调试
+loc_zh_TW: 調試
+%%
+Glyph: __DESCRIPTION__
+loc_de: Beschreibung
+loc_en: Description
+loc_es: Descripción
+loc_fi: Kuvaus
+loc_fr: Description << SIL glossary
+loc_it: Descrizione
+loc_ja: 記述
+loc_ko: 설명
+loc_nl: Beschrijving
+loc_ru: Описание
+loc_vi: Sự tả
+loc_zh_CN: 描述
+loc_zh_TW: 描述
+%%
+Glyph: __DONT_SHOW__
+loc_de: Zeige diese Meldung nicht noch einmal.
+loc_en: Do not warn me again.
+loc_es: No volver a mostrar esta advertencia.
+loc_fi: Älä näytä enää.
+loc_fr: Ne plus afficher cette alerte.
+loc_it: Non avvisare più.
+loc_ja: 今後この警告を表示しない。
+loc_ko: 다시 이 대화상자 보지 않기.
+loc_nl: Laat dit venster niet meer zien.
+loc_ru: Больше не предупреждать.
+loc_vi: Không cảnh báo cho tôi một lần nữa.
+loc_zh_CN: 不要再显示这个警报再次。
+loc_zh_TW: 不要再顯示這個警報再次。
+%%
+Glyph: __DOWNLOAD__
+loc_de: Laden
+loc_en: Download
+loc_es: Descargar
+loc_fi: Hae
+loc_fr: Télécharger
+loc_it: Scarica
+loc_ja: ダウンロード
+loc_ko: 다운로드
+loc_nl: Download <<
+loc_ru: Загрузка
+loc_vi: Tải về
+loc_zh_CN: 下载
+loc_zh_TW: 下載
+%%
+Glyph: __EXTIPA__
+loc_de: Erweitertes IPA
+loc_en: ExtIPA
+loc_es: AFI Extendido
+loc_fi: Laajennettu IPA
+loc_fr: API Étendu
+loc_it: Estensioni al AFI
+loc_ja: 拡張IPA
+loc_ko: 연장IPA
+loc_nl: Uitgebreide IPA
+loc_ru: Расширения МФА
+loc_vi: IPA mở rộng
+loc_zh_CN: 扩IPA
+loc_zh_TW: 擴IPA
+%%
+Glyph: __FALLBACK__
+loc_de: Ersatzfont verwenden
+loc_en: Use Substitute
+loc_es: Uso sustituto
+loc_fi: Käytä korvike
+loc_fr: Utiliser succédané
+loc_it: Utilizzare un sostituto
+loc_ja: 代わりフォント使用
+loc_ko: 교체 사용
+loc_nl: Gebruik plaatsvervanger
+loc_ru: Использовать замену
+loc_vi: Sử dụng thay thế
+loc_zh_CN: 使用备用
+loc_zh_TW: 使用備用
+%%
+Glyph: __FONT_WARNING__
+loc_de: Nicht unterstützt
+loc_en: Not supported
+loc_es: No se admite
+loc_fi: Ei tuettu
+loc_fr: Non géré
+loc_it: Non supportato
+loc_ja: 非対応
+loc_ko: 지원하지 않음
+loc_nl: Niet-ondersteund
+loc_ru: Не поддерживается
+loc_vi: Không được hỗ 
+loc_zh_CN: 扩IPA
+loc_zh_TW: 不支援
+%%
+Glyph: __GLYPH__
+loc_de: Zeichen
+loc_en: Glyph
+loc_es: Signo
+loc_fi: Merkki
+loc_fr: Glyphe
+loc_it: Glifi
+loc_ja: グリフ
+loc_ko: 글리프
+loc_nl: Karakter
+loc_ru: Глиф
+loc_vi: Chữ cái
+loc_zh_CN: 字形
+loc_zh_TW: 字形
+%%
+Glyph: __HAVE_UPDATE__
+loc_de: Eine neuere Version (%@) von __IPA_PALETTE__ ist verfügbar.
+loc_en: A newer version (%@) is available.
+loc_es: Existe una versión más reciente (%@).
+loc_fi: __IPA_PALETTE__ on saatavilla uudempi versio (%@).
+loc_fr: Une nouvelle version (%@) de __IPA_PALETTE__ est disponible.
+loc_it: È disponibile una versione (%@) più aggiornata del __IPA_PALETTE__.
+loc_ja: より新しいバージョン（%@）の“__IPA_PALETTE__”を使用できます。
+loc_ko: 새로운 소프트웨어가 있습니다.
+loc_nl: Er is een nieuwere versie (%@) van __IPA_PALETTE__ beschikbaar.
+loc_ru: Доступна более новая версия (%@) программы «__IPA_PALETTE__».
+loc_vi: Một phiên bản mới hơn (% @) có sẵn. Click vào đây để tải về.
+loc_zh_CN: 有更高版本 (%@) 的“__IPA_PALETTE__”可供使用。
+loc_zh_TW: “__IPA_PALETTE__”已有較新版本（%@）。
+%%
+Glyph: __INSANE__
+loc_de: Sehr ausführlich
+loc_en: Insane
+loc_es: Muy verboso
+loc_fi: Hyvin jaarittelevine
+loc_fr: Très verbeux
+loc_it: Molto prolisso
+loc_ja: 超詳細
+loc_ko: 아주 상세
+loc_nl: Zeer gedetailleerd
+loc_ru: Очень подробно
+loc_vi: Rất rườm rà
+loc_zh_CN: 非常详细
+loc_zh_TW: 非常詳細
+%%
+Glyph: __IPA_PALETTE__
+loc_de: IPA-Palette
+loc_en: IPA Palette
+loc_es: Paleta de AFI
+loc_fi: IPA-Paletti
+loc_fr: Palette API
+loc_it: Tavolozza AFI
+loc_ja: IPAパレット
+loc_ko: IPA 팔레트
+loc_nl: IPA-Palet
+loc_ru: Палитра МФА
+loc_vi: Bảng mẫu IPA
+loc_zh_CN: IPA调板
+loc_zh_TW: IPA面板
+%%
+Glyph: __LAST_RESORT__
+loc_de: Letzte Zuflucht verwenden
+loc_en: Use Last Resort
+loc_es: Uso Último Recurso
+loc_fi: Käytä Viimeinen Keino
+loc_fr: Utiliser Dernier Recours
+loc_it: Utilizzare l'Ultima Risorsa
+loc_ja: ラストリゾート使用
+loc_ko: 최후의 수단 사용
+loc_nl: Gebruik Laatste Toevlucht
+loc_ru: Использовать последний выход
+loc_vi: Sử dụng phương sách cuối cùng
+loc_zh_CN: 使用占位符
+loc_zh_TW: 使用佔位符
+%%
+Glyph: __LOOKING_FOR_UPDATES__
+loc_de: Nach Updates suchen…
+loc_en: Checking for updates…
+loc_es: Buscando software nuevo…
+loc_fi: Etsitään uutta versiota…
+loc_fr: Vérification des mises à jour…
+loc_it: Cerco aggiornamenti…
+loc_ja: アップデートを確認中⋯
+loc_ko: 업데이트 확인 중…
+loc_nl: Controleren op updates…
+loc_ru: Проверка обновлений…
+loc_vi: Đang kiểm tra để cập nhật…
+loc_zh_CN: 正在核查更新⋯
+loc_zh_TW: 正在檢查更新項目⋯
+%%
+Glyph: __LOOKING__
+loc_de: Suche nach IPA Schriftarten…
+loc_en: Looking for IPA fonts…
+loc_es: Buscando fuentes AFI…
+loc_fi: Etsitään IPA-fontteja…
+loc_fr: Recherche des polices API…
+loc_it: Cerco caratteri AFI…
+loc_ja: IPA フォントを検索中⋯
+loc_ko: IPA 서체 검색 중…
+loc_nl: Zoeken naar IPA-lettertypen…
+loc_ru: Ищу шрифты МФА…
+loc_vi: Đang tìm kiếm phông chữ IPA…
+loc_zh_CN: 正在寻找字体⋯
+loc_zh_TW: 正在尋找字體⋯
+%%
+Glyph: __NO_FONTS__
+loc_de: Es scheint, dass Sie keine IPA Schriftarten installiert haben.
+loc_en: You don't seem to have any IPA fonts installed.
+loc_es: Fuentes de la AFI no parece que esté instalado.
+loc_fi: Sinun ei näytä olevan mitään IPA-fontit asennettuna.
+loc_fr: Vous ne semblez pas disposer des polices API.
+loc_it: Lei non sembra avere alcun caratteri AFI installati
+loc_ja: IPA フォントはインストールされていないようです。
+loc_ko: 구성된 IPA 설치된 모든 글꼴을 가지고있는 것처럼 보이지 않는다.
+loc_nl: Et lijkt erop dat u geen IPA-lettertypen geïnstalleerd.
+loc_ru: Вы не кажется имеете любые установленные шрифты МФА.
+loc_vi: Bạn không có vẻ có các phông chữ IPA.
+loc_zh_CN: 没有国际音标字体安装。
+loc_zh_TW: 沒有國際音標字體安裝。
+%%
+Glyph: __NO_UPDATE__
+loc_de: Diese Version des __IPA_PALETTE__ (%@ [%@]) ist die aktuelle Version.
+loc_en: This version of __IPA_PALETTE__ (%@ [%@]) is the current version.
+loc_es: Esta versión de __IPA_PALETTE__ (%@ [%@]) es la versión actual.
+loc_fi: Tämä __IPA_PALETTE__ versio (%@) on uusin versio.
+loc_fr: Cette version de __IPA_PALETTE__ (%@ [%@]) est la version la plus récente disponible.
+loc_it: Questa versione di __IPA_PALETTE__ (%@) è quella attuale.
+loc_ja: このバージョン（%@）の“__IPA_PALETTE__”は最新のバージョンです。
+loc_ko: __IPA_PALETTE__ 최신입니다.
+loc_nl: Deze versie van __IPA_PALETTE__ (%@ [%@]) is de nieuwste versie.
+loc_ru: Эта версия __IPA_PALETTE__ (%@ [%@]) является текущей версией.
+loc_vi: Phiên bản này của __IPA_PALETTE__ (%@ [%@]) là phiên bản hiện hành.
+loc_zh_CN: 此版本的“__IPA_PALETTE__”(%@ [%@]) 是最新版本。
+loc_zh_TW: 此“__IPA_PALETTE__”版本（%@ [%@]）是目前的版本。
+%%
+Glyph: __OFF__
+loc_de: Aus
+loc_en: Off
+loc_es: No
+loc_fi: Pois
+loc_fr: Désactivé
+loc_it: Disattivo
+loc_ja: オフ
+loc_ko: 끔
+loc_nl: Uitgeschakeld
+loc_ru: выкл
+loc_vi: Tắt
+loc_zh_CN: 关
+loc_zh_TW: 關
+%%
+Glyph: __OK__
+loc_de: OK
+loc_en: OK
+loc_es: OK
+loc_fi: OK
+loc_fr: OK
+loc_it: OK
+loc_ja: OK
+loc_ko: 승인
+loc_nl: OK
+loc_ru: OK
+loc_vi: OK
+loc_zh_CN: 好
+loc_zh_TW: 好
+%%
+Glyph: __OTHER__
+loc_de: Andere
+loc_en: Other
+loc_es: Complementos
+loc_fi: Muu
+loc_fr: Autre
+loc_it: Altro
+loc_ja: その他
+loc_ko: 다른
+loc_nl: Ander
+loc_ru: Другой
+loc_vi: Cái khác
+loc_zh_CN: 其他符号
+loc_zh_TW: 其他符號
+%%
+Glyph: __PREVIEW_BAD__
+loc_de: Die Zeichenvorschau könnte ungenau sein.
+loc_en: The font preview may be inaccurate.
+loc_es: La vista previa de fuente puede ser inexacta.
+loc_fi: Fontti esikatselu voi olla virheellinen.
+loc_fr: L'aperçu de police est peut-être inexact.
+loc_it: L'anteprima dei font può essere impreciso.
+loc_ja: フォントの表示が正しくない可能性があります。
+loc_ko: 글꼴을 미리 정확하지 않을 수있습니다.
+loc_nl: Het lettertypen preview kan onjuist zijn.
+loc_ru: Предварительный просмотр шрифтов могут быть неточными.
+loc_vi: Các phông chữ xem trước có thể không chính xác.
+loc_zh_CN: 字体预览可能不准确。
+loc_zh_TW: 字體預覽可能不準確。
+%%
+Glyph: __PREVIEW_FONT__
+loc_de: Fehlende Zeichen
+loc_en: Missing glyphs
+loc_es: Falta glifos
+loc_fi: Puuttuvat symbolit
+loc_fr: Glyphes absents
+loc_it: Glifi mancante
+loc_ja: 見つからないグリフ
+loc_ko: 유실된 글리프
+loc_nl: Ontbrekende tekens
+loc_ru: Отсутствующих глифов
+loc_vi: Vắng mặt chữ cái
+loc_zh_CN: 丢失字形
+loc_zh_TW: 丢失字形
+%%
+Glyph: __SETTINGS__
+loc_de: Einstellungen
+loc_en: Settings
+loc_es: Ajustes
+loc_fi: Asetukset
+loc_fr: Réglages
+loc_it: Impostazioni
+loc_ja: 設定
+loc_ko: 설정
+loc_nl: Voorkeuren
+loc_ru: Настройки
+loc_vi: Thiết lập
+loc_zh_CN: 设置
+loc_zh_TW: 設定
+%%
+Glyph: __SRCH__
+loc_de: Suche
+loc_en: Search
+loc_es: Buscar
+loc_fi: Etsi
+loc_fr: Rechercher
+loc_it: Ricerca
+loc_ja: 検索
+loc_ko: 검색
+loc_nl: Zoeken
+loc_ru: Найти
+loc_vi: Tìm
+loc_zh_CN: 搜索
+loc_zh_TW: 搜尋
+%%
+Glyph: __SUPERSCRIPT__
+loc_de: Hochstellung
+loc_en: Superscript
+loc_es: Sobrescrito
+loc_fi: Yläviitta
+loc_fr: Exposant
+loc_it: Apice
+loc_ja: 上つき
+loc_ko: 어깨 글자
+loc_nl: Superscript << Wikipedia
+loc_ru: Верхний индекс
+loc_vi: Sự biên địa chỉ
+loc_zh_CN: 上标
+loc_zh_TW: 上標
+%%
+Glyph: __SUPRASEGMENTAL__
+loc_de: Suprasegmentalia
+loc_en: Suprasegmental
+loc_es: Suprasegmentales
+loc_fi: Suprasegmentaalit
+loc_fr: Suprasegmental << SIL
+loc_it: Suprasegmentale
+loc_ja: 超分節要素
+loc_ko: 초분절
+loc_nl: Suprasegmentale
+loc_ru: Супрасегментные
+loc_vi: Siêu đoạn
+loc_zh_CN: 超音段音位
+loc_zh_TW: 超音段音位
+%%
+Glyph: __UPDATES__
+loc_de: Nach Updates suchen…
+loc_en: Check for Updates…
+loc_es: Buscar actualizaciones…
+loc_fi: Tarkista päivitykset…
+loc_fr: Mises à jour…
+loc_it: Verifica aggiornamenti…
+loc_ja: アップデートの確認⋯
+loc_ko: 업데이트 확인…
+loc_nl: Controleren op updates…
+loc_ru: Проверять обновления…
+loc_vi: Tìm các bản cập nhật…
+loc_zh_CN: 检查更新⋯
+loc_zh_TW: 檢查更新⋯
+%%
+Glyph: __USER_GLYPHS__
+loc_de: Angepasstes
+loc_en: Custom
+loc_es: Personalizado
+loc_fi: Mukautettu
+loc_fr: Personnaliser
+loc_it: Ad hoc
+loc_ja: カスタム
+loc_ko: 사용자화
+loc_nl: Aangepaste
+loc_ru: Пользовательские
+loc_vi: Riêng
+loc_zh_CN: 自定
+loc_zh_TW: 自定
+%%
+Glyph: __VERBOSE__
+loc_de: Ausführlich
+loc_en: Verbose
+loc_es: Verboso
+loc_fi: Jaarittelevine
+loc_fr: Verbeux
+loc_it: Prolisso
+loc_ja: 詳細
+loc_ko: 상세
+loc_nl: Gedetailleerd
+loc_ru: Подробно
+loc_vi: Rườm rà
+loc_zh_CN: 详细
+loc_zh_TW: 詳細
+%%
+Glyph: __VOWEL__
+loc_de: Vokal
+loc_en: Vowel
+loc_es: Vocal
+loc_fi: Vokaalit
+loc_fr: Voyelle
+loc_it: Vocale
+loc_ja: 母音
+loc_ko: 홀소리
+loc_nl: Klinker
+loc_ru: Гласный
+loc_vi: Nguyên âm
+loc_zh_CN: 元音
+loc_zh_TW: 元音
+%%
+Glyph: __WARN_ONLY__
+loc_de: Nur warnen
+loc_en: Warn Only
+loc_es: Acaba de avisar
+loc_fi: Vain varoita
+loc_fr: Juste avertir
+loc_it: Solo avvertire
+loc_ja: 警告だけ
+loc_ko: 경고 전용
+loc_nl: Alleen waarschuwen
+loc_ru: Просто предупредить
+loc_vi: Chỉ cảnh báo
+loc_zh_CN: 警告只
+loc_zh_TW: 警告只
