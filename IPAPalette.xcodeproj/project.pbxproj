@@ -158,7 +158,7 @@
 		326E891A144616450063F34B /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = ImageMapGen/MainMenu.xib; sourceTree = "<group>"; };
 		327FE565106D53E9003FEB34 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		328B05041075244F000D6186 /* IPAPalettePostinstall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPAPalettePostinstall.m; path = Installer/IPAPalettePostinstall.m; sourceTree = "<group>"; };
-		328D1C8B122C08ED00FE6E3C /* Alts.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Alts.strings; sourceTree = "<group>"; };
+		328D1C8B122C08ED00FE6E3C /* Alts.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Alts.strings; path = Palette/Alts.strings; sourceTree = "<group>"; };
 		328E50171459D77700BAB93F /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaults.plist; path = Palette/defaults.plist; sourceTree = "<group>"; };
 		3299F3E0143E65B9009191BC /* HackedDoulos-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HackedDoulos-Regular.ttf"; path = "ImageMapGen/HackedDoulos-Regular.ttf"; sourceTree = "<group>"; };
 		32B0660813BA7DEB00EB242B /* Pal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Pal.pdf; sourceTree = "<group>"; };

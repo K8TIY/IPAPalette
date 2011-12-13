@@ -827,7 +827,7 @@ def MakeKeyboard():
   for line in lines:
     m = re.match(r'^Glyph:\s+(U\+.+)', line)
     if m: d['%s' % (m.group(1).encode('utf-8'))] = 1
-  fh = open("../Alts.strings", 'r')
+  fh = open("../Palette/Alts.strings", 'r')
   data = fh.read().decode('utf-8')
   fh.close()
   lines = re.split(r'\n', data)
