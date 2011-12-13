@@ -1,0 +1,1219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array><dict>
+  <key>char</key> <string>p</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.01, 0.85325}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>b</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.0545455, 0.85325}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>t</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.277273, 0.85325}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>d</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.321818, 0.85325}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʈ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.455455, 0.85325}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɖ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.5, 0.85325}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>c</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.544545, 0.85325}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɟ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.589091, 0.85325}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>k</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.633636, 0.85325}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɡ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.678182, 0.85325}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>q</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.722727, 0.85325}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɢ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.767273, 0.85325}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʔ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.900909, 0.85325}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>m</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.0545455, 0.7355}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɱ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.143636, 0.7355}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>n</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.321818, 0.7355}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɳ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.5, 0.7355}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɲ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.589091, 0.7355}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ŋ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.678182, 0.7355}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɴ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.767273, 0.7355}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʙ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.0545455, 0.61775}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>r</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.321818, 0.61775}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɽ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.5, 0.61775}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʀ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.767273, 0.61775}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ⱱ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.143636, 0.5}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɾ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.321818, 0.5}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɸ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.01, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>β</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.0545455, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>f</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.0990909, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>v</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.143636, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>θ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.188182, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ð</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.232727, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>s</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.277273, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>z</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.321818, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʃ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.366364, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʒ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.410909, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʂ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.455455, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʐ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.5, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ç</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.544545, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʝ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.589091, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>x</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.633636, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɣ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.678182, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>χ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.722727, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʁ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.767273, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ħ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.811818, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʕ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.856364, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>h</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.900909, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɦ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.945455, 0.38225}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɬ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.277273, 0.2645}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɮ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.321818, 0.2645}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʋ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.143636, 0.14675}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɹ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.321818, 0.14675}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɻ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.5, 0.14675}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>j</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.589091, 0.14675}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɰ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.678182, 0.14675}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>l</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.321818, 0.029}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɭ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.5, 0.029}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʎ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.589091, 0.029}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʟ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.678182, 0.029}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>i</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.02, 0.86}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>y</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.11625, 0.86}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɨ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.405, 0.86}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʉ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.50125, 0.86}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɯ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.79, 0.86}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>u</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.88625, 0.86}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɪ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.2, 0.72}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʏ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.29625, 0.72}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʊ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.71625, 0.72}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>e</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.15, 0.58}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ø</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.24625, 0.58}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɘ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.47, 0.58}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɵ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.56625, 0.58}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɤ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.79, 0.58}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>o</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.88625, 0.58}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ə</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.548125, 0.44}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɛ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.285, 0.299}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>œ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.38125, 0.299}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɜ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.535, 0.299}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɞ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.63125, 0.299}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʌ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.79, 0.299}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɔ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.88625, 0.299}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>æ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.35, 0.156}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɐ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.608125, 0.156}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɚ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.02, 0.01}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɝ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.11625, 0.01}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>a</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.418, 0.01}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɶ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.51425, 0.01}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɑ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.79, 0.01}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɒ</string>
+  <key>name</key> <string>Vow</string>
+  <key>rect</key> <string>{{0.88625, 0.01}, {0.09625, 0.141667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̋</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0, 0.875}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>́</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0, 0.75}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̄</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0, 0.625}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̀</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0, 0.5}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̏</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0, 0.375}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ꜛ</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0, 0.25}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ꜜ</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0, 0.125}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>˥</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.25, 0.875}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>˦</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.25, 0.75}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>˧</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.25, 0.625}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>˨</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.25, 0.5}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>˩</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.25, 0.375}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>↗</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.25, 0.25}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>↘</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.25, 0.125}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̌</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.5, 0.875}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̂</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.5, 0.75}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>᷄</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.5, 0.625}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>᷅</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.5, 0.5}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>᷈</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.5, 0.375}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>᷆</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.5, 0.25}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>᷇</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.5, 0.125}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>᷉</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.5, 0}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ˈ</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.75, 0.875}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ˌ</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.75, 0.75}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ː</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.75, 0.625}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ˑ</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.75, 0.5}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̆</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.75, 0.375}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>‿</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.75, 0.25}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>|</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.75, 0.125}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>‖</string>
+  <key>name</key> <string>SupraTone</string>
+  <key>rect</key> <string>{{0.75, 0}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̥</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0, 0.875}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̬</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0, 0.75}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̹</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0, 0.625}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̜</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0, 0.5}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̟</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0, 0.375}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̠</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0, 0.25}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̈</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0, 0.125}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̽</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0, 0}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̩</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.25, 0.875}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̯</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.25, 0.75}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̤</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.25, 0.625}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̰</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.25, 0.5}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̼</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.25, 0.375}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>˞</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.25, 0.25}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̴</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>submap</key> <string>VPh</string>
+  <key>rect</key> <string>{{0.25, 0.125}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʼ</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.25, 0}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̝</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.5, 0.875}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>˔</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.5, 0.75}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̞</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.5, 0.625}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>˕</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.5, 0.5}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̘</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.5, 0.375}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̙</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.5, 0.25}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̡</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>submap</key> <string>Pal</string>
+  <key>rect</key> <string>{{0.5, 0.125}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̢</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>submap</key> <string>Retro</string>
+  <key>rect</key> <string>{{0.5, 0}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̪</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.75, 0.875}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̺</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.75, 0.75}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̻</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.75, 0.625}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̃</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.75, 0.5}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̚</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.75, 0.375}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>͡</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.75, 0.25}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>͜</string>
+  <key>name</key> <string>Diacritic</string>
+  <key>rect</key> <string>{{0.75, 0.125}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʘ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0, 0.875}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ǀ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0, 0.75}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ǃ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0, 0.625}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ǂ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0, 0.5}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ǁ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0, 0.375}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɓ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0.25, 0.875}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɗ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0.25, 0.75}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʄ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0.25, 0.625}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɠ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0.25, 0.5}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʘ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0.25, 0.375}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʍ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0.5, 0.875}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>w</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0.5, 0.75}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɥ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0.5, 0.625}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʜ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0.5, 0.5}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʢ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0.5, 0.375}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʡ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0.5, 0.25}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɕ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0.75, 0.875}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʑ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0.75, 0.75}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɺ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0.75, 0.625}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɧ</string>
+  <key>name</key> <string>Other</string>
+  <key>rect</key> <string>{{0.75, 0.5}, {0.25, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʬ</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0, 0.875}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʭ</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0, 0.75}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʪ</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0, 0.625}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʫ</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0, 0.5}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ʩ</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0, 0.375}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>¡</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0, 0.25}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ǃ¡</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0, 0.125}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>‼</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0, 0}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>͍</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.2, 0.875}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>͆</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.2, 0.75}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̪͆</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.2, 0.625}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>͈</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.2, 0.5}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>͉</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.2, 0.375}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>͎</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.2, 0.25}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>͊</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.2, 0.125}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>͈</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.2, 0}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>͌</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.4, 0.875}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>͇</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.4, 0.75}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>͢</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.4, 0.625}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>͔</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.4, 0.5}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>͕</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.4, 0.375}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>˭</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.6, 0.875}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>₍</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.6, 0.75}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>₎</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.6, 0.625}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ˬ</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.6, 0.5}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>↑</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.6, 0.375}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>↓</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.6, 0.25}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>Œ</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.8, 0.875}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>Ю</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.8, 0.75}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>И</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.8, 0.625}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>Θ</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.8, 0.5}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>̣</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.8, 0.375}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>❍</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.8, 0.25}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɫ</string>
+  <key>name</key> <string>VPh</string>
+  <key>rect</key> <string>{{0, 0.833333}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᵬ</string>
+  <key>name</key> <string>VPh</string>
+  <key>rect</key> <string>{{0, 0.666667}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᵭ</string>
+  <key>name</key> <string>VPh</string>
+  <key>rect</key> <string>{{0, 0.5}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᵮ</string>
+  <key>name</key> <string>VPh</string>
+  <key>rect</key> <string>{{0, 0.333333}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᵯ</string>
+  <key>name</key> <string>VPh</string>
+  <key>rect</key> <string>{{0, 0.166667}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᵰ</string>
+  <key>name</key> <string>VPh</string>
+  <key>rect</key> <string>{{0, 0}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᵱ</string>
+  <key>name</key> <string>VPh</string>
+  <key>rect</key> <string>{{0.5, 0.833333}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᵲ</string>
+  <key>name</key> <string>VPh</string>
+  <key>rect</key> <string>{{0.5, 0.666667}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᵳ</string>
+  <key>name</key> <string>VPh</string>
+  <key>rect</key> <string>{{0.5, 0.5}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᵴ</string>
+  <key>name</key> <string>VPh</string>
+  <key>rect</key> <string>{{0.5, 0.333333}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᵵ</string>
+  <key>name</key> <string>VPh</string>
+  <key>rect</key> <string>{{0.5, 0.166667}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᵶ</string>
+  <key>name</key> <string>VPh</string>
+  <key>rect</key> <string>{{0.5, 0}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ƫ</string>
+  <key>name</key> <string>Pal</string>
+  <key>rect</key> <string>{{0, 0.833333}, {0.333333, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶀ</string>
+  <key>name</key> <string>Pal</string>
+  <key>rect</key> <string>{{0, 0.666667}, {0.333333, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶁ</string>
+  <key>name</key> <string>Pal</string>
+  <key>rect</key> <string>{{0, 0.5}, {0.333333, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶂ</string>
+  <key>name</key> <string>Pal</string>
+  <key>rect</key> <string>{{0, 0.333333}, {0.333333, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶃ</string>
+  <key>name</key> <string>Pal</string>
+  <key>rect</key> <string>{{0, 0.166667}, {0.333333, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶄ</string>
+  <key>name</key> <string>Pal</string>
+  <key>rect</key> <string>{{0, 0}, {0.333333, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶅ</string>
+  <key>name</key> <string>Pal</string>
+  <key>rect</key> <string>{{0.333333, 0.833333}, {0.333333, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶆ</string>
+  <key>name</key> <string>Pal</string>
+  <key>rect</key> <string>{{0.333333, 0.666667}, {0.333333, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶇ</string>
+  <key>name</key> <string>Pal</string>
+  <key>rect</key> <string>{{0.333333, 0.5}, {0.333333, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶈ</string>
+  <key>name</key> <string>Pal</string>
+  <key>rect</key> <string>{{0.333333, 0.333333}, {0.333333, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶉ</string>
+  <key>name</key> <string>Pal</string>
+  <key>rect</key> <string>{{0.333333, 0.166667}, {0.333333, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶊ</string>
+  <key>name</key> <string>Pal</string>
+  <key>rect</key> <string>{{0.333333, 0}, {0.333333, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶋ</string>
+  <key>name</key> <string>Pal</string>
+  <key>rect</key> <string>{{0.666667, 0.833333}, {0.333333, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶌ</string>
+  <key>name</key> <string>Pal</string>
+  <key>rect</key> <string>{{0.666667, 0.666667}, {0.333333, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶍ</string>
+  <key>name</key> <string>Pal</string>
+  <key>rect</key> <string>{{0.666667, 0.5}, {0.333333, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶎ</string>
+  <key>name</key> <string>Pal</string>
+  <key>rect</key> <string>{{0.666667, 0.333333}, {0.333333, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶏ</string>
+  <key>name</key> <string>Retro</string>
+  <key>rect</key> <string>{{0, 0.833333}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶑ</string>
+  <key>name</key> <string>Retro</string>
+  <key>rect</key> <string>{{0, 0.666667}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶒ</string>
+  <key>name</key> <string>Retro</string>
+  <key>rect</key> <string>{{0, 0.5}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶓ</string>
+  <key>name</key> <string>Retro</string>
+  <key>rect</key> <string>{{0, 0.333333}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶔ</string>
+  <key>name</key> <string>Retro</string>
+  <key>rect</key> <string>{{0, 0.166667}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶕ</string>
+  <key>name</key> <string>Retro</string>
+  <key>rect</key> <string>{{0, 0}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶖ</string>
+  <key>name</key> <string>Retro</string>
+  <key>rect</key> <string>{{0.5, 0.833333}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶗ</string>
+  <key>name</key> <string>Retro</string>
+  <key>rect</key> <string>{{0.5, 0.666667}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶘ</string>
+  <key>name</key> <string>Retro</string>
+  <key>rect</key> <string>{{0.5, 0.5}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶙ</string>
+  <key>name</key> <string>Retro</string>
+  <key>rect</key> <string>{{0.5, 0.333333}, {0.5, 0.166667}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ᶚ</string>
+  <key>name</key> <string>Retro</string>
+  <key>rect</key> <string>{{0.5, 0.166667}, {0.5, 0.166667}}</string>
+</dict>
+</array>
+</plist>

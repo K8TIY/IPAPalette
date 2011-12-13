@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ttFont sfntVersion="\x00\x01\x00\x00" ttLibVersion="2.3">
+
+  <GlyphOrder>
+    <!-- The 'id' attribute is only for humans; it is ignored when parsed. -->
+    <GlyphID id="0" name=".notdef"/>
+    <GlyphID id="1" name="NULL"/>
+    <GlyphID id="2" name="nonmarkingreturn"/>
+    <GlyphID id="3" name="space"/>
+    <GlyphID id="4" name="a"/>
+    <GlyphID id="5" name="b"/>
+    <GlyphID id="6" name="c"/>
+  </GlyphOrder>
+
+  <head>
+    <!-- Most of this table will be recalculated by the compiler -->
+    <tableVersion value="1.0"/>
+    <fontRevision value="1.0"/>
+    <checkSumAdjustment value="0x2eefd034"/>
+    <magicNumber value="0x5f0f3cf5"/>
+    <flags value="00000000 00001001"/>
+    <unitsPerEm value="1000"/>
+    <created value="Mon Jun 27 20:00:00 2011"/>
+    <modified value="Wed Jun 29 01:03:25 2011"/>
+    <xMin value="-287"/>
+    <yMin value="-216"/>
+    <xMax value="484"/>
+    <yMax value="675"/>
+    <macStyle value="00000000 00000000"/>
+    <lowestRecPPEM value="9"/>
+    <fontDirectionHint value="2"/>
+    <indexToLocFormat value="0"/>
+    <glyphDataFormat value="0"/>
+  </head>
+
+  <hhea>
+    <tableVersion value="1.0"/>
+    <ascent value="675"/>
+    <descent value="-325"/>
+    <lineGap value="200"/>
+    <advanceWidthMax value="1000"/>
+    <minLeftSideBearing value="-287"/>
+    <minRightSideBearing value="-186"/>
+    <xMaxExtent value="484"/>
+    <caretSlopeRise value="1"/>
+    <caretSlopeRun value="0"/>
+    <caretOffset value="0"/>
+    <reserved0 value="0"/>
+    <reserved1 value="0"/>
+    <reserved2 value="0"/>
+    <reserved3 value="0"/>
+    <metricDataFormat value="0"/>
+    <numberOfHMetrics value="7"/>
+  </hhea>
+
+  <maxp>
+    <!-- Most of this table will be recalculated by the compiler -->
+    <tableVersion value="0x10000"/>
+    <numGlyphs value="16"/>
+    <maxPoints value="239"/>
+    <maxContours value="18"/>
+    <maxCompositePoints value="0"/>
+    <maxCompositeContours value="0"/>
+    <maxZones value="1"/>
+    <maxTwilightPoints value="0"/>
+    <maxStorage value="0"/>
+    <maxFunctionDefs value="10"/>
+    <maxInstructionDefs value="0"/>
+    <maxStackElements value="512"/>
+    <maxSizeOfInstructions value="1287"/>
+    <maxComponentElements value="0"/>
+    <maxComponentDepth value="0"/>
+  </maxp>
+
+  <OS_2>
+    <version value="3"/>
+    <xAvgCharWidth value="597"/>
+    <usWeightClass value="400"/>
+    <usWidthClass value="5"/>
+    <fsType value="00000000 00000000"/>
+    <ySubscriptXSize value="700"/>
+    <ySubscriptYSize value="650"/>
+    <ySubscriptXOffset value="0"/>
+    <ySubscriptYOffset value="140"/>
+    <ySuperscriptXSize value="700"/>
+    <ySuperscriptYSize value="650"/>
+    <ySuperscriptXOffset value="0"/>
+    <ySuperscriptYOffset value="477"/>
+    <yStrikeoutSize value="50"/>
+    <yStrikeoutPosition value="250"/>
+    <sFamilyClass value="0"/>
+    <panose>
+      <bFamilyType value="0"/>
+      <bSerifStyle value="0"/>
+      <bWeight value="0"/>
+      <bProportion value="0"/>
+      <bContrast value="0"/>
+      <bStrokeVariation value="0"/>
+      <bArmStyle value="0"/>
+      <bLetterForm value="0"/>
+      <bMidline value="0"/>
+      <bXHeight value="0"/>
+    </panose>
+    <ulUnicodeRange1 value="00000000 00000000 00000000 00000001"/>
+    <ulUnicodeRange2 value="00000000 00000000 00000000 00000000"/>
+    <ulUnicodeRange3 value="00000000 00000000 00000000 00000000"/>
+    <ulUnicodeRange4 value="00000000 00000000 00000000 00000000"/>
+    <achVendID value="PYRS"/>
+    <fsSelection value="00000000 10000000"/>
+    <fsFirstCharIndex value="0"/>
+    <fsLastCharIndex value="108"/>
+    <sTypoAscender value="675"/>
+    <sTypoDescender value="-325"/>
+    <sTypoLineGap value="200"/>
+    <usWinAscent value="795"/>
+    <usWinDescent value="405"/>
+    <ulCodePageRange1 value="00000000 00000000 00000000 00000001"/>
+    <ulCodePageRange2 value="00000000 00000000 00000000 00000000"/>
+    <sxHeight value="342"/>
+    <sCapHeight value="800"/>
+    <usDefaultChar value="0"/>
+    <usBreakChar value="32"/>
+    <usMaxContex value="0"/>
+  </OS_2>
+
+  <hmtx>
+    <mtx name=".notdef" width="500" lsb="63"/>
+    <mtx name="NULL" width="0" lsb="0"/>
+    <mtx name="a" width="0" lsb="-287"/>
+    <mtx name="b" width="0" lsb="-93"/>
+    <mtx name="c" width="521" lsb="37"/>
+    <mtx name="nonmarkingreturn" width="0" lsb="0"/>
+    <mtx name="space" width="1000" lsb="0"/>
+  </hmtx>
+
+  <cmap>
+    <tableVersion version="0"/>
+    <cmap_format_4 platformID="0" platEncID="3" language="0">
+      <map code="0x0" name="NULL"/><!-- &lt;control> -->
+      <map code="0xd" name="nonmarkingreturn"/><!-- &lt;control> -->
+      <map code="0x20" name="space"/><!-- SPACE -->
+      <map code="0x61" name="a"/><!-- LATIN SMALL LETTER A -->
+      <map code="0x62" name="b"/><!-- LATIN SMALL LETTER B -->
+      <map code="0x63" name="c"/><!-- LATIN SMALL LETTER C -->
+    </cmap_format_4>
+    <!--<cmap_format_6 platformID="1" platEncID="0" language="0">
+      <map code="0x0" name="NULL"/>
+      <map code="0x1" name=".notdef"/>
+      <map code="0x2" name=".notdef"/>
+      <map code="0x3" name=".notdef"/>
+      <map code="0x4" name=".notdef"/>
+      <map code="0x5" name=".notdef"/>
+      <map code="0x6" name=".notdef"/>
+      <map code="0x7" name=".notdef"/>
+      <map code="0x8" name="NULL"/>
+      <map code="0x9" name="nonmarkingreturn"/>
+      <map code="0xa" name=".notdef"/>
+      <map code="0xb" name=".notdef"/>
+      <map code="0xc" name=".notdef"/>
+      <map code="0xd" name="nonmarkingreturn"/>
+      <map code="0xe" name=".notdef"/>
+      <map code="0xf" name=".notdef"/>
+      <map code="0x10" name=".notdef"/>
+      <map code="0x11" name=".notdef"/>
+      <map code="0x12" name=".notdef"/>
+      <map code="0x13" name=".notdef"/>
+      <map code="0x14" name=".notdef"/>
+      <map code="0x15" name=".notdef"/>
+      <map code="0x16" name=".notdef"/>
+      <map code="0x17" name=".notdef"/>
+      <map code="0x18" name=".notdef"/>
+      <map code="0x19" name=".notdef"/>
+      <map code="0x1a" name=".notdef"/>
+      <map code="0x1b" name=".notdef"/>
+      <map code="0x1c" name=".notdef"/>
+      <map code="0x1d" name="NULL"/>
+      <map code="0x1e" name=".notdef"/>
+      <map code="0x1f" name=".notdef"/>
+      <map code="0x20" name="space"/>
+      <map code="0x21" name=".notdef"/>
+      <map code="0x22" name=".notdef"/>
+      <map code="0x23" name=".notdef"/>
+      <map code="0x24" name=".notdef"/>
+      <map code="0x25" name=".notdef"/>
+      <map code="0x26" name=".notdef"/>
+      <map code="0x27" name=".notdef"/>
+      <map code="0x28" name=".notdef"/>
+      <map code="0x29" name=".notdef"/>
+      <map code="0x2a" name=".notdef"/>
+      <map code="0x2b" name=".notdef"/>
+      <map code="0x2c" name=".notdef"/>
+      <map code="0x2d" name=".notdef"/>
+      <map code="0x2e" name=".notdef"/>
+      <map code="0x2f" name=".notdef"/>
+      <map code="0x30" name=".notdef"/>
+      <map code="0x31" name=".notdef"/>
+      <map code="0x32" name=".notdef"/>
+      <map code="0x33" name=".notdef"/>
+      <map code="0x34" name=".notdef"/>
+      <map code="0x35" name=".notdef"/>
+      <map code="0x36" name=".notdef"/>
+      <map code="0x37" name=".notdef"/>
+      <map code="0x38" name=".notdef"/>
+      <map code="0x39" name=".notdef"/>
+      <map code="0x3a" name=".notdef"/>
+      <map code="0x3b" name=".notdef"/>
+      <map code="0x3c" name=".notdef"/>
+      <map code="0x3d" name=".notdef"/>
+      <map code="0x3e" name=".notdef"/>
+      <map code="0x3f" name=".notdef"/>
+      <map code="0x40" name=".notdef"/>
+      <map code="0x41" name=".notdef"/>
+      <map code="0x42" name=".notdef"/>
+      <map code="0x43" name=".notdef"/>
+      <map code="0x44" name=".notdef"/>
+      <map code="0x45" name=".notdef"/>
+      <map code="0x46" name=".notdef"/>
+      <map code="0x47" name=".notdef"/>
+      <map code="0x48" name=".notdef"/>
+      <map code="0x49" name=".notdef"/>
+      <map code="0x4a" name=".notdef"/>
+      <map code="0x4b" name=".notdef"/>
+      <map code="0x4c" name=".notdef"/>
+      <map code="0x4d" name=".notdef"/>
+      <map code="0x4e" name=".notdef"/>
+      <map code="0x4f" name=".notdef"/>
+      <map code="0x50" name=".notdef"/>
+      <map code="0x51" name=".notdef"/>
+      <map code="0x52" name=".notdef"/>
+      <map code="0x53" name=".notdef"/>
+      <map code="0x54" name=".notdef"/>
+      <map code="0x55" name=".notdef"/>
+      <map code="0x56" name=".notdef"/>
+      <map code="0x57" name=".notdef"/>
+      <map code="0x58" name=".notdef"/>
+      <map code="0x59" name=".notdef"/>
+      <map code="0x5a" name=".notdef"/>
+      <map code="0x5b" name=".notdef"/>
+      <map code="0x5c" name=".notdef"/>
+      <map code="0x5d" name=".notdef"/>
+      <map code="0x5e" name=".notdef"/>
+      <map code="0x5f" name=".notdef"/>
+      <map code="0x60" name=".notdef"/>
+      <map code="0x61" name="a"/>
+      <map code="0x62" name="b"/>
+      <map code="0x63" name="c"/>
+      <map code="0x64" name="d"/>
+      <map code="0x65" name="e"/>
+      <map code="0x66" name="f"/>
+      <map code="0x67" name="g"/>
+      <map code="0x68" name="h"/>
+      <map code="0x69" name="i"/>
+      <map code="0x6a" name="j"/>
+      <map code="0x6b" name="k"/>
+      <map code="0x6c" name="l"/>
+      <map code="0x6d" name=".notdef"/>
+      <map code="0x6e" name=".notdef"/>
+      <map code="0x6f" name=".notdef"/>
+      <map code="0x70" name=".notdef"/>
+      <map code="0x71" name=".notdef"/>
+      <map code="0x72" name=".notdef"/>
+      <map code="0x73" name=".notdef"/>
+      <map code="0x74" name=".notdef"/>
+      <map code="0x75" name=".notdef"/>
+      <map code="0x76" name=".notdef"/>
+      <map code="0x77" name=".notdef"/>
+      <map code="0x78" name=".notdef"/>
+      <map code="0x79" name=".notdef"/>
+      <map code="0x7a" name=".notdef"/>
+      <map code="0x7b" name=".notdef"/>
+      <map code="0x7c" name=".notdef"/>
+      <map code="0x7d" name=".notdef"/>
+      <map code="0x7e" name=".notdef"/>
+      <map code="0x7f" name=".notdef"/>
+      <map code="0x80" name=".notdef"/>
+      <map code="0x81" name=".notdef"/>
+      <map code="0x82" name=".notdef"/>
+      <map code="0x83" name=".notdef"/>
+      <map code="0x84" name=".notdef"/>
+      <map code="0x85" name=".notdef"/>
+      <map code="0x86" name=".notdef"/>
+      <map code="0x87" name=".notdef"/>
+      <map code="0x88" name=".notdef"/>
+      <map code="0x89" name=".notdef"/>
+      <map code="0x8a" name=".notdef"/>
+      <map code="0x8b" name=".notdef"/>
+      <map code="0x8c" name=".notdef"/>
+      <map code="0x8d" name=".notdef"/>
+      <map code="0x8e" name=".notdef"/>
+      <map code="0x8f" name=".notdef"/>
+      <map code="0x90" name=".notdef"/>
+      <map code="0x91" name=".notdef"/>
+      <map code="0x92" name=".notdef"/>
+      <map code="0x93" name=".notdef"/>
+      <map code="0x94" name=".notdef"/>
+      <map code="0x95" name=".notdef"/>
+      <map code="0x96" name=".notdef"/>
+      <map code="0x97" name=".notdef"/>
+      <map code="0x98" name=".notdef"/>
+      <map code="0x99" name=".notdef"/>
+      <map code="0x9a" name=".notdef"/>
+      <map code="0x9b" name=".notdef"/>
+      <map code="0x9c" name=".notdef"/>
+      <map code="0x9d" name=".notdef"/>
+      <map code="0x9e" name=".notdef"/>
+      <map code="0x9f" name=".notdef"/>
+      <map code="0xa0" name=".notdef"/>
+      <map code="0xa1" name=".notdef"/>
+      <map code="0xa2" name=".notdef"/>
+      <map code="0xa3" name=".notdef"/>
+      <map code="0xa4" name=".notdef"/>
+      <map code="0xa5" name=".notdef"/>
+      <map code="0xa6" name=".notdef"/>
+      <map code="0xa7" name=".notdef"/>
+      <map code="0xa8" name=".notdef"/>
+      <map code="0xa9" name=".notdef"/>
+      <map code="0xaa" name=".notdef"/>
+      <map code="0xab" name=".notdef"/>
+      <map code="0xac" name=".notdef"/>
+      <map code="0xad" name=".notdef"/>
+      <map code="0xae" name=".notdef"/>
+      <map code="0xaf" name=".notdef"/>
+      <map code="0xb0" name=".notdef"/>
+      <map code="0xb1" name=".notdef"/>
+      <map code="0xb2" name=".notdef"/>
+      <map code="0xb3" name=".notdef"/>
+      <map code="0xb4" name=".notdef"/>
+      <map code="0xb5" name=".notdef"/>
+      <map code="0xb6" name=".notdef"/>
+      <map code="0xb7" name=".notdef"/>
+      <map code="0xb8" name=".notdef"/>
+      <map code="0xb9" name=".notdef"/>
+      <map code="0xba" name=".notdef"/>
+      <map code="0xbb" name=".notdef"/>
+      <map code="0xbc" name=".notdef"/>
+      <map code="0xbd" name=".notdef"/>
+      <map code="0xbe" name=".notdef"/>
+      <map code="0xbf" name=".notdef"/>
+      <map code="0xc0" name=".notdef"/>
+      <map code="0xc1" name=".notdef"/>
+      <map code="0xc2" name=".notdef"/>
+      <map code="0xc3" name=".notdef"/>
+      <map code="0xc4" name=".notdef"/>
+      <map code="0xc5" name=".notdef"/>
+      <map code="0xc6" name=".notdef"/>
+      <map code="0xc7" name=".notdef"/>
+      <map code="0xc8" name=".notdef"/>
+      <map code="0xc9" name=".notdef"/>
+      <map code="0xca" name="space"/>
+    </cmap_format_6>-->
+    <cmap_format_4 platformID="3" platEncID="1" language="0">
+      <map code="0x0" name="NULL"/><!-- &lt;control> -->
+      <map code="0xd" name="nonmarkingreturn"/><!-- &lt;control> -->
+      <map code="0x20" name="space"/><!-- SPACE -->
+      <map code="0x61" name="a"/><!-- LATIN SMALL LETTER A -->
+      <map code="0x62" name="b"/><!-- LATIN SMALL LETTER B -->
+      <map code="0x63" name="c"/><!-- LATIN SMALL LETTER C -->
+    </cmap_format_4>
+  </cmap>
+
+  <fpgm>
+    <bytecode>
+      b800002c 4bb80009 5058b101 018e59b8
+      01ff85b8 00441db9 00090003 5f5e2db8
+      00012c20 20456944 b001602d b800022c
+      b800012a 212db800 032c2046 b0032546
+      52582359 208a208a 49648a20 46206861
+      64b00425 46206861 64525823 658a592f
+      20b00053 586920b0 00545821 b040591b
+      6920b000 545821b0 40655959 3a2db800
+      042c2046 b0042546 5258238a 59204620
+      6a6164b0 04254620 6a616452 58238a59
+      2ffd2db8 00052c4b 20b00326 50585158
+      b080441b b0404459 1b212120 45b0c050
+      58b0c044 1b215959 2db80006 2c202045
+      6944b001 60202045 7d691844 b001602d
+      b800072c b800062a 2db80008 2c4b20b0
+      03265358 b0401bb0 00598a8a 20b00326
+      53582321 b0808a8a 1b8a2359 20b00326
+      53582321 b800c08a 8a1b8a23 5920b003
+      26535823 21b80100 8a8a1b8a 235920b0
+      03265358 2321b801 408a8a1b 8a235920
+      b8000326 5358b003 2545b801 80505823
+      21b80180 23211bb0 03254523 21232159
+      1b215944 2db80009 2c4b5358 45441b21
+      21592d   
+    </bytecode>
+  </fpgm>
+
+  <prep>
+    <bytecode>
+      b800002b 00ba0001 00010002 2b01ba00
+      02000100 022b01bf 00020076 0061004c
+      00360020 00000008 2b00bf00 01007800
+      61004c00 36002000 0000082b 00ba0003
+      00010007 2bb80000 20457d69 1844
+    </bytecode>
+  </prep>
+
+  <cvt>
+    <cv index="0" value="20"/>
+    <cv index="1" value="46"/>
+    <cv index="2" value="47"/>
+    <cv index="3" value="0"/>
+    <cv index="4" value="0"/>
+  </cvt>
+
+  <loca>
+    <!-- The 'loca' table will be calculated by the compiler -->
+  </loca>
+
+  <glyf>
+
+    <!-- The xMin, yMin, xMax and yMax values
+         will be recalculated by the compiler. -->
+
+    <TTGlyph name=".notdef" xMin="63" yMin="0" xMax="438" yMax="675">
+      <contour>
+        <pt x="130" y="282" on="1"/>
+        <pt x="187" y="339" on="1"/>
+        <pt x="250" y="277" on="1"/>
+        <pt x="375" y="402" on="1"/>
+        <pt x="375" y="288" on="1"/>
+        <pt x="250" y="163" on="1"/>
+      </contour>
+      <contour>
+        <pt x="301" y="350" on="1"/>
+        <pt x="250" y="298" on="1"/>
+        <pt x="187" y="359" on="1"/>
+        <pt x="125" y="298" on="1"/>
+        <pt x="125" y="411" on="1"/>
+        <pt x="250" y="536" on="1"/>
+        <pt x="369" y="417" on="1"/>
+        <pt x="312" y="359" on="1"/>
+        <pt x="250" y="422" on="1"/>
+        <pt x="239" y="412" on="1"/>
+      </contour>
+      <contour>
+        <pt x="375" y="63" on="1"/>
+        <pt x="375" y="288" on="1"/>
+        <pt x="436" y="350" on="1"/>
+        <pt x="379" y="406" on="1"/>
+        <pt x="375" y="402" on="1"/>
+        <pt x="375" y="613" on="1"/>
+        <pt x="125" y="613" on="1"/>
+        <pt x="125" y="411" on="1"/>
+        <pt x="63" y="350" on="1"/>
+        <pt x="120" y="293" on="1"/>
+        <pt x="125" y="298" on="1"/>
+        <pt x="125" y="63" on="1"/>
+      </contour>
+      <contour>
+        <pt x="63" y="675" on="1"/>
+        <pt x="438" y="675" on="1"/>
+        <pt x="438" y="0" on="1"/>
+        <pt x="63" y="0" on="1"/>
+      </contour>
+      <instructions><bytecode>
+          b800202f b800032f b8002010 b80018d0
+          b800182f b9000900 02f4b800 00d0b800
+          002fb800 0310b800 0cd0b800 0c2fb800
+          0310b800 10d0b800 0310b900 120002f4
+          b8000310 b80014d0 b8000910 b80016d0
+          b8000910 b8001ad0 b8001810 b8001cd0
+          b8001210 b8001dd0 b8001d2f b8001210
+          b80021dc 00b80000 4558b800 1e2f1bb9
+          001e0003 3e59bb00 1d000100 1500042b
+          b8001e10 b9001000 01f43031 
+        </bytecode></instructions>
+    </TTGlyph>
+
+    <TTGlyph name="NULL"/><!-- contains no outline data -->
+
+    <TTGlyph name="a" xMin="-287" yMin="-216" xMax="-17" yMax="74">
+      <contour>
+        <pt x="-17" y="2" on="1"/>
+        <pt x="-17" y="-74" on="0"/>
+        <pt x="-61" y="-161" on="0"/>
+        <pt x="-118" y="-205" on="0"/>
+        <pt x="-173" y="-216" on="0"/>
+        <pt x="-185" y="-216" on="1"/>
+        <pt x="-206" y="-216" on="0"/>
+        <pt x="-244" y="-202" on="0"/>
+        <pt x="-271" y="-179" on="0"/>
+        <pt x="-287" y="-149" on="0"/>
+        <pt x="-287" y="-132" on="1"/>
+        <pt x="-287" y="-119" on="0"/>
+        <pt x="-267" y="-92" on="0"/>
+        <pt x="-250" y="-92" on="1"/>
+        <pt x="-225" y="-92" on="0"/>
+        <pt x="-207" y="-119" on="0"/>
+        <pt x="-195" y="-152" on="0"/>
+        <pt x="-178" y="-179" on="0"/>
+        <pt x="-154" y="-179" on="1"/>
+        <pt x="-119" y="-179" on="0"/>
+        <pt x="-99" y="-95" on="0"/>
+        <pt x="-99" y="0" on="1"/>
+        <pt x="-99" y="73" on="1"/>
+        <pt x="-17" y="74" on="1"/>
+      </contour>
+      <instructions><bytecode>
+          bb000000 02001500 042b00b8 00172fbb
+          00120001 00050004 2b3031 
+        </bytecode></instructions>
+    </TTGlyph>
+
+    <TTGlyph name="b" xMin="-93" yMin="-216" xMax="177" yMax="74">
+      <contour>
+        <pt x="177" y="-132" on="1"/>
+        <pt x="177" y="-149" on="0"/>
+        <pt x="161" y="-179" on="0"/>
+        <pt x="134" y="-202" on="0"/>
+        <pt x="96" y="-216" on="0"/>
+        <pt x="75" y="-216" on="1"/>
+        <pt x="67" y="-216" on="0"/>
+        <pt x="36" y="-212" on="0"/>
+        <pt x="-1" y="-197" on="0"/>
+        <pt x="-41" y="-169" on="0"/>
+        <pt x="-73" y="-120" on="0"/>
+        <pt x="-93" y="-48" on="0"/>
+        <pt x="-93" y="2" on="1"/>
+        <pt x="-93" y="74" on="1"/>
+        <pt x="-11" y="73" on="1"/>
+        <pt x="-11" y="0" on="1"/>
+        <pt x="-11" y="-95" on="0"/>
+        <pt x="9" y="-179" on="0"/>
+        <pt x="44" y="-179" on="1"/>
+        <pt x="68" y="-179" on="0"/>
+        <pt x="85" y="-152" on="0"/>
+        <pt x="97" y="-119" on="0"/>
+        <pt x="115" y="-92" on="0"/>
+        <pt x="140" y="-92" on="1"/>
+        <pt x="157" y="-92" on="0"/>
+        <pt x="177" y="-119" on="0"/>
+      </contour>
+      <instructions><bytecode>
+          00bb0012 00010005 00042b30 31
+        </bytecode></instructions>
+    </TTGlyph>
+
+    <TTGlyph name="c" xMin="37" yMin="0" xMax="484" yMax="447">
+      <contour>
+        <pt x="237" y="424" on="1"/>
+        <pt x="237" y="434" on="0"/>
+        <pt x="250" y="447" on="0"/>
+        <pt x="260" y="447" on="1"/>
+        <pt x="270" y="447" on="0"/>
+        <pt x="284" y="434" on="0"/>
+        <pt x="284" y="424" on="1"/>
+        <pt x="284" y="414" on="0"/>
+        <pt x="270" y="401" on="0"/>
+        <pt x="260" y="401" on="1"/>
+        <pt x="250" y="401" on="0"/>
+        <pt x="237" y="414" on="0"/>
+      </contour>
+      <contour>
+        <pt x="237" y="23" on="1"/>
+        <pt x="237" y="33" on="0"/>
+        <pt x="250" y="46" on="0"/>
+        <pt x="260" y="46" on="1"/>
+        <pt x="270" y="46" on="0"/>
+        <pt x="284" y="33" on="0"/>
+        <pt x="284" y="23" on="1"/>
+        <pt x="284" y="13" on="0"/>
+        <pt x="270" y="0" on="0"/>
+        <pt x="260" y="0" on="1"/>
+        <pt x="250" y="0" on="0"/>
+        <pt x="237" y="13" on="0"/>
+      </contour>
+      <contour>
+        <pt x="315" y="417" on="1"/>
+        <pt x="321" y="432" on="0"/>
+        <pt x="337" y="432" on="1"/>
+        <pt x="347" y="432" on="0"/>
+        <pt x="360" y="417" on="0"/>
+        <pt x="360" y="408" on="1"/>
+        <pt x="360" y="398" on="0"/>
+        <pt x="346" y="385" on="0"/>
+        <pt x="337" y="385" on="1"/>
+        <pt x="327" y="385" on="0"/>
+        <pt x="314" y="400" on="0"/>
+        <pt x="314" y="409" on="1"/>
+        <pt x="314" y="415" on="0"/>
+      </contour>
+      <contour>
+        <pt x="162" y="47" on="1"/>
+        <pt x="165" y="54" on="0"/>
+        <pt x="178" y="62" on="0"/>
+        <pt x="184" y="62" on="1"/>
+        <pt x="194" y="62" on="0"/>
+        <pt x="207" y="47" on="0"/>
+        <pt x="207" y="38" on="1"/>
+        <pt x="207" y="28" on="0"/>
+        <pt x="192" y="15" on="0"/>
+        <pt x="184" y="15" on="1"/>
+        <pt x="173" y="15" on="0"/>
+        <pt x="160" y="30" on="0"/>
+        <pt x="160" y="38" on="1"/>
+        <pt x="160" y="41" on="0"/>
+        <pt x="161" y="44" on="0"/>
+      </contour>
+      <contour>
+        <pt x="385" y="382" on="1"/>
+        <pt x="395" y="389" on="0"/>
+        <pt x="402" y="389" on="1"/>
+        <pt x="412" y="389" on="0"/>
+        <pt x="425" y="375" on="0"/>
+        <pt x="425" y="365" on="1"/>
+        <pt x="425" y="355" on="0"/>
+        <pt x="412" y="342" on="0"/>
+        <pt x="402" y="342" on="1"/>
+        <pt x="392" y="342" on="0"/>
+        <pt x="379" y="357" on="0"/>
+        <pt x="379" y="365" on="1"/>
+        <pt x="379" y="374" on="0"/>
+      </contour>
+      <contour>
+        <pt x="102" y="98" on="1"/>
+        <pt x="109" y="105" on="0"/>
+        <pt x="118" y="105" on="1"/>
+        <pt x="128" y="105" on="0"/>
+        <pt x="142" y="92" on="0"/>
+        <pt x="142" y="82" on="1"/>
+        <pt x="142" y="73" on="0"/>
+        <pt x="129" y="59" on="0"/>
+        <pt x="119" y="59" on="1"/>
+        <pt x="109" y="59" on="0"/>
+        <pt x="95" y="73" on="0"/>
+        <pt x="95" y="82" on="1"/>
+        <pt x="95" y="89" on="0"/>
+      </contour>
+      <contour>
+        <pt x="437" y="322" on="1"/>
+        <pt x="443" y="324" on="0"/>
+        <pt x="445" y="324" on="1"/>
+        <pt x="454" y="324" on="0"/>
+        <pt x="469" y="310" on="0"/>
+        <pt x="469" y="300" on="1"/>
+        <pt x="469" y="292" on="0"/>
+        <pt x="455" y="277" on="0"/>
+        <pt x="445" y="277" on="1"/>
+        <pt x="436" y="277" on="0"/>
+        <pt x="422" y="290" on="0"/>
+        <pt x="422" y="300" on="1"/>
+        <pt x="422" y="316" on="0"/>
+      </contour>
+      <contour>
+        <pt x="66" y="168" on="1"/>
+        <pt x="70" y="170" on="0"/>
+        <pt x="75" y="170" on="1"/>
+        <pt x="85" y="170" on="0"/>
+        <pt x="99" y="158" on="0"/>
+        <pt x="99" y="147" on="1"/>
+        <pt x="99" y="138" on="0"/>
+        <pt x="85" y="124" on="0"/>
+        <pt x="75" y="124" on="1"/>
+        <pt x="66" y="124" on="0"/>
+        <pt x="52" y="137" on="0"/>
+        <pt x="52" y="147" on="1"/>
+        <pt x="52" y="163" on="0"/>
+      </contour>
+      <contour>
+        <pt x="460" y="247" on="1"/>
+        <pt x="471" y="247" on="0"/>
+        <pt x="484" y="234" on="0"/>
+        <pt x="484" y="224" on="1"/>
+        <pt x="484" y="214" on="0"/>
+        <pt x="471" y="201" on="0"/>
+        <pt x="461" y="201" on="1"/>
+        <pt x="459" y="201" on="1"/>
+        <pt x="450" y="201" on="0"/>
+        <pt x="437" y="214" on="0"/>
+        <pt x="437" y="223" on="1"/>
+        <pt x="437" y="233" on="0"/>
+        <pt x="452" y="246" on="0"/>
+      </contour>
+      <contour>
+        <pt x="60" y="247" on="1"/>
+        <pt x="69" y="247" on="0"/>
+        <pt x="83" y="233" on="0"/>
+        <pt x="83" y="224" on="1"/>
+        <pt x="83" y="214" on="0"/>
+        <pt x="69" y="200" on="0"/>
+        <pt x="60" y="200" on="1"/>
+        <pt x="59" y="200" on="1"/>
+        <pt x="49" y="200" on="0"/>
+        <pt x="37" y="214" on="0"/>
+        <pt x="37" y="224" on="1"/>
+        <pt x="37" y="234" on="0"/>
+        <pt x="49" y="247" on="0"/>
+      </contour>
+      <contour>
+        <pt x="454" y="168" on="1"/>
+        <pt x="469" y="163" on="0"/>
+        <pt x="469" y="147" on="1"/>
+        <pt x="469" y="137" on="0"/>
+        <pt x="455" y="124" on="0"/>
+        <pt x="445" y="124" on="1"/>
+        <pt x="434" y="124" on="0"/>
+        <pt x="422" y="138" on="0"/>
+        <pt x="422" y="147" on="1"/>
+        <pt x="422" y="158" on="0"/>
+        <pt x="437" y="170" on="0"/>
+        <pt x="446" y="170" on="1"/>
+        <pt x="450" y="170" on="0"/>
+      </contour>
+      <contour>
+        <pt x="83" y="322" on="1"/>
+        <pt x="99" y="316" on="0"/>
+        <pt x="99" y="299" on="1"/>
+        <pt x="99" y="289" on="0"/>
+        <pt x="83" y="277" on="0"/>
+        <pt x="75" y="277" on="1"/>
+        <pt x="64" y="277" on="0"/>
+        <pt x="52" y="292" on="0"/>
+        <pt x="52" y="300" on="1"/>
+        <pt x="52" y="310" on="0"/>
+        <pt x="66" y="324" on="0"/>
+        <pt x="75" y="324" on="1"/>
+        <pt x="77" y="324" on="0"/>
+      </contour>
+      <contour>
+        <pt x="418" y="99" on="1"/>
+        <pt x="425" y="92" on="0"/>
+        <pt x="425" y="82" on="1"/>
+        <pt x="425" y="73" on="0"/>
+        <pt x="413" y="59" on="0"/>
+        <pt x="402" y="59" on="1"/>
+        <pt x="392" y="59" on="0"/>
+        <pt x="378" y="73" on="0"/>
+        <pt x="378" y="82" on="1"/>
+        <pt x="378" y="92" on="0"/>
+        <pt x="391" y="105" on="0"/>
+        <pt x="401" y="105" on="1"/>
+        <pt x="410" y="105" on="0"/>
+      </contour>
+      <contour>
+        <pt x="134" y="382" on="1"/>
+        <pt x="142" y="374" on="0"/>
+        <pt x="142" y="366" on="1"/>
+        <pt x="142" y="355" on="0"/>
+        <pt x="129" y="342" on="0"/>
+        <pt x="119" y="342" on="1"/>
+        <pt x="108" y="342" on="0"/>
+        <pt x="95" y="356" on="0"/>
+        <pt x="95" y="365" on="1"/>
+        <pt x="95" y="375" on="0"/>
+        <pt x="109" y="389" on="0"/>
+        <pt x="118" y="389" on="1"/>
+        <pt x="127" y="389" on="0"/>
+      </contour>
+      <contour>
+        <pt x="358" y="47" on="1"/>
+        <pt x="360" y="44" on="0"/>
+        <pt x="360" y="39" on="1"/>
+        <pt x="360" y="30" on="0"/>
+        <pt x="347" y="15" on="0"/>
+        <pt x="337" y="15" on="1"/>
+        <pt x="328" y="15" on="0"/>
+        <pt x="313" y="28" on="0"/>
+        <pt x="313" y="39" on="1"/>
+        <pt x="313" y="47" on="0"/>
+        <pt x="326" y="62" on="0"/>
+        <pt x="335" y="62" on="1"/>
+        <pt x="352" y="62" on="0"/>
+      </contour>
+      <contour>
+        <pt x="205" y="418" on="1"/>
+        <pt x="207" y="414" on="0"/>
+        <pt x="207" y="409" on="1"/>
+        <pt x="207" y="399" on="0"/>
+        <pt x="195" y="385" on="0"/>
+        <pt x="185" y="385" on="1"/>
+        <pt x="174" y="385" on="0"/>
+        <pt x="160" y="398" on="0"/>
+        <pt x="160" y="409" on="1"/>
+        <pt x="160" y="417" on="0"/>
+        <pt x="174" y="432" on="0"/>
+        <pt x="184" y="432" on="1"/>
+        <pt x="199" y="432" on="0"/>
+      </contour>
+      <instructions><bytecode>
+          bb006000 02006600 042bbb00 2b000200
+          3100042b bb000600 02000000 042bbb00
+          b8000200 be00042b bb006b00 02007200
+          042bbb00 39000200 3f00042b 4105005a
+          0000006a 00000002 71412100 09000000
+          19000000 29000000 39000000 49000000
+          59000000 69000000 79000000 89000000
+          99000000 a9000000 b9000000 c9000000
+          d9000000 e9000000 f9000000 105d410b
+          00090000 00190000 00290000 00390000
+          00490000 000571b8 000010b8 000cd0b8
+          000610b8 0012d0b8 00b810b8 001dd041
+          05005a00 be006a00 be000271 41210009
+          00be0019 00be0029 00be0039 00be0049
+          00be0059 00be0069 00be0079 00be0089
+          00be0099 00be00a9 00be00b9 00be00c9
+          00be00d9 00be00e9 00be00f9 00be0010
+          5d410b00 0900be00 1900be00 2900be00
+          3900be00 4900be00 0571b800 be10b800
+          23d0b800 232f4121 0006002b 0016002b
+          0026002b 0036002b 0046002b 0056002b
+          0066002b 0076002b 0086002b 0096002b
+          00a6002b 00b6002b 00c6002b 00d6002b
+          00e6002b 00f6002b 00105d41 0b000600
+          2b001600 2b002600 2b003600 2b004600
+          2b000571 41050055 002b0065 002b0002
+          71410500 5a003f00 6a003f00 02714121
+          0009003f 0019003f 0029003f 0039003f
+          0049003f 0059003f 0069003f 0079003f
+          0089003f 0099003f 00a9003f 00b9003f
+          00c9003f 00d9003f 00e9003f 00f9003f
+          00105d41 0b000900 3f001900 3f002900
+          3f003900 3f004900 3f000571 41210006
+          00600016 00600026 00600036 00600046
+          00600056 00600066 00600076 00600086
+          00600096 006000a6 006000b6 006000c6
+          006000d6 006000e6 006000f6 00600010
+          5d410b00 06006000 16006000 26006000
+          36006000 46006000 05714105 00550060
+          00650060 000271b8 006010b9 00460002
+          f4b80060 10b8004c d0b8004c 2fb80039
+          10b90053 0002f4b8 003910b8 0059d0b8
+          00592f41 05005a00 72006a00 72000271
+          41210009 00720019 00720029 00720039
+          00720049 00720059 00720069 00720079
+          00720089 00720099 007200a9 007200b9
+          007200c9 007200d9 007200e9 007200f9
+          00720010 5d410b00 09007200 19007200
+          29007200 39007200 49007200 0571ba00
+          78006600 60111239 b800782f b9007f00
+          02f4b800 5310b800 84d0b800 3910b800
+          8ad0b800 8a2fb800 6010b800 91d0b800
+          6610b800 97d0b800 3910b800 9ed0b800
+          3f10b800 a4d0b800 a42fb800 4610b800
+          abd0b800 6010b800 b1d0b800 b12fb800
+          2b10b800 c5d0b800 3110b800 cbd0b800
+          6b10b800 d1dc00b8 00004558 b800152f
+          1bb90015 00033e59 bb002800 01002e00
+          042bbb00 03000100 0900042b bb001a00
+          01002000 042bbb00 5d000100 6300042b
+          bb005000 01005600 042bbb00 75000100
+          7b00042b b8001510 b9000f00 01f44121
+          0007000f 0017000f 0027000f 0037000f
+          0047000f 0057000f 0067000f 0077000f
+          0087000f 0097000f 00a7000f 00b7000f
+          00c7000f 00d7000f 00e7000f 00f7000f
+          00105d41 0b000700 0f001700 0f002700
+          0f003700 0f004700 0f000571 41050056
+          000f0066 000f0002 71b80020 10b80036
+          d0b80036 2fb9003c 0001f4b8 002810b8
+          0049d0b8 00492fb9 00430001 f4b80075
+          10b80068 d0b8007b 10b8006e d0b8006e
+          2fb80063 10b80087 d0b8005d 10b8008d
+          d0b80056 10b80094 d0b80050 10b8009a
+          d0b80028 10b800a1 d0b800a1 2fb80043
+          10b800a7 d0b8003c 10b800ae d0b80020
+          10b800b4 d0b800b4 2fb8002e 10b800bb
+          d0b80028 10b800c1 d0b80020 10b800c8
+          d0b8001a 10b800ce d03031 
+        </bytecode></instructions>
+    </TTGlyph>
+
+    <TTGlyph name="nonmarkingreturn"/><!-- contains no outline data -->
+
+    <TTGlyph name="space"/><!-- contains no outline data -->
+
+  </glyf>
+
+  <name>
+    <namerecord nameID="0" platformID="1" platEncID="0" langID="0x0">
+     
+    </namerecord>
+    <namerecord nameID="1" platformID="1" platEncID="0" langID="0x0">
+      HackedDoulos
+    </namerecord>
+    <namerecord nameID="2" platformID="1" platEncID="0" langID="0x0">
+      Regular
+    </namerecord>
+    <namerecord nameID="3" platformID="1" platEncID="0" langID="0x0">
+      1.000;PYRS;HackedDoulos-Regular
+    </namerecord>
+    <namerecord nameID="4" platformID="1" platEncID="0" langID="0x0">
+      HackedDoulos Regular
+    </namerecord>
+    <namerecord nameID="5" platformID="1" platEncID="0" langID="0x0">
+      Version 1.00 2011
+    </namerecord>
+    <namerecord nameID="6" platformID="1" platEncID="0" langID="0x0">
+      HackedDoulos-Regular
+    </namerecord>
+    <namerecord nameID="7" platformID="1" platEncID="0" langID="0x0">
+      
+    </namerecord>
+    <namerecord nameID="8" platformID="1" platEncID="0" langID="0x0">
+     
+    </namerecord>
+    <namerecord nameID="9" platformID="1" platEncID="0" langID="0x0">
+      Moses Hall
+    </namerecord>
+    <namerecord nameID="10" platformID="1" platEncID="0" langID="0x0">
+     Hacked by Moses Hall in 2011.
+    </namerecord>
+    <namerecord nameID="0" platformID="3" platEncID="1" langID="0x409">
+      
+    </namerecord>
+    <namerecord nameID="1" platformID="3" platEncID="1" langID="0x409">
+      HackedDoulos
+    </namerecord>
+    <namerecord nameID="2" platformID="3" platEncID="1" langID="0x409">
+      Regular
+    </namerecord>
+    <namerecord nameID="3" platformID="3" platEncID="1" langID="0x409">
+      1.000;PYRS;HackedDoulos-Regular
+    </namerecord>
+    <namerecord nameID="4" platformID="3" platEncID="1" langID="0x409">
+      HackedDoulos Regular
+    </namerecord>
+    <namerecord nameID="5" platformID="3" platEncID="1" langID="0x409">
+      Version 1.00 2011
+    </namerecord>
+    <namerecord nameID="6" platformID="3" platEncID="1" langID="0x409">
+      HackedDoulos-Regular
+    </namerecord>
+    <namerecord nameID="7" platformID="3" platEncID="1" langID="0x409">
+      
+    </namerecord>
+    <namerecord nameID="8" platformID="3" platEncID="1" langID="0x409">
+      
+    </namerecord>
+    <namerecord nameID="9" platformID="3" platEncID="1" langID="0x409">
+      Moses Hall
+    </namerecord>
+    <namerecord nameID="10" platformID="3" platEncID="1" langID="0x409">
+      Hacked by Moses Hall in 2011.
+    </namerecord>
+  </name>
+
+  <post>
+    <formatType value="2.0"/>
+    <italicAngle value="0.0"/>
+    <underlinePosition value="-75"/>
+    <underlineThickness value="50"/>
+    <isFixedPitch value="0"/>
+    <minMemType42 value="0"/>
+    <maxMemType42 value="0"/>
+    <minMemType1 value="0"/>
+    <maxMemType1 value="0"/>
+    <psNames>
+      <!-- This file uses unique glyph names based on the information
+           found in the 'post' table. Since these names might not be unique,
+           we have to invent artificial names in case of clashes. In order to
+           be able to retain the original information, we need a name to
+           ps name mapping for those cases where they differ. That's what
+           you see below.
+            -->
+    </psNames>
+    <extraNames>
+      <!-- following are the name that are not taken from the standard Mac glyph order -->
+      <psName name="NULL"/>
+    </extraNames>
+  </post>
+
+</ttFont>

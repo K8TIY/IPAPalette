@@ -3,18 +3,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
- <style type="text/css"> div.p { margin-top: 7pt;}</style>
+ <style type="text/css"> div.p {margin-top: 7pt;}</style>
  <style type="text/css"><!--
- td div.comp { margin-top: -0.6ex; margin-bottom: -1ex;}
- td div.comb { margin-top: -0.6ex; margin-bottom: -.6ex;}
- td div.hrcomp { line-height: 0.9; margin-top: -0.8ex; margin-bottom: -1ex;}
+ td div.comp {margin-top: -0.6ex; margin-bottom: -1ex;}
+ td div.comb {margin-top: -0.6ex; margin-bottom: -.6ex;}
+ td div.hrcomp {line-height: 0.9; margin-top: -0.8ex; margin-bottom: -1ex;}
  td div.norm {line-height:normal;}
- span.roman {font-family: serif; font-style: normal; font-weight: normal;} 
+ //̢span.roman {font-family: serif; font-style: normal; font-weight: normal;} 
  span.overacc2 {position: relative;  left: .8em; top: -1.2ex;}
  span.overacc1 {position: relative;  left: .6em; top: -1.2ex;} --></style>
- 
-  
-<title> User's Guide for IPA Palette v2.0</title>
+
+<title> User's Guide for IPA Palette v2.1</title>
 </head>
 <body>
 <div>
@@ -23,67 +22,40 @@
 
 <h2>In a Nutshell</h2>
 IPA Palette is a Unicode input method for the Mac. It allows users of
-OS X 10.2.8 and later to insert International Phonetic Alphabet symbols
-in a Unicode-enabled text field or editor
-(i.e., any OS X application worth using).
+OS X 10.5 and later to insert International Phonetic Alphabet symbols
+in any Unicode-enabled text field or editor.
 
 <h2>How to Install</h2>
-There are two distinct "flavors" of IPA Palette.
 
-<h3>For OS X 10.5 and later</h3>
-The "new style" Input Method Kit (IMKit) is available and is preferred, since IMKit is much simpler
-and cleaner for me, the programmer, and probably you, the user. IMKit compatibility
-is a new feature of IPA Palette 2.0.
-
-Use the supplied installer and you will get the IMKit flavor installed with little trouble. It seems
-that there is no need to restart the machine or log out; the installer tries to notify Mac OS that a new Input
-Method has been added. You should therefore be able to use it immediately.
-
-<h3>For OS X 10.2.8 - 10.4</h3>
-The software is built to work with the Component Manager.
-This is the older and somewhat messier way that Input Methods had to be built.
-
-Because of limitations in Apple's installer software, you must install manually if you use this flavor.
-You may choose to install in either <tt>/Library/Components</tt> or <tt>~/Library/Components</tt>. The former will make IPA Palette
-available to all users but will require administrator privileges. The latter will install just for your own use.
-
-Create the selected <tt>Components</tt> directory if it does not exist, and
-drag the <tt>IPAPalette.component</tt> file into it.
-You will need to restart your Mac before IPA Palette can be enabled and used.
-<br/><br/>
-<i>Note: any time you upgrade from an older version of IPA Palette to a newer,
-a logout or restart is recommended. That's because an older version of the server (GUI) process
-may still be running. Alternatively, you can try using the Terminal command
-<tt>killall IPAServer</tt>, but I still recommend a restart especially on pre-Tiger systems.</i>
+Use the supplied installer and you should have no trouble. The installer tries
+to notify Mac OS that a new Input Method has been added or modified, and it also
+tries to terminate any currently-running instances of the input method. If you
+are unable to activate/use the Palette immediately, restart the machine.
+While inconvenient, it is the best way to get a reluctant system to "see" the new software.
 
 <h2>How to Enable</h2>
-Go to System Preferences &#8594; International &#8594; Input Menu.
-(On Snow Leopard it is System Preferences &#8594; Language & Text &#8594; Input Sources.)
+<table style="width:70%">
+<tr><td>
+Go to System Preferences &#8594; Language & Text &#8594; Input Sources.
+(On Leopard it is System Preferences &#8594; International &#8594; Input Menu.)
 IPA Palette should show up near the top of the
-list of input methods, allong with the built-in Character Palette, as in <a href="#f1">Figure 1</a>.
+list of input methods, allong with the built-in Character Palette.
 Put a check mark in the box to enable it, and also make sure the check box at the bottom
-of the window ("Show input menu in menu bar") is checked also. This enables the
-Input Menu, which I sometimes refer to as the "flag menu".
-<br/><br/>
-<a name="f1">
-<img src="International.jpg" alt="The International Panel"/></a><br/>
-<h4>Figure 1: IPA Palette enabled under Mac OS X 10.5</h4>
+of the window ("Show Input menu in menu bar") is checked also. This enables the Input Menu.
+</td><td>
+<img src="International.jpg" alt="The International Panel"/><br/>
+</td></tr></table>
 
  <h2>How To Use</h2>
-Select the Input Menu item "Show IPA Palette" (<a href="#f2">Figure 2</a>). You should be greeted by a view
-similar to <a href="#f3">Figure 3</a>.
+Select the Input Menu item "Show IPA Palette". The IPA Palette main window should then open as pictured below.
 <br/><br/>
-<table>
+<table style="width:70%">
 <tr>
 <td>
-<a name="f2">
-<img src="IMMenu.jpg" alt="The Input Menu"/></a><br/>
-<h4>Figure 2: The Input Menu under Mac OS X 10.5 with IPA Palette ready to go</h4>
+<img src="IMMenu.jpg" alt="The Input Menu"/>
 </td>
 <td>
-<a name="f3">
-<img src="IPAPalette.jpg" alt="The Palette"/></a><br/>
-<h4>Figure 3: IPA Palette activated under Mac OS X 10.5</h4>
+<img src="IPAPalette.jpg" alt="The Palette"/>
 </td>
 </tr></table>
 <br/>
@@ -116,28 +88,68 @@ in the Consonants tab, hold down the shift and/or option keys, and click the sym
 <i>Note: currently this does not work with the list of results in the search tab,
 but you can search for the string "aspirated" to find it.</i>
 
+<table><tr>
+<td><img src="New.png" alt="New Feature"/></td>
+<td><h3>Precomposed Retroflex, Palatal, and Velar Panes</h3></td>
+</tr></table>
+Doulos and Charis do not support the combining tilde overlay or the combining
+palatal and retroflex hooks. Instead, the recommendation is to use one of the
+many cool-looking precomposed characters. To this end, IPA Palette includes
+three new image maps which can be shown/hidden by clicking on the small
+triangles in the diactitic section of the "Other" pane.
+
+<table><tr>
+<td><img src="New.png" alt="New Feature"/></td>
+<td><h3>Keyboard shortcuts</h3></td>
+</tr></table>
+This is intended for those who use custom keyboard layouts, for example
+<a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=UniIPAKeyboard#79dbd88a">
+IPA Unicode 5.1 Macintosh Keyboard</a>.
+If enabled in the <code>Settings</code> pane ("Show Keyboard Shortcuts" checkbox),
+IPA Palette will scan the current
+keyboard layout you are using and try to display the keyboard shortcut (if any)
+for the symbol you are holding the mouse over. In this way you can use the software
+as a sort of "Reverse Keyboard Viewer:" instead of seeing the symbol generated by
+the given keys, you see the keys needed to generate a symbol of interest.
+
 <h3>User-Defined Symbols</h3>
-If IPA Palette tried to show all of the symbols used in theoretical and applied linguistics,
-the window would have twenty tabs and fill the entire screen! It's a painful choice,
-but only current IPA/ExtIPA symbols (and their superscripts if available)
-will be officially supported. However, if you need some additional
-symbols that are not in IPA but are still supported by Unicode, you can add them to your
-preferences. Or maybe you just use a few IPA symbols and you want them all on the same tab.
+If IPA Palette tried to show all of the symbols used in theoretical and applied
+linguistics, the window would have twenty tabs and fill the entire screen!
+It's a painful choice, but only current IPA/ExtIPA symbols (and their
+superscripts if available) will be officially supported. However, if you need
+some additional symbols that are not in IPA but are still supported by Unicode,
+you can add them to your preferences. Or maybe you just use a few IPA symbols
+and you want them all on the same tab.
 <br/><br/>
-The <code>Settings</code> pane has a button called <code>Custom Symbols…</code>.
-If you press the button, a sheet will be displayed in which you can edit your custom symbols.
-You can add (with the plus button) and delete (with the delete key). You can paste in a symbol, or you can use Apple's
-Character Palette to enter one. Under the <code>Description</code> column you can describe the symbol if
-you wish. If you do, the description will be displayed at the bottom of the palette when you mouse
-over the symbol, and you can search for it in the <code>Search</code> tab.
+The <code>Settings</code> pane has a menu called <code>Custom Symbols</code>.
+Using that you can use the <code>Edit…</code> item; a sheet will be displayed in
+which you can edit your symbols. You can add (with the plus button) and delete
+(with the delete key). You can paste in a symbol, or you can use Apple's
+Character Palette to enter one. Under the <code>Description</code> column you
+can describe the symbol if you wish. If you do, the description will be
+displayed at the bottom of the palette when you mouse over the symbol, and you
+can search for it in the <code>Search</code> tab.
 <br/><br/>
-The <code>Custom</code> tab pane is updated every time you edit your list. (If you remove all of them, or don't have any,
-the <code>Custom</code> pane will not be displayed in the Palette.) Custom symbols and their descriptions
-are saved in your preferences, so you only have to define them once.
+The <code>Custom</code> tab pane is updated every time you edit your list.
+(If you remove all of them, or don't have any, the <code>Custom</code> pane will
+not be displayed in the Palette.) Custom symbols and their descriptions are
+saved in your preferences, so you only have to define them once.
 <br/><br/>
-<i>Note: if a glyph is a diacritic, IPA Palette will (should -- there may be some nonspacing characters it
-does not know about -- let me know if there is one it misses) add the normal dotted circle (<code>U+25CC</code>) as
-a placeholder in the table and the image map. You don't need to (and should not) add it manually.</i>
+<i>Note: if a glyph is a diacritic, IPA Palette will (should -- there may be
+some nonspacing characters it does not know about -- let me know if there is one
+it misses) add the normal dotted circle (<code>U+25CC</code>) as a placeholder
+in the table and the image map. You don't need to (and should not) add it
+manually.</i>
+<br/><br/>
+<table><tr>
+<td><img src="New.png" alt="New Feature"/></td>
+<td><code>Custom symbols</code> also has <code>Export…</code> and
+<code>Import…</code> items. This functionality was requested by a user who was
+teaching a class and wished his students to have a certain set of symbols he
+could prepare for them and just have them load them in without a lot of tedious
+editing. The file format is just a old plain XML Property List
+(<code>.plist</code>, like a preferences file).</td>
+</tr></table>
 
 <h2>Font Support</h2>
 Although OS X has always had decent IPA support, I am assuming that most IPA
@@ -148,13 +160,14 @@ They are the de facto standard IPA fonts,
 and I have designed IPA Palette with them in mind.
 The SIL font designers have made Doulos/Charis "smart" using OpenType and AAT
 (Apple Advanced Typography) properties. Take as an example the IPA tone symbols
-<tt>U+02E5</tt> through <tt>U+02E9</tt>. While fonts in the Hiragino family can render them,
-Doulos can form elegant ligatures, as in <a href="#f4">Figure 4</a>.
+<tt>U+02E5</tt> through <tt>U+02E9</tt>. While fonts in the Hiragino family can
+render them, Doulos can form elegant ligatures:
 <br/>
-<a name="f4"><img src="Doulos.png" alt="Doulos vs Hiragino"/></a>
-<h4>Figure 4: Comparison of Hiragino and Doulos,
-contrasting Doulos' ligature with Hiragino's lack thereof,
-for the same tone sequence.</h4>
+<img src="Doulos.png" alt="Doulos vs Hiragino"/>
+<br/>
+<i>Note: please use Doulos or Charis SIL version 4.110; some earlier versions
+were buggy and would cause weird warning messages under Snow Leopard. I think
+the bugs were resolved with 4.110 or one of its immediate predecessors.</i>
 
 <h3>Font "Synchronization"</h3>
 To insert a symbol in the current open document in the font that you have selected
@@ -163,16 +176,18 @@ for the font preview, hold down the Control key when you click on it.
 <i>Note: anything you type subsequently will be in the font that was selected before.
 Only the inserted symbol will be in the preview font.</i>
 
+<i>Note: not all target programs support this. Microsoft Word 2008, for example, suffers from this defect.
+(Actually its users suffer, but hasn't that always been the case?)</i>
+
 <h3>User-Defined Fonts</h3>
 IPA Palette tries to show only IPA fonts in its popup menu. To be specific, it searches every
 installed font for those which contain /ɮ/,  <font size="-2">LATIN SMALL LETTER LEZH</font>.
-<a href="#tthFtNtAAB" name="tthFrefAAB"><sup>1</sup></a>
 If you want the menu to show additional fonts, you can do so, but you must
-modify your preferences using the Terminal or with Property List Editor (part of Apple's free Developer Tools).
+modify your preferences using the Terminal or with Property List Editor (part of Apple's XCode developer tool suite).
 (<i>Note: most users will not need or wish to do this.</i>)
 
 <pre>
-defaults write com.blugs.IPAServer UserFonts '("Arial Narrow","Papyrus")'
+defaults write com.blugs.inputmethod.IPAPalette UserFonts '("Arial Narrow","Papyrus")'
 </pre>
 
 The font names are a combination of "Family" (like "Hiragino Maru Gothic"), and
@@ -198,7 +213,7 @@ a waste of my time and yours.
 <ul>
 <li>Old versions (Office X and earler) do not speak Unicode at all. Forget it.</li>
 <li>In Word 2004, diacritics are not positioned correctly. <i>Microsoft engineer: "Die a critic? Huh??"</i></li>
-<li>Word 2008 actually seems to almost work sometimes! <i>Wow guys, it only took you 8 years?</i></li>
+<li>Word 2008 and 2011 actually seem to almost work sometimes! <i>Wow guys, it only took you 8 years?</i></li>
 </ul>
 
 <p><b>Q: Does IPA Palette work with Application XYZ?</b><br/>
@@ -213,41 +228,39 @@ in the Late Mesozoic period before Unicode.</li>
 <li>Cocoa (Objective-C programs that require OS X) software is automatically Unicode-savvy,
 so no worries there. I would be shocked to find a Cocoa application that causes problems
 for IPA Palette.</li>
-<li>OpenOffice and other X11 software, Java programs, and any other miscellaneous categories
+<li>OpenOffice, X11 software, Java programs, and any other miscellaneous categories
 may perform arbitrarily well or poorly, depending on the implementation language and the phase
 of the moon.</li>
 </ul>
 
 <p><b>Q: My Linguistics class is over. How do I uninstall the Palette?</b><br/>
-<b>A: Manually.</b></p>
+<b>A: Manually.</b><br/>
 <ul>
-<li>The IMKit version is in <tt>/Library/Input Methods</tt> or <tt>~/Library/Input Methods</tt>,
-depending on how you installed it.</li>
-<li>If you use the Component Manager version, it lives wherever you dragged it,
-either in <tt>/Library/Components</tt> or <tt>~/Library/Components</tt>.</li>
-<li>In either case, just drag the software to the Trash. The next time you restart, the software will be completely
+<li>The software is in <tt>/Library/Input Methods</tt> or <tt>~/Library/Input Methods</tt>,
+depending on how you installed it. In either case, just drag the software to the Trash or the desktop.
+The next time you log in, the software will be completely
 inactivated, and then you can empty the Trash.</li>
+</ul>
+
+<p><b>Q: Is IPA Palette available on the Mac App Store?</b><br/>
+<b>A: No, and it probably never will be.</b><br/>
+<ul>
+<li>Until Apple cleans up its act and makes the App Store more compatible with open source
+software, this is not going to happen.</li>
+<li>I'm not sure I terribly keen on the idea of paying Apple for the privilege of
+giving away my free software.</li>
+<li>I think readers know by now how I feel about the Mac App Store.</li>
 </ul>
 
 <h2>Thanks to...</h2>
 <ul>
-<li>Evan Gross from Rainmaker Research for help with fun <tt>NSApplication</tt>
+<li>Matt Gemmell for permission to use his <code>MAAttachedWindow</code> code under GPL 2+ license</li>
+<li>Evan Gross from Rainmaker Research for help with fun <code>NSApplication</code>
 undocumented calls for the search pane</li>
-<li>Hans-Jörg Bibiko for the German localization</li>
-<li>David Swain for help in debugging the <tt>cmap</tt> type 2 crasher</li>
+<li>Hans-Jörg Bibiko for the German localization (which has been modified in the years since; any errors are certain to be mine)</li>
+<li>David Swain for help in debugging the <code>cmap</code> type 2 crasher</li>
 <li>Joanne Scheibman for help debugging under Rosetta/Word</li>
 <li>Maxim Makatchev for corrections to the Russian localization</li>
 <li><i>Many, many</i> other kind folks who have offered suggestions and advice</li>
 </ul>
-
-<h2>To Do...</h2>
-<ul>
-<li>Darker Input Menu icon that looks better on Snow Leopard.</li>
-</ul>
-
-<hr /><h3>Footnotes:</h3>
-<a name="tthFtNtAAB"></a><a href="#tthFrefAAB"><sup>1</sup></a>Why?
-Because I consider <i>lezh</i> to be a "prototypical IPA symbol".
-Any font that has it is probably IPA, and any IPA font should have it.
-
 </div></body></html>

@@ -87,4 +87,6 @@
 "\U0346" = "\U032A"; // combining bridge A/B
 "\U0306" = "\U032E"; // combining breve; combining breve below
 "\U0303" = "\U0330"; // combining tilde; combining tilde below (inverted from above)
+// Here's the Unicode 6.1 draft oe digraph superscript
+"\U0153" = "\UA7F9"; // MODIFIER LETTER SMALL LIGATURE OE
 

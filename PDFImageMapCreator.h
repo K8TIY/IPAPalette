@@ -1,8 +1,8 @@
 /*
-Copyright © 2009-2010 Brian S. Hall
+Copyright © 2009-2011 Brian S. Hall
 
 This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License version 2 as
+it under the terms of the GNU General Public License version 2 or later as
 published by the Free Software Foundation.
 
 This program is distributed in the hope that it will be useful,
@@ -16,7 +16,13 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #import <Cocoa/Cocoa.h>
 #import "PDFImageMap.h";
 
-extern CGFloat PDFImageMapConsonantWidthPerHeight;
+@interface NSArray (PDFImageMapCreator)
+-(NSArray*)slice:(NSUInteger)size;
+@end
+
+#ifndef __PDFIMC_RUNTIME_ONLY__
+#define __PDFIMC_RUNTIME_ONLY__ 0
+#endif
 
 typedef enum
 {
@@ -28,20 +34,32 @@ typedef enum
 
 @interface PDFImageMapCreator : NSObject
 {
-  void*            _ctx; // CG context
-  NSArray*         _data;
-  CGRect           _rect;
-  NSMutableString* _xml;
-  NSMutableString* _preferredFont;
-  CGFloat          _fontsize;
-  CGFloat          _margin;
-  BOOL             _drawLines; // for debugging
+  void*                _ctx; // CG context
+  NSArray*             _data;
+  CGRect               _rect;
+  NSMutableString*     _xml;
+  NSMutableString*     _preferredFont;
+  NSString*            _chart;
+  NSMutableDictionary* _submaps;
+  NSMutableDictionary* _fontOverrides;
+  NSMutableDictionary* _stringOverrides;
+  NSMutableDictionary* _placeholderOverrides;
+  CGFloat              _fontSize;
 }
-+(void)setPDFImapgeMap:(PDFImageMap*)map toData:(NSArray*)data ofType:(PDFImageMapType)type;
++(void)setPDFImageMap:(PDFImageMap*)map toData:(NSArray*)data ofType:(PDFImageMapType)type;
++(CGMutablePathRef)submapIndicatorQuartzInRect:(CGRect)rect;
++(NSBezierPath*)submapIndicatorCocoaInRect:(NSRect)rect;
+#if !__PDFIMC_RUNTIME_ONLY__
++(void)drawSubmapIndicatorInRect:(CGRect)rect context:(CGContextRef)ctx;
+#endif
 -(id)initWithContext:(void*)ctx rect:(CGRect)rect data:(NSArray*)data;
 -(void)setFontSize:(CGFloat)size;
 -(void)setPreferredFont:(NSString*)font;
--(void)setMargin:(CGFloat)m;
--(NSString*)xml;
--(void)makeImageMapOfType:(PDFImageMapType)type;
+-(void)setOverrideString:(NSString*)str forString:(NSString*)string;
+-(void)setOverridePlaceholder:(NSString*)str forString:(NSString*)string;
+-(void)setOverrideFont:(NSString*)font forString:(NSString*)string;
+-(void)setSubmap:(NSString*)map forString:(NSString*)string;
+-(NSString*)xmlWithContainer:(BOOL)container;
+-(void)makeImageMapOfType:(PDFImageMapType)type named:(NSString*)name;
 @end
+
