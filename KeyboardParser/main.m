@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
   unsigned type = [klp matchingKeyboardType];
   NSObject* obj = [[NSObject alloc] init];
   [klp parseKeyboardType:type withObject:obj selector:@selector(keylayoutParser:foundSequence:forOutput:)];
+  //[klp dumpKeyboardType:type];
   [klp release];
   /*unsigned i;
   for (i = 0; i < 127; i++)

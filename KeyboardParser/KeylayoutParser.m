@@ -20,10 +20,21 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
        output:(NSString*)output withObject:(id)obj;
 @end
 
-#ifndef __KEYBOARD_PARSER_DEBUG__
-#define __KEYBOARD_PARSER_DEBUG__ 0
-#endif
+@interface NSMutableString (KLPAdditions)
+-(void)setFormat:(NSString*)fmt, ...;
+@end
 
+@implementation NSMutableString (KLPAdditions)
+-(void)setFormat:(NSString*)fmt, ...
+{
+  va_list args;
+  va_start(args, fmt);
+  NSString* tmp = [[NSString alloc] initWithFormat:fmt  arguments:args];
+  va_end(args);
+  [self setString:tmp];
+  [tmp release];
+}
+@end
 
 @implementation KeylayoutParser
 // Chooses which keyboard sequence is "better", i.e. more terse.
@@ -33,6 +44,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 +(NSComparisonResult)compareKeyboardSequence:(NSString*)s1
                      withSequence:(NSString*)s2
 {
+  if (s1 == nil && s2 != nil) return NSOrderedDescending;
+  if (s1 != nil && s2 == nil) return NSOrderedAscending;
+  if (s1 == nil && s2 == nil) return NSOrderedSame;
   unsigned l1 = [s1 length];
   unsigned l2 = [s2 length];
   //NSLog(@"compareKeyboardSequence:'%@' withSequence:'%@'", s1, s2);
@@ -58,6 +72,19 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   if (w1 < w2) return NSOrderedAscending;
   if (w1 > w2) return NSOrderedDescending;
   return NSOrderedSame;
+}
+
++(BOOL)isModifier:(unichar)ch
+{
+  switch (ch)
+  {
+    case kCommandUnicode: return YES;
+    case kShiftUnicode: return YES;
+    case 0x21EA: return YES;
+    case kOptionUnicode: return YES;
+    case kControlUnicode: return YES;
+  }
+  return NO;
 }
 
 -(id)init
@@ -88,30 +115,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 {
   unsigned match = 0;
   UCKeyboardLayout* uckl = (UCKeyboardLayout*)_buff;
-  /*if (uckl->keyLayoutFeatureInfoOffset)
-  {
-    UCKeyLayoutFeatureInfo* ucklfi = (UCKeyLayoutFeatureInfo*)(_buff + uckl->keyLayoutFeatureInfoOffset);
-    NSLog(@"Keyboard feature info format 0x%X (should be 0x%X), max out %d",
-          ucklfi->keyLayoutFeatureInfoFormat, kUCKeyLayoutFeatureInfoFormat,
-          ucklfi->maxOutputStringLength);
-  }*/
-  /*struct UCKeyboardTypeHeader {
-  UInt32              keyboardTypeFirst;      // first keyboardType in this entry
-  UInt32              keyboardTypeLast;       // last keyboardType in this entry
-  UInt32              keyModifiersToTableNumOffset; // required
-  UInt32              keyToCharTableIndexOffset; // required
-  UInt32              keyStateRecordsIndexOffset; // 0 => no table
-  UInt32              keyStateTerminatorsOffset; // 0 => no table
-  UInt32              keySequenceDataIndexOffset; // 0 => no table
-};*/
   UCKeyboardTypeHeader* uckth = &(uckl->keyboardTypeList[0]);
   unsigned i;
   for (i = 0; i < uckl->keyboardTypeCount; i++, uckth++)
   {
-    /*NSLog(@"KB type #%d: first %d, last %d, mods->table # offset %d, key->table idx offset %d, recs idx offset %d, terms offset %d, data idx offset %d",
-          i, uckth->keyboardTypeFirst, uckth->keyboardTypeLast, uckth->keyModifiersToTableNumOffset,
-          uckth->keyToCharTableIndexOffset, uckth->keyStateRecordsIndexOffset, uckth->keyStateTerminatorsOffset,
-          uckth->keySequenceDataIndexOffset);*/
     if (_kbType >= uckth->keyboardTypeFirst && _kbType <= uckth->keyboardTypeLast)
     {
       match = i;
@@ -124,17 +131,13 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 -(void)parseKeyboardType:(unsigned)kbtype withObject:(id)obj selector:(SEL)sel
 {
   UCKeyboardLayout* uckl = (UCKeyboardLayout*)_buff;
-  //NSLog(@"Parsing keyboard type #%d", kbtype);
   UCKeyboardTypeHeader* uckth = &(uckl->keyboardTypeList[kbtype]);
   UCKeyModifiersToTableNum* uckmttn = (UCKeyModifiersToTableNum*)(_buff + uckth->keyModifiersToTableNumOffset);
-  //NSLog(@"  KeyModifiersToTableNum: fmt 0x%X (should be 0x%X) default tbl %d, %d recs", uckmttn->keyModifiersToTableNumFormat,
-  //      kUCKeyModifiersToTableNumFormat, uckmttn->defaultTableNum, uckmttn->modifiersCount);
   unsigned j, k;
   NSMutableString* modString = [[NSMutableString alloc] init];
   NSNumber* tableNum;
   for (j = 0; j < uckmttn->modifiersCount; j++)
   {
-    //modifierKeyState = ((EventRecord.modifiers) >> 8) & 0xFF;
     [modString setString:@""];
     tableNum = [[NSNumber alloc] initWithUnsignedInt:uckmttn->tableNum[j]];
     if (j & (1 << (cmdKeyBit - 8))) [modString appendFormat:@"%C", kCommandUnicode];
@@ -142,8 +145,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     if (j & (1 << (alphaLockBit - 8))) [modString appendFormat:@"%C", 0x21EA];
     if (j & (1 << (optionKeyBit - 8)) || j & (1 << (rightOptionKeyBit - 8))) [modString appendFormat:@"%C", kOptionUnicode];
     if (j & (1 << (controlKeyBit - 8)) || j & (1 << (rightControlKeyBit - 8))) [modString appendFormat:@"%C", kControlUnicode];
-    //if (![modString length]) [modString setString:@"(no modifiers)"];
-    //NSLog(@"    %d (0x%X, %@): table %d", j, j, modString, uckmttn->tableNum[j]);
     NSString* existing = [_modMap objectForKey:tableNum];
     if (!existing || [existing length] > [modString length])
     {
@@ -153,37 +154,30 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     }
     [tableNum release];
   }
-#if __KEYBOARD_PARSER_DEBUG__
-  for (tableNum in [[_modMap allKeys] sortedArrayUsingSelector:@selector(compare:)])
-    NSLog(@"    %@: table %@", [_modMap objectForKey:tableNum], tableNum);
-#endif
   UCKeyToCharTableIndex* ucktcti = (UCKeyToCharTableIndex*)(_buff + uckth->keyToCharTableIndexOffset);
-#if __KEYBOARD_PARSER_DEBUG__
-  NSLog(@"  KeyToCharTableIndex: fmt 0x%X (should be 0x%X) size %d, %d recs", ucktcti->keyToCharTableIndexFormat,
-        kUCKeyToCharTableIndexFormat, ucktcti->keyToCharTableSize, ucktcti->keyToCharTableCount);
-#endif
   for (j = 0; j < ucktcti->keyToCharTableCount; j++)
   {
     tableNum = [[NSNumber alloc] initWithUnsignedInt:j];
     [modString setString:[_modMap objectForKey:tableNum]];
     [tableNum release];
-    //NSLog(@"    %d: offset %d", j, ucktcti->keyToCharTableOffsets[j]);
     UCKeyOutput* ucko = (UCKeyOutput*)(_buff + ucktcti->keyToCharTableOffsets[j]);
     for (k = 0; k < ucktcti->keyToCharTableSize; k++, ucko++)
     {
       UCKeyOutput ko = *ucko;
       NSString* output = nil;
-      NSString* sym = [[NSString alloc] initWithCString:VKKSymbol(k) encoding:NSUTF8StringEncoding];
+      NSString* sym = [[NSString alloc] initWithUTF8String:VKKSymbol(k)];
       NSString* seq = [[NSString alloc] initWithFormat:@"%@%@", modString, sym];
       [sym release];
       if ((ko & kUCKeyOutputTestForIndexMask) == kUCKeyOutputStateIndexMask)
       {
-        UInt16 next;
+        UInt16 next = 0;
         unichar ch = [self state0OutputForKeyboardType:kbtype atIndex:ko & kUCKeyOutputGetIndexMask nextState:&next];
         if (ch) output = [[NSString alloc] initWithFormat:@"%C", ch];
         if (next)
         {
           NSNumber* nextNum = [[NSNumber alloc] initWithUnsignedInt:next];
+          //id existing = [_stateMap objectForKey:seq];
+          //if (existing) NSLog("Warning: existing state (%@) for sequence %@", existing, seq);
           [_stateMap setObject:nextNum forKey:seq];
           [nextNum release];
         }
@@ -200,6 +194,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
       {
         [self invokeSelector:sel forFoundSequence:seq output:output withObject:obj];
         [output release];
+        output = nil;
       }
       [seq release];
     }
@@ -210,7 +205,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     tableNum = [[NSNumber alloc] initWithUnsignedInt:j];
     [modString setString:[_modMap objectForKey:tableNum]];
     [tableNum release];
-    //NSLog(@"    %d: offset %d", j, ucktcti->keyToCharTableOffsets[j]);
     UCKeyOutput* ucko = (UCKeyOutput*)(_buff + ucktcti->keyToCharTableOffsets[j]);
     for (k = 0; k < ucktcti->keyToCharTableSize; k++, ucko++)
     {
@@ -222,7 +216,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
         NSString* output = nil;
         NSString* sym = [[NSString alloc] initWithCString:symstr encoding:NSUTF8StringEncoding];
         NSString* seq = [[NSString alloc] initWithFormat:@"%@%@", modString, sym];
-        //NSLog(@"seq %@ from %@ VKKSymbol(%d)", seq, sym, k);
         [sym release];
         for (NSString* key in [_stateMap allKeys])
         {
@@ -242,40 +235,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
       }
     }
   }
-#if __KEYBOARD_PARSER_DEBUG__
-  NSLog(@"%@", _stateMap);
-  if (uckth->keyStateTerminatorsOffset)
+  for (NSString* s in [_stateMap allKeys])
   {
-    UCKeyStateTerminators* uckst = (UCKeyStateTerminators*)(_buff + uckth->keyStateTerminatorsOffset);
-    do
-    {
-      NSLog(@"  KeyStateTerminators: fmt 0x%X (should be 0x%X) size %d", uckst->keyStateTerminatorsFormat,
-            kUCKeyStateTerminatorsFormat, uckst->keyStateTerminatorCount);
-      for (j = 0; j < uckst->keyStateTerminatorCount; j++)
-      {
-        UCKeyCharSeq kcs = uckst->keyStateTerminators[j];
-        UCKeyCharSeq val = kcs;
-        BOOL needRel = NO;
-        NSString* desc = @"no output";
-        if ((kcs & kUCKeyOutputTestForIndexMask) == kUCKeyOutputSequenceIndexMask && uckth->keySequenceDataIndexOffset)
-        {
-          desc = @"sequence index";
-          val = kcs & kUCKeyOutputGetIndexMask;
-        }
-        else if (kcs < 0xFFFE)
-        {
-          UCKeyOutput repr = kcs;
-          if (!repr) repr = '_';
-          desc = [[NSString alloc] initWithFormat:@"unicode character '%C' U+%04X", repr, kcs];
-          needRel = YES;
-        }
-        NSLog(@"    State %d: 0x%X, %@ (from 0x%X)", j+1, val, desc, kcs);
-        if (needRel) [desc release];
-      }
-      break;
-    } while (YES);
+    NSNumber* stateNum = [_stateMap objectForKey:s];
+    NSString* ahnold = [self copyTerminatorForKeyboardType:kbtype forState:[stateNum unsignedIntValue]];
+    [self invokeSelector:sel forFoundSequence:s output:ahnold withObject:obj];
   }
-#endif
   [modString release];
 }
 
@@ -286,30 +251,14 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   UCKeyboardTypeHeader* uckth = &(uckl->keyboardTypeList[kbtype]);
   if (uckth->keySequenceDataIndexOffset)
   {
-   /*struct UCKeySequenceDataIndex {
-    UInt16              keySequenceDataIndexFormat; // =kUCKeySequenceDataIndexFormat
-    UInt16              charSequenceCount;      // Dimension of charSequenceOffsets[] is charSequenceCount+1
-    UInt16              charSequenceOffsets[1];
-                                                // Each offset in charSequenceOffsets is in bytes, from the beginning of
-                                                // UCKeySequenceDataIndex to a sequence of UniChars; the next offset indicates the
-                                                // end of the sequence. The UniChar sequences follow the UCKeySequenceDataIndex.
-                                                // Then there is padding to a 4-byte boundary with bytes containing 0, if necessary.
-    */
     UCKeySequenceDataIndex* ucksdi = (UCKeySequenceDataIndex*)(_buff + uckth->keySequenceDataIndexOffset);
     if (idx < ucksdi->charSequenceCount)
     {
-#if __KEYBOARD_PARSER_DEBUG__
-      NSLog(@"  KeySequenceDataIndex: fmt 0x%X (should be 0x%X) size %d", ucksdi->keySequenceDataIndexFormat,
-            kUCKeySequenceDataIndexFormat, ucksdi->charSequenceCount);
-#endif
       UInt8* start = (UInt8*)ucksdi + ucksdi->charSequenceOffsets[idx];
       UInt8* end = (UInt8*)ucksdi + ucksdi->charSequenceOffsets[idx+1];
       NSStringEncoding enc = (CFByteOrderGetCurrent() == CFByteOrderLittleEndian)?
           NSUTF16LittleEndianStringEncoding:NSUTF16BigEndianStringEncoding;
       s = [[NSString alloc] initWithBytes:start length:end-start encoding:enc];
-#if __KEYBOARD_PARSER_DEBUG__
-      NSLog(@"    %d: '%@' 0x%X to 0x%X (%d bytes)", index, s, start, end, end-start);
-#endif
     }
   }
   return s;
@@ -325,26 +274,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   if (uckth->keyStateRecordsIndexOffset)
   {
     UCKeyStateRecordsIndex* ucksri = (UCKeyStateRecordsIndex*)(_buff + uckth->keyStateRecordsIndexOffset);
-    /*  struct UCKeyStateRecordsIndex {
-    UInt16              keyStateRecordsIndexFormat; // =kUCKeyStateRecordsIndexFormat
-    UInt16              keyStateRecordCount;    // Dimension for keyStateRecordOffsets[]
-    UInt32              keyStateRecordOffsets[1];
-
-                                                // Each offset in keyStateRecordOffsets is from the beginning of the resource to a
-                                                // UCKeyStateRecord. These UCKeyStateRecords follow the keyStateRecordOffsets[] array.
-                                                // Then there is padding to a 4-byte boundary with bytes containing 0, if necessary.
-    };*/
-#if __KEYBOARD_PARSER_DEBUG__
-    NSLog(@"  KeyStateRecordsIndex: fmt 0x%X (should be 0x%X) size %d", ucksri->keyStateRecordsIndexFormat,
-          kUCKeyStateRecordsIndexFormat, ucksri->keyStateRecordCount);
-#endif
     if (idx < ucksri->keyStateRecordCount)
     {
       UCKeyStateRecord* ucksr = (UCKeyStateRecord*)(_buff + ucksri->keyStateRecordOffsets[idx]);
-#if __KEYBOARD_PARSER_DEBUG__
-      NSLog(@"    KeyStateRecord %X: seq 0x%X, state 0 next %d cnt %d fmt %d", idx, ucksr->stateZeroCharData,
-              ucksr->stateZeroNextState, ucksr->stateEntryCount, ucksr->stateEntryFormat);
-#endif
       if (ucksr->stateZeroCharData && ucksr->stateZeroCharData < 0xFFFE)
         ch = ucksr->stateZeroCharData;
       next = ucksr->stateZeroNextState;
@@ -365,21 +297,14 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     UCKeyStateRecordsIndex* ucksri = (UCKeyStateRecordsIndex*)(_buff + uckth->keyStateRecordsIndexOffset);
     do
     {
-#if __KEYBOARD_PARSER_DEBUG__
-      NSLog(@"  KeyStateRecordsIndex: fmt 0x%X (should be 0x%X) size %d", ucksri->keyStateRecordsIndexFormat,
-            kUCKeyStateRecordsIndexFormat, ucksri->keyStateRecordCount);
-#endif
       UCKeyStateRecord* ucksr = (UCKeyStateRecord*)(_buff + ucksri->keyStateRecordOffsets[idx]);
-#if __KEYBOARD_PARSER_DEBUG__
-      NSLog(@"    KeyStateRecord %X: seq 0x%X, state 0 next %d, cnt %d, fmt %d", index, ucksr->stateZeroCharData,
-            ucksr->stateZeroNextState, ucksr->stateEntryCount, ucksr->stateEntryFormat);
- #endif
       char* sed = (char*)&(ucksr->stateEntryData[0]);
       unsigned k;
       for (k = 0; k <= ucksr->stateEntryCount; k++)
       {
+        unsigned cs = 0;
         UCKeyCharSeq kcs;
-        if (state == 0)
+        if (k == 0)
         {
           kcs = ucksr->stateZeroCharData;
         }
@@ -389,6 +314,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
           {
             UCKeyStateEntryTerminal* kset = (UCKeyStateEntryTerminal*)sed;
             kcs = kset->charData;
+            cs = kset->curState;
           }
           else
           {
@@ -396,7 +322,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             kcs = kser->charData;
           }
         }
-        if (k == state)
+        if ((k == 0 && state == 0) || (k > 0 && state > 0 && state == cs))
         {
           if ((kcs & kUCKeyOutputTestForIndexMask) == kUCKeyOutputSequenceIndexMask && uckth->keySequenceDataIndexOffset)
           {
@@ -415,28 +341,53 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
           }
           else if (ucksr->stateEntryFormat == kUCKeyStateEntryRangeFormat)
           {
-  #if __KEYBOARD_PARSER_DEBUG__
-            UCKeyStateEntryRange* kser = (UCKeyStateEntryRange*)sed;
-            UCKeyCharSeq charData = kser->charData;
-            BOOL needRel = NO;
-            NSString* desc;
-            if (charData && charData < 0xFFFE)
-            {
-              desc = [[NSString alloc] initWithCharacters:&charData length:1];
-              needRel = YES;
-            }
-            else desc = @"(no description)";
-            NSLog(@"      %d: 0x%X, %@ (from 0x%X) state start %d range %d mult %d next %d",
-                  k, charData, desc, kcs, kser->curStateStart, kser->curStateRange, kser->deltaMultiplier,
-                  kser->nextState);
-            if (desc && needRel) [desc release];
-  #endif
             sed += sizeof(UCKeyStateEntryRange);
           }
         }
       }
       break;
     } while (1);
+  }
+  return s;
+}
+
+-(unsigned)countTerminatorsForKeyboardType:(unsigned)kbtype
+{
+  unsigned count = 0;
+  UCKeyboardLayout* uckl = (UCKeyboardLayout*)_buff;
+  UCKeyboardTypeHeader* uckth = &(uckl->keyboardTypeList[kbtype]);
+  if (uckth->keyStateTerminatorsOffset)
+  {
+    UCKeyStateTerminators* uckst = (UCKeyStateTerminators*)(_buff + uckth->keyStateTerminatorsOffset);
+    count = uckst->keyStateTerminatorCount;
+  }
+  return count;
+}
+
+-(NSString*)copyTerminatorForKeyboardType:(unsigned)kbtype forState:(unsigned)state
+{
+  NSString* s = nil;
+  UCKeyboardLayout* uckl = (UCKeyboardLayout*)_buff;
+  UCKeyboardTypeHeader* uckth = &(uckl->keyboardTypeList[kbtype]);
+  if (uckth->keyStateTerminatorsOffset)
+  {
+    UCKeyStateTerminators* uckst = (UCKeyStateTerminators*)(_buff + uckth->keyStateTerminatorsOffset);
+    if (state <= uckst->keyStateTerminatorCount)
+    {
+      do
+      {
+        UCKeyCharSeq kcs = uckst->keyStateTerminators[state-1];
+        if ((kcs & kUCKeyOutputTestForIndexMask) == kUCKeyOutputSequenceIndexMask && uckth->keySequenceDataIndexOffset)
+        {
+          s = [self copySequenceForKeyboardType:kbtype atIndex:kcs & kUCKeyOutputGetIndexMask];
+        }
+        else if (kcs < 0xFFFE)
+        {
+          s = [[NSString alloc] initWithFormat:@"%C", kcs];
+        }
+        break;
+      } while (YES);
+    }
   }
   return s;
 }
@@ -458,6 +409,200 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
       [inv invoke];
     }
   }
+}
+
+-(void)dumpKeyboardType:(unsigned)kbtype
+{
+  UCKeyboardLayout* uckl = (UCKeyboardLayout*)_buff;
+  NSLog(@"Parsing keyboard type #%d", kbtype);
+  UCKeyboardTypeHeader* uckth = &(uckl->keyboardTypeList[kbtype]);
+  UCKeyModifiersToTableNum* uckmttn = (UCKeyModifiersToTableNum*)(_buff + uckth->keyModifiersToTableNumOffset);
+  NSLog(@"  KeyModifiersToTableNum: fmt 0x%X (should be 0x%X) default tbl %d, %d recs", uckmttn->keyModifiersToTableNumFormat,
+        kUCKeyModifiersToTableNumFormat, uckmttn->defaultTableNum, uckmttn->modifiersCount);
+  unsigned j, k;
+  NSMutableString* modString = [[NSMutableString alloc] init];
+  NSNumber* tableNum;
+  NSMutableString* output = [[NSMutableString alloc] init];
+   NSLog(@"===== Modifiers =====");
+  for (j = 0; j < uckmttn->modifiersCount; j++)
+  {
+    [modString setString:@""];
+    tableNum = [[NSNumber alloc] initWithUnsignedInt:uckmttn->tableNum[j]];
+    if (j & (1 << (cmdKeyBit - 8))) [modString appendFormat:@"%C", kCommandUnicode];
+    if (j & (1 << (shiftKeyBit - 8)) || j & (1 << (rightShiftKeyBit - 8))) [modString appendFormat:@"%C", kShiftUnicode];
+    if (j & (1 << (alphaLockBit - 8))) [modString appendFormat:@"%C", 0x21EA];
+    if (j & (1 << (optionKeyBit - 8)) || j & (1 << (rightOptionKeyBit - 8))) [modString appendFormat:@"%C", kOptionUnicode];
+    if (j & (1 << (controlKeyBit - 8)) || j & (1 << (rightControlKeyBit - 8))) [modString appendFormat:@"%C", kControlUnicode];
+    //if (![modString length]) [modString setString:@"(no modifiers)"];
+    //NSLog(@"    %d (0x%X, %@): table %d", j, j, modString, uckmttn->tableNum[j]);
+    NSString* existing = [_modMap objectForKey:tableNum];
+    if (!existing ||
+        NSOrderedAscending == [KeylayoutParser compareKeyboardSequence:modString
+                                               withSequence:existing])
+    {
+      NSString* cpy = [modString copy];
+      [_modMap setObject:cpy forKey:tableNum];
+      [cpy release];
+    }
+    [tableNum release];
+  }
+  for (tableNum in [[_modMap allKeys] sortedArrayUsingSelector:@selector(compare:)])
+    NSLog(@"    %@: table %@", [_modMap objectForKey:tableNum], tableNum);
+  UCKeyToCharTableIndex* ucktcti = (UCKeyToCharTableIndex*)(_buff + uckth->keyToCharTableIndexOffset);
+  NSLog(@"  KeyToCharTableIndex: fmt 0x%X (should be 0x%X) size %d, %d recs", ucktcti->keyToCharTableIndexFormat,
+        kUCKeyToCharTableIndexFormat, ucktcti->keyToCharTableSize, ucktcti->keyToCharTableCount);
+  for (j = 0; j < ucktcti->keyToCharTableCount; j++)
+  {
+    tableNum = [[NSNumber alloc] initWithUnsignedInt:j];
+    [modString setString:[_modMap objectForKey:tableNum]];
+    [tableNum release];
+    NSLog(@"    Table %d: offset %d", j, ucktcti->keyToCharTableOffsets[j]);
+    UCKeyOutput* ucko = (UCKeyOutput*)(_buff + ucktcti->keyToCharTableOffsets[j]);
+    for (k = 0; k < ucktcti->keyToCharTableSize; k++, ucko++)
+    {
+      UCKeyOutput ko = *ucko;
+      NSString* sym = [[NSString alloc] initWithUTF8String:VKKSymbol(k)];
+      NSString* seq = [[NSString alloc] initWithFormat:@"%@%@", modString, sym];
+      [sym release];
+      [output setString:@""];
+      if ((ko & kUCKeyOutputTestForIndexMask) == kUCKeyOutputStateIndexMask)
+      {
+        [output setFormat:@"state table %d", ko & kUCKeyOutputGetIndexMask];
+      }
+      else if ((ko & kUCKeyOutputTestForIndexMask) == kUCKeyOutputSequenceIndexMask)
+      {
+        [output setFormat:@"sequence %d", ko & kUCKeyOutputGetIndexMask];
+      }
+      else if (ko < 0xFFFE)
+      {
+        [output setFormat:@"%C", ko];
+      }
+      if ([output length]) NSLog(@"      %d: %@ -> %@ (UCKeyOutput 0x%04X)", k, seq, output, ko);
+      [seq release];
+    }
+  }
+  [modString release];
+  if (uckth->keyStateRecordsIndexOffset)
+  {
+    UCKeyStateRecordsIndex* ucksri = (UCKeyStateRecordsIndex*)(_buff + uckth->keyStateRecordsIndexOffset);
+    do
+    {
+      NSLog(@"  KeyStateRecordsIndex: fmt 0x%X (should be 0x%X) size %d", ucksri->keyStateRecordsIndexFormat,
+            kUCKeyStateRecordsIndexFormat, ucksri->keyStateRecordCount);
+      for (j = 0; j < ucksri->keyStateRecordCount; j++)
+      {
+        UCKeyStateRecord* ucksr = (UCKeyStateRecord*)(_buff + ucksri->keyStateRecordOffsets[j]);
+        NSLog(@"    KeyStateRecord %d (0x%X): seq 0x%X (%C), state 0 next %d, cnt %d, fmt %d", j, ucksr, ucksr->stateZeroCharData,
+              ucksr->stateZeroCharData, ucksr->stateZeroNextState, ucksr->stateEntryCount, ucksr->stateEntryFormat);
+        char* sed = (char*)&(ucksr->stateEntryData[0]);
+        if ((unsigned long)sed & 1) sed++;
+        if ((unsigned long)sed & 2) sed += 2;
+        for (k = 1; k <= ucksr->stateEntryCount; k++)
+        {
+          UCKeyCharSeq kcs;
+          if (ucksr->stateEntryFormat == kUCKeyStateEntryTerminalFormat)
+          {
+            UCKeyStateEntryTerminal* kset = (UCKeyStateEntryTerminal*)sed;
+            kcs = kset->charData;
+          }
+          else
+          {
+            UCKeyStateEntryRange* kser = (UCKeyStateEntryRange*)sed;
+            kcs = kser->charData;
+          }
+          if ((kcs & kUCKeyOutputTestForIndexMask) == kUCKeyOutputSequenceIndexMask && uckth->keySequenceDataIndexOffset)
+          {
+            [output setFormat:@"sequence %d", kcs & kUCKeyOutputGetIndexMask];
+          }
+          else if (kcs > 0 && kcs < 0xFFFE)
+          {
+            [output setFormat:@"character '%C' (U+%04X)", kcs, kcs];
+          }
+          if (ucksr->stateEntryFormat == kUCKeyStateEntryTerminalFormat)
+          {
+            UCKeyStateEntryTerminal* kset = (UCKeyStateEntryTerminal*)sed;
+            NSLog(@"      State %d: %@", kset->curState, output);
+            sed += sizeof(UCKeyStateEntryTerminal);
+          }
+          else if (ucksr->stateEntryFormat == kUCKeyStateEntryRangeFormat)
+          {
+            UCKeyStateEntryRange* kser = (UCKeyStateEntryRange*)sed;
+            UCKeyCharSeq charData = kser->charData;
+            BOOL needRel = NO;
+            NSString* desc;
+            if (charData && charData < 0xFFFE)
+            {
+              desc = [[NSString alloc] initWithCharacters:&charData length:1];
+              needRel = YES;
+            }
+            else desc = @"(no description)";
+            NSLog(@"      State %d: 0x%X, %@ (from 0x%X) state start %d range %d mult %d next %d",
+                  k, charData, desc, kcs, kser->curStateStart, kser->curStateRange, kser->deltaMultiplier,
+                  kser->nextState);
+            if (desc && needRel) [desc release];
+            sed += sizeof(UCKeyStateEntryRange);
+          }
+          else
+          {
+            NSLog(@"      State %d: unknown format", k);
+          }
+        }
+      } break;
+    } while (1);
+  }
+  if (uckth->keyStateTerminatorsOffset)
+  {
+    NSLog(@"===== Terminators =====");
+    UCKeyStateTerminators* uckst = (UCKeyStateTerminators*)(_buff + uckth->keyStateTerminatorsOffset);
+    do
+    {
+      NSString* s = nil;
+      NSLog(@"  KeyStateTerminators: fmt 0x%X (should be 0x%X) size %d", uckst->keyStateTerminatorsFormat,
+            kUCKeyStateTerminatorsFormat, uckst->keyStateTerminatorCount);
+      for (j = 0; j < uckst->keyStateTerminatorCount; j++)
+      {
+        UCKeyCharSeq kcs = uckst->keyStateTerminators[j];
+        if ((kcs & kUCKeyOutputTestForIndexMask) == kUCKeyOutputSequenceIndexMask && uckth->keySequenceDataIndexOffset)
+        {
+          s = [self copySequenceForKeyboardType:kbtype atIndex:kcs & kUCKeyOutputGetIndexMask];
+        }
+        else if (kcs < 0xFFFE)
+        {
+          s = [[NSString alloc] initWithFormat:@"%C", kcs];
+        }
+        NSLog(@"    State %d: '%@' (from 0x%X)", j+1, s, kcs);
+        if (s) [s release];
+      }
+      break;
+    } while (YES);
+  }
+  if (uckth->keySequenceDataIndexOffset)
+  {
+    NSLog(@"===== Key Sequences =====");
+   /*struct UCKeySequenceDataIndex {
+    UInt16              keySequenceDataIndexFormat; // =kUCKeySequenceDataIndexFormat
+    UInt16              charSequenceCount;      // Dimension of charSequenceOffsets[] is charSequenceCount+1
+    UInt16              charSequenceOffsets[1];
+                                                // Each offset in charSequenceOffsets is in bytes, from the beginning of
+                                                // UCKeySequenceDataIndex to a sequence of UniChars; the next offset indicates the
+                                                // end of the sequence. The UniChar sequences follow the UCKeySequenceDataIndex.
+                                                // Then there is padding to a 4-byte boundary with bytes containing 0, if necessary.
+    */
+    UCKeySequenceDataIndex* ucksdi = (UCKeySequenceDataIndex*)(_buff + uckth->keySequenceDataIndexOffset);
+    NSLog(@"  KeySequenceDataIndex: fmt 0x%X (should be 0x%X) size %d", ucksdi->keySequenceDataIndexFormat,
+            kUCKeySequenceDataIndexFormat, ucksdi->charSequenceCount);
+    for (j = 0; j < ucksdi->charSequenceCount; j++)
+    {
+      UInt8* start = (UInt8*)ucksdi + ucksdi->charSequenceOffsets[j];
+      UInt8* end = (UInt8*)ucksdi + ucksdi->charSequenceOffsets[j+1];
+      NSStringEncoding enc = (CFByteOrderGetCurrent() == CFByteOrderLittleEndian)?
+          NSUTF16LittleEndianStringEncoding:NSUTF16BigEndianStringEncoding;
+      NSString* s = [[NSString alloc] initWithBytes:start length:end-start encoding:enc];
+      NSLog(@"    %d: '%@' 0x%X to 0x%X (%d bytes)", j, s, start, end, end-start);
+      [s release];
+    }
+  }
+  [output release];
 }
 @end
 
@@ -632,7 +777,7 @@ char* VKKSymbol(unsigned idx)
 "O",//"kVK_ANSI_O", //0x1F
 "U",//"kVK_ANSI_U", //0x20
 "[",//"kVK_ANSI_LeftBracket", //0x21
-"i",//"kVK_ANSI_I", //0x22
+"I",//"kVK_ANSI_I", //0x22
 "P",//"kVK_ANSI_P", //0x23
 "\xE2\x86\xA9",//"kVK_Return", //0x24;
 "L",//"kVK_ANSI_L", //0x25

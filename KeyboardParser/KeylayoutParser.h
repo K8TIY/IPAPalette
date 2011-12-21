@@ -26,6 +26,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 }
 +(NSComparisonResult)compareKeyboardSequence:(NSString*)s1
                      withSequence:(NSString*)s2;
++(BOOL)isModifier:(unichar)ch;
 -(unsigned)matchingKeyboardType;
 -(void)parseKeyboardType:(unsigned)kbtype withObject:(id)obj selector:(SEL)selector;
 -(NSString*)copySequenceForKeyboardType:(unsigned)kbtype atIndex:(unsigned)idx;
@@ -33,6 +34,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
           nextState:(UInt16*)oNextState;
 -(NSString*)copyOutputForKeyboardType:(unsigned)kbtype atIndex:(unsigned)idx
             inState:(UInt16)state;
+-(unsigned)countTerminatorsForKeyboardType:(unsigned)kbtype;
+-(NSString*)copyTerminatorForKeyboardType:(unsigned)kbtype forState:(unsigned)state;
+-(void)dumpKeyboardType:(unsigned)kbtype;
 @end
 
 char* VKKName(unsigned idx);
