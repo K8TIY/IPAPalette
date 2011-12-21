@@ -435,6 +435,7 @@ NS_ENDHANDLER
     NSArray* data = [glyphs slice:6];
     [PDFImageMapCreator setPDFImageMap:_user toData:data ofType:PDFImageMapColumnar];
     if ([_tabs selectedTabViewItem] == _userGlyphsTab) [_user startTracking];
+    [self keyboardChanged:nil];
   }
 }
 
@@ -730,7 +731,7 @@ NS_ENDHANDLER
     NSString* strVal = @"";
     NSString* uniVal = @"";
     NSString* descVal = @"";
-    NSString* kbVal = nil;
+    NSAttributedString* kbVal = nil;
     id hit = sender;
     if (!hit || ![hit isMemberOfClass:[PDFImageMap class]]) hit = nil;
     if (!hit)
@@ -755,11 +756,17 @@ NS_ENDHANDLER
         }
       }
     }
-    if (!kbVal) kbVal = @"";
+    BOOL needRel = NO;
+    if (!kbVal)
+    {
+      kbVal = [[NSAttributedString alloc] init];
+      needRel = YES;
+    }
     [_glyphView setStringValue:strVal];
     [_unicodeText setStringValue:uniVal];
-    [_keyboardText setStringValue:kbVal];
+    [_keyboardText setAttributedStringValue:kbVal];
     [_descriptionText setStringValue:descVal];
+    if (needRel) [kbVal release];
   }
 }
 
@@ -828,11 +835,19 @@ NS_ENDHANDLER
       for (NSString* u in unicodes)
         [_keyboard setObject:[NSNull null] forKey:u];
       [unicodes release];
+      NSArray* glyphs = [defs objectForKey:ipaUserGlyphsKey];
+      for (NSString* u in glyphs)
+      {
+        NSString* uplus = [IPAServer copyUPlusForString:u];
+        [_keyboard setObject:[NSNull null] forKey:uplus];
+        [uplus release];
+      }
     }
     KeylayoutParser* klp = [[KeylayoutParser alloc] init];
     unsigned type = [klp matchingKeyboardType];
     [klp parseKeyboardType:type withObject:self selector:@selector(keylayoutParser:foundSequence:forOutput:)];
     [klp release];
+    [self updateDisplays:self];
   }
   else
   {
@@ -857,6 +872,8 @@ NS_ENDHANDLER
   if ([seq length] == 0 || [output length] == 0) interesting = NO;
   else
   {
+    NSMutableParagraphStyle* style = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
+    [style setAlignment:NSCenterTextAlignment];
     unichar ch1 = [seq characterAtIndex:0];
     unichar ch2 = [output characterAtIndex:0];
     if (ch2 <= 0x0020 || ch2 == 0x007F) interesting = NO;
@@ -884,13 +901,25 @@ NS_ENDHANDLER
     if (interesting)
     {
       NSString* uplus = [IPAServer copyUPlusForString:output];
-      NSString* existing = [_keyboard objectForKey:uplus];
-      if ([existing isKindOfClass:[NSNull class]] ||
-          ([existing isKindOfClass:[NSString class]] &&
-           [KeylayoutParser compareKeyboardSequence:seq withSequence:existing] == NSOrderedAscending))
-        [_keyboard setObject:seq forKey:uplus];
+      NSAttributedString* existing = [_keyboard objectForKey:uplus];
+      if (!existing ||
+          [existing isKindOfClass:[NSNull class]] ||
+          ([existing isKindOfClass:[NSAttributedString class]] &&
+           [KeylayoutParser compareKeyboardSequence:seq withSequence:[existing string]] == NSOrderedAscending))
+      {
+        NSMutableAttributedString* seq2 = [[NSMutableAttributedString alloc] initWithString:seq];
+        for (i = 0; i < [seq length]; i++)
+        {
+          if ([KeylayoutParser isModifier:[seq characterAtIndex:i]])
+            //[seq2 addAttribute:NSFontAttributeName value:[NSFont boldSystemFontOfSize:[NSFont smallSystemFontSize]] range:NSMakeRange(i, 1)];
+            [seq2 addAttribute:NSForegroundColorAttributeName value:[NSColor colorWithCalibratedRed:0.75 green:0.1 blue:0.1 alpha:1.0] range:NSMakeRange(i, 1)];
+        }
+        [seq2 addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, [seq length])];
+        [_keyboard setObject:seq2 forKey:uplus];
+      }
       [uplus release];
     }
+    [style release];
   }
 }
 
