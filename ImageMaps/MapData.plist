@@ -801,7 +801,7 @@
   <key>rect</key> <string>{{0.25, 0.5}, {0.25, 0.125}}</string>
 </dict>
 <dict>
-  <key>char</key> <string>ʘ</string>
+  <key>char</key> <string>ʛ</string>
   <key>name</key> <string>Other</string>
   <key>rect</key> <string>{{0.25, 0.375}, {0.25, 0.125}}</string>
 </dict>
