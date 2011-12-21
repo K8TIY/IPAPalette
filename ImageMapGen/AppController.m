@@ -215,7 +215,7 @@ unichar diacritics[4][8] = {
   NSURL* url = [NSURL fileURLWithPath:path];
   CGContextRef ctx = CGPDFContextCreateWithURL((CFURLRef)url, &imgRect, NULL);
   NSArray* glyphs = [NSArray arrayWithObjects:@"\xCA\x98", @"\xC7\x80", @"\xC7\x83", @"\xC7\x82", @"\xC7\x81", @"", @"", @"",
-                                              @"\xC9\x93", @"\xC9\x97", @"\xCA\x84", @"\xC9\xA0", @"\xCA\x98", @"", @"", @"",
+                                              @"\xC9\x93", @"\xC9\x97", @"\xCA\x84", @"\xC9\xA0", @"\xCA\x9B", @"", @"", @"",
                                               @"\xCA\x8D", @"w", @"\xC9\xA5", @"\xCA\x9C", @"\xCA\xA2", @"\xCA\xA1", @"", @"",
                                               @"\xC9\x95", @"\xCA\x91", @"\xC9\xBA", @"\xC9\xA7", @"", @"", @"", @"", NULL];
   NSArray* data = [glyphs slice:8];
