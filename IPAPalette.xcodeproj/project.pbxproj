@@ -108,15 +108,15 @@
 
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Palette/main.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Palette/main.m; sourceTree = SOURCE_ROOT; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32022D7C11D16A8F000BFE8F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Localization/es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32022D7D11D16A99000BFE8F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = Localization/it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		320EDD5B14884D2400B191B0 /* Keyboard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Keyboard.plist; path = Palette/Keyboard.plist; sourceTree = "<group>"; };
-		320F3D3411175DB400079629 /* plus.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = plus.icns; path = Palette/plus.icns; sourceTree = "<group>"; };
-		3221A71D111C83EB00D8D1A9 /* TextRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextRenderer.h; sourceTree = "<group>"; };
-		3221A71E111C83EB00D8D1A9 /* TextRenderer.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = TextRenderer.c; sourceTree = "<group>"; };
+		320EDD5B14884D2400B191B0 /* Keyboard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Keyboard.plist; path = Palette/Keyboard.plist; sourceTree = SOURCE_ROOT; };
+		320F3D3411175DB400079629 /* plus.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = plus.icns; path = Palette/plus.icns; sourceTree = SOURCE_ROOT; };
+		3221A71D111C83EB00D8D1A9 /* TextRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextRenderer.h; sourceTree = SOURCE_ROOT; };
+		3221A71E111C83EB00D8D1A9 /* TextRenderer.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = TextRenderer.c; sourceTree = SOURCE_ROOT; };
 		3226A32B10863DCC000AD993 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Localization/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3226A32E10863DDC000AD993 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Localization/de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3226A32F10863DE0000AD993 /* en_GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en_GB; path = Localization/en_GB.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -126,65 +126,65 @@
 		3226A33310863DF0000AD993 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Localization/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3226A33410863DF3000AD993 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = Localization/vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3226A33510863DFA000AD993 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = Localization/zh_CN.lproj/Localizable.strings; sourceTree = "<group>"; };
-		3229611613846B22008157E9 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = Palette/MainMenu.xib; sourceTree = "<group>"; };
-		323788851072812C00149CCD /* ExtIPA.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ExtIPA.pdf; sourceTree = "<group>"; };
-		323788861072812C00149CCD /* SupraTone.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = SupraTone.pdf; sourceTree = "<group>"; };
-		323788871072812C00149CCD /* Other.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Other.pdf; sourceTree = "<group>"; };
-		323788881072812C00149CCD /* Diacritic.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Diacritic.pdf; sourceTree = "<group>"; };
-		323788891072812C00149CCD /* VowDrag.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = VowDrag.pdf; sourceTree = "<group>"; };
-		3237888A1072812C00149CCD /* Vow.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Vow.pdf; sourceTree = "<group>"; };
-		3237888B1072812C00149CCD /* Cons.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Cons.pdf; sourceTree = "<group>"; };
+		3229611613846B22008157E9 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = Palette/MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		323788851072812C00149CCD /* ExtIPA.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = ExtIPA.pdf; path = ImageMaps/ExtIPA.pdf; sourceTree = SOURCE_ROOT; };
+		323788861072812C00149CCD /* SupraTone.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = SupraTone.pdf; path = ImageMaps/SupraTone.pdf; sourceTree = SOURCE_ROOT; };
+		323788871072812C00149CCD /* Other.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Other.pdf; path = ImageMaps/Other.pdf; sourceTree = SOURCE_ROOT; };
+		323788881072812C00149CCD /* Diacritic.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Diacritic.pdf; path = ImageMaps/Diacritic.pdf; sourceTree = SOURCE_ROOT; };
+		323788891072812C00149CCD /* VowDrag.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = VowDrag.pdf; path = ImageMaps/VowDrag.pdf; sourceTree = SOURCE_ROOT; };
+		3237888A1072812C00149CCD /* Vow.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Vow.pdf; path = ImageMaps/Vow.pdf; sourceTree = SOURCE_ROOT; };
+		3237888B1072812C00149CCD /* Cons.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Cons.pdf; path = ImageMaps/Cons.pdf; sourceTree = SOURCE_ROOT; };
 		3241E2F110727BC500144CE0 /* ImageMapGen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageMapGen.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3241E31210727C8200144CE0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ImageMapGen/Info.plist; sourceTree = "<group>"; };
-		3241E31410727C8200144CE0 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppController.m; path = ImageMapGen/AppController.m; sourceTree = "<group>"; };
-		3241E31610727C8200144CE0 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ImageMapGen/AppController.h; sourceTree = "<group>"; };
-		3241F26A10975BD3004779A4 /* PDFImageMapCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFImageMapCreator.h; sourceTree = "<group>"; };
-		3241F26B10975BD3004779A4 /* PDFImageMapCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFImageMapCreator.m; sourceTree = "<group>"; };
-		3247FE951051B3B70013F223 /* IPAIcon.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = IPAIcon.tif; path = Palette/IPAIcon.tif; sourceTree = "<group>"; };
-		325554F7105AF4AD007222C6 /* CMAPParser.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = CMAPParser.c; path = Palette/CMAPParser.c; sourceTree = "<group>"; };
-		325554F8105AF4AD007222C6 /* CMAPParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMAPParser.h; path = Palette/CMAPParser.h; sourceTree = "<group>"; };
-		325554FC105AF4AD007222C6 /* GlyphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlyphView.h; path = Palette/GlyphView.h; sourceTree = "<group>"; };
-		325554FD105AF4AD007222C6 /* GlyphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlyphView.m; path = Palette/GlyphView.m; sourceTree = "<group>"; };
+		3241E31210727C8200144CE0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ImageMapGen/Info.plist; sourceTree = SOURCE_ROOT; };
+		3241E31410727C8200144CE0 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppController.m; path = ImageMapGen/AppController.m; sourceTree = SOURCE_ROOT; };
+		3241E31610727C8200144CE0 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ImageMapGen/AppController.h; sourceTree = SOURCE_ROOT; };
+		3241F26A10975BD3004779A4 /* PDFImageMapCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFImageMapCreator.h; sourceTree = SOURCE_ROOT; };
+		3241F26B10975BD3004779A4 /* PDFImageMapCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFImageMapCreator.m; sourceTree = SOURCE_ROOT; };
+		3247FE951051B3B70013F223 /* IPAIcon.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = IPAIcon.tif; path = Palette/IPAIcon.tif; sourceTree = SOURCE_ROOT; };
+		325554F7105AF4AD007222C6 /* CMAPParser.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = CMAPParser.c; path = Palette/CMAPParser.c; sourceTree = SOURCE_ROOT; };
+		325554F8105AF4AD007222C6 /* CMAPParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMAPParser.h; path = Palette/CMAPParser.h; sourceTree = SOURCE_ROOT; };
+		325554FC105AF4AD007222C6 /* GlyphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlyphView.h; path = Palette/GlyphView.h; sourceTree = SOURCE_ROOT; };
+		325554FD105AF4AD007222C6 /* GlyphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlyphView.m; path = Palette/GlyphView.m; sourceTree = SOURCE_ROOT; };
 		32555501105AF4AD007222C6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ImageMapGen/main.m; sourceTree = SOURCE_ROOT; };
 		32555503105AF4AD007222C6 /* MapData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MapData.plist; path = ImageMaps/MapData.plist; sourceTree = SOURCE_ROOT; };
-		32555505105AF4AD007222C6 /* Onizuka.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Onizuka.h; sourceTree = "<group>"; };
-		32555506105AF4AD007222C6 /* Onizuka.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Onizuka.m; sourceTree = "<group>"; };
-		32555507105AF4AD007222C6 /* PDFImageMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDFImageMap.h; path = Palette/PDFImageMap.h; sourceTree = "<group>"; };
-		32555508105AF4AD007222C6 /* PDFImageMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDFImageMap.m; path = Palette/PDFImageMap.m; sourceTree = "<group>"; };
-		32555509105AF4AD007222C6 /* Placeholder.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = Placeholder.c; path = Palette/Placeholder.c; sourceTree = "<group>"; };
-		3255550A105AF4AD007222C6 /* Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Placeholder.h; path = Palette/Placeholder.h; sourceTree = "<group>"; };
-		3255550B105AF4AD007222C6 /* IPAServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPAServer.h; path = Palette/IPAServer.h; sourceTree = "<group>"; };
-		3255550C105AF4AD007222C6 /* IPAServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPAServer.m; path = Palette/IPAServer.m; sourceTree = "<group>"; };
-		326E891A144616450063F34B /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = ImageMapGen/MainMenu.xib; sourceTree = "<group>"; };
+		32555505105AF4AD007222C6 /* Onizuka.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Onizuka.h; path = Onizuka/Onizuka.h; sourceTree = SOURCE_ROOT; };
+		32555506105AF4AD007222C6 /* Onizuka.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Onizuka.m; path = Onizuka/Onizuka.m; sourceTree = SOURCE_ROOT; };
+		32555507105AF4AD007222C6 /* PDFImageMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDFImageMap.h; path = Palette/PDFImageMap.h; sourceTree = SOURCE_ROOT; };
+		32555508105AF4AD007222C6 /* PDFImageMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDFImageMap.m; path = Palette/PDFImageMap.m; sourceTree = SOURCE_ROOT; };
+		32555509105AF4AD007222C6 /* Placeholder.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = Placeholder.c; path = Palette/Placeholder.c; sourceTree = SOURCE_ROOT; };
+		3255550A105AF4AD007222C6 /* Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Placeholder.h; path = Palette/Placeholder.h; sourceTree = SOURCE_ROOT; };
+		3255550B105AF4AD007222C6 /* IPAServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPAServer.h; path = Palette/IPAServer.h; sourceTree = SOURCE_ROOT; };
+		3255550C105AF4AD007222C6 /* IPAServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPAServer.m; path = Palette/IPAServer.m; sourceTree = SOURCE_ROOT; };
+		326E891A144616450063F34B /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = ImageMapGen/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		327FE565106D53E9003FEB34 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
-		328B05041075244F000D6186 /* IPAPalettePostinstall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPAPalettePostinstall.m; path = Installer/IPAPalettePostinstall.m; sourceTree = "<group>"; };
-		328D1C8B122C08ED00FE6E3C /* Alts.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Alts.strings; path = Palette/Alts.strings; sourceTree = "<group>"; };
-		328E50171459D77700BAB93F /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaults.plist; path = Palette/defaults.plist; sourceTree = "<group>"; };
-		3299F3E0143E65B9009191BC /* HackedDoulos-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HackedDoulos-Regular.ttf"; path = "ImageMapGen/HackedDoulos-Regular.ttf"; sourceTree = "<group>"; };
-		32B0660813BA7DEB00EB242B /* Pal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Pal.pdf; sourceTree = "<group>"; };
-		32B0660913BA7DEB00EB242B /* Retro.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Retro.pdf; sourceTree = "<group>"; };
-		32B0660F13BA7E1100EB242B /* VPh.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = VPh.pdf; sourceTree = "<group>"; };
-		32B0662913BA815800EB242B /* MAAttachedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAAttachedWindow.h; path = Palette/MAAttachedWindow.h; sourceTree = "<group>"; };
-		32B0662A13BA815800EB242B /* MAAttachedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAAttachedWindow.m; path = Palette/MAAttachedWindow.m; sourceTree = "<group>"; };
-		32BC62311113697F00B4E065 /* UserGlyphsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserGlyphsController.h; path = Palette/UserGlyphsController.h; sourceTree = "<group>"; };
-		32BC62321113697F00B4E065 /* UserGlyphsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserGlyphsController.m; path = Palette/UserGlyphsController.m; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* IPAPalette_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAPalette_Prefix.pch; sourceTree = "<group>"; };
-		32D0964A135DED4C00D86037 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
-		32D4CD92147ADF39008973BD /* KeyboardParser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KeyboardParser-Info.plist"; path = "KeyboardParser/KeyboardParser-Info.plist"; sourceTree = "<group>"; };
+		328B05041075244F000D6186 /* IPAPalettePostinstall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPAPalettePostinstall.m; path = Installer/IPAPalettePostinstall.m; sourceTree = SOURCE_ROOT; };
+		328D1C8B122C08ED00FE6E3C /* Alts.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Alts.strings; path = Palette/Alts.strings; sourceTree = SOURCE_ROOT; };
+		328E50171459D77700BAB93F /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaults.plist; path = Palette/defaults.plist; sourceTree = SOURCE_ROOT; };
+		3299F3E0143E65B9009191BC /* HackedDoulos-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HackedDoulos-Regular.ttf"; path = "ImageMapGen/HackedDoulos-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		32B0660813BA7DEB00EB242B /* Pal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Pal.pdf; path = ImageMaps/Pal.pdf; sourceTree = SOURCE_ROOT; };
+		32B0660913BA7DEB00EB242B /* Retro.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Retro.pdf; path = ImageMaps/Retro.pdf; sourceTree = SOURCE_ROOT; };
+		32B0660F13BA7E1100EB242B /* VPh.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = VPh.pdf; path = ImageMaps/VPh.pdf; sourceTree = SOURCE_ROOT; };
+		32B0662913BA815800EB242B /* MAAttachedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAAttachedWindow.h; path = Palette/MAAttachedWindow.h; sourceTree = SOURCE_ROOT; };
+		32B0662A13BA815800EB242B /* MAAttachedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAAttachedWindow.m; path = Palette/MAAttachedWindow.m; sourceTree = SOURCE_ROOT; };
+		32BC62311113697F00B4E065 /* UserGlyphsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserGlyphsController.h; path = Palette/UserGlyphsController.h; sourceTree = SOURCE_ROOT; };
+		32BC62321113697F00B4E065 /* UserGlyphsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserGlyphsController.m; path = Palette/UserGlyphsController.m; sourceTree = SOURCE_ROOT; };
+		32CA4F630368D1EE00C91783 /* IPAPalette_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAPalette_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		32D0964A135DED4C00D86037 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = SOURCE_ROOT; };
+		32D4CD92147ADF39008973BD /* KeyboardParser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KeyboardParser-Info.plist"; path = "KeyboardParser/KeyboardParser-Info.plist"; sourceTree = SOURCE_ROOT; };
 		32D4CDA3147AE00C008973BD /* KeyboardParser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KeyboardParser; sourceTree = BUILT_PRODUCTS_DIR; };
-		32D4CDB3147AE0C5008973BD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = KeyboardParser/main.m; sourceTree = "<group>"; };
-		32D4CEC9147AF8B2008973BD /* KeylayoutParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeylayoutParser.h; path = KeyboardParser/KeylayoutParser.h; sourceTree = "<group>"; };
-		32D4CECA147AF8B2008973BD /* KeylayoutParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeylayoutParser.m; path = KeyboardParser/KeylayoutParser.m; sourceTree = "<group>"; };
+		32D4CDB3147AE0C5008973BD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = KeyboardParser/main.m; sourceTree = SOURCE_ROOT; };
+		32D4CEC9147AF8B2008973BD /* KeylayoutParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeylayoutParser.h; path = KeyboardParser/KeylayoutParser.h; sourceTree = SOURCE_ROOT; };
+		32D4CECA147AF8B2008973BD /* KeylayoutParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeylayoutParser.m; path = KeyboardParser/KeylayoutParser.m; sourceTree = SOURCE_ROOT; };
 		32DC620E10D2EF6B008B5B1B /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = Localization/zh_TW.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32E102081110BFC100B1F030 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = Localization/fi.lproj/Localizable.strings; sourceTree = "<group>"; };
-		32E729E01444EC3700E2B07B /* IPAIconTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = IPAIconTemplate.pdf; path = Palette/IPAIconTemplate.pdf; sourceTree = "<group>"; };
+		32E729E01444EC3700E2B07B /* IPAIconTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = IPAIconTemplate.pdf; path = Palette/IPAIconTemplate.pdf; sourceTree = SOURCE_ROOT; };
 		32F9027F1076ACB2000D0404 /* IPAPalettePostinstall */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IPAPalettePostinstall; sourceTree = BUILT_PRODUCTS_DIR; };
 		32FE85E611629A0700E64D62 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = Localization/nl.lproj/Localizable.strings; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Palette/Info.plist; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Palette/Info.plist; sourceTree = SOURCE_ROOT; };
 		8D1107320486CEB800E47090 /* IPAPalette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPAPalette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93074B60A5C264700470842 /* InputMethodKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputMethodKit.framework; path = /System/Library/Frameworks/InputMethodKit.framework; sourceTree = "<absolute>"; };
-		E93074E00A5C2F1200470842 /* IPAInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPAInputController.h; path = Palette/IPAInputController.h; sourceTree = "<group>"; };
-		E93074E10A5C2F1200470842 /* IPAInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPAInputController.m; path = Palette/IPAInputController.m; sourceTree = "<group>"; };
+		E93074E00A5C2F1200470842 /* IPAInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPAInputController.h; path = Palette/IPAInputController.h; sourceTree = SOURCE_ROOT; };
+		E93074E10A5C2F1200470842 /* IPAInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPAInputController.m; path = Palette/IPAInputController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,7 +327,7 @@
 				32555503105AF4AD007222C6 /* MapData.plist */,
 			);
 			path = ImageMaps;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		3241E30810727C5F00144CE0 /* IPAChartGen */ = {
 			isa = PBXGroup;
@@ -340,7 +340,7 @@
 				3299F3E0143E65B9009191BC /* HackedDoulos-Regular.ttf */,
 			);
 			name = IPAChartGen;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		32555504105AF4AD007222C6 /* Onizuka */ = {
 			isa = PBXGroup;
@@ -349,7 +349,7 @@
 				32555506105AF4AD007222C6 /* Onizuka.m */,
 			);
 			path = Onizuka;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		328B050610752462000D6186 /* Postinstall */ = {
 			isa = PBXGroup;
@@ -357,7 +357,7 @@
 				328B05041075244F000D6186 /* IPAPalettePostinstall.m */,
 			);
 			name = Postinstall;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		32D4CDB5147AE0DB008973BD /* KeyboadParser */ = {
 			isa = PBXGroup;
@@ -368,7 +368,7 @@
 				32D4CD92147ADF39008973BD /* KeyboardParser-Info.plist */,
 			);
 			name = KeyboadParser;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -613,7 +613,7 @@
 				32DC620E10D2EF6B008B5B1B /* zh_TW */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXVariantGroup section */
 
