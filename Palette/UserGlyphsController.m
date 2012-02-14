@@ -101,7 +101,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   [_editglyphs addObject:@""];
   [_editdescriptions addObject:@""];
   [_table reloadData];
-  [_table selectRow:[_editglyphs count]-1 byExtendingSelection:NO];
+  NSIndexSet* is = [[NSIndexSet alloc] initWithIndex:[_editglyphs count]-1];
+  [is release];
+  [_table selectRowIndexes:is byExtendingSelection:NO];
   [_table editColumn:0 row:[_editglyphs count]-1 withEvent:nil select:YES];
 }
 
