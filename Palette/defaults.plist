@@ -6,8 +6,6 @@
 	<string>Doulos SIL</string>
 	<key>Debug</key>
 	<integer>0</integer>
-	<key>ComponentDebug</key>
-	<integer>0</integer>
 	<key>Tab</key>
 	<string>Vowel</string>
 	<key>DontShowAgain</key>

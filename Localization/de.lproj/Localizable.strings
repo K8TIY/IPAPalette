@@ -1,7 +1,6 @@
 "Unsupported" = "Das aktuelle Programm unterstützt keine reinen Unicode-Zeichen.";
 "__CANCEL__" = "Abbrechen";
 "__CHARTS__" = "Tabellen";
-"__COMPONENT_DEBUGGING__" = "Komponent-Debugger";
 "__CONS__" = "Konsonant";
 "__DEBUGGING__" = "Debugger";
 "__DEBUG__" = "Normal";

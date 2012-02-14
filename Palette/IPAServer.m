@@ -163,9 +163,7 @@ static NSString* ipaStringSymbolTypeKey   = @"SpelledOut";  // NSString
 // Defaults that have registerable values
 static NSString* ipaFontKey = @"Font";
 static NSString* ipaFontDefault = @"Doulos SIL";
-static NSString* ipaDebugKey = @"Debug";
-NSString* ipaComponentDebugKey = @"ComponentDebug";
-//static NSString* ipaTabKey = @"Tab";
+NSString* ipaDebugKey = @"Debug";
 static NSString* ipaDontShowAgainKey = @"DontShowAgain";
 static NSString* ipaUserFontsKey = @"UserFonts";
 NSString* ipaUserGlyphsKey = @"UserGlyphs";
@@ -174,7 +172,6 @@ static NSString* ipaFallbackKey = @"GlyphFallback";
 static NSString* ipaKeyboardSyncKey = @"KeyboardSync";
 // These will not be registered; filled in later
 static NSString*  ipaFrameKey = @"PaletteFrame";
-#define __DBG ([[NSUserDefaults standardUserDefaults] integerForKey:ipaDebugKey])
 
 +(void)initialize
 {

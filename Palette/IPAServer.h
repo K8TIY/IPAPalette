@@ -21,8 +21,8 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 extern NSString* ipaUserGlyphsKey;
 extern NSString* ipaUserGlyphDescriptionsKey;
-extern NSString* ipaComponentDebugKey;
-#define __CDBG ([[NSUserDefaults standardUserDefaults] integerForKey:ipaComponentDebugKey])
+extern NSString* ipaDebugKey;
+#define __DBG ([[NSUserDefaults standardUserDefaults] integerForKey:ipaDebugKey])
 
 // Shared debug levels
 enum

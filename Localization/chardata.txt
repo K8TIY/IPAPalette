@@ -3480,21 +3480,6 @@ loc_vi: Bảng
 loc_zh_CN: 图
 loc_zh_TW: 圖
 %%
-Glyph: __COMPONENT_DEBUGGING__
-loc_de: Komponent-Debugger
-loc_en: Component Debug
-loc_es: Depuración de componente
-loc_fi: Komponentti-vianetsintä
-loc_fr: Composant Déboguer
-loc_it: Debug di componente
-loc_ja: コンポーネントのデバッグ
-loc_ko: 구성요소 디버그
-loc_nl: Component-Debugger
-loc_ru: Отладка компонента
-loc_vi: Gỡ lỗi Component
-loc_zh_CN: Component调试
-loc_zh_TW: Component調試
-%%
 Glyph: __CONS__
 loc_de: Konsonant
 loc_en: Consonant

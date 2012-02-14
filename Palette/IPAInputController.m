@@ -83,12 +83,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   #pragma unused(sender)
   if ([[[self client] bundleIdentifier] isEqual:@"com.blugs.IPAServer"])
   {
-    if (__CDBG >= ipaVerboseDebugLevel) NSLog(@"activateServer: refusing com.blugs.IPAServer");
+    if (__DBG >= ipaVerboseDebugLevel) NSLog(@"activateServer: refusing com.blugs.IPAServer");
   }
   else
   {
     NSInteger wl = [[self client] windowLevel] + 1;
-    if (__CDBG >= ipaVerboseDebugLevel) NSLog(@"activateServer with window level %d", wl);
+    if (__DBG >= ipaVerboseDebugLevel) NSLog(@"activateServer with window level %d", wl);
     [[IPAServer sharedServer] setInputController:self];
     [[IPAServer sharedServer] activateWithWindowLevel:wl];
   }
