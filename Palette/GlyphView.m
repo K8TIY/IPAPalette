@@ -77,7 +77,7 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
   [super setFrameSize:sz];
 }
 
--(BOOL)mouseDownCanMoveWindow {return YES;}
+//-(BOOL)mouseDownCanMoveWindow {return YES;}
 
 #pragma mark API
 -(void)setStringValue:(NSString*)str
