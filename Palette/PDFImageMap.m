@@ -1,5 +1,5 @@
 /*
-Copyright © 2009-2011 Brian S. Hall
+Copyright © 2009-2012 Brian S. Hall
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License version 2 or later as
@@ -21,7 +21,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 -(void)_coreInit;
 -(void)_detachWindow;
 -(void)_checkMouse;
--(NSRect)imageRect;
 -(NSString*)_keyForPoint:(NSPoint)p;
 -(NSRect)_rectFromKey:(NSString*)key;
 -(NSRect)_centerRect:(NSRect)rect inRect:(NSRect)host;
@@ -48,6 +47,7 @@ static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGE
 
 -(void)_coreInit
 {
+  [self setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
   if (!_data) _data = [[NSMutableDictionary alloc] init];
   if (!_hots) _hots = [[NSMutableDictionary alloc] init];
   if (!_lastHot) _lastHot = [[NSMutableString alloc] init];
@@ -63,12 +63,19 @@ static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGE
     CFRelease(src);
     CGEventTapEnable(_tap, false);
   }
+  _canDragMap = YES;
+  if ([self image])
+  {
+    _copyImage = [[self image] copy];
+    [_copyImage setScalesWhenResized:YES];
+  }
 }
 
 -(void)dealloc
 {
   [self stopTracking];
   if (_dragImage) [_dragImage release];
+  if (_copyImage) [_copyImage release];
   if (_data) [_data release];
   if (_hots) [_hots release];
   if (_submaps) [_submaps release];
@@ -77,10 +84,23 @@ static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGE
   [super dealloc];
 }
 
+-(void)setImage:(NSImage*)newImage
+{
+  if (_copyImage) [_copyImage release];
+  _copyImage = [newImage copy];
+  [_copyImage setScalesWhenResized:YES];
+  [super setImage:newImage];
+}
+
 -(void)removeAllTrackingRects
 {
   [_data removeAllObjects];
   [_hots removeAllObjects];
+}
+
+-(NSString*)name
+{
+  return _name;
 }
 
 -(void)setName:(NSString*)name
@@ -91,7 +111,8 @@ static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGE
 -(void)loadDataFromFile:(NSString*)path withName:(NSString*)name;
 {
   NSArray* dat = [[NSArray alloc] initWithContentsOfFile:path];
-  if (!name) name = _name;
+  if (name) [_name setString:name];
+  else name = _name;
   for (NSDictionary* entry in dat)
   {
     NSString* name2 = [entry objectForKey:@"name"];
@@ -166,21 +187,9 @@ static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGE
   NSImage* image = [self image];
   if (image)
   {
-    NSRect bounds = [self bounds];
-    NSImage* copy = [image copy];
-    [copy setScalesWhenResized:YES];
-    NSSize size = [copy size];
-    NSPoint pt;
-    CGFloat rx = bounds.size.width / size.width;
-    CGFloat ry = bounds.size.height / size.height;
-    CGFloat r = rx < ry ? rx : ry;
-    size.width *= r;
-    size.height *= r;
-    [copy setSize:size];
-    pt.x = (bounds.size.width - size.width) / 2.0L;
-    pt.y = (bounds.size.height - size.height) / 2.0L;
-    [copy compositeToPoint:pt operation:NSCompositeSourceOver];
-    [copy release];
+    NSRect ir = [self imageRect];
+    [_copyImage setSize:ir.size];
+    [_copyImage compositeToPoint:ir.origin operation:NSCompositeSourceOver];
   }
 }
 
@@ -275,34 +284,49 @@ static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGE
       return;
     }
   }
-  while (str)
+  while (YES)
   {
     evt = [[self window] nextEventMatchingMask:NSLeftMouseDraggedMask | NSLeftMouseUpMask];
     if (evt)
     {
       if ([evt type] == NSLeftMouseUp) break;
-      NSData* encoded = [str dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
-      if (encoded)
+      NSData* encoded = [str dataUsingEncoding:NSUTF8StringEncoding
+                             allowLossyConversion:NO];
+      if (encoded || (_canDragMap && !str))
       {
         NSImage* img = _dragImage;
-        if (nil == img) img = [self image];
+        if (nil == img || !str) img = [self image];
         if (img)
         {
-          img = [img copy];
+          //img = [img copy];
           NSSize imgSize = [img size];
-          NSRect sourcer = NSRectFromString([_data objectForKey:str]);
-          sourcer.origin.x = sourcer.origin.x * imgSize.width;
-          sourcer.origin.y = sourcer.origin.y * imgSize.height;
-          sourcer.size.width *= imgSize.width;
-          sourcer.size.height *= imgSize.height;
-          sourcer = NSInsetRect(sourcer, 1.0L, 1.0L);
-          NSRect destrect = r;
-          destrect.origin = NSZeroPoint;
+          NSRect srcr, destr;
+          if (str)
+          {
+            srcr = NSRectFromString([_data objectForKey:str]);
+            srcr.origin.x *= imgSize.width;
+            srcr.origin.y *= imgSize.height;
+            srcr.size.width *= imgSize.width;
+            srcr.size.height *= imgSize.height;
+            srcr = NSInsetRect(srcr, 1.0L, 1.0L);
+            destr = r;
+            _draggingSymbol = YES;
+          }
+          else
+          {
+            srcr = NSZeroRect;
+            srcr.size = [img size];
+            destr = [self imageRect];
+            r = destr;
+            _draggingSymbol = NO;
+          }
+          destr.origin = NSZeroPoint;
           NSPoint dragPoint = NSMakePoint(r.origin.x, r.origin.y);
           NSImage* draggingImage = [[NSImage alloc] initWithSize:r.size];
           [draggingImage lockFocus];
-          [img drawInRect:destrect fromRect:sourcer operation:NSCompositeSourceOver fraction:1.0L];
-          [img release];
+          [img drawInRect:destr fromRect:srcr
+               operation:NSCompositeSourceOver fraction:1.0L];
+          //[img release];
           [draggingImage unlockFocus];
           NSPasteboard* pboard = [NSPasteboard pasteboardWithName:NSDragPboard];
           NSArray* types = [NSArray arrayWithObjects:NSStringPboardType, NULL];
@@ -310,7 +334,8 @@ static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGE
           [pboard setData:encoded forType:NSStringPboardType];
           _dragging = YES;
           [self dragImage:draggingImage at:dragPoint offset:NSZeroSize
-                event:evt pasteboard:pboard source:self slideBack:YES];
+                event:evt pasteboard:pboard source:self
+                slideBack:_draggingSymbol];
           [draggingImage release];
           _dragging = NO;
         }
@@ -330,6 +355,41 @@ static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGE
       {
         //NSLog(@"target %@, action 0x%X _lastHot '%@' string '%@'", target, action, _lastHot, [self stringValue]);
         [target performSelector:action withObject:self];
+      }
+    }
+  }
+}
+
+-(NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)loc
+{
+  #pragma unused (loc)
+  return (loc)? NSDragOperationCopy | NSDragOperationPrivate :
+                NSDragOperationCopy;
+}
+
+-(void)draggedImage:(NSImage*)img endedAt:(NSPoint)p
+       operation:(NSDragOperation)op
+{
+  #pragma unused (img,op)
+  if (!_draggingSymbol)
+  {
+    //NSPoint where = p;//[self convertPointToBase:p];
+    //NSRect f = [[self window] frame];
+    //NSLog(@"Is %@ outside %@?", NSStringFromPoint(where), NSStringFromRect(f));
+    //if (NSPointInRect(where, f)/* && NSPointInRect([NSEvent mouseLocation], f)*/)
+    if (NO)
+    {
+      //NSLog(@"Nope!");
+    }
+    else
+    {
+      _dropPoint = p;
+      id del = [self delegate];
+      if (del)
+      {
+        SEL sel = @selector(PDFImageMapDidDrag:);
+        if ([del respondsToSelector:sel])
+          [del performSelector:sel withObject:self];
       }
     }
   }
@@ -406,6 +466,7 @@ static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGE
       }
     }
     _lastMouse = where;
+    //NSLog(@"%@: %@ in %@?", _name, NSStringFromPoint(where),NSStringFromRect([self frame]);
   }
 }
 
@@ -513,8 +574,15 @@ static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGE
   if (_dragImage) [_dragImage release];
   _dragImage = img;
 }
+
+-(BOOL)canDragMap { return _canDragMap; }
+-(void)setCanDragMap:(BOOL)can { _canDragMap = can; }
+-(NSPoint)dropPoint { return _dropPoint; }
+
 @end
 
+// We talk to the hardware because we are an LSUIElement and we don't seem
+// to get modifier key changes.
 static NSUInteger local_CurrentModifiers(void)
 {
   UInt32 carbon = GetCurrentKeyModifiers();

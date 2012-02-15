@@ -1,5 +1,5 @@
 /*
-Copyright © 2009-2011 Brian S. Hall
+Copyright © 2009-2012 Brian S. Hall
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License version 2 or later as
@@ -25,6 +25,9 @@ typedef NSRect SubRect;
 
 @interface PDFImageMap : NSImageView
 {
+  // FiXME: can we move the event tap to a class global
+  // and let a class method dispatch the event to all instances
+  // that register for the notification?
   CFMachPortRef          _tap;  // Quartz event tap for tracking rects
   NSMutableDictionary*   _data; // key -> stringified SubRect
   NSMutableDictionary*   _hots; // stringified SubRect -> key
@@ -32,6 +35,7 @@ typedef NSRect SubRect;
   // an optional image used for generating drag images in case
   // the regular image has extra "stuff" (like the lines in the vowel chart)
   NSImage*               _dragImage;
+  NSImage*               _copyImage; // The scalable one
   NSMutableString*       _lastHot;
   NSMutableString*       _name;
   NSUInteger             _modifiers;
@@ -40,8 +44,11 @@ typedef NSRect SubRect;
   PDFImageMap*           _submap;
   id                     delegate;
   NSPoint                _lastMouse;
+  NSPoint                _dropPoint;
   NSTrackingRectTag      _trackingRect; // for the whole view
   BOOL                   _dragging;
+  BOOL                   _draggingSymbol;
+  BOOL                   _canDragMap;
 }
 -(NSString*)stringValue;
 -(void)startTracking;
@@ -49,10 +56,16 @@ typedef NSRect SubRect;
 -(NSString*)subwindowName;
 -(void)showSubwindow:(NSString*)str;
 -(void)removeAllTrackingRects;
+-(NSString*)name;
+-(void)setName:(NSString*)name;
 -(void)loadDataFromFile:(NSString*)path withName:(NSString*)name;
 -(void)setTrackingRect:(SubRect)r forKey:(NSString*)key;
 -(NSUInteger)modifiers;
 -(id)delegate;
 -(void)setDelegate:(id)del;
 -(void)setDragImage:(NSImage*)img;
+-(NSRect)imageRect;
+-(BOOL)canDragMap;
+-(void)setCanDragMap:(BOOL)can;
+-(NSPoint)dropPoint;
 @end

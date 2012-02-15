@@ -1,5 +1,5 @@
 /*
-Copyright © 2005-2011 Brian S. Hall
+Copyright © 2005-2012 Brian S. Hall
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License version 2 or later as
@@ -117,13 +117,22 @@ static void local_KeyboardChanged(CFNotificationCenterRef center,
 @end
 
 @implementation IPAPanel
+-(id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)windowStyle
+     backing:(NSBackingStoreType)bufferingType defer:(BOOL)deferCreation
+{
+  if ((self = [super initWithContentRect:contentRect
+                     styleMask:windowStyle
+                     backing:bufferingType
+                     defer:deferCreation]))
+  {
+    [[self standardWindowButton:NSWindowZoomButton] setHidden:YES];
+    [self setBecomesKeyOnlyIfNeeded:YES];
+  }
+  return self;
+}
+
 -(BOOL)canBecomeKeyWindow {return YES;}
 -(BOOL)canBecomeMainWindow {return NO;}
--(void)awakeFromNib
-{
-  [[self standardWindowButton:NSWindowZoomButton] setHidden:YES];
-  [self setBecomesKeyOnlyIfNeeded:YES];
-}
 @end
 
 @interface IPAServer (Private)
@@ -140,12 +149,16 @@ static void local_KeyboardChanged(CFNotificationCenterRef center,
 -(void)PDFImageMap:(PDFImageMap*)map didChangeSelection:(NSString*)key;
 -(void)updateDisplays:(id)hit;
 -(void)selectAnotherTab:(BOOL)prev;
--(void)die:(NSTimer*)t;
+//-(void)die:(NSTimer*)t;
 -(void)setPaletteVisible:(BOOL)vis;
+-(void)deactivateAppAndWindows;
+-(void)createAuxiliaryPanelForName:(NSString*)name withFrame:(NSRect)frame
+       syncToDefaults:(BOOL)sync;
 -(void)keyboardChanged:(NSNotification*)note;
 -(void)keylayoutParser:(KeylayoutParser*)kp foundSequence:(NSString*)seq
        forOutput:(NSString*)output;
--(void)deactivateAppAndWindows;
+-(void)syncAuxiliariesToDefaults;
+-(void)syncAuxiliariesFromDefaults;
 @end
 
 
@@ -170,6 +183,7 @@ NSString* ipaUserGlyphsKey = @"UserGlyphs";
 NSString* ipaUserGlyphDescriptionsKey = @"UserGlyphDescriptions";
 static NSString* ipaFallbackKey = @"GlyphFallback";
 static NSString* ipaKeyboardSyncKey = @"KeyboardSync";
+static NSString*  ipaAuxiliariesKey = @"Auxiliaries";
 // These will not be registered; filled in later
 static NSString*  ipaFrameKey = @"PaletteFrame";
 
@@ -212,6 +226,7 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
   [_diacritic loadDataFromFile:path withName:@"Diacritic"];
   [_other loadDataFromFile:path withName:@"Other"];
   [_extipa loadDataFromFile:path withName:@"ExtIPA"];
+  [_user setName:@"User"];
   [_window setFrameUsingName:ipaFrameKey];
   // Load the alternate image for vowel drag images
   path = [[NSBundle mainBundle] pathForResource:@"VowDrag" ofType:@"pdf"];
@@ -262,6 +277,7 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
 #if defined(XCODE_DEBUG_CONFIGURATION_DEBUG)
   [self activateWithWindowLevel:NSFloatingWindowLevel];
 #endif
+  [self syncAuxiliariesFromDefaults];
 }
 
 #define kLezh 0x026E // LZh digraph U+026E
@@ -347,6 +363,9 @@ NS_ENDHANDLER
         waitUntilDone:NO];
 }
 
+// FIXME: put this in the GlyphView code or find a way to make a
+// Leopard-compatible objc_setAssociatedObject() infrastructure
+// so I can make a category on NSView with this capability.
 -(void)embedSpinny
 {
   _spinny = [[NSProgressIndicator alloc] init];
@@ -536,6 +555,14 @@ NS_ENDHANDLER
       [_window orderOut:nil];
       //if (isMin) [_window deminiaturize:nil];
     }
+    if (_auxiliaries)
+    {
+      for (IPAPanel* aux in [_auxiliaries allValues])
+      {
+        if (vis) [aux orderFrontRegardless];
+        else [aux orderOut:nil];
+      }
+    }
   }
 }
 
@@ -717,10 +744,24 @@ NS_ENDHANDLER
   [self updateDisplays:map];
 }
 
+-(void)PDFImageMapDidDrag:(PDFImageMap*)map
+{
+  NSRect f = [map imageRect];
+  NSRect wf = f;
+  wf.size.width = f.size.width + 4.0f;
+  wf.size.height = f.size.height + 4.0f;
+  wf.origin = [map dropPoint];
+  [self createAuxiliaryPanelForName:[map name] withFrame:wf syncToDefaults:YES];
+}
+
 -(void)updateDisplays:(id)sender
 {
   // If we are still scanning for IPA fonts, the spinny is still, er, spinning
   // in the glyph view. Don't overwrite it.
+  // FIXME: this should not be done here; update the other fields but
+  // specifically avoid updating the spinnining GlyphView.
+  // Better yet, when  the spin code is migrated into GlyphView,
+  // it will be smart enough to not update.
   if (_scanningText == nil &&
       ![[[_tabs selectedTabViewItem] identifier] isEqual:@"Search"])
   {
@@ -771,6 +812,11 @@ NS_ENDHANDLER
 {
   [self setPaletteVisible:YES];
   [_window setLevel:level];
+  if (_auxiliaries)
+  {
+    for (IPAPanel* aux in [_auxiliaries allValues])
+      [aux setLevel:level];
+  }
 }
 
 -(void)hide
@@ -804,129 +850,48 @@ NS_ENDHANDLER
   [_window saveFrameUsingName:ipaFrameKey];
 }
 
--(void)observeValueForKeyPath:(NSString*)path ofObject:(id)object change:(NSDictionary*)change context:(void*)ctx
+-(void)observeValueForKeyPath:(NSString*)path ofObject:(id)object
+       change:(NSDictionary*)change context:(void*)ctx
 {
   #pragma unused (object,change,ctx)
   //NSLog(@"observeValueForKeyPath:%@ ofObject:%@ change:%@", path, object, change);
   if ([path isEqualToString:ipaKeyboardSyncKey]) [self keyboardChanged:nil];
-  
-}
-
-// FIXME: run this in a thread?
--(void)keyboardChanged:(NSNotification*)note
-{
-  #pragma unused (note)
-  if (__DBG > ipaDebugDebugLevel) NSLog(@"Keyboard changed");
-  NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
-  if ([defs boolForKey:ipaKeyboardSyncKey])
-  {
-    if (_keyboard)
-    {
-      for (id key in [_keyboard allKeys])
-        [_keyboard setObject:[NSNull null] forKey:key];
-    }
-    else
-    {
-      _keyboard = [[NSMutableDictionary alloc] init];
-      NSArray* unicodes = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Keyboard" ofType:@"plist"]];
-      for (NSString* u in unicodes)
-        [_keyboard setObject:[NSNull null] forKey:u];
-      [unicodes release];
-      NSArray* glyphs = [defs objectForKey:ipaUserGlyphsKey];
-      for (NSString* u in glyphs)
-      {
-        NSString* uplus = [IPAServer copyUPlusForString:u];
-        [_keyboard setObject:[NSNull null] forKey:uplus];
-        [uplus release];
-      }
-    }
-    KeylayoutParser* klp = [[KeylayoutParser alloc] init];
-    unsigned type = [klp matchingKeyboardType];
-    [klp parseKeyboardType:type withObject:self selector:@selector(keylayoutParser:foundSequence:forOutput:)];
-    [klp release];
-    [self updateDisplays:self];
-  }
-  else
-  {
-    if (_keyboard)
-    {
-      [_keyboard release];
-      _keyboard = nil;
-    }
-  }
-}
-
--(void)keylayoutParser:(KeylayoutParser*)kp foundSequence:(NSString*)seq
-       forOutput:(NSString*)output
-{
-  #pragma unused (kp)
-  BOOL interesting = YES;
-  // The following combos are officially uninteresting:
-  // 1. Anything yielding an empty string.
-  // 2. Anything yielding a single character of 0x20 (space) or below, or 0x7F (delete).
-  // 3. Unmodified 'A' yields 'a' or 'A'
-  // 4. Sequence with a cmd modifier
-  if ([seq length] == 0 || [output length] == 0) interesting = NO;
-  else
-  {
-    NSMutableParagraphStyle* style = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
-    [style setAlignment:NSCenterTextAlignment];
-    unichar ch1 = [seq characterAtIndex:0];
-    unichar ch2 = [output characterAtIndex:0];
-    if (ch2 <= 0x0020 || ch2 == 0x007F) interesting = NO;
-    if ([seq length] == 1 && [output length] == 1)
-    {
-      if (ch1 == ch2 || (ch1 >= 'A' && ch1 <= 'Z' && ch2 - 0x0020 == ch1))
-        interesting = NO;
-    }
-    if ([seq length] == 2 && [output length] == 1)
-    {
-      if (ch1 == kShiftUnicode || ch1 == kControlUnicode || ch1 == 0x21EA)
-        ch1 = [seq characterAtIndex:1];
-      if (ch1 == ch2 || (ch1 >= 'A' && ch1 <= 'Z' && ch2 - 0x0020 == ch1))
-        interesting = NO;
-    }
-    unsigned i;
-    for (i = 0; i < [seq length]; i++)
-    {
-      if ([seq characterAtIndex:i] == kCommandUnicode)
-      {
-        interesting = NO;
-        break;
-      }
-    }
-    if (interesting)
-    {
-      NSString* uplus = [IPAServer copyUPlusForString:output];
-      NSAttributedString* existing = [_keyboard objectForKey:uplus];
-      if (!existing ||
-          [existing isKindOfClass:[NSNull class]] ||
-          ([existing isKindOfClass:[NSAttributedString class]] &&
-           [KeylayoutParser compareKeyboardSequence:seq withSequence:[existing string]] == NSOrderedAscending))
-      {
-        NSMutableAttributedString* seq2 = [[NSMutableAttributedString alloc] initWithString:seq];
-        for (i = 0; i < [seq length]; i++)
-        {
-          if ([KeylayoutParser isModifier:[seq characterAtIndex:i]])
-            //[seq2 addAttribute:NSFontAttributeName value:[NSFont boldSystemFontOfSize:[NSFont smallSystemFontSize]] range:NSMakeRange(i, 1)];
-            [seq2 addAttribute:NSForegroundColorAttributeName value:[NSColor colorWithCalibratedRed:0.75 green:0.1 blue:0.1 alpha:1.0] range:NSMakeRange(i, 1)];
-        }
-        [seq2 addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, [seq length])];
-        [_keyboard setObject:seq2 forKey:uplus];
-      }
-      [uplus release];
-    }
-    [style release];
-  }
 }
 
 -(void)windowWillClose:(NSNotification*)note
 {
-  #pragma unused (note)
   if (__DBG > ipaDebugDebugLevel) NSLog(@"windowWillClose: received");
-  _hidden = YES;
-  [self setPaletteVisible:NO];
-  if (_inputController) [_inputController receiveHide];
+  IPAPanel* w = [note object];
+  if (w == _window)
+  {
+    _hidden = YES;
+    [self setPaletteVisible:NO];
+    if (_inputController) [_inputController receiveHide];
+  }
+  else
+  {
+    if (_auxiliaries)
+    {
+      NSString* toRemove = nil;
+      for (NSString* uuid in _auxiliaries)
+      {
+        IPAPanel* aux = [_auxiliaries objectForKey:uuid];
+        if (w == aux)
+        {
+          PDFImageMap* im = [[[w contentView] subviews] objectAtIndex:0];
+          if ([im isKindOfClass:[PDFImageMap class]])
+            [im stopTracking];
+          toRemove = uuid;
+          break;
+        }
+      }
+      if (toRemove)
+      {
+        [_auxiliaries removeObjectForKey:toRemove];
+        [self syncAuxiliariesToDefaults];
+      }
+    }
+  }
 }
 
 -(void)controlTextDidChange:(NSNotification*)note
@@ -1026,7 +991,7 @@ NS_ENDHANDLER
   [self updateDisplays:nil];
 }
 
-#pragma mark SEARCH RESULTS TABLE
+#pragma mark Search Results Table
 -(NSInteger)numberOfRowsInTableView:(NSTableView*)tv
 {
   #pragma unused (tv)
@@ -1090,6 +1055,201 @@ NS_ENDHANDLER
     wrote = [pboard setString:str forType:NSStringPboardType];
   }
   return wrote;
+}
+
+#pragma mark Keyboard Synchronization
+// FIXME: run this in a thread?
+// FIXME: the NSNotification is unused, remove it.
+-(void)keyboardChanged:(NSNotification*)note
+{
+  #pragma unused (note)
+  if (__DBG > ipaDebugDebugLevel) NSLog(@"Keyboard changed");
+  NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
+  if ([defs boolForKey:ipaKeyboardSyncKey])
+  {
+    if (_keyboard)
+    {
+      for (id key in [_keyboard allKeys])
+        [_keyboard setObject:[NSNull null] forKey:key];
+    }
+    else
+    {
+      _keyboard = [[NSMutableDictionary alloc] init];
+      NSArray* unicodes = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Keyboard" ofType:@"plist"]];
+      for (NSString* u in unicodes)
+        [_keyboard setObject:[NSNull null] forKey:u];
+      [unicodes release];
+      NSArray* glyphs = [defs objectForKey:ipaUserGlyphsKey];
+      for (NSString* u in glyphs)
+      {
+        NSString* uplus = [IPAServer copyUPlusForString:u];
+        [_keyboard setObject:[NSNull null] forKey:uplus];
+        [uplus release];
+      }
+    }
+    KeylayoutParser* klp = [[KeylayoutParser alloc] init];
+    unsigned type = [klp matchingKeyboardType];
+    [klp parseKeyboardType:type withObject:self selector:@selector(keylayoutParser:foundSequence:forOutput:)];
+    [klp release];
+    [self updateDisplays:self];
+  }
+  else
+  {
+    if (_keyboard)
+    {
+      [_keyboard release];
+      _keyboard = nil;
+    }
+  }
+}
+
+-(void)keylayoutParser:(KeylayoutParser*)kp foundSequence:(NSString*)seq
+       forOutput:(NSString*)output
+{
+  #pragma unused (kp)
+  // The following combos are officially uninteresting:
+  // 1. Anything yielding an empty string.
+  // 2. Anything yielding a single character of 0x20 (space) or below, or 0x7F (delete).
+  // 3. Unmodified 'A' yields 'a' or 'A'
+  // 4. Sequence with a cmd modifier
+  if ([seq length] > 0 && [output length] > 0)
+  {
+    BOOL interesting = YES;
+    NSMutableParagraphStyle* style = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
+    [style setAlignment:NSCenterTextAlignment];
+    unichar ch1 = [seq characterAtIndex:0];
+    unichar ch2 = [output characterAtIndex:0];
+    if (ch2 <= 0x0020 || ch2 == 0x007F) interesting = NO;
+    if ([seq length] == 1 && [output length] == 1)
+    {
+      if (ch1 == ch2 || (ch1 >= 'A' && ch1 <= 'Z' && ch2 - 0x0020 == ch1))
+        interesting = NO;
+    }
+    if ([seq length] == 2 && [output length] == 1)
+    {
+      if (ch1 == kShiftUnicode || ch1 == kControlUnicode || ch1 == 0x21EA)
+        ch1 = [seq characterAtIndex:1];
+      if (ch1 == ch2 || (ch1 >= 'A' && ch1 <= 'Z' && ch2 - 0x0020 == ch1))
+        interesting = NO;
+    }
+    unsigned i;
+    for (i = 0; i < [seq length]; i++)
+    {
+      if ([seq characterAtIndex:i] == kCommandUnicode)
+      {
+        interesting = NO;
+        break;
+      }
+    }
+    if (interesting)
+    {
+      NSString* uplus = [IPAServer copyUPlusForString:output];
+      NSAttributedString* existing = [_keyboard objectForKey:uplus];
+      if (!existing ||
+          [existing isKindOfClass:[NSNull class]] ||
+          ([existing isKindOfClass:[NSAttributedString class]] &&
+           [KeylayoutParser compareKeyboardSequence:seq withSequence:[existing string]] == NSOrderedAscending))
+      {
+        NSMutableAttributedString* seq2 = [[NSMutableAttributedString alloc] initWithString:seq];
+        for (i = 0; i < [seq length]; i++)
+        {
+          if ([KeylayoutParser isModifier:[seq characterAtIndex:i]])
+            //[seq2 addAttribute:NSFontAttributeName value:[NSFont boldSystemFontOfSize:[NSFont smallSystemFontSize]] range:NSMakeRange(i, 1)];
+            [seq2 addAttribute:NSForegroundColorAttributeName value:[NSColor colorWithCalibratedRed:0.75 green:0.1 blue:0.1 alpha:1.0] range:NSMakeRange(i, 1)];
+        }
+        [seq2 addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, [seq length])];
+        [_keyboard setObject:seq2 forKey:uplus];
+        [seq2 release];
+      }
+      [uplus release];
+    }
+    [style release];
+  }
+}
+
+#pragma mark Auxiliary Windows
+-(void)createAuxiliaryPanelForName:(NSString*)name withFrame:(NSRect)frame
+       syncToDefaults:(BOOL)flag
+{
+  NSRect imf = frame;
+  imf.size.width = frame.size.width - 4.0f;
+  imf.size.height = frame.size.height - 4.0f;
+  imf.origin = NSMakePoint(2.0f, 2.0f);
+  PDFImageMap* newMap = [[PDFImageMap alloc] initWithFrame:imf];
+  if ([name isEqualToString:@"User"])
+  {
+    NSArray* glyphs = [[NSUserDefaults standardUserDefaults] objectForKey:ipaUserGlyphsKey];
+    if ([glyphs count])
+    {
+      NSArray* data = [glyphs slice:6];
+      [PDFImageMapCreator setPDFImageMap:newMap toData:data ofType:PDFImageMapColumnar];
+    }
+  }
+  else
+  {
+    [newMap setImage:[NSImage imageNamed:[NSString stringWithFormat:@"%@.pdf", name]]];
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"MapData" ofType:@"plist"];
+    [newMap loadDataFromFile:path withName:name];
+  }
+  unsigned flags = NSTitledWindowMask | NSClosableWindowMask |
+                   NSMiniaturizableWindowMask | NSResizableWindowMask |
+                   NSUtilityWindowMask;
+  IPAPanel* aux = [[IPAPanel alloc] initWithContentRect:frame styleMask:flags
+                                    backing:NSBackingStoreBuffered defer:NO];
+  if (!_auxiliaries) _auxiliaries = [[NSMutableDictionary alloc] init];
+  [aux setFloatingPanel:YES];
+  [aux setHidesOnDeactivate:NO];
+  [[aux contentView] addSubview:newMap];
+  [aux setLevel:[_window level]];
+  [aux setDelegate:self];
+  [newMap setDelegate:self];
+  [newMap setTarget:self];
+  [newMap setAction:@selector(imageAction:)];
+  [newMap setCanDragMap:NO];
+  [newMap startTracking];
+  [newMap release];
+  CFUUIDRef	uuidObj = CFUUIDCreate(nil);
+  CFStringRef uuid = CFUUIDCreateString(nil, uuidObj);
+  CFRelease(uuidObj);
+  [_auxiliaries setObject:aux forKey:(id)uuid];
+  CFRelease(uuid);
+  if (!_hidden) [aux orderFront:self];
+  if (flag) [self syncAuxiliariesToDefaults];
+}
+
+// In defaults Auxiliaries is an array of strings,
+// where the string is of the form "{stringified frame}__{map name}"
+-(void)syncAuxiliariesToDefaults
+{
+  NSMutableArray* arr = [[NSMutableArray alloc] init];
+  for (IPAPanel* aux in [_auxiliaries allValues])
+  {
+    PDFImageMap* im = [[[aux contentView] subviews] objectAtIndex:0];
+    if ([im isKindOfClass:[PDFImageMap class]])
+    {
+      NSString* val = [[NSString alloc] initWithFormat:@"%@__%@",
+                                        NSStringFromRect([aux frame]),
+                                        [im name]];
+      [arr addObject:val];
+      [val release];
+    }
+  }
+  [[NSUserDefaults standardUserDefaults] setObject:arr forKey:ipaAuxiliariesKey];
+  [arr release];
+  [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+-(void)syncAuxiliariesFromDefaults
+{
+  NSArray* arr = [[NSUserDefaults standardUserDefaults] objectForKey:ipaAuxiliariesKey];
+  for (NSString* val in arr)
+  {
+    NSArray* vals = [val componentsSeparatedByString:@"__"];
+    //NSLog(@"%@ from %@", vals, val);
+    NSRect frame = NSRectFromString([vals objectAtIndex:0]);
+    NSString* name = [vals objectAtIndex:1];
+    [self createAuxiliaryPanelForName:name withFrame:frame syncToDefaults:NO];
+  }
 }
 @end
 

@@ -1,5 +1,5 @@
 /*
-Copyright © 2005-2011 Brian S. Hall
+Copyright © 2005-2012 Brian S. Hall
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License version 2 or later as
@@ -22,6 +22,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 extern NSString* ipaUserGlyphsKey;
 extern NSString* ipaUserGlyphDescriptionsKey;
 extern NSString* ipaDebugKey;
+
 #define __DBG ([[NSUserDefaults standardUserDefaults] integerForKey:ipaDebugKey])
 
 // Shared debug levels
@@ -73,6 +74,7 @@ enum
   NSURLConnection* _updateCheck;
   NSMutableData* _updateData;
   NSString* _savedSubwindow;
+  NSMutableDictionary* _auxiliaries; // UUID -> IPAPanel: aux windows dragged
 }
 +(IPAServer*)sharedServer;
 +(NSString*)copyUPlusForString:(NSString*)str;

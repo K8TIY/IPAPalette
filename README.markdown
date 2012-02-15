@@ -1,4 +1,4 @@
-## This is IPA Palette version 2.1
+## This is IPA Palette version 2.2 (unreleased beta)
 <http://blugs.com/IPA>
 
 ### What can you do with this thing?
@@ -7,22 +7,17 @@ IPA Palette is a palette-class input method for OS X 10.5 and later.
 It makes possible point-and-click input of International Phonetic
 Alphabet symbols into Unicode-savvy applications.
 
-### What's new in 2.1?
+### What's new in 2.2?
 
-* Got rid of the Component Manager version; now runs only on Leopard and up.
-* No longer client-server architecture so less code and faster startup.
-* Can display the keyboard shortcut associated with a symbol if you
-  use an IPA keyboard layout. 
-* Display precomposed velarized, palatal, and retroflex characters.
-  (click on the disclosure triangle thingy).
-* New superscript character from the Unicode 6.1 draft: U+A7F9 (superscript œ).
-  I will add U+A7F8 (faucalized voice) to the ExtIPA chart when Doulos
-  supports it.
-* Unified font sizes across charts so they are consistent and more readable.
-* Export and import custom symbols.
-* No longer call undocumented NSWindow/NSApp methods;
-  `[_window resignKeyWindow]` and `[NSApp deactivate]` together seem to do
-  the trick.
+* You can click in an unoccupied part of an image map (a part that has no
+  IPA symbol and thus doesn't hilite under your mouse) and drag it out into
+  a new mini-palette (I call them "auxiliaries").
+  This way you can have whatever subset of the IPA you
+  use the most available, without having to keep switching tabs.
+* The auxiliary palettes hide when you hide the main one, and are saved to
+  your preferences.
+* Some optimizations to the PDF image maps should enhance performance
+  in the mouse tracking routines.
 
 ### To Build
 
