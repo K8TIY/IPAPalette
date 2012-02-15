@@ -1,5 +1,5 @@
 /*
-Copyright © 2011 Brian S. Hall
+Copyright © 2011-2012 Brian S. Hall
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License version 2 or later as
@@ -16,6 +16,8 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #import <Cocoa/Cocoa.h>
 #import <Carbon/Carbon.h>
 
+// FIXME: conditionalize inclusion of dumpKeyboardType: method
+// so the Palette doesn't need to include this code.
 @interface KeylayoutParser : NSObject
 {
   NSMutableDictionary* _modMap; // NSNumber -> Modifier seq
