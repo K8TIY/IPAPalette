@@ -411,6 +411,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   }
 }
 
+#if __KEYLAYOUTPARSER_INCLUDE_DUMP__
 -(void)dumpKeyboardType:(unsigned)kbtype
 {
   UCKeyboardLayout* uckl = (UCKeyboardLayout*)_buff;
@@ -605,6 +606,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   }
   [output release];
 }
+#endif //__KEYLAYOUTPARSER_INCLUDE_DUMP__
 @end
 
 char* VKKName(unsigned idx)

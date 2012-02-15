@@ -16,8 +16,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #import <Cocoa/Cocoa.h>
 #import <Carbon/Carbon.h>
 
-// FIXME: conditionalize inclusion of dumpKeyboardType: method
-// so the Palette doesn't need to include this code.
+#ifndef __KEYLAYOUTPARSER_INCLUDE_DUMP__
+#define __KEYLAYOUTPARSER_INCLUDE_DUMP__ 0
+#endif
+
 @interface KeylayoutParser : NSObject
 {
   NSMutableDictionary* _modMap; // NSNumber -> Modifier seq
@@ -30,15 +32,19 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                      withSequence:(NSString*)s2;
 +(BOOL)isModifier:(unichar)ch;
 -(unsigned)matchingKeyboardType;
--(void)parseKeyboardType:(unsigned)kbtype withObject:(id)obj selector:(SEL)selector;
+-(void)parseKeyboardType:(unsigned)kbtype withObject:(id)obj
+       selector:(SEL)selector;
 -(NSString*)copySequenceForKeyboardType:(unsigned)kbtype atIndex:(unsigned)idx;
 -(unichar)state0OutputForKeyboardType:(unsigned)kbtype atIndex:(unsigned)idx
           nextState:(UInt16*)oNextState;
 -(NSString*)copyOutputForKeyboardType:(unsigned)kbtype atIndex:(unsigned)idx
             inState:(UInt16)state;
 -(unsigned)countTerminatorsForKeyboardType:(unsigned)kbtype;
--(NSString*)copyTerminatorForKeyboardType:(unsigned)kbtype forState:(unsigned)state;
+-(NSString*)copyTerminatorForKeyboardType:(unsigned)kbtype
+            forState:(unsigned)state;
+#if __KEYLAYOUTPARSER_INCLUDE_DUMP__
 -(void)dumpKeyboardType:(unsigned)kbtype;
+#endif
 @end
 
 char* VKKName(unsigned idx);
