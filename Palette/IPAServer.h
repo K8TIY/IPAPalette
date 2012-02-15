@@ -75,6 +75,7 @@ enum
   NSMutableData* _updateData;
   NSString* _savedSubwindow;
   NSMutableDictionary* _auxiliaries; // UUID -> IPAPanel: aux windows dragged
+  // FIXME: change _auxiliaries to NSMutableSet, we don't need the UUID
 }
 +(IPAServer*)sharedServer;
 +(NSString*)copyUPlusForString:(NSString*)str;
