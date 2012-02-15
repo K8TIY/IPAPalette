@@ -86,6 +86,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 -(IBAction)acceptSheet:(id)sender
 {
+  [[sender window] makeFirstResponder:[sender window]];
   [NSApp endSheet:[sender window] returnCode:NSAlertDefaultReturn];
 }
 
@@ -102,8 +103,8 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   [_editdescriptions addObject:@""];
   [_table reloadData];
   NSIndexSet* is = [[NSIndexSet alloc] initWithIndex:[_editglyphs count]-1];
-  [is release];
   [_table selectRowIndexes:is byExtendingSelection:NO];
+  [is release];
   [_table editColumn:0 row:[_editglyphs count]-1 withEvent:nil select:YES];
 }
 
@@ -185,7 +186,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   [_table reloadData];
 }
 
-#pragma mark TABLE
+#pragma mark Table
 -(NSInteger)numberOfRowsInTableView:(NSTableView*)tv
 {
   #pragma unused (tv)
