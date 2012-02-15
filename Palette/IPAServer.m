@@ -557,7 +557,7 @@ NS_ENDHANDLER
     }
     if (_auxiliaries)
     {
-      for (IPAPanel* aux in [_auxiliaries allValues])
+      for (IPAPanel* aux in _auxiliaries)
       {
         if (vis) [aux orderFrontRegardless];
         else [aux orderOut:nil];
@@ -814,7 +814,7 @@ NS_ENDHANDLER
   [_window setLevel:level];
   if (_auxiliaries)
   {
-    for (IPAPanel* aux in [_auxiliaries allValues])
+    for (IPAPanel* aux in _auxiliaries)
       [aux setLevel:level];
   }
 }
@@ -870,27 +870,7 @@ NS_ENDHANDLER
   }
   else
   {
-    if (_auxiliaries)
-    {
-      NSString* toRemove = nil;
-      for (NSString* uuid in _auxiliaries)
-      {
-        IPAPanel* aux = [_auxiliaries objectForKey:uuid];
-        if (w == aux)
-        {
-          PDFImageMap* im = [[[w contentView] subviews] objectAtIndex:0];
-          if ([im isKindOfClass:[PDFImageMap class]])
-            [im stopTracking];
-          toRemove = uuid;
-          break;
-        }
-      }
-      if (toRemove)
-      {
-        [_auxiliaries removeObjectForKey:toRemove];
-        [self syncAuxiliariesToDefaults];
-      }
-    }
+    if (_auxiliaries) [_auxiliaries removeObject:w];
   }
 }
 
@@ -1194,7 +1174,7 @@ NS_ENDHANDLER
                    NSUtilityWindowMask;
   IPAPanel* aux = [[IPAPanel alloc] initWithContentRect:frame styleMask:flags
                                     backing:NSBackingStoreBuffered defer:NO];
-  if (!_auxiliaries) _auxiliaries = [[NSMutableDictionary alloc] init];
+  if (!_auxiliaries) _auxiliaries = [[NSMutableSet alloc] init];
   [aux setFloatingPanel:YES];
   [aux setHidesOnDeactivate:NO];
   [[aux contentView] addSubview:newMap];
@@ -1206,11 +1186,7 @@ NS_ENDHANDLER
   [newMap setCanDragMap:NO];
   [newMap startTracking];
   [newMap release];
-  CFUUIDRef	uuidObj = CFUUIDCreate(nil);
-  CFStringRef uuid = CFUUIDCreateString(nil, uuidObj);
-  CFRelease(uuidObj);
-  [_auxiliaries setObject:aux forKey:(id)uuid];
-  CFRelease(uuid);
+  [_auxiliaries addObject:aux];
   if (!_hidden) [aux orderFront:self];
   if (flag) [self syncAuxiliariesToDefaults];
 }
@@ -1220,7 +1196,7 @@ NS_ENDHANDLER
 -(void)syncAuxiliariesToDefaults
 {
   NSMutableArray* arr = [[NSMutableArray alloc] init];
-  for (IPAPanel* aux in [_auxiliaries allValues])
+  for (IPAPanel* aux in _auxiliaries)
   {
     PDFImageMap* im = [[[aux contentView] subviews] objectAtIndex:0];
     if ([im isKindOfClass:[PDFImageMap class]])
