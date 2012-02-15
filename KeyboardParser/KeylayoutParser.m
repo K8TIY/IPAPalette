@@ -572,6 +572,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
         }
         NSLog(@"    State %d: '%@' (from 0x%X)", j+1, s, kcs);
         if (s) [s release];
+        s = nil;
       }
       break;
     } while (YES);
