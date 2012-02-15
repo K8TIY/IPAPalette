@@ -971,6 +971,13 @@ NS_ENDHANDLER
   [self updateDisplays:nil];
 }
 
+-(void)windowDidMove:(NSNotification*)note
+{
+  NSWindow* w = [note object];
+  if (_auxiliaries && [_auxiliaries containsObject:w])
+    [self syncAuxiliariesToDefaults];
+}
+
 #pragma mark Search Results Table
 -(NSInteger)numberOfRowsInTableView:(NSTableView*)tv
 {
