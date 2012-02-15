@@ -78,6 +78,7 @@ static void local_KeyboardChanged(CFNotificationCenterRef center,
                                   const void* object, CFDictionaryRef userInfo);
 
 @implementation IPASearchResults
+// FIXME: what's wrong with allowing keyboard nav in the table?
 -(BOOL)acceptsFirstResponder {return NO;}
 
 // It doesn't seem reasonable to allow dragging table Unicode strings to ourselves,
@@ -208,7 +209,8 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
   for (i = 0; i < nchars; i++)
   {
     unichar uc = [str characterAtIndex:i];
-    [uplus appendFormat:@"%sU+%.4X", ([uplus length])?" ":"", uc];
+    if (uc != PlaceholderDottedCircle)
+      [uplus appendFormat:@"%sU+%.4X", ([uplus length])?" ":"", uc];
   }
   return uplus;
 }
@@ -722,56 +724,48 @@ NS_ENDHANDLER
 
 -(void)updateDisplays:(id)sender
 {
-  // If we are still scanning for IPA fonts, the spinny is still, er, spinning
-  // in the glyph view. Don't overwrite it.
-  // FIXME: this should not be done here; update the other fields but
-  // specifically avoid updating the spinnining GlyphView.
-  // Better yet, when  the spin code is migrated into GlyphView,
-  // it will be smart enough to not update.
-  if (_scanningText == nil &&
-      ![[[_tabs selectedTabViewItem] identifier] isEqual:@"Search"])
+  NSString* strVal = @"";
+  NSString* uniVal = @"";
+  NSString* descVal = @"";
+  NSString* str = @"";
+  NSUInteger mods = 0;
+  NSAttributedString* kbVal = nil;
+  if ([[[_tabs selectedTabViewItem] identifier] isEqual:@"Search"])
   {
-    NSPoint p = [_window mouseLocationOutsideOfEventStream];
-    NSString* strVal = @"";
-    NSString* uniVal = @"";
-    NSString* descVal = @"";
-    NSAttributedString* kbVal = nil;
-    id hit = sender;
-    if (!hit || ![hit isMemberOfClass:[PDFImageMap class]]) hit = nil;
-    if (!hit)
+    NSInteger sel = [_searchResultsTable selectedRow];
+    // Clear the fields when nothing selected.
+    if (sel != -1)
     {
-      hit = [_tabs hitTest:p];
-      if (!hit || ![hit isMemberOfClass:[PDFImageMap class]]) hit = nil;
+      NSArray* obj = [_searchResults objectAtIndex:sel];
+      str = [obj objectAtIndex:1L];
     }
-    if (hit)
-    {
-      NSString* str = [hit stringValue];
-      NSUInteger mods = [hit modifiers];
-      NSDictionary* d = [self charactersForIPA:str modifiers:mods];
-      if (d)
-      {
-        strVal = [d objectForKey:ipaStringForGlyphViewKey];
-        uniVal = [d objectForKey:ipaStringCodepointsKey];
-        descVal = [d objectForKey:ipaStringSymbolTypeKey];
-        if (_keyboard)
-        {
-          kbVal = [_keyboard objectForKey:uniVal];
-          if ([kbVal isKindOfClass:[NSNull class]]) kbVal = nil;
-        }
-      }
-    }
-    BOOL needRel = NO;
-    if (!kbVal)
-    {
-      kbVal = [[NSAttributedString alloc] init];
-      needRel = YES;
-    }
-    [_glyphView setStringValue:strVal];
-    [_unicodeText setStringValue:uniVal];
-    [_keyboardText setAttributedStringValue:kbVal];
-    [_descriptionText setStringValue:descVal];
-    if (needRel) [kbVal release];
   }
+  else
+  {
+    if (!sender || ![sender isMemberOfClass:[PDFImageMap class]]) sender = nil;
+    if (sender)
+    {
+      str = [sender stringValue];
+      mods = [sender modifiers];
+    }
+  }
+  NSDictionary* d = [self charactersForIPA:str modifiers:mods];
+  if (d)
+  {
+    strVal = [d objectForKey:ipaStringForGlyphViewKey];
+    uniVal = [d objectForKey:ipaStringCodepointsKey];
+    descVal = [d objectForKey:ipaStringSymbolTypeKey];
+    if (_keyboard)
+    {
+      kbVal = [_keyboard objectForKey:uniVal];
+      if (kbVal && [kbVal isKindOfClass:[NSNull class]]) kbVal = nil;
+    }
+  }
+  [_glyphView setStringValue:strVal];
+  [_unicodeText setStringValue:uniVal];
+  [_descriptionText setStringValue:descVal];
+  if (kbVal) [_keyboardText setAttributedStringValue:kbVal];
+  else [_keyboardText setStringValue:@""];
 }
 
 -(void)activateWithWindowLevel:(NSInteger)level
@@ -850,6 +844,8 @@ NS_ENDHANDLER
   [self doSearch];
 }
 
+// FIXME: what's wrong with allowing keyboard nav in the table?
+// This should be removed.
 // Delegate for search text
 -(void)controlTextDidEndEditing:(NSNotification*)note
 {
@@ -982,22 +978,7 @@ NS_ENDHANDLER
 -(void)tableViewSelectionDidChange:(NSNotification*)note
 {
   #pragma unused (note)
-  NSInteger sel = [_searchResultsTable selectedRow];
-  // Clear the fields when nothing selected.
-  NSString* zilch = @"";
-  if (sel == -1)
-  {
-    [_glyphView setStringValue:zilch];
-    [_descriptionText setStringValue:zilch];
-    [_unicodeText setStringValue:zilch];
-  }
-  else
-  {
-    NSArray* obj = [_searchResults objectAtIndex:sel];
-    [_glyphView setStringValue:[obj objectAtIndex:1L]];
-    [_descriptionText setStringValue:[obj objectAtIndex:2L]];
-    [_unicodeText setStringValue:[obj objectAtIndex:3L]];
-  }
+  [self updateDisplays:nil];
 }
 
 -(BOOL)tableView:(NSTableView*)tv writeRowsWithIndexes:(NSIndexSet*)rowIndexes
