@@ -154,7 +154,7 @@ static void local_KeyboardChanged(CFNotificationCenterRef center,
 -(void)deactivateAppAndWindows;
 -(void)createAuxiliaryPanelForName:(NSString*)name withFrame:(NSRect)frame
        syncToDefaults:(BOOL)sync;
--(void)keyboardChanged:(NSNotification*)note;
+-(void)keyboardChanged;
 -(void)keylayoutParser:(KeylayoutParser*)kp foundSequence:(NSString*)seq
        forOutput:(NSString*)output;
 -(void)syncAuxiliariesToDefaults;
@@ -267,7 +267,7 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
   NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
   [defs addObserver:self forKeyPath:ipaKeyboardSyncKey
         options:NSKeyValueObservingOptionNew context:NULL];
-  [self keyboardChanged:nil];
+  [self keyboardChanged];
   [_searchResultsTable setDoubleAction:@selector(tableDoubleAction:)];
   [_searchResultsTable setTarget:self];
   [self userGlyphsChanged:self];
@@ -451,7 +451,7 @@ NS_ENDHANDLER
     NSArray* data = [glyphs slice:6];
     [PDFImageMapCreator setPDFImageMap:_user toData:data ofType:PDFImageMapColumnar];
     if ([_tabs selectedTabViewItem] == _userGlyphsTab) [_user startTracking];
-    [self keyboardChanged:nil];
+    [self keyboardChanged];
   }
 }
 
@@ -855,7 +855,7 @@ NS_ENDHANDLER
 {
   #pragma unused (object,change,ctx)
   //NSLog(@"observeValueForKeyPath:%@ ofObject:%@ change:%@", path, object, change);
-  if ([path isEqualToString:ipaKeyboardSyncKey]) [self keyboardChanged:nil];
+  if ([path isEqualToString:ipaKeyboardSyncKey]) [self keyboardChanged];
 }
 
 -(void)windowWillClose:(NSNotification*)note
@@ -1059,10 +1059,8 @@ NS_ENDHANDLER
 
 #pragma mark Keyboard Synchronization
 // FIXME: run this in a thread?
-// FIXME: the NSNotification is unused, remove it.
--(void)keyboardChanged:(NSNotification*)note
+-(void)keyboardChanged
 {
-  #pragma unused (note)
   if (__DBG > ipaDebugDebugLevel) NSLog(@"Keyboard changed");
   NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
   if ([defs boolForKey:ipaKeyboardSyncKey])
@@ -1268,6 +1266,6 @@ static void local_KeyboardChanged(CFNotificationCenterRef center,
 {
   #pragma unused (center, name, object, userInfo)
   IPAServer* serv = (IPAServer*)observer;
-  [serv keyboardChanged:nil];
+  [serv keyboardChanged];
 }
 
