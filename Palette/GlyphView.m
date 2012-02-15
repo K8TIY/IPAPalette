@@ -48,7 +48,7 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
 -(void)drawRect:(NSRect)r
 {
   [super drawRect:r];
-  if ([_stringValue length])
+  if ([_stringValue length] && !_spinny)
   {
     CGContextRef ctx = [[NSGraphicsContext currentContext] graphicsPort];
     if (!ctx) return;
@@ -102,6 +102,47 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
   {
     _fallbackBehavior = flag;
     [self setNeedsDisplay:YES];
+  }
+}
+
+// TODO: Find a way to make a Leopard-compatible objc_setAssociatedObject()
+// infrastructure so I can make a category on NSView with this capability.
+-(void)embedSpinny
+{
+  if (_spinny) return;
+  _spinny = [[NSProgressIndicator alloc] init];
+  [_spinny setControlSize:NSRegularControlSize];
+  [_spinny setStyle:NSProgressIndicatorSpinningStyle];
+  NSRect bounds = [self bounds];
+  NSRect piFrame = NSMakeRect(bounds.size.width / 2.0,
+                              bounds.size.height / 2.0,
+                              0.0, 0.0);
+  [_spinny setFrame:piFrame];
+  [_spinny setIndeterminate:YES];
+  [_spinny setDisplayedWhenStopped:NO];
+  [_spinny setBezeled:NO];
+  [_spinny setAutoresizingMask:(NSViewMaxXMargin | NSViewMinXMargin |
+                                NSViewMaxYMargin | NSViewMinYMargin)]; 
+  [_spinny sizeToFit];
+  piFrame = [_spinny frame];
+  piFrame.origin.x -= (piFrame.size.width / 2.0);
+  piFrame.origin.y -= (piFrame.size.height / 2.0);
+  [_spinny setFrame:piFrame];
+  [_spinny sizeToFit];
+  [self addSubview:_spinny];
+  //[_spinny setUsesThreadedAnimation:YES];
+  [_spinny startAnimation:self];
+}
+
+-(void)unembedSpinny
+{
+  if (_spinny)
+  {
+    [_spinny stopAnimation:self];
+    [_spinny removeFromSuperview];
+    [_spinny release];
+    _spinny = nil;
+    [self setNeedsDisplay];
   }
 }
 

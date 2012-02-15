@@ -62,7 +62,6 @@ enum
   IBOutlet UserGlyphsController* _userGlyphsController;
   IPAInputController* _inputController;
   NSTabViewItem* _userGlyphsTab;
-  NSProgressIndicator* _spinny;
   NSView* _fontMenuSuperview;
   //NSTimer* _timer;
   //NSInteger _timeout; // Seconds between window close and server termination

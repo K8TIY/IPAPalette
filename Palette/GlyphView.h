@@ -25,6 +25,7 @@ enum
 
 @interface GlyphView : NSImageView
 {
+  NSProgressIndicator* _spinny;
   NSMutableString*  _font;
   NSMutableString*  _stringValue;
   CGFloat           _fontSize;
@@ -34,4 +35,6 @@ enum
 -(void)setStringValue:(NSString*)str;
 -(void)setFont:(NSString*)font;
 -(void)setFallbackBehavior:(uint8_t)flag;
+-(void)embedSpinny;
+-(void)unembedSpinny;
 @end

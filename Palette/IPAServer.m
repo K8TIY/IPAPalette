@@ -137,7 +137,6 @@ static void local_KeyboardChanged(CFNotificationCenterRef center,
 
 @interface IPAServer (Private)
 -(void)addIPAFonts:(id)me;
--(void)embedSpinny;
 -(void)finishIPAFonts:(id)sender;
 -(void)runFontAlert;
 -(void)userGlyphsChanged:(id)sender;
@@ -237,7 +236,7 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
   path = [[NSBundle mainBundle] pathForResource:@"Alts" ofType:@"strings"];
   _alts = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
   //[_debugMenu selectItemAtIndex:_debug];
-  [self embedSpinny];
+  [_glyphView embedSpinny];
   [NSApp setDelegate:self];
   _fontMenuSuperview = [_fontMenu superview];
   [_fontMenu retain];
@@ -363,44 +362,11 @@ NS_ENDHANDLER
         waitUntilDone:NO];
 }
 
-// FIXME: put this in the GlyphView code or find a way to make a
-// Leopard-compatible objc_setAssociatedObject() infrastructure
-// so I can make a category on NSView with this capability.
--(void)embedSpinny
-{
-  _spinny = [[NSProgressIndicator alloc] init];
-  [_spinny setControlSize:NSRegularControlSize];
-  [_spinny setStyle:NSProgressIndicatorSpinningStyle];
-  NSRect piFrame = NSMakeRect(_glyphView.bounds.size.width / 2.0,
-                              _glyphView.bounds.size.height / 2.0,
-                              0.0, 0.0);
-  [_spinny setFrame:piFrame];
-  [_spinny setIndeterminate:YES];
-  [_spinny setDisplayedWhenStopped:NO];
-  //[_spinny setHidden:NO];
-  [_spinny setBezeled:NO];
-  [_spinny setAutoresizingMask:(NSViewMaxXMargin | NSViewMinXMargin |
-                                NSViewMaxYMargin | NSViewMinYMargin)]; 
-  [_spinny sizeToFit];
-  piFrame = [_spinny frame];
-  piFrame.origin.x -= (piFrame.size.width / 2.0);
-  piFrame.origin.y -= (piFrame.size.height / 2.0);
-  [_spinny setFrame:piFrame];
-  [_spinny sizeToFit];
-  [_glyphView addSubview:_spinny];
-  //[_spinny setUsesThreadedAnimation:YES];
-  [_spinny startAnimation:self];
-}
-
 // Called to do cleanup on main thread after font collection thread finishes.
 -(void)finishIPAFonts:(id)sender
 {
   #pragma unused (sender)
-  [_spinny stopAnimation:self];
-  [_spinny removeFromSuperview];
-  [_spinny release];
-  _spinny = nil;
-  [_glyphView setNeedsDisplay:YES];
+  [_glyphView unembedSpinny];
   [_scanningText removeFromSuperview];
   _scanningText = nil;
   [_fontMenuSuperview addSubview:_fontMenu];
@@ -870,7 +836,11 @@ NS_ENDHANDLER
   }
   else
   {
-    if (_auxiliaries) [_auxiliaries removeObject:w];
+    if (_auxiliaries)
+    {
+      [_auxiliaries removeObject:w];
+      [self syncAuxiliariesToDefaults];
+    }
   }
 }
 
