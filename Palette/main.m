@@ -1,5 +1,5 @@
 /*
-Copyright © 2005-2011 Brian S. Hall
+Copyright © 2005-2012 Brian S. Hall
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License version 2 or later as
@@ -44,7 +44,7 @@ static void local_CheckPrefs(void)
     NSString* src = [home stringByAppendingPathComponent:@"Library/Preferences/com.blugs.IPAServer.plist"];
     if ([dfm fileExistsAtPath:src])
     {
-      BOOL success = [dfm copyPath:src toPath:dest handler:nil];
+      BOOL success = [dfm copyItemAtPath:src toPath:dest error:NULL];
       if (success) NSLog(@"Copied old prefs from %@ to %@", src, dest);
       else NSLog(@"Failed to copy old prefs from %@ to %@", src, dest);
     }
