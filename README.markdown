@@ -27,7 +27,7 @@ Requires my Onizuka localizer from <https://github.com/K8TIY/Onizuka>.
 It's set up as a git submodule, so just do the usual git submodule
 magic to get it set up.
 
-If you change any localizations (they're all in Localization/chardata.txt,
+If you change any localizations (they're all in Localization/chardata.txt),
 run ./translator.py -s in order to regenerate all the *.strings files.
 
 ### Todo
