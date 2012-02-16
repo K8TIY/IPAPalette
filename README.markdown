@@ -18,13 +18,17 @@ Alphabet symbols into Unicode-savvy applications.
   your preferences.
 * Some optimizations to the PDF image maps should enhance performance
   in the mouse tracking routines.
+* Multicharacter symbols like /ǃ¡/ from ExtIPA can now have keyboard shortcuts
+  displayed (if you have a really good keyboard layout!).
 
 ### To Build
 
 Requires my Onizuka localizer from <https://github.com/K8TIY/Onizuka>.
 It's set up as a git submodule, so just do the usual git submodule
-magic to get it set up. (Don't ask me about it -- I'm new to git and submodules
-make my head hurt.)
+magic to get it set up.
+
+If you change any localizations (they're all in Localization/chardata.txt,
+run ./translator.py -s in order to regenerate all the *.strings files.
 
 ### Todo
 
@@ -48,5 +52,3 @@ make my head hurt.)
 * Limitations in the 'uchr' resource parser means that for some complex
   Unicode keyboards, like Unicode Hex Input, keyboard shortcuts for
   IPA symbols are not found.
-* Multicharacter symbols like /ǃ¡/ from ExtIPA cannot have keyboard shortcuts
-  displayed.

@@ -154,6 +154,7 @@ static void local_KeyboardChanged(CFNotificationCenterRef center,
 -(void)keyboardChanged;
 -(void)keylayoutParser:(KeylayoutParser*)kp foundSequence:(NSString*)seq
        forOutput:(NSString*)output;
+-(NSAttributedString*)attributedStringForKeyboardShortcut:(NSString*)seq;
 -(void)syncAuxiliariesToDefaults;
 -(void)syncAuxiliariesFromDefaults;
 @end
@@ -726,7 +727,7 @@ NS_ENDHANDLER
   NSString* descVal = @"";
   NSString* str = @"";
   NSUInteger mods = 0;
-  NSAttributedString* kbVal = nil;
+  NSString* kbVal = nil;
   if ([[[_tabs selectedTabViewItem] identifier] isEqual:@"Search"])
   {
     NSInteger sel = [_searchResultsTable selectedRow];
@@ -754,14 +755,35 @@ NS_ENDHANDLER
     descVal = [d objectForKey:ipaStringSymbolTypeKey];
     if (_keyboard)
     {
-      kbVal = [_keyboard objectForKey:uniVal];
+      NSArray* comps = [uniVal componentsSeparatedByString:@" "];
+      // Need to have shortcuts for all components.
+      // FIXME: is there a way to indicate that one of the symbols has
+      // no keyboard shortcut?
+      if ([comps count] > 1)
+      {
+        NSMutableArray* keys = [[NSMutableArray alloc] init];
+        for (NSString* comp in comps)
+        {
+          NSString* key = [_keyboard objectForKey:comp];
+          if (key && ![key isKindOfClass:[NSNull class]])
+            [keys addObject:key];
+        }
+        if ([keys count] == [comps count])
+          kbVal = [keys componentsJoinedByString:@" "];
+        [keys release];
+      }
+      else kbVal = [_keyboard objectForKey:uniVal];
       if (kbVal && [kbVal isKindOfClass:[NSNull class]]) kbVal = nil;
     }
   }
   [_glyphView setStringValue:strVal];
   [_unicodeText setStringValue:uniVal];
   [_descriptionText setStringValue:descVal];
-  if (kbVal) [_keyboardText setAttributedStringValue:kbVal];
+  if (kbVal)
+  {
+    NSAttributedString* akbVal = [self attributedStringForKeyboardShortcut:kbVal];
+    [_keyboardText setAttributedStringValue:akbVal];
+  }
   else [_keyboardText setStringValue:@""];
 }
 
@@ -984,7 +1006,6 @@ NS_ENDHANDLER
 }
 
 #pragma mark Keyboard Synchronization
-// FIXME: run this in a thread?
 -(void)keyboardChanged
 {
   if (__DBG > ipaDebugDebugLevel) NSLog(@"Keyboard changed");
@@ -999,21 +1020,27 @@ NS_ENDHANDLER
     else
     {
       _keyboard = [[NSMutableDictionary alloc] init];
-      NSArray* unicodes = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Keyboard" ofType:@"plist"]];
+      NSString* path = [[NSBundle mainBundle] pathForResource:@"Keyboard"
+                                              ofType:@"plist"];
+      NSArray* unicodes = [[NSArray alloc] initWithContentsOfFile:path];
       for (NSString* u in unicodes)
         [_keyboard setObject:[NSNull null] forKey:u];
       [unicodes release];
       NSArray* glyphs = [defs objectForKey:ipaUserGlyphsKey];
       for (NSString* u in glyphs)
       {
-        NSString* uplus = [IPAServer copyUPlusForString:u];
-        [_keyboard setObject:[NSNull null] forKey:uplus];
-        [uplus release];
+        if ([u length])
+        {
+          NSString* uplus = [IPAServer copyUPlusForString:u];
+          [_keyboard setObject:[NSNull null] forKey:uplus];
+          [uplus release];
+        }
       }
     }
     KeylayoutParser* klp = [[KeylayoutParser alloc] init];
     unsigned type = [klp matchingKeyboardType];
-    [klp parseKeyboardType:type withObject:self selector:@selector(keylayoutParser:foundSequence:forOutput:)];
+    [klp parseKeyboardType:type withObject:self
+         selector:@selector(keylayoutParser:foundSequence:forOutput:)];
     [klp release];
     [self updateDisplays:self];
   }
@@ -1033,14 +1060,13 @@ NS_ENDHANDLER
   #pragma unused (kp)
   // The following combos are officially uninteresting:
   // 1. Anything yielding an empty string.
-  // 2. Anything yielding a single character of 0x20 (space) or below, or 0x7F (delete).
+  // 2. Anything yielding a single character of 0x20 (space) or below,
+  //    or 0x7F (delete).
   // 3. Unmodified 'A' yields 'a' or 'A'
   // 4. Sequence with a cmd modifier
   if ([seq length] > 0 && [output length] > 0)
   {
     BOOL interesting = YES;
-    NSMutableParagraphStyle* style = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
-    [style setAlignment:NSCenterTextAlignment];
     unichar ch1 = [seq characterAtIndex:0];
     unichar ch2 = [output characterAtIndex:0];
     if (ch2 <= 0x0020 || ch2 == 0x007F) interesting = NO;
@@ -1068,27 +1094,34 @@ NS_ENDHANDLER
     if (interesting)
     {
       NSString* uplus = [IPAServer copyUPlusForString:output];
-      NSAttributedString* existing = [_keyboard objectForKey:uplus];
+      NSString* existing = [_keyboard objectForKey:uplus];
       if (!existing ||
           [existing isKindOfClass:[NSNull class]] ||
-          ([existing isKindOfClass:[NSAttributedString class]] &&
-           [KeylayoutParser compareKeyboardSequence:seq withSequence:[existing string]] == NSOrderedAscending))
+          ([existing isKindOfClass:[NSString class]] &&
+           [KeylayoutParser compareKeyboardSequence:seq withSequence:existing] == NSOrderedAscending))
       {
-        NSMutableAttributedString* seq2 = [[NSMutableAttributedString alloc] initWithString:seq];
-        for (i = 0; i < [seq length]; i++)
-        {
-          if ([KeylayoutParser isModifier:[seq characterAtIndex:i]])
-            //[seq2 addAttribute:NSFontAttributeName value:[NSFont boldSystemFontOfSize:[NSFont smallSystemFontSize]] range:NSMakeRange(i, 1)];
-            [seq2 addAttribute:NSForegroundColorAttributeName value:[NSColor colorWithCalibratedRed:0.75 green:0.1 blue:0.1 alpha:1.0] range:NSMakeRange(i, 1)];
-        }
-        [seq2 addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, [seq length])];
-        [_keyboard setObject:seq2 forKey:uplus];
-        [seq2 release];
+        [_keyboard setObject:seq forKey:uplus];
       }
       [uplus release];
     }
-    [style release];
   }
+}
+
+-(NSAttributedString*)attributedStringForKeyboardShortcut:(NSString*)seq
+{
+  NSMutableParagraphStyle* style = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
+  [style setAlignment:NSCenterTextAlignment];
+  NSMutableAttributedString* seq2 = [[NSMutableAttributedString alloc] initWithString:seq];
+  NSColor* col = [NSColor colorWithCalibratedRed:0.75 green:0.1 blue:0.1 alpha:1.0];
+  unsigned i;
+  for (i = 0; i < [seq length]; i++)
+  {
+    if ([KeylayoutParser isModifier:[seq characterAtIndex:i]])
+      [seq2 addAttribute:NSForegroundColorAttributeName value:col range:NSMakeRange(i, 1)];
+  }
+  [seq2 addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, [seq length])];
+  [style release];
+  return [seq2 autorelease];
 }
 
 #pragma mark Auxiliary Windows

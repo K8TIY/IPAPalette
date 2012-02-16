@@ -2,229 +2,227 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-<string>U+0061</string>
-<string>U+0062</string>
-<string>U+0063</string>
-<string>U+0064</string>
-<string>U+0065</string>
-<string>U+0066</string>
-<string>U+0068</string>
-<string>U+0069</string>
-<string>U+006A</string>
-<string>U+006B</string>
-<string>U+006C</string>
-<string>U+006D</string>
-<string>U+006E</string>
-<string>U+006F</string>
-<string>U+0070</string>
-<string>U+0071</string>
-<string>U+0072</string>
-<string>U+0073</string>
-<string>U+0074</string>
-<string>U+0075</string>
-<string>U+0076</string>
-<string>U+0077</string>
-<string>U+0078</string>
-<string>U+0079</string>
-<string>U+007A</string>
-<string>U+007C</string>
-<string>U+00A1</string>
-<string>U+00E6</string>
-<string>U+00E7</string>
-<string>U+00F0</string>
-<string>U+00F8</string>
-<string>U+0127</string>
-<string>U+014B</string>
-<string>U+0152</string>
-<string>U+0153</string>
-<string>U+01C0</string>
-<string>U+01C1</string>
-<string>U+01C2</string>
-<string>U+01C3</string>
-<string>U+01C3 U+00A1</string>
-<string>U+0250</string>
-<string>U+0251</string>
-<string>U+0252</string>
-<string>U+0253</string>
-<string>U+0254</string>
-<string>U+0255</string>
-<string>U+0256</string>
-<string>U+0257</string>
-<string>U+0258</string>
-<string>U+0259</string>
-<string>U+025A</string>
-<string>U+025B</string>
-<string>U+025C</string>
-<string>U+025D</string>
-<string>U+025E</string>
-<string>U+025F</string>
-<string>U+0260</string>
-<string>U+0261</string>
-<string>U+0262</string>
-<string>U+0263</string>
-<string>U+0264</string>
-<string>U+0265</string>
-<string>U+0266</string>
-<string>U+0267</string>
-<string>U+0268</string>
-<string>U+026A</string>
-<string>U+026B</string>
-<string>U+026C</string>
-<string>U+026D</string>
-<string>U+026E</string>
-<string>U+026F</string>
-<string>U+0270</string>
-<string>U+0271</string>
-<string>U+0272</string>
-<string>U+0273</string>
-<string>U+0274</string>
-<string>U+0275</string>
-<string>U+0276</string>
-<string>U+0278</string>
-<string>U+0279</string>
-<string>U+027A</string>
-<string>U+027B</string>
-<string>U+027D</string>
-<string>U+027E</string>
-<string>U+0280</string>
-<string>U+0281</string>
-<string>U+0282</string>
-<string>U+0283</string>
-<string>U+0284</string>
-<string>U+0288</string>
-<string>U+0289</string>
-<string>U+028A</string>
-<string>U+028B</string>
-<string>U+028C</string>
-<string>U+028D</string>
-<string>U+028E</string>
-<string>U+028F</string>
-<string>U+0290</string>
-<string>U+0291</string>
-<string>U+0292</string>
-<string>U+0294</string>
-<string>U+0295</string>
-<string>U+0298</string>
-<string>U+0299</string>
-<string>U+029B</string>
-<string>U+029C</string>
-<string>U+029D</string>
-<string>U+029F</string>
-<string>U+02A1</string>
-<string>U+02A2</string>
-<string>U+02A9</string>
-<string>U+02AA</string>
-<string>U+02AB</string>
-<string>U+02AC</string>
-<string>U+02AD</string>
-<string>U+02B0</string>
-<string>U+02B2</string>
-<string>U+02B6</string>
-<string>U+02B7</string>
-<string>U+02BC</string>
-<string>U+02C8</string>
-<string>U+02CC</string>
-<string>U+02D0</string>
-<string>U+02D1</string>
-<string>U+02D4</string>
-<string>U+02D5</string>
-<string>U+02DE</string>
-<string>U+02E0</string>
-<string>U+02E1</string>
-<string>U+02E4</string>
-<string>U+02E5</string>
-<string>U+02E6</string>
-<string>U+02E7</string>
-<string>U+02E8</string>
-<string>U+02E9</string>
-<string>U+02EC</string>
-<string>U+02ED</string>
-<string>U+0300</string>
-<string>U+0301</string>
-<string>U+0302</string>
-<string>U+0303</string>
-<string>U+0304</string>
-<string>U+0306</string>
-<string>U+0307</string>
-<string>U+0308</string>
-<string>U+030A</string>
-<string>U+030B</string>
-<string>U+030C</string>
-<string>U+030D</string>
-<string>U+030F</string>
-<string>U+0311</string>
-<string>U+0318</string>
-<string>U+0319</string>
-<string>U+031A</string>
-<string>U+031C</string>
-<string>U+031D</string>
-<string>U+031E</string>
-<string>U+031F</string>
-<string>U+0320</string>
-<string>U+0321</string>
-<string>U+0322</string>
-<string>U+0323</string>
-<string>U+0324</string>
-<string>U+0325</string>
-<string>U+0329</string>
-<string>U+032A</string>
-<string>U+032C</string>
-<string>U+032E</string>
-<string>U+032F</string>
-<string>U+0330</string>
-<string>U+0334</string>
-<string>U+0339</string>
-<string>U+033A</string>
-<string>U+033B</string>
-<string>U+033C</string>
-<string>U+033D</string>
-<string>U+0346</string>
-<string>U+0346 U+032A</string>
-<string>U+0347</string>
-<string>U+0348</string>
-<string>U+0349</string>
-<string>U+034A</string>
-<string>U+034B</string>
-<string>U+034C</string>
-<string>U+034D</string>
-<string>U+034E</string>
-<string>U+0351</string>
-<string>U+0353</string>
-<string>U+0354</string>
-<string>U+0355</string>
-<string>U+0357</string>
-<string>U+035C</string>
-<string>U+0361</string>
-<string>U+0362</string>
-<string>U+0398</string>
-<string>U+03B2</string>
-<string>U+03B8</string>
-<string>U+03C7</string>
-<string>U+0418</string>
-<string>U+042E</string>
-<string>U+1DB9</string>
-<string>U+1DC4</string>
-<string>U+1DC5</string>
-<string>U+1DC6</string>
-<string>U+1DC7</string>
-<string>U+1DC8</string>
-<string>U+1DC9</string>
-<string>U+2016</string>
-<string>U+203C</string>
-<string>U+203F</string>
-<string>U+2071</string>
-<string>U+207F</string>
-<string>U+208D</string>
-<string>U+208E</string>
-<string>U+2191</string>
-<string>U+2193</string>
-<string>U+2197</string>
-<string>U+2198</string>
-<string>U+274D</string>
-<string>U+2C71</string>
-<string>U+A71B</string>
-<string>U+A71C</string>
-<string>U+A7F8</string>
-<string>U+A7F9</string>
+	<string>U+0061</string>
+	<string>U+0062</string>
+	<string>U+0063</string>
+	<string>U+0064</string>
+	<string>U+0065</string>
+	<string>U+0066</string>
+	<string>U+0068</string>
+	<string>U+0069</string>
+	<string>U+006A</string>
+	<string>U+006B</string>
+	<string>U+006C</string>
+	<string>U+006D</string>
+	<string>U+006E</string>
+	<string>U+006F</string>
+	<string>U+0070</string>
+	<string>U+0071</string>
+	<string>U+0072</string>
+	<string>U+0073</string>
+	<string>U+0074</string>
+	<string>U+0075</string>
+	<string>U+0076</string>
+	<string>U+0077</string>
+	<string>U+0078</string>
+	<string>U+0079</string>
+	<string>U+007A</string>
+	<string>U+007C</string>
+	<string>U+00A1</string>
+	<string>U+00E6</string>
+	<string>U+00E7</string>
+	<string>U+00F0</string>
+	<string>U+00F8</string>
+	<string>U+0127</string>
+	<string>U+014B</string>
+	<string>U+0152</string>
+	<string>U+0153</string>
+	<string>U+01C0</string>
+	<string>U+01C1</string>
+	<string>U+01C2</string>
+	<string>U+01C3</string>
+	<string>U+0250</string>
+	<string>U+0251</string>
+	<string>U+0252</string>
+	<string>U+0253</string>
+	<string>U+0254</string>
+	<string>U+0255</string>
+	<string>U+0256</string>
+	<string>U+0257</string>
+	<string>U+0258</string>
+	<string>U+0259</string>
+	<string>U+025A</string>
+	<string>U+025B</string>
+	<string>U+025C</string>
+	<string>U+025D</string>
+	<string>U+025E</string>
+	<string>U+025F</string>
+	<string>U+0260</string>
+	<string>U+0261</string>
+	<string>U+0262</string>
+	<string>U+0263</string>
+	<string>U+0264</string>
+	<string>U+0265</string>
+	<string>U+0266</string>
+	<string>U+0267</string>
+	<string>U+0268</string>
+	<string>U+026A</string>
+	<string>U+026B</string>
+	<string>U+026C</string>
+	<string>U+026D</string>
+	<string>U+026E</string>
+	<string>U+026F</string>
+	<string>U+0270</string>
+	<string>U+0271</string>
+	<string>U+0272</string>
+	<string>U+0273</string>
+	<string>U+0274</string>
+	<string>U+0275</string>
+	<string>U+0276</string>
+	<string>U+0278</string>
+	<string>U+0279</string>
+	<string>U+027A</string>
+	<string>U+027B</string>
+	<string>U+027D</string>
+	<string>U+027E</string>
+	<string>U+0280</string>
+	<string>U+0281</string>
+	<string>U+0282</string>
+	<string>U+0283</string>
+	<string>U+0284</string>
+	<string>U+0288</string>
+	<string>U+0289</string>
+	<string>U+028A</string>
+	<string>U+028B</string>
+	<string>U+028C</string>
+	<string>U+028D</string>
+	<string>U+028E</string>
+	<string>U+028F</string>
+	<string>U+0290</string>
+	<string>U+0291</string>
+	<string>U+0292</string>
+	<string>U+0294</string>
+	<string>U+0295</string>
+	<string>U+0298</string>
+	<string>U+0299</string>
+	<string>U+029B</string>
+	<string>U+029C</string>
+	<string>U+029D</string>
+	<string>U+029F</string>
+	<string>U+02A1</string>
+	<string>U+02A2</string>
+	<string>U+02A9</string>
+	<string>U+02AA</string>
+	<string>U+02AB</string>
+	<string>U+02AC</string>
+	<string>U+02AD</string>
+	<string>U+02B0</string>
+	<string>U+02B2</string>
+	<string>U+02B6</string>
+	<string>U+02B7</string>
+	<string>U+02BC</string>
+	<string>U+02C8</string>
+	<string>U+02CC</string>
+	<string>U+02D0</string>
+	<string>U+02D1</string>
+	<string>U+02D4</string>
+	<string>U+02D5</string>
+	<string>U+02DE</string>
+	<string>U+02E0</string>
+	<string>U+02E1</string>
+	<string>U+02E4</string>
+	<string>U+02E5</string>
+	<string>U+02E6</string>
+	<string>U+02E7</string>
+	<string>U+02E8</string>
+	<string>U+02E9</string>
+	<string>U+02EC</string>
+	<string>U+02ED</string>
+	<string>U+0300</string>
+	<string>U+0301</string>
+	<string>U+0302</string>
+	<string>U+0303</string>
+	<string>U+0304</string>
+	<string>U+0306</string>
+	<string>U+0307</string>
+	<string>U+0308</string>
+	<string>U+030A</string>
+	<string>U+030B</string>
+	<string>U+030C</string>
+	<string>U+030D</string>
+	<string>U+030F</string>
+	<string>U+0311</string>
+	<string>U+0318</string>
+	<string>U+0319</string>
+	<string>U+031A</string>
+	<string>U+031C</string>
+	<string>U+031D</string>
+	<string>U+031E</string>
+	<string>U+031F</string>
+	<string>U+0320</string>
+	<string>U+0321</string>
+	<string>U+0322</string>
+	<string>U+0323</string>
+	<string>U+0324</string>
+	<string>U+0325</string>
+	<string>U+0329</string>
+	<string>U+032A</string>
+	<string>U+032C</string>
+	<string>U+032E</string>
+	<string>U+032F</string>
+	<string>U+0330</string>
+	<string>U+0334</string>
+	<string>U+0339</string>
+	<string>U+033A</string>
+	<string>U+033B</string>
+	<string>U+033C</string>
+	<string>U+033D</string>
+	<string>U+0346</string>
+	<string>U+0347</string>
+	<string>U+0348</string>
+	<string>U+0349</string>
+	<string>U+034A</string>
+	<string>U+034B</string>
+	<string>U+034C</string>
+	<string>U+034D</string>
+	<string>U+034E</string>
+	<string>U+0351</string>
+	<string>U+0353</string>
+	<string>U+0354</string>
+	<string>U+0355</string>
+	<string>U+0357</string>
+	<string>U+035C</string>
+	<string>U+0361</string>
+	<string>U+0362</string>
+	<string>U+0398</string>
+	<string>U+03B2</string>
+	<string>U+03B8</string>
+	<string>U+03C7</string>
+	<string>U+0418</string>
+	<string>U+042E</string>
+	<string>U+1DB9</string>
+	<string>U+1DC4</string>
+	<string>U+1DC5</string>
+	<string>U+1DC6</string>
+	<string>U+1DC7</string>
+	<string>U+1DC8</string>
+	<string>U+1DC9</string>
+	<string>U+2016</string>
+	<string>U+203C</string>
+	<string>U+203F</string>
+	<string>U+2071</string>
+	<string>U+207F</string>
+	<string>U+208D</string>
+	<string>U+208E</string>
+	<string>U+2191</string>
+	<string>U+2193</string>
+	<string>U+2197</string>
+	<string>U+2198</string>
+	<string>U+274D</string>
+	<string>U+2C71</string>
+	<string>U+A71B</string>
+	<string>U+A71C</string>
+	<string>U+A7F8</string>
+	<string>U+A7F9</string>
 </array>
 </plist>
