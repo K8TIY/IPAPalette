@@ -15,7 +15,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 #import "PDFImageMap.h"
 #import <Carbon/Carbon.h>
-#import "PDFImageMapCreator.h";
+#import "PDFImageMapCreator.h"
 
 @interface PDFImageMap (Private)
 -(void)_coreInit;
