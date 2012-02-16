@@ -1,5 +1,4 @@
 #import <Cocoa/Cocoa.h>
-#define __KEYLAYOUTPARSER_INCLUDE_DUMP__ 1
 #import "KeylayoutParser.h"
 
 @interface NSObject (KeylayoutParser)

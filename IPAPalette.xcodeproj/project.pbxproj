@@ -696,13 +696,12 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INSTALL_PATH = /usr/local/bin;
-				OTHER_CFLAGS = "-D__KEYBOARD_PARSER_DEBUG__";
+				OTHER_CFLAGS = "-D__KEYLAYOUTPARSER_INCLUDE_DUMP__=1";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
 					"-framework",
 					AppKit,
-					"-lexpat",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = KeyboardParser;
