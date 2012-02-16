@@ -78,9 +78,6 @@ static void local_KeyboardChanged(CFNotificationCenterRef center,
                                   const void* object, CFDictionaryRef userInfo);
 
 @implementation IPASearchResults
-// FIXME: what's wrong with allowing keyboard nav in the table?
--(BOOL)acceptsFirstResponder {return NO;}
-
 // It doesn't seem reasonable to allow dragging table Unicode strings to ourselves,
 // so we don't allow dragging IPA symbols to the search field (or anywhere
 // else in the Palette). We do a "copy" operation so we get the +-sign cursor badge when dragging
@@ -842,15 +839,6 @@ NS_ENDHANDLER
 {
   #pragma unused (note)
   [self doSearch];
-}
-
-// FIXME: what's wrong with allowing keyboard nav in the table?
-// This should be removed.
-// Delegate for search text
--(void)controlTextDidEndEditing:(NSNotification*)note
-{
-  #pragma unused (note)
-  [self deactivateAppAndWindows];
 }
 
 // It would be nice if [NSApp deactivate] worked for our purpose....
