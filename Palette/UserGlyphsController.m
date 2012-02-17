@@ -232,7 +232,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     if (c == NSDeleteFunctionKey || c == 0x7F)
     {
       handled = YES;
-      [[self delegate] delete:self];
+      id del = [self delegate];
+      if (del && [del respondsToSelector:@selector(delete:)])
+        [del performSelector:@selector(delete:) withObject:self];
     }
   }
   if (!handled) [super keyDown:event];
