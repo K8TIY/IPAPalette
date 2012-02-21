@@ -176,8 +176,8 @@
 		32D4CDB3147AE0C5008973BD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = KeyboardParser/main.m; sourceTree = SOURCE_ROOT; };
 		32D4CEC9147AF8B2008973BD /* KeylayoutParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeylayoutParser.h; path = KeyboardParser/KeylayoutParser.h; sourceTree = SOURCE_ROOT; };
 		32D4CECA147AF8B2008973BD /* KeylayoutParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeylayoutParser.m; path = KeyboardParser/KeylayoutParser.m; sourceTree = SOURCE_ROOT; };
-		32DB949714ED9B5A008A805A /* NSView+Spinny.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+Spinny.h"; sourceTree = "<group>"; };
-		32DB949814ED9B5A008A805A /* NSView+Spinny.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+Spinny.m"; sourceTree = "<group>"; };
+		32DB949714ED9B5A008A805A /* NSView+Spinny.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSView+Spinny.h"; path = "Palette/NSView+Spinny.h"; sourceTree = "<group>"; };
+		32DB949814ED9B5A008A805A /* NSView+Spinny.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSView+Spinny.m"; path = "Palette/NSView+Spinny.m"; sourceTree = "<group>"; };
 		32DC620E10D2EF6B008B5B1B /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = Localization/zh_TW.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32E102081110BFC100B1F030 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = Localization/fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32E729E01444EC3700E2B07B /* IPAIconTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = IPAIconTemplate.pdf; path = Palette/IPAIconTemplate.pdf; sourceTree = SOURCE_ROOT; };
