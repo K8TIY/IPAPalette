@@ -36,15 +36,14 @@ int main(int argc, char *argv[])
 {
   #pragma unused (kp)
   #pragma unused (kp)
-  BOOL interesting = YES;
   // The following combos are officially uninteresting:
   // 1. Anything yielding an empty string.
   // 2. Anything yielding a single character of 0x20 (space) or below, or 0x7F (delete).
   // 3. Unmodified 'A' yields 'a' or 'A'
   // 4. Sequence with a cmd modifier
-  if ([seq length] == 0 || [output length] == 0) interesting = NO;
-  else
+  if ([seq length] != 0 && [output length] != 0)
   {
+    BOOL interesting = YES;
     unichar ch1 = [seq characterAtIndex:0];
     unichar ch2 = [output characterAtIndex:0];
     if (ch2 <= 0x0020 || ch2 == 0x007F) interesting = NO;
