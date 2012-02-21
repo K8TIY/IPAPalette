@@ -240,6 +240,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     NSNumber* stateNum = [_stateMap objectForKey:s];
     NSString* ahnold = [self copyTerminatorForKeyboardType:kbtype forState:[stateNum unsignedIntValue]];
     [self invokeSelector:sel forFoundSequence:s output:ahnold withObject:obj];
+    [ahnold release];
   }
   [modString release];
 }
