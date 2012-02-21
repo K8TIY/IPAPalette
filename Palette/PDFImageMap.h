@@ -25,10 +25,6 @@ typedef NSRect SubRect;
 
 @interface PDFImageMap : NSImageView
 {
-  // FiXME: can we move the event tap to a class global
-  // and let a class method dispatch the event to all instances
-  // that register for the notification?
-  CFMachPortRef          _tap;  // Quartz event tap for tracking rects
   NSMutableDictionary*   _data; // key -> stringified SubRect
   NSMutableDictionary*   _hots; // stringified SubRect -> key
   NSMutableDictionary*   _submaps; // key -> PDFImageMap

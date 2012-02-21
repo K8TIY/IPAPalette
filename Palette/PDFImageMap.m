@@ -30,7 +30,41 @@ static NSUInteger local_CurrentModifiers(void);
 static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void* refcon);
 
 
+
 @implementation PDFImageMap
+static CFMachPortRef gTap = NULL;  // Quartz event tap for tracking rects
+static NSMapTable*   gObservers;
+
++(void)registerForEvents:(id)target action:(SEL)action
+{
+  if (!gTap)
+  {
+    gTap = CGEventTapCreate(kCGHIDEventTap, kCGHeadInsertEventTap, kCGEventTapOptionListenOnly,
+                            CGEventMaskBit(kCGEventMouseMoved) | CGEventMaskBit(kCGEventFlagsChanged),
+                            local_TapCallback, nil);
+    if (gTap)
+    {
+      CFRunLoopSourceRef src = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, gTap, 0);
+      CFRunLoopAddSource(CFRunLoopGetMain(), src, kCFRunLoopCommonModes);
+      CFRelease(src);
+      CGEventTapEnable(gTap, false);
+    }
+  }
+  if (action)
+  {
+    if (!gObservers)
+      gObservers = [[NSMapTable alloc] initWithKeyOptions:NSMapTableStrongMemory valueOptions:NSMapTableStrongMemory capacity:1];
+    (void)NSMapInsert(gObservers, target, [NSValue valueWithPointer:action]);
+    //[gObservers setObject:[NSValue valueWithPointer:action] forKey:target];
+  }
+  else
+  {
+    if (gObservers) NSMapRemove(gObservers, target);
+  }
+  //NSLog(@"Observers: %@", gObservers);
+  if (gTap) CGEventTapEnable(gTap, (gObservers && [gObservers count] > 0));
+}
+
 -(id)initWithFrame:(NSRect)frameRect
 {
   self = [super initWithFrame:frameRect];
@@ -53,16 +87,6 @@ static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGE
   if (!_lastHot) _lastHot = [[NSMutableString alloc] init];
   if (!_name) _name = [[NSMutableString alloc] init];
   if (!_subwindowName) _subwindowName = [[NSMutableString alloc] init];
-  _tap = CGEventTapCreate(kCGHIDEventTap, kCGHeadInsertEventTap, kCGEventTapOptionListenOnly,
-                          CGEventMaskBit(kCGEventMouseMoved) | CGEventMaskBit(kCGEventFlagsChanged),
-                          local_TapCallback, self);
-  if (_tap)
-  {
-    CFRunLoopSourceRef src = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, _tap, 0);
-    CFRunLoopAddSource(CFRunLoopGetMain(), src, kCFRunLoopCommonModes);
-    CFRelease(src);
-    CGEventTapEnable(_tap, false);
-  }
   _canDragMap = YES;
   if ([self image])
   {
@@ -80,7 +104,7 @@ static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGE
   if (_hots) [_hots release];
   if (_submaps) [_submaps release];
   if (_lastHot) [_lastHot release];
-  if (_tap) CFRelease(_tap);
+  //if (_tap) CFRelease(_tap);
   [super dealloc];
 }
 
@@ -153,8 +177,17 @@ static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGE
 -(void)startTracking
 {
   if (_trackingRect) [self removeTrackingRect:_trackingRect];
-  _trackingRect = [self addTrackingRect:[self imageRect] owner:self userData:self assumeInside:NO];
-  //NSLog(@"startTracking: adding %X", _trackingRect);
+  _trackingRect = [self addTrackingRect:[self imageRect] owner:self
+                        userData:self assumeInside:NO];
+  NSPoint where = [[self window] mouseLocationOutsideOfEventStream];
+  if (NSPointInRect(where, [self bounds]))
+  {
+    NSEvent* evt = [NSEvent enterExitEventWithType:NSMouseEntered
+                    location:where modifierFlags:0 timestamp:0.0
+                    windowNumber:0 context:[NSGraphicsContext currentContext]
+                    eventNumber:0 trackingNumber:_trackingRect userData:NULL];
+    [self mouseEntered:evt];
+  }
 }
 
 -(void)stopTracking
@@ -364,7 +397,7 @@ static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGE
 {
   #pragma unused (loc)
   return (loc)? NSDragOperationCopy | NSDragOperationPrivate :
-                NSDragOperationCopy;
+                ((_draggingSymbol)? NSDragOperationCopy : NSDragOperationNone);
 }
 
 -(void)draggedImage:(NSImage*)img endedAt:(NSPoint)p
@@ -496,13 +529,15 @@ static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGE
 -(void)mouseEntered:(NSEvent*)evt
 {
   if ([evt trackingNumber] != _trackingRect) return;
-  if (_tap) CGEventTapEnable(_tap, true);
+  [[self class] registerForEvents:self action:@selector(_checkMouse)];
+  //if (_tap) CGEventTapEnable(_tap, true);
 }
 
 -(void)mouseExited:(NSEvent*)evt
 {
   if ([evt trackingNumber] != _trackingRect) return;
-  if (_tap) CGEventTapEnable(_tap, false);
+  [[self class] registerForEvents:self action:nil];
+  //if (_tap) CGEventTapEnable(_tap, false);
   if ([_lastHot length])
     [self setNeedsDisplayInRect:[self _rectFromKey:_lastHot]];
   [_lastHot setString:@""];
@@ -597,9 +632,18 @@ static NSUInteger local_CurrentModifiers(void)
 
 static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void* refcon)
 {
-  #pragma unused (proxy,type)
-  PDFImageMap* me = refcon;
-  [me _checkMouse];
+  #pragma unused (proxy,type,refcon)
+  if (gObservers)
+  {
+    for (id target in NSAllMapTableKeys(gObservers))
+    {
+      NSValue* val = NSMapGet(gObservers, target);
+      SEL action = [val pointerValue];
+      //NSLog(@"%@ has %s", target, action);
+      if (action && [target respondsToSelector:action])
+        [target performSelector:action];
+    }
+  }
   return event;
 }
 
