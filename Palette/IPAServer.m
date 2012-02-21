@@ -247,21 +247,19 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
   [_descriptionText setStringValue:@""];
   _searchResults = [[NSMutableArray alloc] init];
   _descToGlyph = [[NSMutableDictionary alloc] init];
-  NSString* locs = [[NSBundle mainBundle] pathForResource:@"Localizable" ofType:@"strings"];
-  // Turn the appropriate strings file into a dictionary and iterate thru
-  // it, looking for anything that starts with "U+..." and setting the
-  // localized description as key for the U+ string data.
-  // FIXME: this doesn't work for subset localizations like British English
-  // Can we extend Onizuka to get the canonical list of all loc keys, then
-  // get the translation for each one?
-  NSDictionary* d = [NSDictionary dictionaryWithContentsOfFile:locs];
-  for (NSString* glyph in [d allKeys])
+  NSString* locs = [[NSBundle mainBundle] pathForResource:@"Keyboard" ofType:@"plist"];
+  // Map all localized descriptions we have to the stringified U+ minus the U+.
+  NSArray* a = [NSArray arrayWithContentsOfFile:locs];
+  for (NSString* glyph in a)
   {
     if ([glyph length] > 2 && [[glyph substringToIndex:2L] isEqual:@"U+"])
     {
-      NSString* desc = [d objectForKey:glyph];
-      glyph = [glyph substringFromIndex:2L];
-      [_descToGlyph setValue:glyph forKey:desc];
+      NSString* desc = [[Onizuka sharedOnizuka] bestLocalizedString:glyph];
+      if (desc)
+      {
+        glyph = [glyph substringFromIndex:2L];
+        [_descToGlyph setValue:glyph forKey:desc];
+      }
     }
   }
   CFNotificationCenterAddObserver(CFNotificationCenterGetDistributedCenter(),
