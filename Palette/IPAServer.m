@@ -22,6 +22,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #import "CMAPParser.h"
 #import "PDFImageMapCreator.h"
 #import "KeylayoutParser.h"
+#import "NSView+Spinny.h"
 
 @interface NSArray (IPAPalette)
 -(NSArray*)slice:(unsigned)size;
@@ -250,6 +251,9 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
   // Turn the appropriate strings file into a dictionary and iterate thru
   // it, looking for anything that starts with "U+..." and setting the
   // localized description as key for the U+ string data.
+  // FIXME: this doesn't work for subset localizations like British English
+  // Can we extend Onizuka to get the canonical list of all loc keys, then
+  // get the translation for each one?
   NSDictionary* d = [NSDictionary dictionaryWithContentsOfFile:locs];
   for (NSString* glyph in [d allKeys])
   {
@@ -277,6 +281,8 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
   [self activateWithWindowLevel:NSFloatingWindowLevel];
 #endif
   [self syncAuxiliariesFromDefaults];
+  // So we can call starttracking on it.
+  [self tabView:_tabs didSelectTabViewItem:[_tabs selectedTabViewItem]];
 }
 
 #define kLezh 0x026E // LZh digraph U+026E
@@ -294,12 +300,12 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
       ByteCount neededSize;
       ATSFontRef atsf = ATSFontFindFromPostScriptName((CFStringRef)font, kATSOptionFlagsDefault);
       err = ATSFontGetTable(atsf, 'cmap', 0, 0, NULL, &neededSize);
-      if (err) NSLog(@"  ATSFontGetTable '%@' err=%d, size=%ld", font, err, neededSize);
+      if (err) NSLog(@"  ATSFontGetTable '%@' err=%d, size=%ld", font, (int)err, neededSize);
       else
       {
         char* buffer = malloc(neededSize);
         err = ATSFontGetTable(atsf, 'cmap', 0, neededSize, buffer, &neededSize);
-        if (err) NSLog(@"  ATSFontGetTable '%@' err=%d, size=%ld", font, err, neededSize);
+        if (err) NSLog(@"  ATSFontGetTable '%@' err=%d, size=%ld", font, (int)err, neededSize);
         if (!err && CMAPHasChar(buffer, kLezh) && CMAPHasChar(buffer, kBeta))
         {
           CFStringRef readable;
@@ -391,7 +397,7 @@ NS_ENDHANDLER
 
 -(void)endAlert:(NSAlert*)alert returnCode:(int)code contextInfo:(void*)ctx
 {
-  #pragma unused (sender,code,ctx)
+  #pragma unused (code,ctx)
   if ([[alert suppressionButton] state] == NSOnState)
     [[NSUserDefaults standardUserDefaults] setInteger:1L forKey:ipaDontShowAgainKey];
 }

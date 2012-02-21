@@ -1,5 +1,5 @@
 /*
-Copyright © 2005-2011 Brian S. Hall
+Copyright © 2005-2012 Brian S. Hall
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License version 2 or later as
@@ -18,6 +18,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #import "Onizuka.h"
 
 @interface GlyphView (Private)
+-(void)_coreInit;
 -(void)_drawWarning;
 -(void)_setupFontWithFrame:(NSRect)r;
 @end
@@ -27,20 +28,26 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
 -(id)initWithCoder:(NSCoder*)coder
 {
   self = [super initWithCoder:coder];
-  _stringValue = [[NSMutableString alloc] init];
+  [self _coreInit];
   return self;
 }
 
 -(id)initWithFrame:(NSRect)frame
 {
   self = [super initWithFrame:frame];
-  _stringValue = [[NSMutableString alloc] init];
+  [self _coreInit];
   return self;
+}
+
+-(void)_coreInit
+{
+  _font = [[NSMutableString alloc] init];
+  _stringValue = [[NSMutableString alloc] init];
 }
 
 -(void)dealloc
 {
-  if (_font) [_font release];
+  [_font release];
   [_stringValue release];
   [super dealloc];
 }
@@ -48,7 +55,7 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
 -(void)drawRect:(NSRect)r
 {
   [super drawRect:r];
-  if ([_stringValue length] && !_spinny)
+  if ([_stringValue length] && [_font length])
   {
     CGContextRef ctx = [[NSGraphicsContext currentContext] graphicsPort];
     if (!ctx) return;
@@ -91,8 +98,7 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
 
 -(void)setFont:(NSString*)font
 {
-  if (!_font) _font = [[NSMutableString alloc] initWithString:font];
-  else [_font setString:font];
+  [_font setString:font];
   [self _setupFontWithFrame:[self bounds]];
 }
 
@@ -102,47 +108,6 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
   {
     _fallbackBehavior = flag;
     [self setNeedsDisplay:YES];
-  }
-}
-
-// TODO: Find a way to make a Leopard-compatible objc_setAssociatedObject()
-// infrastructure so I can make a category on NSView with this capability.
--(void)embedSpinny
-{
-  if (_spinny) return;
-  _spinny = [[NSProgressIndicator alloc] init];
-  [_spinny setControlSize:NSRegularControlSize];
-  [_spinny setStyle:NSProgressIndicatorSpinningStyle];
-  NSRect bounds = [self bounds];
-  NSRect piFrame = NSMakeRect(bounds.size.width / 2.0,
-                              bounds.size.height / 2.0,
-                              0.0, 0.0);
-  [_spinny setFrame:piFrame];
-  [_spinny setIndeterminate:YES];
-  [_spinny setDisplayedWhenStopped:NO];
-  [_spinny setBezeled:NO];
-  [_spinny setAutoresizingMask:(NSViewMaxXMargin | NSViewMinXMargin |
-                                NSViewMaxYMargin | NSViewMinYMargin)]; 
-  [_spinny sizeToFit];
-  piFrame = [_spinny frame];
-  piFrame.origin.x -= (piFrame.size.width / 2.0);
-  piFrame.origin.y -= (piFrame.size.height / 2.0);
-  [_spinny setFrame:piFrame];
-  [_spinny sizeToFit];
-  [self addSubview:_spinny];
-  //[_spinny setUsesThreadedAnimation:YES];
-  [_spinny startAnimation:self];
-}
-
--(void)unembedSpinny
-{
-  if (_spinny)
-  {
-    [_spinny stopAnimation:self];
-    [_spinny removeFromSuperview];
-    [_spinny release];
-    _spinny = nil;
-    [self setNeedsDisplay];
   }
 }
 
