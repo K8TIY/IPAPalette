@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
   if (url)
   {
     status = TISRegisterInputSource(url);
-    NSLog(@"TISRegisterInputSource(%@): %d", url, status);
+    NSLog(@"TISRegisterInputSource(%@): %ld", url, status);
     CFRelease(url);
   }
   system("killall IPAServer");
