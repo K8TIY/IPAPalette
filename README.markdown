@@ -29,8 +29,11 @@ Requires my Onizuka localizer from <https://github.com/K8TIY/Onizuka>.
 It's set up as a git submodule, so just do the usual git submodule
 magic to get it set up.
 
+Project settings are for building on Snow Leopard against the 10.5 SDK.
+If you are on Lion, you will probably have to fiddle with settings.
+
 If you change any localizations (they're all in Localization/chardata.txt),
-run ./translator.py -s to regenerate the *.strings files.
+run `./translator.py -s` to regenerate the *.strings files.
 
 ### Todo
 
