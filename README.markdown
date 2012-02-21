@@ -12,12 +12,14 @@ Alphabet symbols into Unicode-savvy applications.
 * You can click in an unoccupied part of an image map (a part that has no
   IPA symbol and thus doesn't hilite under your mouse) and drag it out into
   a new mini-palette (I call them "auxiliaries").
-  This way you can have whatever subset of the IPA you
-  use the most available, without having to keep switching tabs.
+  This way you can have available whatever subset of the IPA you
+  use the most, without having to keep switching between tabs.
 * The auxiliary palettes hide when you hide the main one, and are saved to
   your preferences.
 * Some optimizations to the PDF image maps should enhance performance
   in the mouse tracking routines.
+* Mouse tracking starts up before font scanning finishes, so you can have symbol
+  description information available earlier, even if you have many fonts installed.
 * Multicharacter symbols like /ǃ¡/ from ExtIPA can now have keyboard shortcuts
   displayed (if you have a really good keyboard layout!).
 
@@ -28,7 +30,7 @@ It's set up as a git submodule, so just do the usual git submodule
 magic to get it set up.
 
 If you change any localizations (they're all in Localization/chardata.txt),
-run ./translator.py -s in order to regenerate all the *.strings files.
+run ./translator.py -s to regenerate the *.strings files.
 
 ### Todo
 
@@ -51,4 +53,5 @@ run ./translator.py -s in order to regenerate all the *.strings files.
   There's probably something wrong with the alpha channel.
 * Limitations in the 'uchr' resource parser means that for some complex
   Unicode keyboards, like Unicode Hex Input, keyboard shortcuts for
-  IPA symbols are not found.
+  IPA symbols are not found. Fixing this is not a high priority but
+  may be done eventually.
