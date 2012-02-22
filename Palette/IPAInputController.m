@@ -1,5 +1,5 @@
 /*
-Copyright © 2005-2011 Brian S. Hall
+Copyright © 2005-2012 Brian S. Hall
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License version 2 or later as
@@ -81,24 +81,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 -(void)activateServer:(id)sender
 {
   #pragma unused(sender)
-  if ([[[self client] bundleIdentifier] isEqual:@"com.blugs.IPAServer"])
-  {
-    if (__DBG >= ipaVerboseDebugLevel) NSLog(@"activateServer: refusing com.blugs.IPAServer");
-  }
-  else
-  {
-    NSInteger wl = [[self client] windowLevel] + 1;
-    if (__DBG >= ipaVerboseDebugLevel) NSLog(@"activateServer with window level %d", wl);
-    [[IPAServer sharedServer] setInputController:self];
-    [[IPAServer sharedServer] activateWithWindowLevel:wl];
-  }
+  NSInteger wl = [[self client] windowLevel] + 1;
+  if (__DBG >= ipaVerboseDebugLevel)
+    NSLog(@"activateServer with window level %ld", (long)wl);
+  [[IPAServer sharedServer] setInputController:self];
+  [[IPAServer sharedServer] activateWithWindowLevel:wl];
 }
-
-/*-(void)deactivateServer:(id)sender
-{
-   //NSLog(@"deactivateServer from %@", sender);
-   [super deactivateServer:sender];
-}*/
 
 #pragma mark Private
 -(TISInputSourceRef)findMe
@@ -106,7 +94,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   TISInputSourceRef me = nil;
   NSMutableDictionary* filter = [[NSMutableDictionary alloc] init];
   NSString* bid = [[NSBundle mainBundle] bundleIdentifier];
-  [filter setObject:(id)bid forKey:(id)kTISPropertyBundleID];
+  [filter setObject:bid forKey:(id)kTISPropertyBundleID];
   NSArray* list = (NSArray*)TISCreateInputSourceList((CFDictionaryRef)filter, false);
   [filter release];
   me = (TISInputSourceRef)[list objectAtIndex:0L];
