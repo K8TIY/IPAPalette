@@ -24,6 +24,7 @@
 "\U007A" = "\U1DBB"; // LATIN SMALL LETTER Z
 "\U00F0" = "\U1D9E"; // LATIN SMALL LETTER ETH
 "\U014B" = "\U1D51"; // LATIN SMALL LETTER ENG
+"\U0153" = "\UA7F9"; // MODIFIER LETTER SMALL LIGATURE OE (Unicode 6.1)
 "\U0250" = "\U1D44"; // LATIN SMALL LETTER TURNED A
 "\U0251" = "\U1D45"; // LATIN SMALL LETTER ALPHA
 "\U0252" = "\U1D9B"; // LATIN SMALL LETTER TURNED ALPHA
@@ -87,6 +88,4 @@
 "\U0346" = "\U032A"; // combining bridge A/B
 "\U0306" = "\U032E"; // combining breve; combining breve below
 "\U0303" = "\U0330"; // combining tilde; combining tilde below (inverted from above)
-// Here's the Unicode 6.1 draft oe digraph superscript
-"\U0153" = "\UA7F9"; // MODIFIER LETTER SMALL LIGATURE OE
 
