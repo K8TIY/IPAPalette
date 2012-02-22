@@ -814,7 +814,7 @@ def MakeStrings(dic,locs):
         outlines.append('"%s" = "%s";' % (ipa,translation))
         if comment is not None and comment != '': outlines.append(' //%s' % (comment))
         outlines.append('\n')
-    fname = os.path.join(lproj,'localizable.strings')
+    fname = os.path.join(lproj,'Localizable.strings')
     f = open(fname,'w')
     f.write(''.join(outlines).encode('utf-8'))
     f.close()
