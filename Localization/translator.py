@@ -780,7 +780,8 @@ def CharNeedsPlaceholder(ch):
       (ch >= 0x02E0 and ch <= 0x02E4) or # Ditto
       (ch >= 0x1D2C and ch <= 0x1D6A) or # Phonetic Extensions -- super and sub (just in case)
       (ch == 0x2071 or ch == 0x207F) or # Superscripts and subscripts
-      (ch == 0x02D0 or ch == 0x02D1 or ch == 0x02ED)): # Long and half-long
+      (ch == 0x02D0 or ch == 0x02D1 or ch == 0x02ED) or # Long and half-long
+      (ch == 0xA7F8 or ch == 0xA7F9)): # Unicode 6.1 additions
     return 'before'
   if ch == 0x02C8 or ch == 0x02CC: return 'after'
   return 'no'
