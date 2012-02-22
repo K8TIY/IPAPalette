@@ -32,6 +32,6 @@ int NeedsPlaceholder(unsigned short ch)
           (ch >= 0x02E0 && ch <= 0x02E4) || // Ditto
           (ch >= 0x1D2C && ch <= 0x1D6A) || // Phonetic Extensions -- super and sub (just in case)
           (ch == 0x2071 || ch == 0x207F) || // Superscripts and subscripts
-          (ch == 0x2071 || ch == 0x207F)    // Superscripts from Latin Extended D
+          (ch == 0xA7F8 || ch == 0xA7F9)    // Superscripts from Latin Extended D (Unicode 6.1)
   );
 }
