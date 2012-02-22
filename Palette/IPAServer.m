@@ -155,6 +155,8 @@ static void local_KeyboardChanged(CFNotificationCenterRef center,
 -(void)keyboardChanged;
 -(void)keylayoutParser:(KeylayoutParser*)kp foundSequence:(NSString*)seq
        forOutput:(NSString*)output;
+-(BOOL)isInterestingKeyboardSequence:(NSString*)seq
+       forOutput:(NSString*)output;
 -(NSAttributedString*)attributedStringForKeyboardShortcut:(NSString*)seq;
 -(void)syncAuxiliariesToDefaults;
 -(void)syncAuxiliariesFromDefaults;
@@ -760,24 +762,29 @@ NS_ENDHANDLER
     if (_keyboard)
     {
       NSArray* comps = [uniVal componentsSeparatedByString:@" "];
-      // Need to have shortcuts for all components.
-      // FIXME: is there a way to indicate that one of the symbols has
-      // no keyboard shortcut?
-      if ([comps count] > 1)
+      // In a multi-element sequence, use an ellipsis to indicate a missing
+      // shortcut for one of the elements. There must be at least 1 with a
+      // real, "interesting" shortcut.
+      NSMutableArray* keys = [[NSMutableArray alloc] init];
+      BOOL gotOne = NO;
+      BOOL interesting = NO;
+      NSUInteger i = 0;
+      for (NSString* comp in comps)
       {
-        NSMutableArray* keys = [[NSMutableArray alloc] init];
-        for (NSString* comp in comps)
+        NSString* key = [_keyboard objectForKey:comp];
+        if (key && ![key isKindOfClass:[NSNull class]])
         {
-          NSString* key = [_keyboard objectForKey:comp];
-          if (key && ![key isKindOfClass:[NSNull class]])
-            [keys addObject:key];
+          if ([self isInterestingKeyboardSequence:key
+                    forOutput:[str substringWithRange:NSMakeRange(i, 1)]])
+            interesting = YES;
+          [keys addObject:key];
+          gotOne = YES;
         }
-        if ([keys count] == [comps count])
-          kbVal = [keys componentsJoinedByString:@" "];
-        [keys release];
+        else [keys addObject:[NSString stringWithFormat:@"%C", 0x2026]];
+        i++;
       }
-      else kbVal = [_keyboard objectForKey:uniVal];
-      if (kbVal && [kbVal isKindOfClass:[NSNull class]]) kbVal = nil;
+      if (gotOne && interesting) kbVal = [keys componentsJoinedByString:@" "];
+      [keys release];
     }
   }
   [_glyphView setStringValue:strVal];
@@ -1062,15 +1069,34 @@ NS_ENDHANDLER
        forOutput:(NSString*)output
 {
   #pragma unused (kp)
-  // The following combos are officially uninteresting:
-  // 1. Anything yielding an empty string.
-  // 2. Anything yielding a single character of 0x20 (space) or below,
-  //    or 0x7F (delete).
-  // 3. Unmodified 'A' yields 'a' or 'A'
-  // 4. Sequence with a cmd modifier
+  //if ([self isInterestingKeyboardSequence:seq forOutput:output])
+  {
+    NSString* uplus = [IPAServer copyUPlusForString:output];
+    NSString* existing = [_keyboard objectForKey:uplus];
+    if (!existing ||
+        [existing isKindOfClass:[NSNull class]] ||
+        ([existing isKindOfClass:[NSString class]] &&
+         [KeylayoutParser compareKeyboardSequence:seq withSequence:existing] == NSOrderedAscending))
+    {
+      [_keyboard setObject:seq forKey:uplus];
+    }
+    [uplus release];
+  }
+}
+
+// The following combos are officially uninteresting:
+// 1. Anything yielding an empty string.
+// 2. Anything yielding a single character of 0x20 (space) or below,
+//    or 0x7F (delete).
+// 3. Unmodified 'A' yields 'a' or 'A'
+// 4. Sequence with a cmd modifier
+-(BOOL)isInterestingKeyboardSequence:(NSString*)seq
+       forOutput:(NSString*)output
+{
+  BOOL interesting = NO;
   if ([seq length] > 0 && [output length] > 0)
   {
-    BOOL interesting = YES;
+    interesting = YES;
     unichar ch1 = [seq characterAtIndex:0];
     unichar ch2 = [output characterAtIndex:0];
     if (ch2 <= 0x0020 || ch2 == 0x007F) interesting = NO;
@@ -1095,20 +1121,8 @@ NS_ENDHANDLER
         break;
       }
     }
-    if (interesting)
-    {
-      NSString* uplus = [IPAServer copyUPlusForString:output];
-      NSString* existing = [_keyboard objectForKey:uplus];
-      if (!existing ||
-          [existing isKindOfClass:[NSNull class]] ||
-          ([existing isKindOfClass:[NSString class]] &&
-           [KeylayoutParser compareKeyboardSequence:seq withSequence:existing] == NSOrderedAscending))
-      {
-        [_keyboard setObject:seq forKey:uplus];
-      }
-      [uplus release];
-    }
   }
+  return interesting;
 }
 
 -(NSAttributedString*)attributedStringForKeyboardShortcut:(NSString*)seq
