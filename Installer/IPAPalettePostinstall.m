@@ -2,6 +2,8 @@
 #include <Carbon/Carbon.h>
 #include <sys/stat.h>
 
+static void EnableIPAPalette(void);
+
 int main(int argc, char *argv[])
 {
   NSAutoreleasePool* arp = [[NSAutoreleasePool alloc] init];
@@ -28,7 +30,7 @@ int main(int argc, char *argv[])
     uid_t usr = st.st_uid;
     gid_t grp = st.st_gid;
     mode_t md = st.st_mode;
-    NSLog(@"Command: >>>%@<<<", cmd);
+    //NSLog(@"Command: >>>%@<<<", cmd);
     system([cmd UTF8String]);
     NSLog(@"Leopard detected; trying to swap in tiff menu icon. (%d,%d,%d)", usr, grp, md);
     int err = chmod(file, md);
@@ -44,10 +46,26 @@ int main(int argc, char *argv[])
     status = TISRegisterInputSource(url);
     NSLog(@"TISRegisterInputSource(%@): %ld", url, status);
     CFRelease(url);
+    EnableIPAPalette();
   }
   system("killall IPAServer");
   system("killall IPAPalette");
   [path release];
   [arp release];
   return status;
+}
+
+static void EnableIPAPalette(void)
+{
+  NSMutableDictionary* filter = [[NSMutableDictionary alloc] init];
+  [filter setObject:(id)@"com.blugs.inputmethod.IPAPalette" forKey:(id)kTISPropertyBundleID];
+  NSArray* list = (NSArray*)TISCreateInputSourceList((CFDictionaryRef)filter, true);
+  [filter release];
+  if ([list count])
+  {
+    TISInputSourceRef me = (TISInputSourceRef)[list objectAtIndex:0L];
+    OSStatus err = TISEnableInputSource(me);
+    NSLog(@"TISEnableInputSource(): %ld", err);
+  }
+  [list release];
 }
