@@ -931,7 +931,7 @@
   <key>rect</key> <string>{{0.2, 0.125}, {0.2, 0.125}}</string>
 </dict>
 <dict>
-  <key>char</key> <string>͈</string>
+  <key>char</key> <string>͋</string>
   <key>name</key> <string>ExtIPA</string>
   <key>rect</key> <string>{{0.2, 0}, {0.2, 0.125}}</string>
 </dict>

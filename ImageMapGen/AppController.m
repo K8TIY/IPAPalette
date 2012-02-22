@@ -235,7 +235,7 @@ unichar diacritics[4][8] = {
   NSURL* url = [NSURL fileURLWithPath:path];
   CGContextRef ctx = CGPDFContextCreateWithURL((CFURLRef)url, &imgRect, NULL);
   NSArray* glyphs = [NSArray arrayWithObjects:@"\xCA\xAC", @"\xCA\xAD", @"\xCA\xAA", @"\xCA\xAB", @"\xCA\xA9", @"\xC2\xA1", @"\xC7\x83\xC2\xA1", @"\xE2\x80\xBC",
-                                              @"\xCD\x8D", @"\xCD\x86", @"\xCD\x86\xCC\xAA", @"\xCD\x88", @"\xCD\x89", @"\xCD\x8E", @"\xCD\x8A", @"\xCD\x88",
+                                              @"\xCD\x8D", @"\xCD\x86", @"\xCD\x86\xCC\xAA", @"\xCD\x88", @"\xCD\x89", @"\xCD\x8E", @"\xCD\x8A", @"\xCD\x8B",
                                               //@"\xCD\x8C", @"\xCD\x87", @"\xCD\xA2", @"\xCD\x94", @"\xCD\x95", @"\xEA\x9F\xB8", @"", @"", <<--- FIXME: use this when Doulos supports Unicode 6.1.
                                               @"\xCD\x8C", @"\xCD\x87", @"\xCD\xA2", @"\xCD\x94", @"\xCD\x95", @"", @"", @"",
                                               @"\xCB\xAD", @"\xE2\x82\x8D", @"\xE2\x82\x8E", @"\xCB\xAC", @"\xE2\x86\x91", @"\xE2\x86\x93", @"", @"",
