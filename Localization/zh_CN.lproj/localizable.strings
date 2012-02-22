@@ -5,6 +5,7 @@
 "__DEBUGGING__" = "调试";
 "__DEBUG__" = "调试";
 "__DESCRIPTION__" = "描述";
+"__DIACRITIC__" = "附加符号";
 "__DOWNLOAD__" = "下载";
 "__EDIT_SYMBOLS__" = "编辑⋯";
 "__EXPORT_SYMBOLS__" = "导出⋯";

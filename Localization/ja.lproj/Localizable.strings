@@ -5,6 +5,7 @@
 "__DEBUGGING__" = "デバッグ";
 "__DEBUG__" = "デバッグ";
 "__DESCRIPTION__" = "記述";
+"__DIACRITIC__" = "付加記号";
 "__DOWNLOAD__" = "ダウンロード";
 "__EDIT_SYMBOLS__" = "編集⋯";
 "__EXPORT_SYMBOLS__" = "書き出す⋯";

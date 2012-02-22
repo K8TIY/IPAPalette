@@ -5,6 +5,7 @@
 "__DEBUGGING__" = "디버그";
 "__DEBUG__" = "디버그";
 "__DESCRIPTION__" = "설명";
+"__DIACRITIC__" = "발음 구별 기호";
 "__DOWNLOAD__" = "다운로드";
 "__EDIT_SYMBOLS__" = "편집…";
 "__EXPORT_SYMBOLS__" = "보내기…";

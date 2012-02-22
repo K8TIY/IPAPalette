@@ -5,6 +5,7 @@
 "__DEBUGGING__" = "Debug";
 "__DEBUG__" = "Debug";
 "__DESCRIPTION__" = "Description";
+"__DIACRITIC__" = "Diacritic";
 "__DOWNLOAD__" = "Download";
 "__EDIT_SYMBOLS__" = "Edit…";
 "__EXPORT_SYMBOLS__" = "Export…";

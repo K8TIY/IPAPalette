@@ -1172,6 +1172,19 @@ NS_ENDHANDLER
   IPAPanel* aux = [[IPAPanel alloc] initWithContentRect:frame styleMask:flags
                                     backing:NSBackingStoreBuffered defer:NO];
   if (!_auxiliaries) _auxiliaries = [[NSMutableSet alloc] init];
+  NSString* auxPath = [[NSBundle mainBundle] pathForResource:@"AuxNames" ofType:@"strings"];
+  NSDictionary* auxNames = [[NSDictionary alloc] initWithContentsOfFile:auxPath];
+  NSString* auxName = [auxNames objectForKey:name];
+  if (auxName)
+  {
+    auxName = [[Onizuka sharedOnizuka] copyLocalizedTitle:auxName];
+    if (auxName)
+    {
+      [aux setTitle:auxName];
+      [auxName release];
+    }
+  }
+  [auxNames release];
   [aux setFloatingPanel:YES];
   [aux setHidesOnDeactivate:NO];
   [[aux contentView] addSubview:newMap];

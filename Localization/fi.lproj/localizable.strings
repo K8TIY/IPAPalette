@@ -5,6 +5,7 @@
 "__DEBUGGING__" = "Vianetsintä";
 "__DEBUG__" = "Vianetsintä";
 "__DESCRIPTION__" = "Kuvaus";
+"__DIACRITIC__" = "Tarke";
 "__DOWNLOAD__" = "Hae";
 "__EDIT_SYMBOLS__" = "Muokkaus…";
 "__EXPORT_SYMBOLS__" = "Vie…";

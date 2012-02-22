@@ -3540,6 +3540,21 @@ loc_vi: Sự tả
 loc_zh_CN: 描述
 loc_zh_TW: 描述
 %%
+Glyph: __DIACRITIC__
+loc_de: Diakritische
+loc_en: Diacritic
+loc_es: Diacrítico
+loc_fi: Tarke
+loc_fr: Diacritique
+loc_it: Diacritico
+loc_ja: 付加記号
+loc_ko: 발음 구별 기호
+loc_nl: Diakritisch
+loc_ru: Диакритический
+loc_vi: Dấu
+loc_zh_CN: 附加符号
+loc_zh_TW: 附加符號
+%%
 Glyph: __DOWNLOAD__
 loc_de: Laden
 loc_en: Download

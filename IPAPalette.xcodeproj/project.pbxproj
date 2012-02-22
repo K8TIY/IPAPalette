@@ -56,6 +56,7 @@
 		327FE566106D53E9003FEB34 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327FE565106D53E9003FEB34 /* Carbon.framework */; };
 		328E50181459D77700BAB93F /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 328E50171459D77700BAB93F /* defaults.plist */; };
 		3299F3E1143E65B9009191BC /* HackedDoulos-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3299F3E0143E65B9009191BC /* HackedDoulos-Regular.ttf */; };
+		32A854E714F55E4A007CCF53 /* AuxNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = 32A854E614F55E4A007CCF53 /* AuxNames.strings */; };
 		32B0660A13BA7DEB00EB242B /* Pal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 32B0660813BA7DEB00EB242B /* Pal.pdf */; };
 		32B0660B13BA7DEB00EB242B /* Retro.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 32B0660913BA7DEB00EB242B /* Retro.pdf */; };
 		32B0661013BA7E1100EB242B /* VPh.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 32B0660F13BA7E1100EB242B /* VPh.pdf */; };
@@ -162,6 +163,9 @@
 		328D1C8B122C08ED00FE6E3C /* Alts.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Alts.strings; path = Palette/Alts.strings; sourceTree = SOURCE_ROOT; };
 		328E50171459D77700BAB93F /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaults.plist; path = Palette/defaults.plist; sourceTree = SOURCE_ROOT; };
 		3299F3E0143E65B9009191BC /* HackedDoulos-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HackedDoulos-Regular.ttf"; path = "ImageMapGen/HackedDoulos-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		32A854E614F55E4A007CCF53 /* AuxNames.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = AuxNames.strings; sourceTree = "<group>"; };
+		32A8551E14F562AA007CCF53 /* chardata.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = chardata.txt; path = Localization/chardata.txt; sourceTree = "<group>"; };
+		32A8551F14F562B6007CCF53 /* translator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = translator.py; path = Localization/translator.py; sourceTree = "<group>"; };
 		32B0660813BA7DEB00EB242B /* Pal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Pal.pdf; path = ImageMaps/Pal.pdf; sourceTree = SOURCE_ROOT; };
 		32B0660913BA7DEB00EB242B /* Retro.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Retro.pdf; path = ImageMaps/Retro.pdf; sourceTree = SOURCE_ROOT; };
 		32B0660F13BA7E1100EB242B /* VPh.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = VPh.pdf; path = ImageMaps/VPh.pdf; sourceTree = SOURCE_ROOT; };
@@ -289,6 +293,8 @@
 				3237887D1072811600149CCD /* ImageMaps */,
 				320F3D3411175DB400079629 /* plus.icns */,
 				3226A32A10863DCC000AD993 /* Localizable.strings */,
+				32A8551E14F562AA007CCF53 /* chardata.txt */,
+				32A8551F14F562B6007CCF53 /* translator.py */,
 				320EDD5B14884D2400B191B0 /* Keyboard.plist */,
 				3247FE951051B3B70013F223 /* IPAIcon.tif */,
 				32E729E01444EC3700E2B07B /* IPAIconTemplate.pdf */,
@@ -296,6 +302,7 @@
 				328D1C8B122C08ED00FE6E3C /* Alts.strings */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				328E50171459D77700BAB93F /* defaults.plist */,
+				32A854E614F55E4A007CCF53 /* AuxNames.strings */,
 				32CA4F630368D1EE00C91783 /* IPAPalette_Prefix.pch */,
 				32D0964A135DED4C00D86037 /* README.markdown */,
 				3241E30810727C5F00144CE0 /* IPAChartGen */,
@@ -518,6 +525,7 @@
 				32E729E11444EC3700E2B07B /* IPAIconTemplate.pdf in Resources */,
 				328E50181459D77700BAB93F /* defaults.plist in Resources */,
 				320EDD5C14884D2400B191B0 /* Keyboard.plist in Resources */,
+				32A854E714F55E4A007CCF53 /* AuxNames.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

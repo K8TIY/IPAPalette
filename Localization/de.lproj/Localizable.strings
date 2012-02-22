@@ -5,6 +5,7 @@
 "__DEBUGGING__" = "Debugger";
 "__DEBUG__" = "Normal";
 "__DESCRIPTION__" = "Beschreibung";
+"__DIACRITIC__" = "Diakritische";
 "__DOWNLOAD__" = "Laden";
 "__EDIT_SYMBOLS__" = "Bearbeiten…";
 "__EXPORT_SYMBOLS__" = "Exportieren…";

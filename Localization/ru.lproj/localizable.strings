@@ -5,6 +5,7 @@
 "__DEBUGGING__" = "Отладка";
 "__DEBUG__" = "Отладка";
 "__DESCRIPTION__" = "Описание";
+"__DIACRITIC__" = "Диакритический";
 "__DOWNLOAD__" = "Загрузка";
 "__EDIT_SYMBOLS__" = "Правка…";
 "__EXPORT_SYMBOLS__" = "Экспорт…";
