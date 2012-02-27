@@ -41,18 +41,35 @@ IPA Palette v2.0<br/>
 /ʔa͜ɪ.pʰi'ɛ͜ɪ.pʰə'lɛʔ/</h1>
 <h3 class="c2">Brian S. "Moses" Hall</h3>
 <h2>In a Nutshell</h2>
-IPA Palette is a Unicode input method for the Mac. It allows users of OS X 10.5 and later to insert International Phonetic Alphabet symbols in any Unicode-enabled text field or editor.
+IPA Palette is a Unicode input method for the Mac. It allows users of OS X 10.5
+and later to insert International Phonetic Alphabet symbols in any
+Unicode-enabled text field or editor.
 <h2>How to Install</h2>
-Use the supplied installer and you should have no trouble. The installer tries to notify Mac OS that a new Input Method has been added or modified, and it also tries to terminate any currently-running instances of the input method. If you are unable to activate/use the Palette immediately, restart the machine. While inconvenient, it is the best way to get a reluctant system to "see" the new software.
+Use the supplied installer and you should have no trouble. The installer tries
+to notify Mac OS that a new Input Method has been added or modified, and it also
+tries to terminate any currently-running instances of the input method.
+If you are unable to activate/use the Palette immediately, restart the machine.
+While inconvenient, it is the best way to get a reluctant system to "see" the
+new software.
 <h2>How to Enable</h2>
 <table class="c3">
 <tr>
-<td>Go to System Preferences → Language &amp; Text → Input Sources. (On Leopard it is System Preferences → International → Input Menu.) IPA Palette should show up near the top of the list of input methods, allong with the built-in Character Palette. Put a check mark in the box to enable it, and also make sure the check box at the bottom of the window ("Show Input menu in menu bar") is checked also. This enables the Input Menu.</td>
+<td><b>As of version 2.2, it should no longer be necessary to enable the input
+method; the installer will try to do it for you. But, you still should check the
+"Show Input menu in menu bar" checkbox if you have not already.
+</b><br/>Go to System Preferences → Language &amp; Text → Input Sources.
+(On Leopard it is System Preferences → International → Input Menu.)
+IPA Palette should show up near the top of the list of input methods, allong
+with the built-in Character and Keyboard Viewers.
+Put a check mark in the box to enable it, and also make sure the check box at
+the bottom of the window ("Show Input menu in menu bar") is checked also.
+This enables the Input Menu.</td>
 <td><img src="International.jpg" alt="The International Panel" /><br/></td>
 </tr>
 </table>
 <h2>How To Use</h2>
-Select the Input Menu item "Show IPA Palette". The IPA Palette main window should then open as pictured below.<br/>
+Select the Input Menu item "Show IPA Palette". The IPA Palette main window
+should then open as pictured below.<br/>
 <br/>
 <table class="c3">
 <tr>
@@ -64,6 +81,23 @@ Select the Input Menu item "Show IPA Palette". The IPA Palette main window shoul
 To enter text, you click on the desired IPA symbol. The preview pane on the right side of the palette shows a magnified image of the character the mouse is over. You can select the preview font you want to see using the popup menu button above it.<br/>
 <br/>
 <em>Note: the font selection on the palette has no direct influence on the font selection in your document. You can insert a character in the preview font by control-clicking it, but that only applies to the character that is inserted, not to the font selected in the System font panel.</em>
+<table>
+<tr>
+<td><img src="New.png" alt="New Feature" /></td>
+<td>
+<h3>Auxiliary Windows</h3>
+</td>
+</tr>
+</table>
+Find an area of an image map that doesn't have any symbols on it (for example,
+one of the "impossible" consonant slots, between vowels, or the bottom of the
+ExtIPA chart -- anywhere that doesn't highlight under your cursor). Then drag
+the whole image somewhere on your screen. Now you have an auxiliary window with
+just that portion of the chart. You can set up your preferred arrangement of
+windows with just the symbols you need, no more constant clicking back and
+forth between tabs.<br/>
+IPA Palette keeps track of what auxiliary windows you have open and where they
+are, so you only need set them up once.
 <h3>Alternation: Superscripts and Above/Below</h3>
 Standard IPA superscripts (such as ʰ and ʷ), and superscript versions of other IPA symbols (like ᵊ and ᶿ, when provided by a good font) do not have separate buttons. Instead, you hold down the shift or option key (or both) with the button for the full-sized version of the symbol. Similarly, certain diacritics can alternate between "above" and "below" versions, for example the under-ring that indicates voicelessness (n̥). You can also put the ring above, in the case of a carrier with a descender (ŋ̊).<br/>
 <br/>
@@ -80,7 +114,11 @@ To preview one of these alternate versions, hold down either the shift or option
 </td>
 </tr>
 </table>
-Doulos and Charis do not support the combining tilde overlay or the combining palatal and retroflex hooks. Instead, the recommendation is to use one of the many cool-looking precomposed characters. To this end, IPA Palette includes three new image maps which can be shown/hidden by clicking on the small triangles in the diactitic section of the "Other" pane.
+The Doulos and Charis fonts (see below) do not support the combining tilde
+overlay or the combining palatal and retroflex hooks. Instead, the
+recommendation is to use one of the many cool-looking precomposed characters.
+To this end, IPA Palette includes three new image maps which can be shown/hidden
+by clicking on the small triangles in the diactitic section of the "Other" pane.
 <table>
 <tr>
 <td><img src="New.png" alt="New Feature" /></td>
@@ -89,11 +127,31 @@ Doulos and Charis do not support the combining tilde overlay or the combining pa
 </td>
 </tr>
 </table>
-This is intended for those who use custom keyboard layouts, for example <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;id=UniIPAKeyboard#79dbd88a">IPA Unicode 5.1 Macintosh Keyboard</a>. If enabled in the <code>Settings</code> pane ("Show Keyboard Shortcuts" checkbox), IPA Palette will scan the current keyboard layout you are using and try to display the keyboard shortcut (if any) for the symbol you are holding the mouse over. In this way you can use the software as a sort of "Reverse Keyboard Viewer:" instead of seeing the symbol generated by the given keys, you see the keys needed to generate a symbol of interest.
+This is intended for those who use custom keyboard layouts, for example
+<a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;id=UniIPAKeyboard#79dbd88a">IPA Unicode 5.1 Macintosh Keyboard</a>.
+If enabled in the <code>Settings</code> pane
+("Show Keyboard Shortcuts" checkbox), IPA Palette will scan the current keyboard
+layout you are using and try to display the keyboard shortcut (if any) for the
+symbol you are holding the mouse over. In this way you can use the software as a
+sort of "Reverse Keyboard Viewer"; instead of seeing the symbol generated by the
+given keys, you see the keys needed to generate a symbol of interest.
 <h3>User-Defined Symbols</h3>
-If IPA Palette tried to show all of the symbols used in theoretical and applied linguistics, the window would have twenty tabs and fill the entire screen! It's a painful choice, but only current IPA/ExtIPA symbols (and their superscripts if available) will be officially supported. However, if you need some additional symbols that are not in IPA but are still supported by Unicode, you can add them to your preferences. Or maybe you just use a few IPA symbols and you want them all on the same tab.<br/>
+If IPA Palette tried to show all of the symbols used in theoretical and applied
+linguistics, the window would have twenty tabs and fill the entire screen!
+It's a painful choice, but only current IPA/ExtIPA symbols (and their
+superscripts if available) will be officially supported. However, if you need
+some additional symbols that are not in IPA but are still supported by Unicode,
+you can add them to your preferences. Or maybe you just use a few IPA symbols
+and you want them all on the same tab.<br/>
 <br/>
-The <code>Settings</code> pane has a menu called <code>Custom Symbols</code>. Using that you can use the <code>Edit…</code> item; a sheet will be displayed in which you can edit your symbols. You can add (with the plus button) and delete (with the delete key). You can paste in a symbol, or you can use Apple's Character Palette to enter one. Under the <code>Description</code> column you can describe the symbol if you wish. If you do, the description will be displayed at the bottom of the palette when you mouse over the symbol, and you can search for it in the <code>Search</code> tab.<br/>
+The <code>Settings</code> pane has a menu called <code>Custom Symbols</code>.
+Using that you can use the <code>Edit…</code> item; a sheet will be displayed
+in which you can edit your symbols. You can add (with the plus button) and
+delete (with the delete key). You can paste in a symbol, or you can use Apple's
+Character Viewer to enter one. Under the <code>Description</code> column you can
+describe the symbol if you wish. If you do, the description will be displayed at
+the bottom of the palette when you mouse over the symbol, and you can search for
+it in the <code>Search</code> tab.<br/>
 <br/>
 The <code>Custom</code> tab pane is updated every time you edit your list. (If you remove all of them, or don't have any, the <code>Custom</code> pane will not be displayed in the Palette.) Custom symbols and their descriptions are saved in your preferences, so you only have to define them once.<br/>
 <br/>

@@ -701,7 +701,7 @@ CGFloat PDFImageMapConsonantWidthPerHeight = 2.9f;
       if (submap) [PDFImageMapCreator drawSubmapIndicatorInRect:chrect context:_ctx];
     #endif
       OSStatus err = TRRenderText(_ctx, chrect, (CFStringRef)toDraw, (CFStringRef)useFont, _fontSize, TRSubstituteFallbackBehavior, baseline);
-      if (err) NSLog(@"Error: %d drawing %@", err, toDraw);
+      if (err) NSLog(@"Error: %ld drawing %@", (long)err, toDraw);
       //NSLog(@"%@ in %@ at %f baseline %f (%d) (%@)", toDraw, NSStringFromRect(*(NSRect*)&chrect), _fontSize, baseline, err, useFont);
       pctRect = NSMakeRect((chrect.origin.x-_rect.origin.x)/_rect.size.width,
                            (chrect.origin.y-_rect.origin.y)/_rect.size.height,

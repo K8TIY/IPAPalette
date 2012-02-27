@@ -18,6 +18,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #import "IPAServer.h"
 #import "Placeholder.h"
 
+@interface UserGlyphsController (Private)
+-(NSUInteger)_moveRows:(NSArray*)array to:(NSUInteger)destination copying:(BOOL)copy;
+@end
+
+static NSString* const IPASymbolListRows = @"IPASymbolListRows";
+
 @implementation UserGlyphsController
 -(id)init
 {
@@ -36,6 +42,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 -(void)awakeFromNib
 {
+  [_table registerForDraggedTypes:[NSArray arrayWithObjects:IPASymbolListRows, nil]];
   [[Onizuka sharedOnizuka] localizeWindow:_editSheet];
 }
 
@@ -104,6 +111,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   [_table reloadData];
   NSIndexSet* is = [[NSIndexSet alloc] initWithIndex:[_editglyphs count]-1];
   [_table selectRowIndexes:is byExtendingSelection:NO];
+  [_table scrollRowToVisible:[_editglyphs count]-1];
   [is release];
   [_table editColumn:0 row:[_editglyphs count]-1 withEvent:nil select:YES];
 }
@@ -175,15 +183,28 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 {
   #pragma unused (sender)
   NSUInteger i;
-  for (i = [_table numberOfRows]; i > 0; i--)
+  NSInteger selection = [_table selectedRow];
+  if (selection != -1)
   {
-    if ([_table isRowSelected:i-1])
+    for (i = [_table numberOfRows]; i > 0; i--)
     {
-      [_editglyphs removeObjectAtIndex:i-1];
-      [_editdescriptions removeObjectAtIndex:i-1];
+      if ([_table isRowSelected:i-1])
+      {
+        [_editglyphs removeObjectAtIndex:i-1];
+        [_editdescriptions removeObjectAtIndex:i-1];
+        selection--;
+      }
     }
+    if ([_editglyphs count])
+    {
+      selection++;
+      if (selection < 0) selection = [_editglyphs count] - 1;
+      if ((NSUInteger)selection >= [_editglyphs count]) selection = [_editglyphs count] - 1;
+      NSIndexSet* rows = [NSIndexSet indexSetWithIndex:selection];
+      [_table selectRowIndexes:rows byExtendingSelection:NO];
+    }
+    [_table reloadData];
   }
-  [_table reloadData];
 }
 
 #pragma mark Table
@@ -213,11 +234,116 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     {
       unichar chr = [str characterAtIndex:0];
       if (NeedsPlaceholder(chr))
-          str = [NSString stringWithFormat:@"%C%@", PlaceholderDottedCircle, str];
+        str = [NSString stringWithFormat:@"%C%@", PlaceholderDottedCircle, str];
     }
   }
   else str = [_editdescriptions objectAtIndex:row];
   return str;
+}
+
+-(BOOL)tableView:(NSTableView*)table writeRows:(NSArray*)rows toPasteboard:(NSPasteboard*)pb
+{
+	if (table == _table && [table numberOfSelectedRows])
+	{
+		// Intra-table drag - data is the array of rows.
+		[pb declareTypes:[NSArray arrayWithObject:IPASymbolListRows] owner:nil];
+		[pb setPropertyList:rows forType:IPASymbolListRows];
+		return YES;
+	}
+	return NO;
+}
+
+-(NSDragOperation)tableView:(NSTableView*)table validateDrop:(id <NSDraggingInfo>)info
+                  proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)op
+{
+  #pragma unused (info)
+	// Make drops at the end of the table go to the end.
+	if (row == -1)
+	{
+		row = [table numberOfRows];
+		op = NSTableViewDropAbove;
+		[table setDropRow:row dropOperation:op];
+	}
+	// We don't ever want to drop onto a row, only between rows.
+	if (op == NSTableViewDropOn)
+		[table setDropRow:(row+1) dropOperation:NSTableViewDropAbove];
+  NSUInteger modifiers = [[NSApp currentEvent] modifierFlags] & NSDeviceIndependentModifierFlagsMask;
+  if (modifiers == NSAlternateKeyMask) return NSDragOperationCopy;
+  return NSDragOperationMove;
+}
+
+-(BOOL)tableView:(NSTableView*)table acceptDrop:(id <NSDraggingInfo>)info
+       row:(NSInteger)dropRow dropOperation:(NSTableViewDropOperation)op;
+{
+  #pragma unused (op)
+  //NSLog(@"row %d op %d", dropRow, op);
+	BOOL accepted = NO;
+  if (table == _table)
+	{
+	  NSPasteboard* pb = [info draggingPasteboard];
+    NSArray* array = [pb propertyListForType:IPASymbolListRows];
+    if (array)
+    {
+      NSDragOperation	srcMask = [info draggingSourceOperationMask];
+      BOOL isCopy = (srcMask & NSDragOperationMove) ? NO:YES;
+      dropRow = [self _moveRows:array to:dropRow copying:isCopy];
+      [table deselectAll:self];
+      NSMutableIndexSet* rows = [[NSMutableIndexSet alloc] init];
+      for (id blah in array)
+        [rows addIndex:dropRow++];
+      [_table reloadData];
+      [table selectRowIndexes:rows byExtendingSelection:YES];
+      [rows release];
+      accepted = YES;
+    }
+	}
+	return accepted;
+}
+
+-(NSUInteger)_moveRows:(NSArray*)array to:(NSUInteger)destination copying:(BOOL)copy
+{
+  NSMutableArray* moved = [[NSMutableArray alloc] initWithCapacity:[array count]];
+  NSMutableArray* movedDesc = [[NSMutableArray alloc] initWithCapacity:[array count]];
+  NSInteger result = destination;
+	for (id val in [array reverseObjectEnumerator])
+  {
+		unsigned i = [val unsignedIntValue];
+		NSString* m = [_editglyphs objectAtIndex:i];
+    NSString* md = [_editdescriptions objectAtIndex:i];
+		if (copy)
+    {
+      m = [m copy];
+      md = [md copy];
+    }
+    else
+    {
+      [m retain];
+      [md retain];
+    }
+		[moved addObject:m];
+    [movedDesc addObject:md];
+		[m release];
+    [md release];
+		if (!copy)
+		{
+			[_editglyphs removeObjectAtIndex:i];
+      [_editdescriptions removeObjectAtIndex:i];
+			if (i < destination) destination--;
+		}
+	}
+  unsigned dst = destination;
+	for (NSString* m in [moved reverseObjectEnumerator])
+  {
+    [_editglyphs insertObject:m atIndex:dst++];
+  }
+  dst = destination;
+  for (NSString* md in [movedDesc reverseObjectEnumerator])
+  {
+    [_editdescriptions insertObject:md atIndex:dst++];
+  }
+  [moved release];
+  [movedDesc release];
+  return result;
 }
 @end
 
@@ -259,7 +385,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 -(NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)isLocal
 {
-  #pragma unused (isLocal)
+  if (isLocal) return NSDragOperationMove | NSDragOperationCopy;
   return NSDragOperationNone;
 }
 @end
