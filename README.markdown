@@ -1,4 +1,4 @@
-## This is IPA Palette version 2.2 (unreleased beta)
+## This is IPA Palette version 2.2 (release candidate)
 <http://blugs.com/IPA>
 
 ### What can you do with this thing?
@@ -21,12 +21,19 @@ Alphabet symbols into Unicode-savvy applications.
 * Mouse tracking starts up before font scanning finishes, so you can have symbol
   description information available earlier, even if you have many fonts
   installed.
-* Multicharacter symbols like /ǃ¡/ from ExtIPA can now have keyboard shortcuts
-  displayed (if you have a really good keyboard layout!).
-* Restored the ExtIPA Nasal Escape symbol, which went missing somewhere
-  along the line, probably in the 2.0 transition.
 * Made it possible to rearrange the custom symbols layout by dragging rows
   in the table. (You can copy if you hold down the Option key.)
+
+### Fixed in 2.2
+
+* Restored the ExtIPA Nasal Escape symbol, which went missing somewhere
+  along the line, probably in the 2.0 transition.
+* Multicharacter symbols like /ǃ¡/ from ExtIPA can now have keyboard shortcuts
+  displayed (if you have a really good keyboard layout!).
+* Finally diagnosed the reason I could never seem to change the preview font in
+  Snow Leopard -- a Core Text bug or misfeature that was cacheing font data
+  based on the address of the string object I was passing on, instead of its
+  content (sincoe I was reusing a mutable string).
 
 ### To Build
 
