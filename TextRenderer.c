@@ -119,7 +119,7 @@ static OSStatus local_CoreTR(CGContextRef ctx, CGRect r, CFStringRef string,
       CFRelease(font);
       CFStringRef fontName2 = CTFontCopyName(font2, kCTFontFullNameKey);
       fdesc = CTFontDescriptorCreateWithNameAndSize(fontName2, fontSize);
-      //NSLog(@"falling back to %@ : %@", fontName2, fdesc);
+      //NSLog(@"falling back to %@ from %@ : %@", fontName2, fontName, fdesc);
       CFRelease(fontName2);
       font = CTFontCreateWithFontDescriptor(fdesc, fontSize, NULL);
       CFRelease(fdesc);
