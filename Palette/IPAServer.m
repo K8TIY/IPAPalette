@@ -1078,7 +1078,17 @@ NS_ENDHANDLER
         ([existing isKindOfClass:[NSString class]] &&
          [KeylayoutParser compareKeyboardSequence:seq withSequence:existing] == NSOrderedAscending))
     {
-      [_keyboard setObject:seq forKey:uplus];
+      BOOL allow = YES;
+      // But, never ever allow cmd
+      for (unsigned i = 0; i < [seq length]; i++)
+      {
+        if ([seq characterAtIndex:i] == kCommandUnicode)
+        {
+          allow = NO;
+          break;
+        }
+      }
+      if (allow) [_keyboard setObject:seq forKey:uplus];
     }
     [uplus release];
   }
