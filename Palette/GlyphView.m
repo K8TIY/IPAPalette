@@ -17,6 +17,17 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #import <Carbon/Carbon.h>
 #import "Onizuka.h"
 
+/* Note: in order to work around a Core Text cacheing bug in Snow Leopard,
+   the TextRenderer routines must work on a copy of our mutable string,
+   because it uses the object itself as a key into the font name -> info
+   cache(s).
+
+   In a sense, Core Text was saying, "Oh, I see your string (which currently
+   holds the value 'Doulos SIL') was previously used to ask for this font
+   'Everson Mono', here you go!"
+   
+   Not fun.
+*/
 @interface GlyphView (Private)
 -(void)_coreInit;
 -(void)_drawWarning;
@@ -63,9 +74,11 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
     r = NSInsetRect(bounds, GlyphViewBevelInset, GlyphViewBevelInset);
     CGRect cgr = CGRectMake(r.origin.x, r.origin.y, r.size.width, r.size.height);
     CGContextClipToRect(ctx, cgr);
+    NSString* tmp = [_font copy];
     OSStatus err = TRRenderText(ctx, cgr, (CFStringRef)_stringValue,
-                                (CFStringRef)_font, _fontSize,
+                                (CFStringRef)tmp, _fontSize,
                                 _fallbackBehavior, _baseline);
+    [tmp release];
     if (err == kATSUFontsNotMatched) [self _drawWarning];
   }
 }
@@ -84,12 +97,10 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
   [super setFrameSize:sz];
 }
 
-//-(BOOL)mouseDownCanMoveWindow {return YES;}
-
 #pragma mark API
 -(void)setStringValue:(NSString*)str
 {
-  if (!str || ![_stringValue isEqual:str])
+  if (!str || ![_stringValue isEqualToString:str])
   {
     [_stringValue setString:(str)? str:@""];
     [self setNeedsDisplay:YES];
@@ -98,8 +109,12 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
 
 -(void)setFont:(NSString*)font
 {
-  [_font setString:font];
-  [self _setupFontWithFrame:[self bounds]];
+  if (!font || ![_font isEqualToString:font])
+  {
+    [_font setString:font];
+    [self _setupFontWithFrame:[self bounds]];
+    [self setNeedsDisplay:YES];
+  }
 }
 
 -(void)setFallbackBehavior:(uint8_t)flag
@@ -133,11 +148,13 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
     textWhere.x = iconWhere.x+iconSize.width+2.0L;
     textWhere.y = iconWhere.y;
   }
-  [icon drawAtPoint:iconWhere fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:delta];
+  [icon drawAtPoint:iconWhere fromRect:NSZeroRect
+        operation:NSCompositeSourceOver fraction:delta];
   NSString* warning = [[Onizuka sharedOnizuka] copyLocalizedTitle:@"__FONT_WARNING__"];
   NSDictionary* attrs = [[NSDictionary alloc] initWithObjectsAndKeys:[NSColor redColor],
                                               NSForegroundColorAttributeName, 
-                                              [NSFont systemFontOfSize:10.0L], NSFontAttributeName, NULL];
+                                              [NSFont systemFontOfSize:10.0L],
+                                              NSFontAttributeName, NULL];
   [warning drawAtPoint:textWhere withAttributes:attrs];
   [attrs release];
   [warning release];
@@ -149,8 +166,12 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
   if (!gc) return;
   CGContextRef ctx = [gc graphicsPort];
   if (!ctx) return;
+  NSString* tmp = [_font copy];
   r = NSInsetRect(r, GlyphViewBevelInset, GlyphViewBevelInset);
-  (void)TRGetBestFontSize(ctx, *(CGRect*)&r, CFSTR("Wj"), (CFStringRef)_font, _fallbackBehavior, &_fontSize, &_baseline);
+  (void)TRGetBestFontSize(ctx, *(CGRect*)&r, CFSTR("Wj"),
+                          (CFStringRef)tmp, _fallbackBehavior,
+                          &_fontSize, &_baseline);
+  [tmp release];
 }
 @end
 
