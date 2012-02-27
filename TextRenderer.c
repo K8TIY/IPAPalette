@@ -40,17 +40,16 @@ OSStatus TRGetBestFontSize(CGContextRef ctx, CGRect r, CFStringRef string,
   if (fontName)
   {
     r = CGRectInset(r, 0.1f*r.size.width, 0.1f*r.size.height);
-    Boolean tooBig = true;
     fontSize = 100.0f;
     NSUInteger i = 0;
-    while (tooBig && fontSize > 0.0f)
+    while (fontSize > 0.0f)
     {
       TRInfo info;
       OSStatus err = TRGetTextInfo(ctx, r, string, fontName, fontSize,
                                    fallbackBehavior, &info);
       if (err == paramErr) return err;
       baseline = info.baseline;
-      /*printf("_setUpFontWithFrame:{%.2f %.2f} size=%.2fpt w=%.2f h=%.2f asc=%f desc=%f bl=%f\n",
+      /*printf("TRGetBestFontSize:{%.2f %.2f} size=%.2fpt w=%.2f h=%.2f asc=%f desc=%f bl=%f\n",
               r.size.width, r.size.height, fontSize, info.width, info.height,
               info.ascent, info.descent, baseline);*/
       if (info.height < r.size.height && info.width < r.size.width) break;
@@ -89,7 +88,7 @@ static OSStatus local_CoreTR(CGContextRef ctx, CGRect r, CFStringRef string,
                              TRFallbackBehavior fallbackBehavior,
                              Boolean render, CGFloat baseline, TRInfo* oInfo)
 {
-  if (!ctx || !string) return paramErr;
+  if (!ctx || !string || !fontName) return paramErr;
   CGContextSaveGState(ctx);
   CGContextSetTextMatrix(ctx, CGAffineTransformIdentity);
   CTFontDescriptorRef fdesc = CTFontDescriptorCreateWithNameAndSize(fontName, fontSize);
