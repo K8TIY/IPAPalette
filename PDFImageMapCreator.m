@@ -111,7 +111,7 @@ static void local_ReleaseInfoCB(void* info);
 #define SIPt1(r) r.origin.x + (r.size.width * SIXLeftPct), r.origin.y + (r.size.height * SIYBottomPct)
 #define SIPt2(r) r.origin.x + (r.size.width * SIXLeftPct), r.origin.y + (r.size.height * SIYTopPct)
 #define SIPt3(r) r.origin.x + (r.size.width * SIXRightPct), r.origin.y + (r.size.height * ((SIYBottomPct+SIYTopPct)/2))
-+(CGMutablePathRef)submapIndicatorQuartzInRect:(CGRect)rect
++(CGMutablePathRef)newSubmapIndicatorQuartzInRect:(CGRect)rect
 {
   CGMutablePathRef path = CGPathCreateMutable();
   CGPathMoveToPoint(path, NULL, SIPt1(rect));
@@ -121,9 +121,9 @@ static void local_ReleaseInfoCB(void* info);
   return path;
 }
 
-+(NSBezierPath*)submapIndicatorCocoaInRect:(NSRect)rect
++(NSBezierPath*)newSubmapIndicatorCocoaInRect:(NSRect)rect
 {
-  NSBezierPath* path = [NSBezierPath bezierPath];
+  NSBezierPath* path = [[NSBezierPath alloc] init];
   [path moveToPoint:NSMakePoint(SIPt1(rect))];
   [path lineToPoint:NSMakePoint(SIPt2(rect))];
   [path lineToPoint:NSMakePoint(SIPt3(rect))];
@@ -135,7 +135,7 @@ static void local_ReleaseInfoCB(void* info);
 +(void)drawSubmapIndicatorInRect:(CGRect)rect context:(CGContextRef)ctx
 {
   CGContextSaveGState(ctx);
-  CGMutablePathRef path = [PDFImageMapCreator submapIndicatorQuartzInRect:rect];
+  CGMutablePathRef path = [PDFImageMapCreator newSubmapIndicatorQuartzInRect:rect];
   CGContextSetRGBFillColor(ctx, 0.1f, 0.1f, 0.9f, 0.75f);
   CGContextAddPath(ctx, path);
   CGContextSetShadow(ctx, CGSizeMake(2.0f, -2.0f), 4.0);

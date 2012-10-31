@@ -308,14 +308,16 @@ static NSMapTable*   gObservers;
   NSRect r = [self _rectFromKey:_lastHot];
   if (str && [_submaps objectForKey:str])
   {
-    NSBezierPath* tri = [PDFImageMapCreator submapIndicatorCocoaInRect:r];
+    NSBezierPath* tri = [PDFImageMapCreator newSubmapIndicatorCocoaInRect:r];
     NSPoint mouse = [self convertPoint:[evt locationInWindow] fromView:nil];
     if ([tri containsPoint:mouse])
     {
       if ([_subwindowName isEqualToString:str]) [self _detachWindow];
       else [self showSubwindow:str];
+      [tri release];
       return;
     }
+    [tri release];
   }
   while (YES)
   {

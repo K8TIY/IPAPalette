@@ -47,8 +47,8 @@ typedef enum
   CGFloat              _fontSize;
 }
 +(void)setPDFImageMap:(PDFImageMap*)map toData:(NSArray*)data ofType:(PDFImageMapType)type;
-+(CGMutablePathRef)submapIndicatorQuartzInRect:(CGRect)rect;
-+(NSBezierPath*)submapIndicatorCocoaInRect:(NSRect)rect;
++(CGMutablePathRef)newSubmapIndicatorQuartzInRect:(CGRect)rect;
++(NSBezierPath*)newSubmapIndicatorCocoaInRect:(NSRect)rect;
 #if !__PDFIMC_RUNTIME_ONLY__
 +(void)drawSubmapIndicatorInRect:(CGRect)rect context:(CGContextRef)ctx;
 #endif
