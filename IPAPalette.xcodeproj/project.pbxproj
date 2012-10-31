@@ -183,6 +183,7 @@
 		32DB949714ED9B5A008A805A /* NSView+Spinny.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSView+Spinny.h"; path = "Palette/NSView+Spinny.h"; sourceTree = "<group>"; };
 		32DB949814ED9B5A008A805A /* NSView+Spinny.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSView+Spinny.m"; path = "Palette/NSView+Spinny.m"; sourceTree = "<group>"; };
 		32DC620E10D2EF6B008B5B1B /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = Localization/zh_TW.lproj/Localizable.strings; sourceTree = "<group>"; };
+		32DCEA0F15E426CC00D3B33A /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = Localization/th.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32E102081110BFC100B1F030 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = Localization/fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32E729E01444EC3700E2B07B /* IPAIconTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = IPAIconTemplate.pdf; path = Palette/IPAIconTemplate.pdf; sourceTree = SOURCE_ROOT; };
 		32F9027F1076ACB2000D0404 /* IPAPalettePostinstall */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IPAPalettePostinstall; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -478,6 +479,7 @@
 				nl,
 				es,
 				it,
+				th,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* NumberInput */;
 			projectDirPath = "";
@@ -622,6 +624,7 @@
 				3226A33210863DEC000AD993 /* ko */,
 				32FE85E611629A0700E64D62 /* nl */,
 				3226A33310863DF0000AD993 /* ru */,
+				32DCEA0F15E426CC00D3B33A /* th */,
 				3226A33410863DF3000AD993 /* vi */,
 				3226A33510863DFA000AD993 /* zh_CN */,
 				32DC620E10D2EF6B008B5B1B /* zh_TW */,

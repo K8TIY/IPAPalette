@@ -3386,6 +3386,7 @@ loc_ja: カスタム
 loc_ko: 사용자화
 loc_nl: Aangepaste
 loc_ru: Пользовательские
+loc_th: ที่กำหนดเอง
 loc_vi: Tuỳ chỉnh
 loc_zh_CN: 自定
 loc_zh_TW: 自定
@@ -3401,6 +3402,7 @@ loc_ja: カスタム字
 loc_ko: 사용자화 기호
 loc_nl: Aangepaste Symbolen
 loc_ru: Пользовательские Символы
+loc_th: สัญลักษณ์ที่กำหนดเอง
 loc_vi: Tuỳ chỉnh biểu tượng
 loc_zh_CN: 自定义符号
 loc_zh_TW: 自定義符號
@@ -3416,6 +3418,7 @@ loc_ja: 編集⋯
 loc_ko: 편집…
 loc_nl: Wijzig…
 loc_ru: Правка…
+loc_th: แก้ไข…
 loc_vi: Chỉnh sửa…
 loc_zh_CN: 编辑⋯
 loc_zh_TW: 編輯⋯
@@ -3431,6 +3434,7 @@ loc_ja: 読み込む⋯
 loc_ko: 가져오기…
 loc_nl: Importeer…
 loc_ru: Импорт…
+loc_th: นำเข้า…
 loc_vi: Nhập khẩu…
 loc_zh_CN: 导入⋯
 loc_zh_TW: 輸入⋯
@@ -3446,6 +3450,7 @@ loc_ja: 書き出す⋯
 loc_ko: 보내기…
 loc_nl: Exporteer…
 loc_ru: Экспорт…
+loc_th: ส่งออก…
 loc_vi: Xuất khẩu…
 loc_zh_CN: 导出⋯
 loc_zh_TW: 輸出⋯
@@ -3461,6 +3466,7 @@ loc_ja: キャンセル
 loc_ko: 취소
 loc_nl: Annuleer
 loc_ru: Отменить
+loc_th: ยกเลิก
 loc_vi: Hủy bỏ
 loc_zh_CN: 取消 
 loc_zh_TW: 取消
@@ -3476,6 +3482,7 @@ loc_ja: 図
 loc_ko: 도표
 loc_nl: Tabellen
 loc_ru: Таблицы
+loc_th: แผนภูมิ
 loc_vi: Bảng
 loc_zh_CN: 图
 loc_zh_TW: 圖
@@ -3491,6 +3498,7 @@ loc_ja: 子音
 loc_ko: 닿소리
 loc_nl: Medeklinker
 loc_ru: Согласные
+loc_th: พยัญชนะ
 loc_vi: Phụ âm
 loc_zh_CN: 辅音
 loc_zh_TW: 輔音
@@ -3506,6 +3514,7 @@ loc_ja: デバッグ
 loc_ko: 디버그
 loc_nl: Debugger
 loc_ru: Отладка
+loc_th: โหมดแก้ไขปัญหา
 loc_vi: Gỡ lỗi
 loc_zh_CN: 调试
 loc_zh_TW: 調試
@@ -3521,6 +3530,7 @@ loc_ja: デバッグ
 loc_ko: 디버그
 loc_nl: Debugger
 loc_ru: Отладка
+loc_th: ดีบั๊ก
 loc_vi: Gỡ lỗi
 loc_zh_CN: 调试
 loc_zh_TW: 調試
@@ -3536,6 +3546,7 @@ loc_ja: 記述
 loc_ko: 설명
 loc_nl: Beschrijving
 loc_ru: Описание
+loc_th: รายละเอียด
 loc_vi: Sự tả
 loc_zh_CN: 描述
 loc_zh_TW: 描述
@@ -3551,6 +3562,7 @@ loc_ja: 付加記号
 loc_ko: 발음 구별 기호
 loc_nl: Diakritisch
 loc_ru: Диакритический
+loc_th: เครื่องหมายการออกเสียง
 loc_vi: Dấu
 loc_zh_CN: 附加符号
 loc_zh_TW: 附加符號
@@ -3566,6 +3578,7 @@ loc_ja: ダウンロード
 loc_ko: 다운로드
 loc_nl: Download <<
 loc_ru: Загрузка
+loc_th: ดาวน์โหลด
 loc_vi: Tải về
 loc_zh_CN: 下载
 loc_zh_TW: 下載
@@ -3581,6 +3594,7 @@ loc_ja: 拡張IPA
 loc_ko: 연장IPA
 loc_nl: Uitgebreide IPA
 loc_ru: Расширения МФА
+loc_th: IPA ขยาย
 loc_vi: IPA mở rộng
 loc_zh_CN: 扩IPA
 loc_zh_TW: 擴IPA
@@ -3596,6 +3610,7 @@ loc_ja: 代わりフォント使用
 loc_ko: 교체 사용
 loc_nl: Gebruik plaatsvervanger
 loc_ru: Использовать замену
+loc_th: ใช้ทดแทน
 loc_vi: Sử dụng thay thế
 loc_zh_CN: 使用备用
 loc_zh_TW: 使用備用
@@ -3611,6 +3626,7 @@ loc_ja: 非対応
 loc_ko: 지원하지 않음
 loc_nl: Niet-ondersteund
 loc_ru: Не поддерживается
+loc_th: ไม่รองรับ
 loc_vi: Không được hỗ 
 loc_zh_CN: 扩IPA
 loc_zh_TW: 不支援
@@ -3626,6 +3642,7 @@ loc_ja: グリフ
 loc_ko: 글리프
 loc_nl: Karakter
 loc_ru: Глиф
+loc_th: สัญลักษณ์
 loc_vi: Chữ cái
 loc_zh_CN: 字形
 loc_zh_TW: 字形
@@ -3641,6 +3658,7 @@ loc_ja: より新しいバージョン（%@）の“__IPA_PALETTE__”を使用�
 loc_ko: 새로운 소프트웨어가 있습니다.
 loc_nl: Er is een nieuwere versie (%@) van __IPA_PALETTE__ beschikbaar.
 loc_ru: Доступна более новая версия (%@) программы «__IPA_PALETTE__».
+loc_th: รุ่นใหม่ของ __IPA_PALETTE__ สามารถใช้ได้
 loc_vi: Một phiên bản mới hơn (% @) có sẵn. Click vào đây để tải về.
 loc_zh_CN: 有更高版本 (%@) 的“__IPA_PALETTE__”可供使用。
 loc_zh_TW: “__IPA_PALETTE__”已有較新版本（%@）。
@@ -3656,6 +3674,7 @@ loc_ja: 超詳細
 loc_ko: 아주 상세
 loc_nl: Zeer gedetailleerd
 loc_ru: Очень подробно
+loc_th: ช่างพูดมาก
 loc_vi: Rất rườm rà
 loc_zh_CN: 非常详细
 loc_zh_TW: 非常詳細
@@ -3671,6 +3690,7 @@ loc_ja: IPAパレット
 loc_ko: IPA 팔레트
 loc_nl: IPA-Palet
 loc_ru: Палитра МФА
+loc_th: จานสี IPA
 loc_vi: Bảng mẫu IPA
 loc_zh_CN: IPA调板
 loc_zh_TW: IPA面板
@@ -3686,6 +3706,7 @@ loc_ja: ラストリゾート使用
 loc_ko: 최후의 수단 사용
 loc_nl: Gebruik Laatste Toevlucht
 loc_ru: Использовать последний выход
+loc_th: ที่พึ่งสุดท้าย
 loc_vi: Sử dụng phương sách cuối cùng
 loc_zh_CN: 使用占位符
 loc_zh_TW: 使用佔位符
@@ -3701,6 +3722,7 @@ loc_ja: アップデートを確認中⋯
 loc_ko: 업데이트 확인 중…
 loc_nl: Controleren op updates…
 loc_ru: Проверка обновлений…
+loc_th: กำลังมองหาการปรับปรุง…
 loc_vi: Đang kiểm tra để cập nhật…
 loc_zh_CN: 正在核查更新⋯
 loc_zh_TW: 正在檢查更新項目⋯
@@ -3716,6 +3738,7 @@ loc_ja: IPA フォントを検索中⋯
 loc_ko: IPA 서체 검색 중…
 loc_nl: Zoeken naar IPA-lettertypen…
 loc_ru: Ищу шрифты МФА…
+loc_th: กำลังมองหาแบบอักษร IPA…
 loc_vi: Đang tìm kiếm phông chữ IPA…
 loc_zh_CN: 正在寻找字体⋯
 loc_zh_TW: 正在尋找字體⋯
@@ -3731,6 +3754,7 @@ loc_ja: IPA フォントはインストールされていないようです。
 loc_ko: 구성된 IPA 설치된 모든 글꼴을 가지고있는 것처럼 보이지 않는다.
 loc_nl: Et lijkt erop dat u geen IPA-lettertypen geïnstalleerd.
 loc_ru: Вы не кажется имеете любые установленные шрифты МФА.
+loc_th: คุณดูเหมือนจะไม่ได้มีการติดตั้งแบบอักษร IPA
 loc_vi: Bạn không có vẻ có các phông chữ IPA.
 loc_zh_CN: 没有国际音标字体安装。
 loc_zh_TW: 沒有國際音標字體安裝。
@@ -3746,6 +3770,7 @@ loc_ja: このバージョン（%@）の“__IPA_PALETTE__”は最新のバー�
 loc_ko: __IPA_PALETTE__ 최신입니다.
 loc_nl: Deze versie van __IPA_PALETTE__ (%@ [%@]) is de nieuwste versie.
 loc_ru: Эта версия __IPA_PALETTE__ (%@ [%@]) является текущей версией.
+loc_th: รุ่นนี้ของ __IPA_PALETTE__ (%@ [%@]) เป็นรุ่นปัจจุบัน
 loc_vi: Phiên bản này của __IPA_PALETTE__ (%@ [%@]) là phiên bản hiện hành.
 loc_zh_CN: 此版本的“__IPA_PALETTE__”(%@ [%@]) 是最新版本。
 loc_zh_TW: 此“__IPA_PALETTE__”版本（%@ [%@]）是目前的版本。
@@ -3761,6 +3786,7 @@ loc_ja: オフ
 loc_ko: 끔
 loc_nl: Uitgeschakeld
 loc_ru: выкл
+loc_th: ปิด
 loc_vi: Tắt
 loc_zh_CN: 关
 loc_zh_TW: 關
@@ -3776,6 +3802,7 @@ loc_ja: OK
 loc_ko: 승인
 loc_nl: OK
 loc_ru: OK
+loc_th: ตกลง
 loc_vi: OK
 loc_zh_CN: 好
 loc_zh_TW: 好
@@ -3791,6 +3818,7 @@ loc_ja: その他
 loc_ko: 다른
 loc_nl: Ander
 loc_ru: Другой
+loc_th: อื่นๆ
 loc_vi: Cái khác
 loc_zh_CN: 其他符号
 loc_zh_TW: 其他符號
@@ -3806,6 +3834,7 @@ loc_ja: フォントの表示が正しくない可能性があります。
 loc_ko: 글꼴을 미리 정확하지 않을 수있습니다.
 loc_nl: Het lettertypen preview kan onjuist zijn.
 loc_ru: Предварительный просмотр шрифтов могут быть неточными.
+loc_th: การแสดงตัวอย่างแบบอักษรต้นอาจไม่ถูกต้อง
 loc_vi: Các phông chữ xem trước có thể không chính xác.
 loc_zh_CN: 字体预览可能不准确。
 loc_zh_TW: 字體預覽可能不準確。
@@ -3821,6 +3850,7 @@ loc_ja: 見つからないグリフ
 loc_ko: 유실된 글리프
 loc_nl: Ontbrekende Tekens
 loc_ru: Отсутствующих Глифов
+loc_th: สัญลักษณไม่พบ
 loc_vi: Vắng mặt chữ cái
 loc_zh_CN: 丢失字形
 loc_zh_TW: 丢失字形
@@ -3836,6 +3866,7 @@ loc_ja: 設定
 loc_ko: 설정
 loc_nl: Voorkeuren
 loc_ru: Настройки
+loc_th: ค่าติดตั้ง
 loc_vi: Thiết lập
 loc_zh_CN: 设置
 loc_zh_TW: 設定
@@ -3851,6 +3882,7 @@ loc_ja: 検索
 loc_ko: 검색
 loc_nl: Zoeken
 loc_ru: Найти
+loc_th: ค้นหา
 loc_vi: Tìm
 loc_zh_CN: 搜索
 loc_zh_TW: 搜尋
@@ -3866,6 +3898,7 @@ loc_ja: 上つき
 loc_ko: 어깨 글자
 loc_nl: Superscript << Wikipedia
 loc_ru: Верхний индекс
+loc_th: ซึ่งเขียน
 loc_vi: Sự biên địa chỉ
 loc_zh_CN: 上标
 loc_zh_TW: 上標
@@ -3881,6 +3914,7 @@ loc_ja: 超分節要素
 loc_ko: 초분절
 loc_nl: Suprasegmentale
 loc_ru: Супрасегментные
+loc_th: เหนือหน่วย
 loc_vi: Siêu đoạn
 loc_zh_CN: 超音段音位
 loc_zh_TW: 超音段音位
@@ -3896,6 +3930,7 @@ loc_ja: アップデートの確認⋯
 loc_ko: 업데이트 확인…
 loc_nl: Controleren op updates…
 loc_ru: Проверять обновления…
+loc_th: ตรวจหาการอัปเดต…
 loc_vi: Tìm các bản cập nhật…
 loc_zh_CN: 检查更新⋯
 loc_zh_TW: 檢查更新⋯
@@ -3911,6 +3946,7 @@ loc_ja: 詳細
 loc_ko: 상세
 loc_nl: Gedetailleerd
 loc_ru: Подробно
+loc_th: ซึ่งใช้คำฟุ่มเฟื่อย
 loc_vi: Rườm rà
 loc_zh_CN: 详细
 loc_zh_TW: 詳細
@@ -3926,6 +3962,7 @@ loc_ja: 母音
 loc_ko: 홀소리
 loc_nl: Klinker
 loc_ru: Гласный
+loc_th: เสียงสระ
 loc_vi: Nguyên âm
 loc_zh_CN: 元音
 loc_zh_TW: 元音
@@ -3941,6 +3978,7 @@ loc_ja: 警告だけ
 loc_ko: 경고 전용
 loc_nl: Alleen waarschuwen
 loc_ru: Просто предупредить
+loc_th: เพียงเตือนฉัน
 loc_vi: Chỉ cảnh báo
 loc_zh_CN: 警告只
 loc_zh_TW: 警告只
@@ -3956,6 +3994,7 @@ loc_ja: キーボードショートカットを表示
 loc_ko: 키보드 단축키를 보기
 loc_nl: Toon toetscombinaties
 loc_ru: Показать сочетания клавиш
+loc_th: แสดงคีย์ลัดแป้นพิมพ์
 loc_vi: Hiển thị các phím tắt bàn phím
 loc_zh_CN: 显示快捷键
 loc_zh_TW: 顯示鍵盤快速鍵
@@ -3971,6 +4010,7 @@ loc_ja: Brian「Moses」Hall
 loc_ko: Brian “Moses” Hall
 loc_nl: Brian “Moses” Hall
 loc_ru: Brian «Moses» Hall
+loc_th: Brian “Moses” Hall
 loc_vi: Brian “Moses” Hall
 loc_zh_CN: Brian “Moses” Hall
 loc_zh_TW: Brian「Moses」Hall
