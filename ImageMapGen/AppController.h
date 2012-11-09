@@ -21,5 +21,20 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   IBOutlet NSProgressIndicator* _spinny;
   IBOutlet NSTextField* _info;
   IBOutlet NSWindow* _window;
+  
+  IBOutlet NSButton* _vowButton;
+  IBOutlet NSButton* _vowDragButton;
+  IBOutlet NSButton* _supraToneButton;
+  IBOutlet NSButton* _consButton;
+  IBOutlet NSButton* _diacriticButton;
+  IBOutlet NSButton* _palButton;
+  IBOutlet NSButton* _retroButton;
+  IBOutlet NSButton* _vPhButton;
+  IBOutlet NSButton* _otherButton;
+  IBOutlet NSButton* _extIPAButton;
+  
+  NSMutableString*   _xml;
 }
+
+-(IBAction)doIt:(id)sender;
 @end
