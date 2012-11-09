@@ -17,7 +17,6 @@
  td div.comb {margin-top: -0.6ex; margin-bottom: -.6ex;}
  td div.hrcomp {line-height: 0.9; margin-top: -0.8ex; margin-bottom: -1ex;}
  td div.norm {line-height:normal;}
- //̢span.roman {font-family: serif; font-style: normal; font-weight: normal;} 
  span.overacc2 {position: relative;  left: .8em; top: -1.2ex;}
  span.overacc1 {position: relative;  left: .6em; top: -1.2ex;} -->
 /*]]>*/
@@ -180,7 +179,11 @@ The font names are a combination of "Family" (like "Hiragino Maru Gothic"), and 
 <h2>How to Report Bugs or Feature Requests</h2>
 <tt>moses@blugs.com</tt> (that's me)<br/>
 <br/>
-If you have a crash, try to send a CrashReporter log with your report. Also, try to turn on "Debugging" via the "About" pane of the IPA Palette window itself; a higher debug level sends more status message to the System logger. You can monitor this using <tt>/Applications/Utilities/Console</tt> while IPA Palette is running. It's not perfect, but it may give us some clues about what has happened.<br/>
+If you have a crash, try to send a CrashReporter log with your report.
+Also, turn on "Debugging" via the "Settings" pane of the IPA Palette window itself;
+a higher debug level sends more status message to the System logger.
+You can monitor this using <tt>/Applications/Utilities/Console</tt> while IPA Palette is running.
+It's not perfect, but it may give us some clues about what has happened.<br/>
 <br/>
 <strong>Please</strong> try to be as complete as possible in your description. "IPA Palette doesn't work on my computer" is a waste of my time and yours.
 <h2>FAQ and Potential FAQ Section</h2>
@@ -194,8 +197,12 @@ If you have a crash, try to send a CrashReporter log with your report. Also, try
 <p><strong>Q: Does IPA Palette work with Application XYZ?</strong><br/>
 <strong>A: Maybe.</strong></p>
 <ul>
-<li>In general, if the software works with Character Palette, it will almost certainly work with IPA Palette.</li>
-<li>It depends on how well application XYZ supports Unicode. Carbon (C-language programs that may or may not work with Mac OS 9) software, especially software written with legacy QuickDraw text APIs, is particularly vulnerable to this kind of incompatibility, as the old Mac Toolbox was written way back in the Late Mesozoic period before Unicode.</li>
+<li>In general, if the software works with Character Viewer (née Character Palette),
+    it will almost certainly work with IPA Palette.</li>
+<li>It depends on how well application XYZ supports Unicode. Carbon (C-language programs
+    that may or may not work with Mac OS 9) software, especially software written with legacy
+    QuickDraw text APIs, is particularly vulnerable to this kind of incompatibility, as the old
+    Mac Toolbox was written way back in the Late Mesozoic period before Unicode.</li>
 <li>Cocoa (Objective-C programs that require OS X) software is automatically Unicode-savvy, so no worries there. I would be shocked to find a Cocoa application that causes problems for IPA Palette.</li>
 <li>OpenOffice, X11 software, Java programs, and any other miscellaneous categories may perform arbitrarily well or poorly, depending on the implementation language and the phase of the moon.</li>
 </ul>
@@ -208,7 +215,7 @@ If you have a crash, try to send a CrashReporter log with your report. Also, try
 <strong>A: No, and it probably never will be.</strong><br/></p>
 <ul>
 <li>Until Apple cleans up its act and makes the App Store more compatible with open source software, this is not going to happen.</li>
-<li>I'm not sure I terribly keen on the idea of paying Apple for the privilege of giving away my free software.</li>
+<li>I'm not sure I am terribly keen on the idea of paying Apple for the privilege of giving away my free software.</li>
 <li>I think readers know by now how I feel about the Mac App Store.</li>
 </ul>
 <h2>Thanks to...</h2>
