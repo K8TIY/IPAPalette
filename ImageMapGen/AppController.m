@@ -149,7 +149,7 @@ NSString* plistEnd = @"</array>\n</plist>\n";
                length:strlen(tfNameCString)];
     free(tfNameCString);
   }
-  NSLog(@"Using %@ for %@", path, file);
+  //NSLog(@"Using %@ for %@", path, file);
   return path;
 }
 
