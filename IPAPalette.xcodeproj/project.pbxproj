@@ -65,6 +65,7 @@
 		32D4CEA5147AE9C0008973BD /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327FE565106D53E9003FEB34 /* Carbon.framework */; };
 		32D4CECB147AF8B2008973BD /* KeylayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4CECA147AF8B2008973BD /* KeylayoutParser.m */; };
 		32DB949914ED9B5A008A805A /* NSView+Spinny.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DB949814ED9B5A008A805A /* NSView+Spinny.m */; };
+		32DCEB1915EFDBC900D3B33A /* HackedDoulosF-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32DCEB1815EFDBC900D3B33A /* HackedDoulosF-Regular.ttf */; };
 		32E729E11444EC3700E2B07B /* IPAIconTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 32E729E01444EC3700E2B07B /* IPAIconTemplate.pdf */; };
 		32EC6C991125CE6E00FABAC9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		32F57E4B148944C30032B77E /* KeylayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4CECA147AF8B2008973BD /* KeylayoutParser.m */; };
@@ -184,6 +185,7 @@
 		32DB949814ED9B5A008A805A /* NSView+Spinny.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSView+Spinny.m"; path = "Palette/NSView+Spinny.m"; sourceTree = "<group>"; };
 		32DC620E10D2EF6B008B5B1B /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = Localization/zh_TW.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32DCEA0F15E426CC00D3B33A /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = Localization/th.lproj/Localizable.strings; sourceTree = "<group>"; };
+		32DCEB1815EFDBC900D3B33A /* HackedDoulosF-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HackedDoulosF-Regular.ttf"; path = "ImageMapGen/HackedDoulosF-Regular.ttf"; sourceTree = "<group>"; };
 		32E102081110BFC100B1F030 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = Localization/fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32E729E01444EC3700E2B07B /* IPAIconTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = IPAIconTemplate.pdf; path = Palette/IPAIconTemplate.pdf; sourceTree = SOURCE_ROOT; };
 		32F9027F1076ACB2000D0404 /* IPAPalettePostinstall */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IPAPalettePostinstall; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -306,7 +308,7 @@
 				32A854E614F55E4A007CCF53 /* AuxNames.strings */,
 				32CA4F630368D1EE00C91783 /* IPAPalette_Prefix.pch */,
 				32D0964A135DED4C00D86037 /* README.markdown */,
-				3241E30810727C5F00144CE0 /* IPAChartGen */,
+				3241E30810727C5F00144CE0 /* ImageMapGen */,
 				328B050610752462000D6186 /* Postinstall */,
 				32D4CDB5147AE0DB008973BD /* KeyboadParser */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -342,7 +344,7 @@
 			path = ImageMaps;
 			sourceTree = SOURCE_ROOT;
 		};
-		3241E30810727C5F00144CE0 /* IPAChartGen */ = {
+		3241E30810727C5F00144CE0 /* ImageMapGen */ = {
 			isa = PBXGroup;
 			children = (
 				3241E31610727C8200144CE0 /* AppController.h */,
@@ -351,8 +353,9 @@
 				3241E31210727C8200144CE0 /* Info.plist */,
 				326E891A144616450063F34B /* MainMenu.xib */,
 				3299F3E0143E65B9009191BC /* HackedDoulos-Regular.ttf */,
+				32DCEB1815EFDBC900D3B33A /* HackedDoulosF-Regular.ttf */,
 			);
-			name = IPAChartGen;
+			name = ImageMapGen;
 			sourceTree = SOURCE_ROOT;
 		};
 		32555504105AF4AD007222C6 /* Onizuka */ = {
@@ -501,6 +504,7 @@
 			files = (
 				3299F3E1143E65B9009191BC /* HackedDoulos-Regular.ttf in Resources */,
 				326E891B144616450063F34B /* MainMenu.xib in Resources */,
+				32DCEB1915EFDBC900D3B33A /* HackedDoulosF-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
