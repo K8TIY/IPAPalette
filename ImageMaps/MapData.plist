@@ -113,11 +113,6 @@
   <key>rect</key> <string>{{0.321818, 0.61775}, {0.0445455, 0.11775}}</string>
 </dict>
 <dict>
-  <key>char</key> <string>ɽ</string>
-  <key>name</key> <string>Cons</string>
-  <key>rect</key> <string>{{0.5, 0.61775}, {0.0445455, 0.11775}}</string>
-</dict>
-<dict>
   <key>char</key> <string>ʀ</string>
   <key>name</key> <string>Cons</string>
   <key>rect</key> <string>{{0.767273, 0.61775}, {0.0445455, 0.11775}}</string>
@@ -131,6 +126,11 @@
   <key>char</key> <string>ɾ</string>
   <key>name</key> <string>Cons</string>
   <key>rect</key> <string>{{0.321818, 0.5}, {0.0445455, 0.11775}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ɽ</string>
+  <key>name</key> <string>Cons</string>
+  <key>rect</key> <string>{{0.5, 0.5}, {0.0445455, 0.11775}}</string>
 </dict>
 <dict>
   <key>char</key> <string>ɸ</string>
@@ -959,6 +959,11 @@
   <key>char</key> <string>͕</string>
   <key>name</key> <string>ExtIPA</string>
   <key>rect</key> <string>{{0.4, 0.375}, {0.2, 0.125}}</string>
+</dict>
+<dict>
+  <key>char</key> <string>ꟸ</string>
+  <key>name</key> <string>ExtIPA</string>
+  <key>rect</key> <string>{{0.4, 0.25}, {0.2, 0.125}}</string>
 </dict>
 <dict>
   <key>char</key> <string>˭</string>
