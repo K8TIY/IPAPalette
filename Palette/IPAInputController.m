@@ -97,8 +97,11 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   [filter setObject:bid forKey:(id)kTISPropertyBundleID];
   NSArray* list = (NSArray*)TISCreateInputSourceList((CFDictionaryRef)filter, false);
   [filter release];
-  me = (TISInputSourceRef)[list objectAtIndex:0L];
-  CFRetain(me);
+  if ([list count])
+  {
+    me = (TISInputSourceRef)[list objectAtIndex:0L];
+    CFRetain(me);
+  }
   [list release];
   return me;
 }
