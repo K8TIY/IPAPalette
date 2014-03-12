@@ -1,4 +1,4 @@
-## This is IPA Palette version 2.2 (release candidate)
+## This is IPA Palette version 2.2
 <http://blugs.com/IPA>
 
 ### What can you do with this thing?
@@ -16,6 +16,8 @@ Alphabet symbols into Unicode-savvy applications.
   use the most, without having to keep switching between tabs.
   The auxiliary palettes hide when you hide the main one, and are saved to
   your preferences.
+* New IPA Manager app handles installation and uninstallation, and updating.
+  It uses the popular Sparkle framework to check for updates.
 * Some optimizations to the PDF image map related to mouse tracking should
   benefit performance and memory use.
 * Mouse tracking starts up before font scanning finishes, so you can have symbol
@@ -32,14 +34,16 @@ Alphabet symbols into Unicode-savvy applications.
   displayed (if you have a really good keyboard layout!).
 * Finally diagnosed the reason I could never seem to change the preview font in
   Snow Leopard -- a Core Text bug or misfeature that was cacheing font data
-  based on the address of the string object I was passing on, instead of its
-  content (sincoe I was reusing a mutable string).
+  based on the address of the string object I was passing in, instead of its
+  content (since I was reusing a mutable string).
 
 ### To Build
 
 Requires my Onizuka localizer from <https://github.com/K8TIY/Onizuka>.
 It's set up as a git submodule, so just do the usual git submodule
-magic to get it set up.
+magic to get it set up. I don't have Sparkle set up as a submodule
+because the Github version requires the 10.7 SDK, which I don't have
+on my build machine.
 
 Project settings are for building on Snow Leopard against the 10.5 SDK.
 If you are on Leopard, you will probably have to fiddle with settings.
