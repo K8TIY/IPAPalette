@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cp -r ../build/release/IPAPalette.app ./
-cp ../build/release/IPAPalettePostinstall ./
-codesign -s blugs.com IPAPalette.app/Contents/MacOS/IPAPalette
-codesign -s blugs.com IPAPalettePostinstall
+cp -r ../build/release/IPA\ Manager.app ./
+codesign -s blugs.com IPA\ Manager.app
+codesign -s blugs.com IPA\ Manager.app/Contents/SharedSupport/IPAPalette.app

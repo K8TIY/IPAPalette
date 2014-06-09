@@ -70,8 +70,6 @@ enum
   NSMutableDictionary* _keyboard;
   NSDictionary* _descToGlyph; // For search
   NSMutableArray* _searchResults;
-  NSURLConnection* _updateCheck;
-  NSMutableData* _updateData;
   NSString* _savedSubwindow;
   NSMutableSet* _auxiliaries; // of IPAPanel: aux windows dragged
 }
@@ -79,8 +77,6 @@ enum
 +(NSString*)copyUPlusForString:(NSString*)str;
 -(IBAction)imageAction:(id)sender;
 -(IBAction)fontAction:(id)sender;
--(IBAction)updatesAction:(id)sender;
--(IBAction)downloadUpdatesAction:(id)sender;
 -(void)activateWithWindowLevel:(NSInteger)level;
 -(void)hide;
 -(void)setError;

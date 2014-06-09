@@ -384,6 +384,7 @@ loc_ja: 小さな(韻脚の)纏り
 loc_ko: 작은 그룹
 loc_nl: Onbelangrijk (intonatie) groep
 loc_ru: Незначительный разрыв
+loc_th: กลุ่มย่อย (foot)
 loc_vi: Nhóm nhỏ (âm tiết)
 loc_zh_CN: 小句（音步）组
 loc_zh_TW: 小句（音步）組
@@ -1816,6 +1817,7 @@ loc_ja: 第一ストレス
 loc_ko: 제1 강세
 loc_nl: Primaire klemtoon
 loc_ru: Основное ударение
+loc_th: เสียงเน้นหลัก
 loc_vi: Trọng âm chính
 loc_zh_CN: 主重音
 loc_zh_TW: 主重音
@@ -1831,6 +1833,7 @@ loc_ja: 第二ストレス
 loc_ko: 제2 강세
 loc_nl: Secundaire klemtoon
 loc_ru: Дополнительное ударение
+loc_th: เสียงเน้นรอง
 loc_vi: Trọng âm phụ
 loc_zh_CN: 次重音
 loc_zh_TW: 次重音
@@ -1846,6 +1849,7 @@ loc_ja: 長
 loc_ko: 긴
 loc_nl: Lange
 loc_ru: Долгая гласная
+loc_th: เสียงยาว
 loc_vi: Dài
 loc_zh_CN: 长音
 loc_zh_TW: 長音
@@ -1861,6 +1865,7 @@ loc_ja: 半長
 loc_ko: 반장음
 loc_nl: Halflange
 loc_ru: Полудолгий звук
+loc_th: เสียงกึ่งยาว
 loc_vi: Nửa dài
 loc_zh_CN: 半长音
 loc_zh_TW: 半長音
@@ -2149,6 +2154,7 @@ loc_ja: 超短
 loc_ko: 특별히 짧은
 loc_nl: Extra-kort
 loc_ru: Сверхкраткий звук
+loc_th: เสียงสั้นพิเศษ
 loc_vi: Rất ngắn
 loc_zh_CN: 特短
 loc_zh_TW: 特短
@@ -2888,6 +2894,7 @@ loc_ja: 破擦音或は二重調音
 loc_ko: 파찰음 또는 이중조음
 loc_nl: Affrikative of dubbele articulatie
 loc_ru: Аффрикаты или двойная артикуляция
+loc_th: เสียงต่อเนื่อง
 loc_vi: Tắc xát hoặc câu âm đôi
 loc_zh_CN: 塞擦音或双连音
 loc_zh_TW: 塞擦音或雙連音
@@ -3130,6 +3137,7 @@ loc_ja: 大きな(イントネーションの)纏り
 loc_ko: 큰 그룹
 loc_nl: Belangrijk (intonatie) groep
 loc_ru: Значительный разрыв
+loc_th: กลุ่มหลัก (intonation)
 loc_vi: Nhóm lớn (ngữ điệu)
 loc_zh_CN: 主句（语调）组
 loc_zh_TW: 主句（語調）組
@@ -3690,7 +3698,7 @@ loc_ja: IPAパレット
 loc_ko: IPA 팔레트
 loc_nl: IPA-Palet
 loc_ru: Палитра МФА
-loc_th: จานสี IPA
+loc_th: พาเลท IPA
 loc_vi: Bảng mẫu IPA
 loc_zh_CN: IPA调板
 loc_zh_TW: IPA面板
@@ -4014,3 +4022,163 @@ loc_th: Brian “Moses” Hall
 loc_vi: Brian “Moses” Hall
 loc_zh_CN: Brian “Moses” Hall
 loc_zh_TW: Brian「Moses」Hall
+%%
+Glyph: __INSTALL__
+loc_de: Installieren
+loc_en: Install
+loc_es: Instalar
+loc_fi: Asenna
+loc_fr: Installer
+loc_it: Installa
+loc_ja: インストール
+loc_ko: 설치
+loc_nl: Installeren
+loc_ru: Установить
+loc_th: ติดตั้ง
+loc_vi: Cài đặt
+loc_zh_CN: 安装
+loc_zh_TW: 安裝
+%%
+Glyph: __UNINSTALL__
+loc_de: Deinstallieren
+loc_en: Uninstall
+loc_es: Desinstalar
+loc_fi: Uninstall
+loc_fr: Désinstaller
+loc_it: Disinstalla
+loc_ja: アンインストール
+loc_ko: 설치 해제
+loc_nl: Verwijder
+loc_ru: Удалить
+loc_th: ถอนการติดตั้ง
+loc_vi: Gỡ bỏ cài đặt
+loc_zh_CN: 卸载
+loc_zh_TW: 解除安裝
+%%
+Glyph: __UPDATE__
+loc_de: Aktualisieren
+loc_en: Update
+loc_es: Actualizar
+loc_fi: Päivitä
+loc_fr: Mettre à jour
+loc_it: Aggiorna
+loc_ja: アップデート
+loc_ko: 업데이트
+loc_nl: Werk bij
+loc_ru: Обновление
+loc_th: อัปเดต
+loc_vi: Cập nhật
+loc_zh_CN: 更新
+loc_zh_TW: 更新
+%%
+Glyph: __FIX__
+loc_de: Korrigieren
+loc_en: Fix
+loc_es: Reparar
+loc_fi: Korjaa
+loc_fr: Réparer
+loc_it: Ripara
+loc_ja: 修復
+loc_ko: 업데이트
+loc_nl: Herstel
+loc_ru: Настроить
+loc_th: แก้ไข
+loc_vi: Sửa chữa
+loc_zh_CN: 修复
+loc_zh_TW: 修正
+%%
+Glyph: __INSTALL_ALL_USERS__
+loc_de: Für alle Benutzer an diesem Computer installieren
+loc_en: Install for all users of this computer
+loc_es: Instalar para todos los usuarios de este ordenador
+loc_fi: Asenna koneen kaikille käyttäjille
+loc_fr: Installer pour tous les utilisateurs de cet ordinateur
+loc_it: Installare per tutti gli utenti di questo computer
+loc_ja: このコンピュータのすべてのユーザ用にインストール
+loc_ko: 이 컴퓨터의 모든 사용자를 위해 설치
+loc_nl: Installeer voor alle gebruikers van deze computer
+loc_ru: Установить для всех пользователей компьютера
+loc_th: ติดตั้งสำหรับผู้ใช้งานทุกคนในคอมพิวเตอร์เครื่องนี้
+loc_vi: Cài đặt cho tất cả người dùng của máy tính
+loc_zh_CN: 为这台电脑上的所有用户安装
+loc_zh_TW: 安裝供這部電腦的所有使用者使用
+%%
+Glyph: __INSTALLED_VERSION__
+loc_de: Installierte Version:
+loc_en: Installed version:
+loc_es: Versión instalada:
+loc_fi: Asennettu versio:
+loc_fr: Version installée:
+loc_it: Versione installata:
+loc_ja: インストールされたバージョン：
+loc_ko: 설치된 버전 :
+loc_nl: Geïnstalleerde versie:
+loc_ru: Установленная версия:
+loc_th: รุ่นที่ติดตั้ง:
+loc_vi: Phiên bản cài đặt:
+loc_zh_CN: 安装的版本：
+loc_zh_TW: 安裝的版本：
+%%
+Glyph: __INSTALLED__
+loc_de: __IPA_PALETTE__ ist installiert.
+loc_en: __IPA_PALETTE__ is installed.
+loc_es: __IPA_PALETTE__ está instalado.
+loc_fi: __IPA_PALETTE__ on asennettu.
+loc_fr: __IPA_PALETTE__ est installé.
+loc_it: __IPA_PALETTE__ è installato.
+loc_ja: __IPA_PALETTE__がインストールされています。
+loc_ko: __IPA_PALETTE__가 설치됩니다.
+loc_nl: __IPA_PALETTE__ is geïnstalleerd.
+loc_ru: __IPA_PALETTE__ обеспечение установлено.
+loc_th: __IPA_PALETTE__ที่ติดตั้ง.
+loc_vi: __IPA_PALETTE__ được cài đặt.
+loc_zh_CN: __IPA_PALETTE__安装。
+loc_zh_TW: __IPA_PALETTE__安装。
+%%
+Glyph: __NOT_INSTALLED__
+loc_de: __IPA_PALETTE__ ist nicht installiert.
+loc_en: __IPA_PALETTE__ is not installed.
+loc_es: __IPA_PALETTE__ no está instalado.
+loc_fi: __IPA_PALETTE__ ei ole asennettu.
+loc_fr: __IPA_PALETTE__ n'est pas installé.
+loc_it: __IPA_PALETTE__ non è installato.
+loc_ja: __IPA_PALETTE__がインストールされていません。
+loc_ko: __IPA_PALETTE__가 설치되어 있지 않습니다.
+loc_nl: __IPA_PALETTE__ is niet geïnstalleerd.
+loc_ru: __IPA_PALETTE__ обеспечение не установлено.
+loc_th: __IPA_PALETTE__ไม่ได้ติดตั้ง.
+loc_vi: __IPA_PALETTE__ không được cài đặt.
+loc_zh_CN: __IPA_PALETTE__没有安装。
+loc_zh_TW: __IPA_PALETTE__尚未安装。
+%%
+Glyph: __INSTALLED_OUTDATED__
+loc_de: __IPA_PALETTE__ ist installiert, aber veraltet.
+loc_en: __IPA_PALETTE__ is installed, but outdated.
+loc_es: __IPA_PALETTE__ está instalado, pero anticuado.
+loc_fi: __IPA_PALETTE__ on asennettu, mutta vanhentunut.
+loc_fr: __IPA_PALETTE__ est installé, mais pas à jour.
+loc_it: __IPA_PALETTE__ è installato, ma obsoleto.
+loc_ja: __IPA_PALETTE__がインストールされますが、古くなっています。
+loc_ko: __IPA_PALETTE__가 설치되어 있지만 오래된 것입니다.
+loc_nl: __IPA_PALETTE__ is geïnstalleerd, maar verouderd.
+loc_ru: __IPA_PALETTE__ обеспечение установлено, но устарел.
+loc_th: __IPA_PALETTE__ ที่ติดตั้ง แต่ออกจากวันที่.
+loc_vi: __IPA_PALETTE__ được cài đặt, nhưng đã cũ.
+loc_zh_CN: __IPA_PALETTE__安装，但过时。
+loc_zh_TW: __IPA_PALETTE__安装，但已过期。
+%%
+Glyph: __INSTALLED_TWICE__
+loc_de: __IPA_PALETTE__ ist in zwei Orten installiert.
+loc_en: __IPA_PALETTE__ is installed in two locations.
+loc_es: __IPA_PALETTE__ está instalado en dos ubicaciones.
+loc_fi: __IPA_PALETTE__ on asennettu kahteen paikkaan.
+loc_fr: __IPA_PALETTE__ est installé dans deux emplacements.
+loc_it: __IPA_PALETTE__ è installato in due posizioni.
+loc_ja: __IPA_PALETTE__は、2つの場所にインストールされています。
+loc_ko: __IPA_PALETTE__가 두 위치에 설치됩니다.
+loc_nl: __IPA_PALETTE__ is geïnstalleerd op twee locaties.
+loc_ru: __IPA_PALETTE__ обеспечение устанавливается в двух местах.
+loc_th: __IPA_PALETTE__ที่ติดตั้งในสองสถานที่.
+loc_vi: __IPA_PALETTE__ được cài đặt trong hai địa điểm.
+loc_zh_CN: __IPA_PALETTE__安装在两个位置。
+loc_zh_TW: __IPA_PALETTE__安装在两个位置。

@@ -17,15 +17,15 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.2</string>
+	<string>2.2.1</string>
 	<key>CFBundleSignature</key>
 	<string>IPA!</string>
 	<key>CFBundleVersion</key>
-	<string>2012.11.09</string>
+	<string>2014.06.09</string>
 	<key>LSBackgroundOnly</key>
 	<string>1</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>© Brian S. Hall, 2005-2012</string>
+	<string>© Brian S. Hall, 2005-2014</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>

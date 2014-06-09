@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
   // On Snow Leopard and later we try to use IPAIconTemplate.pdf as the input
   // method icon. Revert the plist to IPAIcon.tif if Leopard is detected.
   SInt32 major = 0;
-  SInt32 minor = 0;   
+  SInt32 minor = 0;
   Gestalt(gestaltSystemVersionMajor, &major);
   Gestalt(gestaltSystemVersionMinor, &minor);
   if (major == 10 && minor == 5)

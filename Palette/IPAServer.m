@@ -267,6 +267,10 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
   CFNotificationCenterAddObserver(CFNotificationCenterGetDistributedCenter(),
     self, local_KeyboardChanged, kTISNotifySelectedKeyboardInputSourceChanged,
     NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
+  [[NSDistributedNotificationCenter defaultCenter]
+     addObserver:self selector:@selector(prefsChanged:)
+     name:@"IPAPalatte_PrefsChanged" object:nil
+     suspensionBehavior:NSNotificationSuspensionBehaviorDeliverImmediately];
   NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
   [defs addObserver:self forKeyPath:ipaKeyboardSyncKey
         options:NSKeyValueObservingOptionNew context:NULL];
@@ -281,7 +285,7 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
   [self activateWithWindowLevel:NSFloatingWindowLevel];
 #endif
   [self syncAuxiliariesFromDefaults];
-  // So we can call starttracking on it.
+  // So we can call start tracking on it.
   [self tabView:_tabs didSelectTabViewItem:[_tabs selectedTabViewItem]];
 }
 
@@ -425,74 +429,6 @@ NS_ENDHANDLER
     if ([_tabs selectedTabViewItem] == _userGlyphsTab) [_user startTracking];
     [self keyboardChanged];
   }
-}
-
--(IBAction)updatesAction:(id)sender
-{
-  #pragma unused (sender)
-  if (!_updateData)
-  {
-    _updateData = [[NSMutableData alloc] init];
-    [[Onizuka sharedOnizuka] localizeObject:_updateResults withTitle:@"__LOOKING_FOR_UPDATES__"];
-    NSURL* url = [NSURL URLWithString:@"http://www.blugs.com/IPA/version.txt"];
-    NSURLRequest* req = [NSURLRequest requestWithURL:url];
-    _updateCheck = [[NSURLConnection alloc] initWithRequest:req delegate:self];
-  }
-}
-
--(IBAction)downloadUpdatesAction:(id)sender
-{
-  #pragma unused (sender)
-  NSString* where = @"http://www.blugs.com/IPA/IPAPalette.dmg";
-  [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:where]];
-  [_updateButton setEnabled:NO];
-}
-
--(void)connection:(NSURLConnection*)connection didReceiveData:(NSData*)data
-{
-  #pragma unused (connection)
-  [_updateData appendData:data];
-}
-
--(void)connection:(NSURLConnection*)connection didFailWithError:(NSError*)error
-{
-  #pragma unused (connection)
-  [_updateResults performSelectorOnMainThread:@selector(setStringValue:) withObject:[error localizedDescription] waitUntilDone:NO];
-  [_updateData release];
-  _updateData = nil;
-  [_updateCheck release];
-  _updateCheck = nil;
-}
-
--(void)connectionDidFinishLoading:(NSURLConnection*)connection
-{
-  #pragma unused (connection)
-  NSString* versHere = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
-  NSString* temp = [[NSString alloc] initWithData:_updateData encoding:NSUTF8StringEncoding];
-  NSString* versThere = [temp stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-  [temp release];
-  //NSLog(@">>%@<<==>>%@<<?", versHere, versThere);
-  BOOL gotOne = ([versHere compare:versThere]==NSOrderedAscending);
-  NSString* results;
-  NSString* fmt = nil;
-  if (gotOne)
-  {
-    fmt = [[Onizuka sharedOnizuka] copyLocalizedTitle:@"__HAVE_UPDATE__"];
-    results = [NSString stringWithFormat:fmt, versThere];
-    [[Onizuka sharedOnizuka] localizeObject:_updateButton withTitle:@"__DOWNLOAD__"];
-    [_updateButton setAction:@selector(downloadUpdatesAction:)];
-  }
-  else
-  {
-    fmt = [[Onizuka sharedOnizuka] copyLocalizedTitle:@"__NO_UPDATE__"];
-    results = [NSString stringWithFormat:fmt, [[Onizuka sharedOnizuka] appVersion], versHere];
-  }
-  [fmt release];
-  [_updateResults setStringValue:results];
-  [_updateData release];
-  _updateData = nil;
-  [_updateCheck release];
-  _updateCheck = nil;
 }
 
 -(void)setPaletteVisible:(BOOL)vis
@@ -801,11 +737,11 @@ NS_ENDHANDLER
 -(void)activateWithWindowLevel:(NSInteger)level
 {
   [self setPaletteVisible:YES];
-  [_window setLevel:level];
+  if (level != [_window level]) [_window setLevel:level];
   if (_auxiliaries)
   {
     for (IPAPanel* aux in _auxiliaries)
-      [aux setLevel:level];
+      if (level != [aux level]) [aux setLevel:level];
   }
 }
 
@@ -844,8 +780,12 @@ NS_ENDHANDLER
        change:(NSDictionary*)change context:(void*)ctx
 {
   #pragma unused (object,change,ctx)
-  //NSLog(@"observeValueForKeyPath:%@ ofObject:%@ change:%@", path, object, change);
-  if ([path isEqualToString:ipaKeyboardSyncKey]) [self keyboardChanged];
+  NSLog(@"observeValueForKeyPath:%@ ofObject:%@ change:%@", path, object, change);
+  if ([path isEqualToString:ipaKeyboardSyncKey])
+  {
+    [self keyboardChanged];
+    [_glyphView setStringValue:@"K"];
+  }
 }
 
 -(void)windowWillClose:(NSNotification*)note
@@ -963,6 +903,13 @@ NS_ENDHANDLER
   NSWindow* w = [note object];
   if (_auxiliaries && [_auxiliaries containsObject:w])
     [self syncAuxiliariesToDefaults];
+}
+
+-(void)prefsChanged:(id)sender
+{
+  #pragma unused (sender)
+  NSLog(@"prefsChanged");
+  [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 #pragma mark Search Results Table

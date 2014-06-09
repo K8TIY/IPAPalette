@@ -13,11 +13,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.2</string>
+	<string>2.2.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>2014.03.11</string>
+	<string>2014.06.09</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>${MACOSX_DEPLOYMENT_TARGET}</string>
 	<key>NSMainNibFile</key>
@@ -27,7 +27,7 @@
 	<key>CFBundleIconFile</key>
 	<string>IPAManager.icns</string>
 	<key>SUFeedURL</key>
-	<string>http://www.blugs.com/Appcasts/IPAPaletteTest.xml</string>
+	<string>http://www.blugs.com/Appcasts/IPAPalette.xml</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>IPAPalette_pub.pem</string>
 </dict>

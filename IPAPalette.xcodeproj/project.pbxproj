@@ -15,8 +15,8 @@
 			dependencies = (
 				32DC62A010D2FFAB008B5B1B /* PBXTargetDependency */,
 				32DC62A810D2FFAB008B5B1B /* PBXTargetDependency */,
-				32DC62AA10D2FFAB008B5B1B /* PBXTargetDependency */,
 				32D4CDA8147AE044008973BD /* PBXTargetDependency */,
+				321F611217739386005B3255 /* PBXTargetDependency */,
 			);
 			name = All;
 			productName = All;
@@ -25,6 +25,12 @@
 
 /* Begin PBXBuildFile section */
 		320EDD5C14884D2400B191B0 /* Keyboard.plist in Resources */ = {isa = PBXBuildFile; fileRef = 320EDD5B14884D2400B191B0 /* Keyboard.plist */; };
+		321F611E1773A0AA005B3255 /* IPAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F611B1773A0AA005B3255 /* IPAManager.m */; };
+		321F611F1773A0AA005B3255 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F611C1773A0AA005B3255 /* main.m */; };
+		321F61201773A0AA005B3255 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321F611D1773A0AA005B3255 /* MainMenu.xib */; };
+		321F61311773B58D005B3255 /* Onizuka.m in Sources */ = {isa = PBXBuildFile; fileRef = 32555506105AF4AD007222C6 /* Onizuka.m */; };
+		321F61351773B775005B3255 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3226A32A10863DCC000AD993 /* Localizable.strings */; };
+		321F61711773BCE7005B3255 /* IPAPalette.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D1107320486CEB800E47090 /* IPAPalette.app */; };
 		3221A721111C83EB00D8D1A9 /* TextRenderer.c in Sources */ = {isa = PBXBuildFile; fileRef = 3221A71E111C83EB00D8D1A9 /* TextRenderer.c */; };
 		3229611713846B22008157E9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3229611613846B22008157E9 /* MainMenu.xib */; };
 		3229611A13846B4B008157E9 /* CMAPParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 325554F7105AF4AD007222C6 /* CMAPParser.c */; };
@@ -55,23 +61,28 @@
 		326E891B144616450063F34B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 326E891A144616450063F34B /* MainMenu.xib */; };
 		327FE566106D53E9003FEB34 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327FE565106D53E9003FEB34 /* Carbon.framework */; };
 		328E50181459D77700BAB93F /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 328E50171459D77700BAB93F /* defaults.plist */; };
+		3293A86117C3EC1E00F07188 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327FE565106D53E9003FEB34 /* Carbon.framework */; };
+		3293A95317C407C100F07188 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3293A95217C407C100F07188 /* Security.framework */; };
+		3293AEB517D13B7100F07188 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3293AEB417D13B7100F07188 /* Sparkle.framework */; };
+		3293AEBF17D13B7C00F07188 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3293AEB417D13B7100F07188 /* Sparkle.framework */; };
 		3299F3E1143E65B9009191BC /* HackedDoulos-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3299F3E0143E65B9009191BC /* HackedDoulos-Regular.ttf */; };
 		32A854E714F55E4A007CCF53 /* AuxNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = 32A854E614F55E4A007CCF53 /* AuxNames.strings */; };
 		32B0660A13BA7DEB00EB242B /* Pal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 32B0660813BA7DEB00EB242B /* Pal.pdf */; };
 		32B0660B13BA7DEB00EB242B /* Retro.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 32B0660913BA7DEB00EB242B /* Retro.pdf */; };
 		32B0661013BA7E1100EB242B /* VPh.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 32B0660F13BA7E1100EB242B /* VPh.pdf */; };
 		32B0662B13BA815800EB242B /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B0662A13BA815800EB242B /* MAAttachedWindow.m */; };
+		32C5DA02180DA88E00614A06 /* IPAManager.icns in Resources */ = {isa = PBXBuildFile; fileRef = 32C5DA01180DA88E00614A06 /* IPAManager.icns */; };
+		32CC7422180F2504001F2F9A /* IPAPalette_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 32CC7421180F2504001F2F9A /* IPAPalette_pub.pem */; };
+		32CC75471810552F001F2F9A /* ActivatePrefs.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 32CC75461810552F001F2F9A /* ActivatePrefs.applescript */; };
 		32D4CDB4147AE0C5008973BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4CDB3147AE0C5008973BD /* main.m */; };
 		32D4CEA5147AE9C0008973BD /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327FE565106D53E9003FEB34 /* Carbon.framework */; };
 		32D4CECB147AF8B2008973BD /* KeylayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4CECA147AF8B2008973BD /* KeylayoutParser.m */; };
 		32DB949914ED9B5A008A805A /* NSView+Spinny.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DB949814ED9B5A008A805A /* NSView+Spinny.m */; };
 		32DCEB1915EFDBC900D3B33A /* HackedDoulosF-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32DCEB1815EFDBC900D3B33A /* HackedDoulosF-Regular.ttf */; };
 		32E729E11444EC3700E2B07B /* IPAIconTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 32E729E01444EC3700E2B07B /* IPAIconTemplate.pdf */; };
+		32EB974718D265900062A8FC /* Onizuka.strings in Resources */ = {isa = PBXBuildFile; fileRef = 32EB972818D265900062A8FC /* Onizuka.strings */; };
 		32EC6C991125CE6E00FABAC9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		32F57E4B148944C30032B77E /* KeylayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4CECA147AF8B2008973BD /* KeylayoutParser.m */; };
-		32F902831076ACD8000D0404 /* IPAPalettePostinstall.m in Sources */ = {isa = PBXBuildFile; fileRef = 328B05041075244F000D6186 /* IPAPalettePostinstall.m */; };
-		32F9029C1076AE18000D0404 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		32F9035F1076AE35000D0404 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327FE565106D53E9003FEB34 /* Carbon.framework */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		E93074B70A5C264700470842 /* InputMethodKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93074B60A5C264700470842 /* InputMethodKit.framework */; };
@@ -79,6 +90,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		321F611117739386005B3255 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 321F610A17739315005B3255;
+			remoteInfo = IPAManager;
+		};
+		321F613F1773B824005B3255 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = IPAPalette;
+		};
 		32D4CDA7147AE044008973BD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -100,14 +125,39 @@
 			remoteGlobalIDString = 3241E2F010727BC500144CE0;
 			remoteInfo = ImageMapGen;
 		};
-		32DC62A910D2FFAB008B5B1B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 32F9027E1076ACB2000D0404;
-			remoteInfo = InstallRegister;
-		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		321F61751773BCF5005B3255 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 12;
+			files = (
+				321F61711773BCE7005B3255 /* IPAPalette.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3293AEB117D13AF100F07188 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3293AEBF17D13B7C00F07188 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32CC755F181056FA001F2F9A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = IPAManager/ActivatePrefs.scpt;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -118,6 +168,12 @@
 		32022D7D11D16A99000BFE8F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = Localization/it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		320EDD5B14884D2400B191B0 /* Keyboard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Keyboard.plist; path = Palette/Keyboard.plist; sourceTree = SOURCE_ROOT; };
 		320F3D3411175DB400079629 /* plus.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = plus.icns; path = Palette/plus.icns; sourceTree = SOURCE_ROOT; };
+		321F610B17739315005B3255 /* IPA Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IPA Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		321F610D17739315005B3255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = IPAManager/Info.plist; sourceTree = "<group>"; };
+		321F611A1773A0AA005B3255 /* IPAManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPAManager.h; path = IPAManager/IPAManager.h; sourceTree = "<group>"; };
+		321F611B1773A0AA005B3255 /* IPAManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPAManager.m; path = IPAManager/IPAManager.m; sourceTree = "<group>"; };
+		321F611C1773A0AA005B3255 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = IPAManager/main.m; sourceTree = "<group>"; };
+		321F611D1773A0AA005B3255 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = IPAManager/MainMenu.xib; sourceTree = "<group>"; };
 		3221A71D111C83EB00D8D1A9 /* TextRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextRenderer.h; sourceTree = SOURCE_ROOT; };
 		3221A71E111C83EB00D8D1A9 /* TextRenderer.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = TextRenderer.c; sourceTree = SOURCE_ROOT; };
 		3226A32B10863DCC000AD993 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Localization/en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -160,9 +216,10 @@
 		3255550C105AF4AD007222C6 /* IPAServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPAServer.m; path = Palette/IPAServer.m; sourceTree = SOURCE_ROOT; };
 		326E891A144616450063F34B /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = ImageMapGen/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		327FE565106D53E9003FEB34 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
-		328B05041075244F000D6186 /* IPAPalettePostinstall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPAPalettePostinstall.m; path = Installer/IPAPalettePostinstall.m; sourceTree = SOURCE_ROOT; };
 		328D1C8B122C08ED00FE6E3C /* Alts.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Alts.strings; path = Palette/Alts.strings; sourceTree = SOURCE_ROOT; };
 		328E50171459D77700BAB93F /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaults.plist; path = Palette/defaults.plist; sourceTree = SOURCE_ROOT; };
+		3293A95217C407C100F07188 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		3293AEB417D13B7100F07188 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Sparkle/build/Release/Sparkle.framework; sourceTree = "<group>"; };
 		3299F3E0143E65B9009191BC /* HackedDoulos-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HackedDoulos-Regular.ttf"; path = "ImageMapGen/HackedDoulos-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		32A854E614F55E4A007CCF53 /* AuxNames.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = AuxNames.strings; sourceTree = "<group>"; };
 		32A8551E14F562AA007CCF53 /* chardata.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = chardata.txt; path = Localization/chardata.txt; sourceTree = "<group>"; };
@@ -174,7 +231,10 @@
 		32B0662A13BA815800EB242B /* MAAttachedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAAttachedWindow.m; path = Palette/MAAttachedWindow.m; sourceTree = SOURCE_ROOT; };
 		32BC62311113697F00B4E065 /* UserGlyphsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserGlyphsController.h; path = Palette/UserGlyphsController.h; sourceTree = SOURCE_ROOT; };
 		32BC62321113697F00B4E065 /* UserGlyphsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserGlyphsController.m; path = Palette/UserGlyphsController.m; sourceTree = SOURCE_ROOT; };
+		32C5DA01180DA88E00614A06 /* IPAManager.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = IPAManager.icns; path = IPAManager/IPAManager.icns; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* IPAPalette_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAPalette_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		32CC7421180F2504001F2F9A /* IPAPalette_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = IPAPalette_pub.pem; path = IPAManager/IPAPalette_pub.pem; sourceTree = "<group>"; };
+		32CC75461810552F001F2F9A /* ActivatePrefs.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = ActivatePrefs.applescript; path = IPAManager/ActivatePrefs.applescript; sourceTree = "<group>"; };
 		32D0964A135DED4C00D86037 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = SOURCE_ROOT; };
 		32D4CD92147ADF39008973BD /* KeyboardParser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KeyboardParser-Info.plist"; path = "KeyboardParser/KeyboardParser-Info.plist"; sourceTree = SOURCE_ROOT; };
 		32D4CDA3147AE00C008973BD /* KeyboardParser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KeyboardParser; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,7 +248,38 @@
 		32DCEB1815EFDBC900D3B33A /* HackedDoulosF-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HackedDoulosF-Regular.ttf"; path = "ImageMapGen/HackedDoulosF-Regular.ttf"; sourceTree = "<group>"; };
 		32E102081110BFC100B1F030 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = Localization/fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32E729E01444EC3700E2B07B /* IPAIconTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = IPAIconTemplate.pdf; path = Palette/IPAIconTemplate.pdf; sourceTree = SOURCE_ROOT; };
-		32F9027F1076ACB2000D0404 /* IPAPalettePostinstall */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IPAPalettePostinstall; sourceTree = BUILT_PRODUCTS_DIR; };
+		32EB972918D265900062A8FC /* ar */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB972A18D265900062A8FC /* ca */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB972B18D265900062A8FC /* cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB972C18D265900062A8FC /* da */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB972D18D265900062A8FC /* de */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB972E18D265900062A8FC /* el */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB972F18D265900062A8FC /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB973018D265900062A8FC /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB973118D265900062A8FC /* fi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB973218D265900062A8FC /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB973318D265900062A8FC /* he */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB973418D265900062A8FC /* hr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = hr; path = hr.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB973518D265900062A8FC /* hu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB973618D265900062A8FC /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB973718D265900062A8FC /* ja */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB973818D265900062A8FC /* ko */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB973918D265900062A8FC /* nl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB973A18D265900062A8FC /* no */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = no; path = no.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB973B18D265900062A8FC /* pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB973C18D265900062A8FC /* pt_BR */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = pt_BR; path = pt_BR.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB973D18D265900062A8FC /* pt_PT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = pt_PT; path = pt_PT.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB973E18D265900062A8FC /* ro */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB973F18D265900062A8FC /* ru */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB974018D265900062A8FC /* sk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB974118D265900062A8FC /* sv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB974218D265900062A8FC /* th */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB974318D265900062A8FC /* tr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB974418D265900062A8FC /* uk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB974518D265900062A8FC /* zh_CN */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB974618D265900062A8FC /* zh_TW */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/Onizuka.strings; sourceTree = "<group>"; };
+		32EB979418D372C50062A8FC /* IPAPalette.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = IPAPalette.xml; path = Installer/IPAPalette.xml; sourceTree = "<group>"; };
+		32EB979518D3761C0062A8FC /* builddmg.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = builddmg.sh; path = Installer/builddmg.sh; sourceTree = "<group>"; };
 		32FE85E611629A0700E64D62 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = Localization/nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Palette/Info.plist; sourceTree = SOURCE_ROOT; };
 		8D1107320486CEB800E47090 /* IPAPalette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPAPalette.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +289,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		321F610917739315005B3255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3293A86117C3EC1E00F07188 /* Carbon.framework in Frameworks */,
+				3293A95317C407C100F07188 /* Security.framework in Frameworks */,
+				3293AEB517D13B7100F07188 /* Sparkle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3241E2EF10727BC500144CE0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -211,15 +312,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				32D4CEA5147AE9C0008973BD /* Carbon.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		32F9027D1076ACB2000D0404 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				32F9029C1076AE18000D0404 /* Cocoa.framework in Frameworks */,
-				32F9035F1076AE35000D0404 /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,8 +341,10 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3293AEB417D13B7100F07188 /* Sparkle.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				3293A95217C407C100F07188 /* Security.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -260,8 +354,8 @@
 			children = (
 				8D1107320486CEB800E47090 /* IPAPalette.app */,
 				3241E2F110727BC500144CE0 /* ImageMapGen.app */,
-				32F9027F1076ACB2000D0404 /* IPAPalettePostinstall */,
 				32D4CDA3147AE00C008973BD /* KeyboardParser */,
+				321F610B17739315005B3255 /* IPA Manager.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -308,8 +402,9 @@
 				32A854E614F55E4A007CCF53 /* AuxNames.strings */,
 				32CA4F630368D1EE00C91783 /* IPAPalette_Prefix.pch */,
 				32D0964A135DED4C00D86037 /* README.markdown */,
+				321F611817739FB2005B3255 /* IPAManager */,
+				328B050610752462000D6186 /* Deliverable */,
 				3241E30810727C5F00144CE0 /* ImageMapGen */,
-				328B050610752462000D6186 /* Postinstall */,
 				32D4CDB5147AE0DB008973BD /* KeyboadParser */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -324,6 +419,21 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		321F611817739FB2005B3255 /* IPAManager */ = {
+			isa = PBXGroup;
+			children = (
+				321F611A1773A0AA005B3255 /* IPAManager.h */,
+				321F611B1773A0AA005B3255 /* IPAManager.m */,
+				321F611C1773A0AA005B3255 /* main.m */,
+				321F611D1773A0AA005B3255 /* MainMenu.xib */,
+				32CC75461810552F001F2F9A /* ActivatePrefs.applescript */,
+				32C5DA01180DA88E00614A06 /* IPAManager.icns */,
+				321F610D17739315005B3255 /* Info.plist */,
+				32CC7421180F2504001F2F9A /* IPAPalette_pub.pem */,
+			);
+			name = IPAManager;
 			sourceTree = "<group>";
 		};
 		3237887D1072811600149CCD /* ImageMaps */ = {
@@ -363,16 +473,18 @@
 			children = (
 				32555505105AF4AD007222C6 /* Onizuka.h */,
 				32555506105AF4AD007222C6 /* Onizuka.m */,
+				32EB972818D265900062A8FC /* Onizuka.strings */,
 			);
 			path = Onizuka;
 			sourceTree = SOURCE_ROOT;
 		};
-		328B050610752462000D6186 /* Postinstall */ = {
+		328B050610752462000D6186 /* Deliverable */ = {
 			isa = PBXGroup;
 			children = (
-				328B05041075244F000D6186 /* IPAPalettePostinstall.m */,
+				32EB979418D372C50062A8FC /* IPAPalette.xml */,
+				32EB979518D3761C0062A8FC /* builddmg.sh */,
 			);
-			name = Postinstall;
+			name = Deliverable;
 			sourceTree = SOURCE_ROOT;
 		};
 		32D4CDB5147AE0DB008973BD /* KeyboadParser */ = {
@@ -389,6 +501,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		321F610A17739315005B3255 /* IPAManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 321F611017739316005B3255 /* Build configuration list for PBXNativeTarget "IPAManager" */;
+			buildPhases = (
+				321F610717739315005B3255 /* Resources */,
+				321F610817739315005B3255 /* Sources */,
+				321F610917739315005B3255 /* Frameworks */,
+				32CC75561810566E001F2F9A /* ShellScript */,
+				32CC755F181056FA001F2F9A /* CopyFiles */,
+				321F61751773BCF5005B3255 /* CopyFiles */,
+				3293AEB117D13AF100F07188 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				321F61401773B824005B3255 /* PBXTargetDependency */,
+			);
+			name = IPAManager;
+			productName = IPAManager;
+			productReference = 321F610B17739315005B3255 /* IPA Manager.app */;
+			productType = "com.apple.product-type.application";
+		};
 		3241E2F010727BC500144CE0 /* ImageMapGen */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3241E2F610727BC600144CE0 /* Build configuration list for PBXNativeTarget "ImageMapGen" */;
@@ -422,22 +556,6 @@
 			productReference = 32D4CDA3147AE00C008973BD /* KeyboardParser */;
 			productType = "com.apple.product-type.tool";
 		};
-		32F9027E1076ACB2000D0404 /* Postinstall */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 32F902841076ACF7000D0404 /* Build configuration list for PBXNativeTarget "Postinstall" */;
-			buildPhases = (
-				32F9027C1076ACB2000D0404 /* Sources */,
-				32F9027D1076ACB2000D0404 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Postinstall;
-			productName = InstallRegister;
-			productReference = 32F9027F1076ACB2000D0404 /* IPAPalettePostinstall */;
-			productType = "com.apple.product-type.tool";
-		};
 		8D1107260486CEB800E47090 /* IPAPalette */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "IPAPalette" */;
@@ -461,6 +579,9 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = blugs.com;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "IPAPalette" */;
 			compatibilityVersion = "Xcode 3.0";
 			developmentRegion = English;
@@ -483,6 +604,23 @@
 				es,
 				it,
 				th,
+				ar,
+				ca,
+				cs,
+				da,
+				el,
+				he,
+				hr,
+				hu,
+				no,
+				pl,
+				pt_BR,
+				pt_PT,
+				ro,
+				sk,
+				sv,
+				tr,
+				uk,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* NumberInput */;
 			projectDirPath = "";
@@ -490,14 +628,26 @@
 			targets = (
 				8D1107260486CEB800E47090 /* IPAPalette */,
 				3241E2F010727BC500144CE0 /* ImageMapGen */,
-				32F9027E1076ACB2000D0404 /* Postinstall */,
 				32D4CDA2147AE00C008973BD /* KeyboardParser */,
+				321F610A17739315005B3255 /* IPAManager */,
 				32DC629B10D2FF87008B5B1B /* All */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		321F610717739315005B3255 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				321F61201773A0AA005B3255 /* MainMenu.xib in Resources */,
+				321F61351773B775005B3255 /* Localizable.strings in Resources */,
+				32C5DA02180DA88E00614A06 /* IPAManager.icns in Resources */,
+				32CC7422180F2504001F2F9A /* IPAPalette_pub.pem in Resources */,
+				32EB974718D265900062A8FC /* Onizuka.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3241E2ED10727BC500144CE0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -537,7 +687,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		32CC75561810566E001F2F9A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "osacompile -d -o IPAManager/ActivatePrefs.scpt IPAManager/ActivatePrefs.applescript";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		321F610817739315005B3255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				321F611E1773A0AA005B3255 /* IPAManager.m in Sources */,
+				321F611F1773A0AA005B3255 /* main.m in Sources */,
+				321F61311773B58D005B3255 /* Onizuka.m in Sources */,
+				32CC75471810552F001F2F9A /* ActivatePrefs.applescript in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3241E2EE10727BC500144CE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -556,14 +733,6 @@
 			files = (
 				32D4CDB4147AE0C5008973BD /* main.m in Sources */,
 				32D4CECB147AF8B2008973BD /* KeylayoutParser.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		32F9027C1076ACB2000D0404 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				32F902831076ACD8000D0404 /* IPAPalettePostinstall.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +760,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		321F611217739386005B3255 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 321F610A17739315005B3255 /* IPAManager */;
+			targetProxy = 321F611117739386005B3255 /* PBXContainerItemProxy */;
+		};
+		321F61401773B824005B3255 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* IPAPalette */;
+			targetProxy = 321F613F1773B824005B3255 /* PBXContainerItemProxy */;
+		};
 		32D4CDA8147AE044008973BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 32D4CDA2147AE00C008973BD /* KeyboardParser */;
@@ -605,11 +784,6 @@
 			isa = PBXTargetDependency;
 			target = 3241E2F010727BC500144CE0 /* ImageMapGen */;
 			targetProxy = 32DC62A710D2FFAB008B5B1B /* PBXContainerItemProxy */;
-		};
-		32DC62AA10D2FFAB008B5B1B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 32F9027E1076ACB2000D0404 /* Postinstall */;
-			targetProxy = 32DC62A910D2FFAB008B5B1B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -636,9 +810,123 @@
 			name = Localizable.strings;
 			sourceTree = SOURCE_ROOT;
 		};
+		32EB972818D265900062A8FC /* Onizuka.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32EB972918D265900062A8FC /* ar */,
+				32EB972A18D265900062A8FC /* ca */,
+				32EB972B18D265900062A8FC /* cs */,
+				32EB972C18D265900062A8FC /* da */,
+				32EB972D18D265900062A8FC /* de */,
+				32EB972E18D265900062A8FC /* el */,
+				32EB972F18D265900062A8FC /* en */,
+				32EB973018D265900062A8FC /* es */,
+				32EB973118D265900062A8FC /* fi */,
+				32EB973218D265900062A8FC /* fr */,
+				32EB973318D265900062A8FC /* he */,
+				32EB973418D265900062A8FC /* hr */,
+				32EB973518D265900062A8FC /* hu */,
+				32EB973618D265900062A8FC /* it */,
+				32EB973718D265900062A8FC /* ja */,
+				32EB973818D265900062A8FC /* ko */,
+				32EB973918D265900062A8FC /* nl */,
+				32EB973A18D265900062A8FC /* no */,
+				32EB973B18D265900062A8FC /* pl */,
+				32EB973C18D265900062A8FC /* pt_BR */,
+				32EB973D18D265900062A8FC /* pt_PT */,
+				32EB973E18D265900062A8FC /* ro */,
+				32EB973F18D265900062A8FC /* ru */,
+				32EB974018D265900062A8FC /* sk */,
+				32EB974118D265900062A8FC /* sv */,
+				32EB974218D265900062A8FC /* th */,
+				32EB974318D265900062A8FC /* tr */,
+				32EB974418D265900062A8FC /* uk */,
+				32EB974518D265900062A8FC /* zh_CN */,
+				32EB974618D265900062A8FC /* zh_TW */,
+			);
+			name = Onizuka.strings;
+			path = StandardUI;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		321F610E17739316005B3255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					i386,
+					x86_64,
+					ppc,
+				);
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Sparkle/build/Release\"",
+				);
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				INFOPLIST_FILE = IPAManager/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "IPA Manager";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		321F610F17739316005B3255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					i386,
+					x86_64,
+					ppc,
+				);
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Sparkle/build/Release\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				INFOPLIST_FILE = IPAManager/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "IPA Manager";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
 		3241E2F410727BC600144CE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -776,69 +1064,6 @@
 			};
 			name = Release;
 		};
-		32F902811076ACB3000D0404 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_DYNAMIC_NO_PIC = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				GCC_WARN_MISSING_PARENTHESES = YES;
-				GCC_WARN_SHADOW = YES;
-				INSTALL_PATH = /usr/local/bin;
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = IPAPalettePostinstall;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
-			};
-			name = Debug;
-		};
-		32F902821076ACB3000D0404 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_DEBUGGING_SYMBOLS = used;
-				GCC_DYNAMIC_NO_PIC = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INSTALL_PATH = /usr/local/bin;
-				MACH_O_TYPE = mh_execute;
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = IPAPalettePostinstall;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -928,14 +1153,18 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				ARCHS = (
+					i386,
+					x86_64,
+					ppc,
+				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACH_O_TYPE = mh_execute;
 				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-16";
 			};
 			name = Debug;
@@ -943,14 +1172,18 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				ARCHS = (
+					i386,
+					x86_64,
+					ppc,
+				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACH_O_TYPE = mh_execute;
 				PREBINDING = NO;
-				SDKROOT = "";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-16";
 			};
 			name = Release;
@@ -958,6 +1191,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		321F611017739316005B3255 /* Build configuration list for PBXNativeTarget "IPAManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				321F610E17739316005B3255 /* Debug */,
+				321F610F17739316005B3255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3241E2F610727BC600144CE0 /* Build configuration list for PBXNativeTarget "ImageMapGen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -981,15 +1223,6 @@
 			buildConfigurations = (
 				32DC629C10D2FF87008B5B1B /* Debug */,
 				32DC629D10D2FF87008B5B1B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		32F902841076ACF7000D0404 /* Build configuration list for PBXNativeTarget "Postinstall" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				32F902811076ACB3000D0404 /* Debug */,
-				32F902821076ACB3000D0404 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
