@@ -1,0 +1,25 @@
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"
+     xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>IPA Palette Changelog</title>
+    <link>http://www.blugs.com/Appcasts/IPAPaletteTest.xml</link>
+    <description>Most recent changes with links to updates.</description>
+    <language>en</language>
+    <item>
+      <title></title>
+      <description><![CDATA[
+        <h2>Version 2.2.1 Official Release</h2>
+        This is the fully localized, supported version of IPA Palette/IPA
+        Manager 2.2.
+    ]]>
+      </description>
+      <pubDate>Mon, 6 Jun 2014 12:30:00 +0000</pubDate>
+      <enclosure url="http://www.blugs.com/Downloads/IPAPalette.dmg"
+                 sparkle:version="2014.06.09"
+                 sparkle:shortVersionString="2.2.1"
+                 length="3170627"
+                 type="application/octet-stream"
+                 sparkle:dsaSignature="MCwCFAmB39sazl2xGIxSF8pHBbBh1zBLAhRmawuNanltHMlkCLv6R8OYiDRigQ=="/>
+    </item>
+  </channel>
+</rss>
