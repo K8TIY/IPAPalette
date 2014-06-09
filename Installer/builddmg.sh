@@ -5,6 +5,8 @@
 mkdir tmp
 rm -f IPAPalette.dmg
 cp -r ../build/Release/IPA\ Manager.app tmp
+codesign -s blugs.com tmp/IPA\ Manager.app
+codesign -s blugs.com tmp/IPA\ Manager.app/Contents/SharedSupport/IPAPalette.app
 ~/Desktop/yoursway-create-dmg/create-dmg --volname "IPA Palette" --background VowLight.png --window-size 500 360 --volicon DMG.icns --icon "IPA\ Manager.app" 60 240 --app-drop-link 380 240 --icon-size 64 IPAPalette.dmg tmp
 rm -rf tmp
 # Put a copy of your .app (with the same name as the version it’s replacing) in a .zip, .tar.gz, or .tar.bz2.
