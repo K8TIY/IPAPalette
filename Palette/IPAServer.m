@@ -299,7 +299,8 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
   NSMutableArray* fonts = [[[NSFontManager sharedFontManager] availableFonts] mutableCopy];
   for (NSString* font in fonts)
   {
-    if (![font isEqualToString:@"LastResort"])
+    // Ignore some garbage (?) fonts that spam the logs.
+    if (![font isEqualToString:@"LastResort"] && ![font hasPrefix:@".SFNS"])
     {
       ByteCount neededSize;
       ATSFontRef atsf = ATSFontFindFromPostScriptName((CFStringRef)font, kATSOptionFlagsDefault);
