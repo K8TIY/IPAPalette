@@ -230,6 +230,8 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
   [_extipa loadDataFromFile:path withName:@"ExtIPA"];
   [_user setName:@"User"];
   [_window setFrameUsingName:ipaFrameKey];
+  [_window setCollectionBehavior: NSWindowCollectionBehaviorMoveToActiveSpace |
+                                  NSWindowCollectionBehaviorFullScreenNone];
   // Load the alternate image for vowel drag images
   path = [[NSBundle mainBundle] pathForResource:@"VowDrag" ofType:@"pdf"];
   NSImage* whatadrag = [[NSImage alloc] initWithContentsOfFile:path];
@@ -271,6 +273,11 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
      addObserver:self selector:@selector(prefsChanged:)
      name:@"IPAPalatte_PrefsChanged" object:nil
      suspensionBehavior:NSNotificationSuspensionBehaviorDeliverImmediately];
+  NSNotificationCenter* nc = [[NSWorkspace sharedWorkspace] notificationCenter];
+  [nc addObserver:self selector:@selector(windowDidMoveSpace:)
+      name:NSWorkspaceActiveSpaceDidChangeNotification object:nil];
+  [nc addObserver:self selector:@selector(userWillLogout:)
+      name:NSWorkspaceWillPowerOffNotification object:nil];
   NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
   [defs addObserver:self forKeyPath:ipaKeyboardSyncKey
         options:NSKeyValueObservingOptionNew context:NULL];
@@ -924,6 +931,21 @@ NS_ENDHANDLER
   #pragma unused (sender)
   NSLog(@"prefsChanged");
   [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+-(void)windowDidMoveSpace:(NSNotification*)note
+ {
+   #pragma unused (note)
+   NSLog(@"Moved space");
+   [_window orderOut:self];
+   [_window orderFront:self];
+}
+
+-(void)userWillLogout:(NSNotification*)note
+{
+  #pragma unused (note)
+  NSLog(@"Will logout");
+  [self hide];
 }
 
 #pragma mark Search Results Table
