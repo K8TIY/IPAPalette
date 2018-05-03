@@ -339,12 +339,19 @@ NS_ENDHANDLER
   for (NSString* fontName in fontNames)
   {
     NSMenuItem* item = [[NSMenuItem alloc] initWithTitle:fontName action:nil keyEquivalent:@""];
-    [[_fontMenu menu] addItem:item];
+    //[[_fontMenu menu] addItem:item];
+    [self performSelectorOnMainThread:@selector(addToFontMenu:) withObject:item
+        waitUntilDone:YES];
     [item release];
   }
   // See if the user has selected a font before
   NSString* name = [defs objectForKey:ipaFontKey];
-  if ([fontNames containsObject:name]) [_fontMenu selectItemWithTitle:name];
+  if ([fontNames containsObject:name])
+  {
+    //[_fontMenu selectItemWithTitle:name];
+    [_fontMenu performSelectorOnMainThread:@selector(selectItemWithTitle:) withObject:name
+        waitUntilDone:YES];
+  }
   else
   {
     if (__DBG >= ipaDebugDebugLevel)
@@ -371,6 +378,12 @@ NS_ENDHANDLER
   [fontNames release];
   [self performSelectorOnMainThread:@selector(finishIPAFonts:) withObject:self
         waitUntilDone:NO];
+}
+
+// Call on main thread.
+-(void)addToFontMenu:(NSMenuItem*)item
+{
+  [[_fontMenu menu] addItem:item];
 }
 
 // Called to do cleanup on main thread after font collection thread finishes.
