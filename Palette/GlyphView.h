@@ -30,6 +30,7 @@ enum
   CGFloat           _fontSize;
   CGFloat           _baseline;
   uint8_t           _fallbackBehavior;
+  BOOL              _setup; // Font size has been set up
 }
 -(void)setStringValue:(NSString*)str;
 -(void)setFont:(NSString*)font;

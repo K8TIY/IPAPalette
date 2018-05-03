@@ -54,6 +54,7 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
 {
   _font = [[NSMutableString alloc] init];
   _stringValue = [[NSMutableString alloc] init];
+  _setup = NO;
 }
 
 -(void)dealloc
@@ -66,6 +67,11 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
 -(void)drawRect:(NSRect)r
 {
   [super drawRect:r];
+  if (!_setup)
+  {
+    [self _setupFontWithFrame:[self bounds]];
+    _setup = YES;
+  }
   if ([_stringValue length] && [_font length])
   {
     CGContextRef ctx = [[NSGraphicsContext currentContext] graphicsPort];
@@ -85,16 +91,14 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
 
 -(void)setFrame:(NSRect)r
 {
-  [self _setupFontWithFrame:r];
   [super setFrame:r];
+  _setup = NO;
 }
 
 -(void)setFrameSize:(NSSize)sz
 {
-  NSRect bounds = [self bounds];
-  bounds.size = sz;
-  [self _setupFontWithFrame:bounds];
   [super setFrameSize:sz];
+  _setup = NO;
 }
 
 #pragma mark API
@@ -112,7 +116,6 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
   if (!font || ![_font isEqualToString:font])
   {
     [_font setString:font];
-    [self _setupFontWithFrame:[self bounds]];
     [self setNeedsDisplay:YES];
   }
 }
