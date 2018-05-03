@@ -929,14 +929,14 @@ NS_ENDHANDLER
 -(void)prefsChanged:(id)sender
 {
   #pragma unused (sender)
-  NSLog(@"prefsChanged");
+  //NSLog(@"prefsChanged");
   [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 -(void)windowDidMoveSpace:(NSNotification*)note
  {
    #pragma unused (note)
-   NSLog(@"Moved space");
+   //NSLog(@"Moved space");
    [_window orderOut:self];
    [_window orderFront:self];
 }
@@ -944,7 +944,7 @@ NS_ENDHANDLER
 -(void)userWillLogout:(NSNotification*)note
 {
   #pragma unused (note)
-  NSLog(@"Will logout");
+  //NSLog(@"Will logout");
   [self hide];
 }
 
