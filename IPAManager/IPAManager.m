@@ -21,7 +21,7 @@ stolen from an older version of Sparkle.
 */
 #import "IPAManager.h"
 #import "Onizuka.h"
-#import "Sparkle/Sparkle.h"
+#import "Sparkle.h"
 
 static inline IPAInstallStatus currentInstallStatus(IPAInstallStatus status);
 static inline BOOL isWrongLocationInstalled(IPAInstallStatus status);
@@ -151,7 +151,7 @@ static inline IPAInstallStatus setWrongLocationInstalled(IPAInstallStatus status
   path = [self _paletteAppPath:_userInstalled];
   infoDict = [NSDictionary dictionaryWithContentsOfFile:[path stringByAppendingPathComponent:@"Contents/Info.plist"]];
   _installedVersion = @"";
-  _installedVersionHR = @"-";
+  _installedVersionHR = @"";
   if (infoDict != nil)
   {
     _installedVersion = [infoDict objectForKey:@"CFBundleVersion"];
@@ -203,7 +203,9 @@ static inline IPAInstallStatus setWrongLocationInstalled(IPAInstallStatus status
   Onizuka* oz = [Onizuka sharedOnizuka];
   if (key != nil) [oz localizeObject:_info withTitle:key];
   if (bkey != nil) [oz localizeObject:_installButton withTitle:bkey];
-  NSString* ver = [NSString stringWithFormat:@"%@ (%@)", _installedVersionHR, _installedVersion];
+  NSString* ver = @"";
+  if ([_installedVersionHR length] && [_installedVersion length])
+    ver = [NSString stringWithFormat:@"%@ (%@)", _installedVersionHR, _installedVersion];
   [_version setStringValue:ver];
   [_installButton setEnabled:YES];
 }
