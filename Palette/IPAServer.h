@@ -38,7 +38,7 @@ enum
 @interface IPASearchResults: NSTableView {} @end
 @interface IPAPanel : NSPanel {} @end
 
-@interface IPAServer : NSObject
+@interface IPAServer : NSObject <NSApplicationDelegate,NSWindowDelegate>
 {
   IBOutlet IPAPanel* _window;
   IBOutlet PDFImageMap*  _consonants;
