@@ -75,20 +75,58 @@ static NSString* const IPASymbolListRows = @"IPASymbolListRows";
   NSString* loc = [[Onizuka sharedOnizuka] copyLocalizedTitle:@"__USER_GLYPHS__"];
   NSString* name = [NSString stringWithFormat:@"%@.plist", loc];
   [loc release];
-  [[NSSavePanel savePanel] beginSheetForDirectory:nil/*@"/"*/ file:name
-                modalForWindow:_window modalDelegate:self
-                didEndSelector:@selector(_sheetDidEnd:returnCode:contextInfo:)
-                contextInfo:@"EXPORT"];
+  NSSavePanel* sp = [[NSSavePanel savePanel] retain];
+  [sp setNameFieldStringValue:name];
+  [sp beginSheetModalForWindow:_window completionHandler:^(NSInteger result)
+  {
+    if (result == NSFileHandlingPanelOKButton)
+    {
+      NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
+      NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+      [dict setObject:[defs objectForKey:ipaUserGlyphsKey]
+            forKey:ipaUserGlyphsKey];
+      [dict setObject:[defs objectForKey:ipaUserGlyphDescriptionsKey]
+            forKey:ipaUserGlyphDescriptionsKey];
+      [dict writeToURL:[sp URL] atomically:YES];
+      [dict release];
+      [sp release];
+    }
+  }];
 }
 
 -(IBAction)importSymbolsAction:(id)sender
 {
   #pragma unused (sender)
   NSArray* exts = [NSArray arrayWithObjects:@"plist", NULL];
-  [[NSOpenPanel openPanel] beginSheetForDirectory:nil file:nil types:exts
-                modalForWindow:_window modalDelegate:self
-                didEndSelector:@selector(_sheetDidEnd:returnCode:contextInfo:)
-                contextInfo:@"IMPORT"];
+  NSOpenPanel* op = [[NSOpenPanel openPanel] retain];
+  [op setCanChooseFiles:YES];
+  [op setCanChooseDirectories:NO];
+  [op setAllowsMultipleSelection:YES];
+  [op setAllowedFileTypes:exts];
+  [op beginWithCompletionHandler:^(NSInteger result)
+  {
+    if (result == NSFileHandlingPanelOKButton)
+    {
+      NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
+      NSDictionary* dict = [[NSDictionary alloc] initWithContentsOfURL:[op URL]];
+      NSArray* g = [dict objectForKey:ipaUserGlyphsKey];
+      NSDictionary* d = [dict objectForKey:ipaUserGlyphDescriptionsKey];
+      if (g && [g isKindOfClass:[NSArray class]] && 
+          d && [d isKindOfClass:[NSDictionary class]])
+      {
+        [defs setObject:g forKey:ipaUserGlyphsKey];
+        [defs setObject:d forKey:ipaUserGlyphDescriptionsKey];
+        if (delegate)
+        {
+          SEL sel = @selector(userGlyphsChanged:);
+          if ([delegate respondsToSelector:sel])
+            [delegate performSelector:sel withObject:self];
+        }
+      }
+      [dict release];
+    }
+    [op release];
+  }];
 }
 
 -(IBAction)acceptSheet:(id)sender
@@ -145,37 +183,6 @@ static NSString* const IPASymbolListRows = @"IPASymbolListRows";
     }
     [_editglyphs removeAllObjects];
     [_editdescriptions removeAllObjects];
-  }
-  else if ([(NSString*)ctx isEqualToString:@"EXPORT"])
-  {
-    NSSavePanel* sp = (NSSavePanel*)sheet;
-    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
-    [dict setObject:[defs objectForKey:ipaUserGlyphsKey]
-          forKey:ipaUserGlyphsKey];
-    [dict setObject:[defs objectForKey:ipaUserGlyphDescriptionsKey]
-          forKey:ipaUserGlyphDescriptionsKey];
-    [dict writeToURL:[sp URL] atomically:YES];
-    [dict release];
-  }
-  else if ([(NSString*)ctx isEqualToString:@"IMPORT"])
-  {
-    NSSavePanel* sp = (NSSavePanel*)sheet;
-    NSDictionary* dict = [[NSDictionary alloc] initWithContentsOfURL:[sp URL]];
-    NSArray* g = [dict objectForKey:ipaUserGlyphsKey];
-    NSDictionary* d = [dict objectForKey:ipaUserGlyphDescriptionsKey];
-    if (g && [g isKindOfClass:[NSArray class]] && 
-        d && [d isKindOfClass:[NSDictionary class]])
-    {
-      [defs setObject:g forKey:ipaUserGlyphsKey];
-      [defs setObject:d forKey:ipaUserGlyphDescriptionsKey];
-      if (delegate)
-      {
-        SEL sel = @selector(userGlyphsChanged:);
-        if ([delegate respondsToSelector:sel])
-          [delegate performSelector:sel withObject:self];
-      }
-    }
-    [dict release];
   }
 }
 
