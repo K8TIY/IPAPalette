@@ -330,7 +330,7 @@ static inline IPAInstallStatus setWrongLocationInstalled(IPAInstallStatus status
       ret = [self _authenticatedRemove:palette];
     else
     {
-      ret = [[NSFileManager defaultManager] removeFileAtPath:palette handler:nil];
+      ret = [[NSFileManager defaultManager] removeItemAtPath:palette error:nil];
       if (ret == NO)
         errorString = [[NSString alloc] initWithString:@"removal of duplicate failed\n"];
     }
