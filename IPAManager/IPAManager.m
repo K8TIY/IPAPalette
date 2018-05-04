@@ -48,7 +48,6 @@ static inline IPAInstallStatus setWrongLocationInstalled(IPAInstallStatus status
 -(void)_installComplete:(id)sender;
 -(void)_register:(NSString*)path;
 -(void)_setPaletteEnabled:(CFBooleanRef)flag;
--(void)_setLeopardIcon:(NSString*)appPath;
 @end
 
 @implementation IPAManager
@@ -357,7 +356,6 @@ static inline IPAInstallStatus setWrongLocationInstalled(IPAInstallStatus status
     auth = nil;
   }
   NSString* path = [self _paletteAppPath:_userInstalled];
-  if (_osVersion < 10.6) [self _setLeopardIcon:path];
   [self performSelectorOnMainThread:@selector(_register:)
         withObject:path waitUntilDone:YES];
   [self performSelectorOnMainThread:@selector(_installComplete:) withObject:nil waitUntilDone:NO];
@@ -442,17 +440,6 @@ static inline IPAInstallStatus setWrongLocationInstalled(IPAInstallStatus status
     [NSThread detachNewThreadSelector:@selector(_update:) toTarget:self withObject:nil];
   else
     [NSThread detachNewThreadSelector:@selector(_install:) toTarget:self withObject:nil];
-}
-
-
-#pragma mark Palette manipulation
--(void)_setLeopardIcon:(NSString*)appPath
-{
-  NSString* plistPath = [appPath stringByAppendingPathComponent:@"Contents"];
-  plistPath = [plistPath stringByAppendingPathComponent:@"Info"];
-  NSString* cmd = [NSString stringWithFormat:@"defaults write \"%@\" tsInputMethodIconFileKey IPAIcon.tif", plistPath];
-  //NSLog(@"Command: >>>%@<<<", cmd);
-  system([cmd UTF8String]);
 }
 
 #pragma TIS Functions
