@@ -252,10 +252,9 @@ static NSMapTable*   gObservers;
   else
   {
     _submap = [_submaps objectForKey:str];
-    NSRect frame = [[self window] frame];
+    NSRect frame = [[self window] convertRectFromScreen:[[self window] frame]];
     NSPoint base = frame.origin;
     base.y += frame.size.height;
-    base = [[self window] convertScreenToBase:base];
     if (_subwindow)
     {
       PDFImageMap* oldSub = [[_subwindow contentView] viewWithTag:31337];
@@ -426,9 +425,12 @@ static NSMapTable*   gObservers;
       id del = [self delegate];
       if (del)
       {
+        #pragma clang diagnostic push
+        #pragma clang diagnostic ignored "-Wundeclared-selector"
         SEL sel = @selector(PDFImageMapDidDrag:);
         if ([del respondsToSelector:sel])
           [del performSelector:sel withObject:self];
+        #pragma clang diagnostic pop
       }
     }
   }
@@ -498,9 +500,12 @@ static NSMapTable*   gObservers;
         id del = [self delegate];
         if (del)
         {
+          #pragma clang diagnostic push
+          #pragma clang diagnostic ignored "-Wundeclared-selector"
           SEL sel = @selector(PDFImageMapDidChange:);
           if ([del respondsToSelector:sel])
             [del performSelector:sel withObject:self];
+          #pragma clang diagnostic pop
         }
       }
     }
@@ -550,9 +555,12 @@ static NSMapTable*   gObservers;
   id del = [self delegate];
   if (del)
   {
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wundeclared-selector"
     SEL sel = @selector(PDFImageMapDidChange:);
     if ([del respondsToSelector:sel])
       [del performSelector:sel withObject:self];
+    #pragma clang diagnostic pop
   }
 }
 

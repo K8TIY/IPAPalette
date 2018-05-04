@@ -118,9 +118,12 @@ static NSString* const IPASymbolListRows = @"IPASymbolListRows";
         [defs setObject:d forKey:ipaUserGlyphDescriptionsKey];
         if (delegate)
         {
+          #pragma clang diagnostic push
+          #pragma clang diagnostic ignored "-Wundeclared-selector"
           SEL sel = @selector(userGlyphsChanged:);
           if ([delegate respondsToSelector:sel])
             [delegate performSelector:sel withObject:self];
+          #pragma clang diagnostic pop
         }
       }
       [dict release];
@@ -177,9 +180,12 @@ static NSString* const IPASymbolListRows = @"IPASymbolListRows";
     [d release];
     if (delegate)
     {
+      #pragma clang diagnostic push
+      #pragma clang diagnostic ignored "-Wundeclared-selector"
       SEL sel = @selector(userGlyphsChanged:);
       if ([delegate respondsToSelector:sel])
         [delegate performSelector:sel withObject:self];
+      #pragma clang diagnostic pop
     }
   }
 }
