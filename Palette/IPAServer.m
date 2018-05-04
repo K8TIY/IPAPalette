@@ -801,11 +801,10 @@ NS_ENDHANDLER
        change:(NSDictionary*)change context:(void*)ctx
 {
   #pragma unused (object,change,ctx)
-  NSLog(@"observeValueForKeyPath:%@ ofObject:%@ change:%@", path, object, change);
+  //NSLog(@"observeValueForKeyPath:%@ ofObject:%@ change:%@", path, object, change);
   if ([path isEqualToString:ipaKeyboardSyncKey])
   {
     [self keyboardChanged];
-    [_glyphView setStringValue:@"K"];
   }
 }
 
