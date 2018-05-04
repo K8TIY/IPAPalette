@@ -344,7 +344,6 @@ static inline IPAInstallStatus setWrongLocationInstalled(IPAInstallStatus status
   NSAutoreleasePool* arp = [[NSAutoreleasePool alloc] init];
   [errorString release];
   errorString = nil;
-  if ([_allUsersButton state] == NSOnState) _userInstalled = NO;
   /* This doesn't ask the user, so create it anyway.  If we don't need it, no problem */
   if (AuthorizationCreate(NULL, kAuthorizationEmptyEnvironment, kAuthorizationFlagDefaults, &auth) != errAuthorizationSuccess)
     /* Oh well, hope we don't need it */
@@ -434,6 +433,7 @@ static inline IPAInstallStatus setWrongLocationInstalled(IPAInstallStatus status
 -(IBAction)installUninstall:(id)sender
 {
   #pragma unused (sender)
+  _userInstalled = ([_allUsersButton state] != NSOnState);
   if (installStatus == kIPAInstallStatusInstalled)
     [NSThread detachNewThreadSelector:@selector(_uninstall:) toTarget:self withObject:nil];
   else if (currentInstallStatus(installStatus) == kIPAInstallStatusOutdated)
