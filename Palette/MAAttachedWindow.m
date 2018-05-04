@@ -10,7 +10,8 @@
 //#define MAATTACHEDWINDOW_DEFAULT_BACKGROUND_COLOR [NSColor colorWithCalibratedWhite:0.1 alpha:0.75]
 #define MAATTACHEDWINDOW_DEFAULT_BACKGROUND_COLOR [NSColor colorWithCalibratedWhite:0.9f alpha:0.90f]
 #define MAATTACHEDWINDOW_DEFAULT_BORDER_COLOR [NSColor whiteColor]
-#define MAATTACHEDWINDOW_SCALE_FACTOR [[NSScreen mainScreen] userSpaceScaleFactor]
+//#define MAATTACHEDWINDOW_SCALE_FACTOR [[NSScreen mainScreen] backingScaleFactor]
+#define MAATTACHEDWINDOW_SCALE_FACTOR (1)
 
 @interface MAAttachedWindow (MAPrivateMethods)
 
@@ -181,7 +182,6 @@
 {
     NSRect contentRect = NSZeroRect;
     contentRect.size = [_view frame].size;
-    
     // Account for viewMargin.
     _viewFrame = NSMakeRect(viewMargin * MAATTACHEDWINDOW_SCALE_FACTOR,
                             viewMargin * MAATTACHEDWINDOW_SCALE_FACTOR,
