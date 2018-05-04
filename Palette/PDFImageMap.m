@@ -113,7 +113,7 @@ static NSMapTable*   gObservers;
 {
   if (_copyImage) [_copyImage release];
   _copyImage = [newImage copy];
-  [_copyImage setScalesWhenResized:YES];
+  //[_copyImage setScalesWhenResized:YES];
   [super setImage:newImage];
 }
 
