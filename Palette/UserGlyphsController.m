@@ -181,8 +181,6 @@ static NSString* const IPASymbolListRows = @"IPASymbolListRows";
       if ([delegate respondsToSelector:sel])
         [delegate performSelector:sel withObject:self];
     }
-    [_editglyphs removeAllObjects];
-    [_editdescriptions removeAllObjects];
   }
 }
 
