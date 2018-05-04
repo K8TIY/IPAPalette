@@ -91,7 +91,8 @@ static NSMapTable*   gObservers;
   if ([self image])
   {
     _copyImage = [[self image] copy];
-    [_copyImage setScalesWhenResized:YES];
+    // Deprecated
+    //[_copyImage setScalesWhenResized:YES];
   }
 }
 
@@ -222,7 +223,10 @@ static NSMapTable*   gObservers;
   {
     NSRect ir = [self imageRect];
     [_copyImage setSize:ir.size];
-    [_copyImage compositeToPoint:ir.origin operation:NSCompositeSourceOver];
+    // Deprecated
+    //[_copyImage compositeToPoint:ir.origin operation:NSCompositeSourceOver];
+    [_copyImage drawInRect:ir fromRect:NSZeroRect
+                operation:NSCompositeSourceOver fraction:1.0];
   }
 }
 
