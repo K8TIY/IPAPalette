@@ -935,9 +935,8 @@ NS_ENDHANDLER
 -(void)windowDidMoveSpace:(NSNotification*)note
  {
    #pragma unused (note)
-   //NSLog(@"Moved space");
-   [_window orderOut:self];
-   [_window orderFront:self];
+   if (_hidden) [_window orderOut:self];
+   else [_window orderFront:self];
 }
 
 -(void)userWillLogout:(NSNotification*)note
