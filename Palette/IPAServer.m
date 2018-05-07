@@ -83,9 +83,21 @@ static void local_KeyboardChanged(CFNotificationCenterRef center,
 // so we don't allow dragging IPA symbols to the search field (or anywhere
 // else in the Palette). We do a "copy" operation so we get the +-sign cursor badge when dragging
 // into a nonlocal target, i.e., another application.
--(NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)isLocal
+-(NSDragOperation)draggingSession:(NSDraggingSession*)session
+                  sourceOperationMaskForDraggingContext:(NSDraggingContext)ctx
 {
-  return (isLocal)? NSDragOperationNone:NSDragOperationCopy;
+  #pragma unused (session)
+  switch (ctx)
+  {
+    case NSDraggingContextOutsideApplication:
+    return NSDragOperationCopy;
+    break;
+
+    case NSDraggingContextWithinApplication:
+    default:
+    return NSDragOperationNone;
+    break;
+  }
 }
 @end
 
@@ -377,7 +389,8 @@ NS_ENDHANDLER
       {
         if (![defs integerForKey:ipaDontShowAgainKey])
         {
-          [self runFontAlert];
+          [self performSelectorOnMainThread:@selector(runFontAlert) withObject:self
+                waitUntilDone:NO];
         }
       }
     }
@@ -415,17 +428,26 @@ NS_ENDHANDLER
   [msg1 release];
   [msg2 release];
   [alert setShowsSuppressionButton:YES];
-  [alert beginSheetModalForWindow:_window modalDelegate:self
+  /*[alert beginSheetModalForWindow:_window modalDelegate:self
              didEndSelector:@selector(endAlert:returnCode:contextInfo:)
-             contextInfo:nil];
+             contextInfo:nil];*/
+  [alert beginSheetModalForWindow:_window
+         completionHandler:^(NSModalResponse result)
+  {
+    if (result == NSModalResponseOK)
+    {
+      if ([[alert suppressionButton] state] == NSOnState)
+      [[NSUserDefaults standardUserDefaults] setInteger:1L forKey:ipaDontShowAgainKey];
+    }
+  }];
 }
 
--(void)endAlert:(NSAlert*)alert returnCode:(int)code contextInfo:(void*)ctx
+/*-(void)endAlert:(NSAlert*)alert returnCode:(int)code contextInfo:(void*)ctx
 {
   #pragma unused (code,ctx)
   if ([[alert suppressionButton] state] == NSOnState)
     [[NSUserDefaults standardUserDefaults] setInteger:1L forKey:ipaDontShowAgainKey];
-}
+}*/
 
 -(void)userGlyphsChanged:(id)sender
 {
