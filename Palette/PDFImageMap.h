@@ -23,7 +23,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 // hot spots' areas can be recalculated easily.
 typedef NSRect SubRect;
 
-@interface PDFImageMap : NSImageView
+@interface PDFImageMap : NSImageView <NSDraggingSource>
 {
   NSMutableDictionary*   _data; // key -> stringified SubRect
   NSMutableDictionary*   _hots; // stringified SubRect -> key
