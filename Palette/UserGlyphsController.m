@@ -252,13 +252,19 @@ static NSString* const IPASymbolListRows = @"IPASymbolListRows";
   return str;
 }
 
--(BOOL)tableView:(NSTableView*)table writeRows:(NSArray*)rows toPasteboard:(NSPasteboard*)pb
+-(BOOL)tableView:(NSTableView*)table writeRowsWithIndexes:(NSIndexSet*)rows toPasteboard:(NSPasteboard*)pb
 {
 	if (table == _table && [table numberOfSelectedRows])
 	{
+    NSMutableArray* ary = [[NSMutableArray alloc] init];
+    [rows enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop){
+      #pragma unused (stop)
+      [ary addObject:[NSNumber numberWithUnsignedInteger:idx]];
+    }];
 		// Intra-table drag - data is the array of rows.
 		[pb declareTypes:[NSArray arrayWithObject:IPASymbolListRows] owner:nil];
-		[pb setPropertyList:rows forType:IPASymbolListRows];
+		[pb setPropertyList:ary forType:IPASymbolListRows];
+    [ary release];
 		return YES;
 	}
 	return NO;
@@ -300,8 +306,11 @@ static NSString* const IPASymbolListRows = @"IPASymbolListRows";
       dropRow = [self _moveRows:array to:dropRow copying:isCopy];
       [table deselectAll:self];
       NSMutableIndexSet* rows = [[NSMutableIndexSet alloc] init];
-      for (id blah in array)
+      for (id idx in array)
+      {
+        #pragma unused (idx)
         [rows addIndex:dropRow++];
+      }
       [_table reloadData];
       [table selectRowIndexes:rows byExtendingSelection:YES];
       [rows release];
@@ -318,7 +327,8 @@ static NSString* const IPASymbolListRows = @"IPASymbolListRows";
   NSInteger result = destination;
 	for (id val in [array reverseObjectEnumerator])
   {
-		unsigned i = [val unsignedIntValue];
+		NSUInteger i = [val unsignedIntValue];
+    if (i < destination) result--;
 		NSString* m = [_editglyphs objectAtIndex:i];
     NSString* md = [_editdescriptions objectAtIndex:i];
 		if (copy)
@@ -342,7 +352,7 @@ static NSString* const IPASymbolListRows = @"IPASymbolListRows";
 			if (i < destination) destination--;
 		}
 	}
-  unsigned dst = destination;
+  NSUInteger dst = destination;
 	for (NSString* m in [moved reverseObjectEnumerator])
   {
     [_editglyphs insertObject:m atIndex:dst++];
@@ -394,9 +404,20 @@ static NSString* const IPASymbolListRows = @"IPASymbolListRows";
   return handled;
 }
 
--(NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)isLocal
+-(NSDragOperation)draggingSession:(NSDraggingSession*)session
+                  sourceOperationMaskForDraggingContext:(NSDraggingContext)ctx
 {
-  if (isLocal) return NSDragOperationMove | NSDragOperationCopy;
-  return NSDragOperationNone;
+  #pragma unused (session)
+  switch (ctx)
+  {
+    case NSDraggingContextOutsideApplication:
+    return NSDragOperationNone;
+    break;
+
+    case NSDraggingContextWithinApplication:
+    default:
+    return NSDragOperationMove;
+    break;
+  }
 }
 @end

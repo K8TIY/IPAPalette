@@ -328,15 +328,12 @@ static NSMapTable*   gObservers;
     if (evt)
     {
       if ([evt type] == NSLeftMouseUp) break;
-      NSData* encoded = [str dataUsingEncoding:NSUTF8StringEncoding
-                             allowLossyConversion:NO];
-      if (encoded || (_canDragMap && !str))
+      if (str || _canDragMap)
       {
         NSImage* img = _dragImage;
         if (nil == img || !str) img = [self image];
         if (img)
         {
-          //img = [img copy];
           NSSize imgSize = [img size];
           NSRect srcr, destr;
           if (str)
@@ -357,23 +354,22 @@ static NSMapTable*   gObservers;
             destr = [self imageRect];
             r = destr;
             _draggingSymbol = NO;
+            str = @"";
           }
           destr.origin = NSZeroPoint;
-          NSPoint dragPoint = NSMakePoint(r.origin.x, r.origin.y);
           NSImage* draggingImage = [[NSImage alloc] initWithSize:r.size];
           [draggingImage lockFocus];
           [img drawInRect:destr fromRect:srcr
                operation:NSCompositeSourceOver fraction:1.0L];
-          //[img release];
           [draggingImage unlockFocus];
-          NSPasteboard* pboard = [NSPasteboard pasteboardWithName:NSDragPboard];
-          NSArray* types = [NSArray arrayWithObjects:NSStringPboardType, NULL];
-          [pboard declareTypes:types owner:self];
-          [pboard setData:encoded forType:NSStringPboardType];
           _dragging = YES;
-          [self dragImage:draggingImage at:dragPoint offset:NSZeroSize
-                event:evt pasteboard:pboard source:self
-                slideBack:_draggingSymbol];
+          NSDraggingItem* drag = [[NSDraggingItem alloc] initWithPasteboardWriter:str];
+          //drag.draggingFrame = r;
+          [drag setDraggingFrame:r contents:draggingImage];
+          NSArray* drags = [[NSArray alloc] initWithObjects:drag, NULL];
+          [drag release];
+          (void)[self beginDraggingSessionWithItems:drags event:evt source:self];
+          [drags release];
           [draggingImage release];
           _dragging = NO;
         }
@@ -398,40 +394,46 @@ static NSMapTable*   gObservers;
   }
 }
 
--(NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)loc
+-(NSDragOperation)draggingSession:(NSDraggingSession*)session
+                  sourceOperationMaskForDraggingContext:(NSDraggingContext)ctx
 {
-  #pragma unused (loc)
-  return (loc)? NSDragOperationCopy | NSDragOperationPrivate :
-                ((_draggingSymbol)? NSDragOperationCopy : NSDragOperationNone);
+  #pragma unused (session)
+  switch (ctx)
+  {
+    case NSDraggingContextOutsideApplication:
+    return (_draggingSymbol)? NSDragOperationCopy : NSDragOperationNone;
+    break;
+
+    case NSDraggingContextWithinApplication:
+    default:
+    return (_draggingSymbol)? NSDragOperationNone : NSDragOperationGeneric;
+    break;
+  }
 }
 
--(void)draggedImage:(NSImage*)img endedAt:(NSPoint)p
+-(BOOL)ignoreModifierKeysForDraggingSession:(NSDraggingSession*)session
+{
+  #pragma unused (session)
+  return YES;
+}
+
+-(void)draggingSession:(NSDraggingSession*)session
+       endedAtPoint:(NSPoint)p
        operation:(NSDragOperation)op
 {
-  #pragma unused (img,op)
+  #pragma unused (session,op)
   if (!_draggingSymbol)
   {
-    //NSPoint where = p;//[self convertPointToBase:p];
-    //NSRect f = [[self window] frame];
-    //NSLog(@"Is %@ outside %@?", NSStringFromPoint(where), NSStringFromRect(f));
-    //if (NSPointInRect(where, f)/* && NSPointInRect([NSEvent mouseLocation], f)*/)
-    if (NO)
+    _dropPoint = p;
+    id del = [self delegate];
+    if (del)
     {
-      //NSLog(@"Nope!");
-    }
-    else
-    {
-      _dropPoint = p;
-      id del = [self delegate];
-      if (del)
-      {
-        #pragma clang diagnostic push
-        #pragma clang diagnostic ignored "-Wundeclared-selector"
-        SEL sel = @selector(PDFImageMapDidDrag:);
-        if ([del respondsToSelector:sel])
-          [del performSelector:sel withObject:self];
-        #pragma clang diagnostic pop
-      }
+      #pragma clang diagnostic push
+      #pragma clang diagnostic ignored "-Wundeclared-selector"
+      SEL sel = @selector(PDFImageMapDidDrag:);
+      if ([del respondsToSelector:sel])
+        [del performSelector:sel withObject:self];
+      #pragma clang diagnostic pop
     }
   }
 }
