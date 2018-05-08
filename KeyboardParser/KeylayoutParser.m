@@ -47,14 +47,14 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   if (s1 == nil && s2 != nil) return NSOrderedDescending;
   if (s1 != nil && s2 == nil) return NSOrderedAscending;
   if (s1 == nil && s2 == nil) return NSOrderedSame;
-  unsigned l1 = [s1 length];
-  unsigned l2 = [s2 length];
+  NSUInteger l1 = [s1 length];
+  NSUInteger l2 = [s2 length];
   //NSLog(@"compareKeyboardSequence:'%@' withSequence:'%@'", s1, s2);
   if (l1 < l2) return NSOrderedAscending;
   if (l1 > l2) return NSOrderedDescending;
-  unsigned w1 = 0;
-  unsigned w2 = 0;
-  unsigned i;
+  NSUInteger w1 = 0;
+  NSUInteger w2 = 0;
+  NSUInteger i;
   for (i = 0; i < l1; i++)
   {
     unichar c1 = [s1 characterAtIndex:i];
@@ -96,7 +96,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   TISInputSourceRef isr = TISCopyCurrentKeyboardLayoutInputSource();
   void* vp = TISGetInputSourceProperty(isr, kTISPropertyUnicodeKeyLayoutData);
   CFDataRef data = (CFDataRef)vp;
-  unsigned n = CFDataGetLength(data);
+  CFIndex n = CFDataGetLength(data);
   _buff = malloc(n);
   CFDataGetBytes(data, CFRangeMake(0,n), _buff);
   CFRelease(isr);
