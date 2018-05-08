@@ -315,7 +315,12 @@
     } else {
          screenFrame = [[NSScreen mainScreen] visibleFrame];
     }
-    NSPoint pointOnScreen = (_window) ? [_window convertBaseToScreen:_point] : _point;
+    //NSPoint pointOnScreen = (_window) ? [_window convertBaseToScreen:_point] : _point;
+    NSPoint pointOnScreen = _point;
+    if (_window)
+    {
+      pointOnScreen = [_window convertRectToScreen:screenFrame].origin;
+    }
     NSSize viewSize = [_view frame].size;
     viewSize.width += (viewMargin * MAATTACHEDWINDOW_SCALE_FACTOR) * 2.0f;
     viewSize.height += (viewMargin * MAATTACHEDWINDOW_SCALE_FACTOR) * 2.0f;
