@@ -78,7 +78,7 @@ typedef struct
   NSInteger result = [panel runModal];
   if (result == NSOKButton)
   {
-    NSString* dir = [panel filename];
+    NSString* dir = [[[panel URL] absoluteString] stringByDeletingLastPathComponent];
     [_info setHidden:NO];
     [_spinny setHidden:NO];
     [_spinny setIndeterminate:YES];
