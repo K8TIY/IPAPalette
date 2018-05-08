@@ -223,7 +223,11 @@
     }
     
     // Position frame origin appropriately for _side, accounting for arrow-inset.
-    contentRect.origin = (_window) ? [_window convertBaseToScreen:_point] : _point;
+    contentRect.origin = _point;
+    if (_window)
+    {
+      contentRect.origin = [_window convertRectToScreen:contentRect].origin;
+    }
     float arrowInset = [self _arrowInset];
     float halfWidth = contentRect.size.width / 2.0f;
     float halfHeight = contentRect.size.height / 2.0f;
