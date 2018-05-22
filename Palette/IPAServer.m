@@ -237,8 +237,8 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
         uc = ((uc - 0xD800) * 0x400) + (uc2 - 0xDC00) + 0x10000;
         i++;
       }
+      [uplus appendFormat:@"%sU+%.4X", ([uplus length])?" ":"", (unsigned)uc];
     }
-    [uplus appendFormat:@"%sU+%.4X", ([uplus length])?" ":"", (unsigned)uc];
   }];
   return uplus;
 }
