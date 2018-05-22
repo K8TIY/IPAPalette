@@ -216,15 +216,30 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
 // Given a string such as "i j", produces "U+0069 U+006A" with hex codepoints.
 +(NSString*)copyUPlusForString:(NSString*)str
 {
+  if (str == nil) return nil;
   NSMutableString* uplus = [[NSMutableString alloc] init];
-  NSUInteger nchars = [str length];
-  NSUInteger i;
-  for (i = 0; i < nchars; i++)
+  __block NSUInteger i, uc, uc2;
+  NSRange fullRange = NSMakeRange(0, [str length]);
+  [str enumerateSubstringsInRange:fullRange
+       options:NSStringEnumerationByComposedCharacterSequences
+       usingBlock:^(NSString* substring, NSRange substringRange,
+                    NSRange enclosingRange, BOOL* stop)
   {
-    unichar uc = [str characterAtIndex:i];
-    if (uc != PlaceholderDottedCircle)
-      [uplus appendFormat:@"%sU+%.4X", ([uplus length])?" ":"", uc];
-  }
+    #pragma unused (substring, enclosingRange, stop)
+    uc = 0;
+    for (i = 0; i < substringRange.length; i++)
+    {
+      uc = [str characterAtIndex:substringRange.location+i];
+      uc2 = 0;
+      if (0xD800 <= uc && uc <= 0xDBFF && i+1 < substringRange.length)
+      {
+        uc2 = [str characterAtIndex:substringRange.location+i+1];
+        uc = ((uc - 0xD800) * 0x400) + (uc2 - 0xDC00) + 0x10000;
+        i++;
+      }
+    }
+    [uplus appendFormat:@"%sU+%.4X", ([uplus length])?" ":"", (unsigned)uc];
+  }];
   return uplus;
 }
 
@@ -552,8 +567,8 @@ NS_ENDHANDLER
       [d setObject:longdesc forKey:ipaStringSymbolTypeKey];
       [toSend release];
       [toDisplay release];
-      [codepoints1 release];
-      [codepoints2 release];
+      if (codepoints1) [codepoints1 release];
+      if (codepoints2) [codepoints2 release];
     }
   }
   return d;
@@ -1047,7 +1062,7 @@ NS_ENDHANDLER
         {
           NSString* uplus = [IPAServer copyUPlusForString:u];
           [_keyboard setObject:[NSNull null] forKey:uplus];
-          [uplus release];
+          if (uplus) [uplus release];
         }
       }
     }
@@ -1093,7 +1108,7 @@ NS_ENDHANDLER
       }
       if (allow) [_keyboard setObject:seq forKey:uplus];
     }
-    [uplus release];
+    if (uplus) [uplus release];
   }
 }
 
