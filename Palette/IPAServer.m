@@ -439,7 +439,7 @@ NS_ENDHANDLER
   NSString* msg2 = [[Onizuka sharedOnizuka] copyLocalizedTitle:@"__PREVIEW_BAD__"];
   NSAlert* alert = [NSAlert alertWithMessageText:msg1 defaultButton:nil
                             alternateButton:nil otherButton:nil
-                            informativeTextWithFormat:msg2];
+                            informativeTextWithFormat:@"%@", msg2];
   [msg1 release];
   [msg2 release];
   [alert setShowsSuppressionButton:YES];
