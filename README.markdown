@@ -41,23 +41,17 @@ Alphabet symbols into Unicode-savvy applications.
 
 Requires my Onizuka localizer from <https://github.com/K8TIY/Onizuka>.
 It's set up as a git submodule, so just do the usual git submodule
-magic to get it set up. I don't have Sparkle set up as a submodule
-because the Github version requires the 10.7 SDK, which I don't have
-on my build machine.
-
-Project settings are for building on Snow Leopard against the 10.5 SDK.
-If you are on Leopard, you will probably have to fiddle with settings.
+magic to get it set up (`git submodule init` followed by `git submodule update`).
 
 If you change any localizations (they're all in Localization/chardata.txt),
 run `./translator.py -s` to regenerate the *.strings files.
 
 ### Todo
 
-* More localizations! (You guys should be doing these for me; *I* don't
-  speak Swahili!)
+* More localizations!
 * Fix bugs.
 * The twice (so far) -requested embedded audio samples for those
-  learning the IPA.
+  learning the IPA. (Somebody please write a grant to get this done.)
 
 ### Not Todo
 
