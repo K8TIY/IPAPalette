@@ -329,35 +329,36 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
 {
   #pragma unused (ignore)
   NSMutableArray* fontNames = [[NSMutableArray alloc] init];
-  OSStatus err;
-  NSMutableArray* fonts = [[[NSFontManager sharedFontManager] availableFonts] mutableCopy];
+  NSArray* fonts = [[NSFontManager sharedFontManager] availableFonts];
   for (NSString* font in fonts)
   {
-    // Ignore some garbage (?) fonts that spam the logs.
-    if (![font isEqualToString:@"LastResort"] && ![font hasPrefix:@".SFNS"])
+    // Ignore some System-private fonts that spam the logs with douchey
+    // warnings like "All system UI font access should be through proper APIs…"
+    if (![font isEqualToString:@"LastResort"] && ![font hasPrefix:@"."])
     {
-      ByteCount neededSize;
-      ATSFontRef atsf = ATSFontFindFromPostScriptName((CFStringRef)font, kATSOptionFlagsDefault);
-      err = ATSFontGetTable(atsf, 'cmap', 0, 0, NULL, &neededSize);
-      if (err) NSLog(@"  ATSFontGetTable '%@' err=%d, size=%ld", font, (int)err, neededSize);
+      CFDataRef data = nil;
+      CTFontRef ctFont = CTFontCreateWithName((CFStringRef)font, 0.0, NULL);
+      if (ctFont)
+      {
+        data = CTFontCopyTable(ctFont, 'cmap', kCTFontTableOptionNoOptions);
+      }
+      if (!data) NSLog(@"CTFontCopyTable '%@' failed", font);
       else
       {
-        char* buffer = malloc(neededSize);
-        err = ATSFontGetTable(atsf, 'cmap', 0, neededSize, buffer, &neededSize);
-        if (err) NSLog(@"  ATSFontGetTable '%@' err=%d, size=%ld", font, (int)err, neededSize);
-        if (!err && CMAPHasChar(buffer, kLezh) && CMAPHasChar(buffer, kBeta))
+        if (CMAPHasChar((char*)CFDataGetBytePtr(data), kLezh) &&
+            CMAPHasChar((char*)CFDataGetBytePtr(data), kBeta))
         {
-          CFStringRef readable;
-          err = ATSFontGetName(atsf, kATSOptionFlagsDefault, &readable);
-          [fontNames addObject:(NSString*)readable];
-          //NSLog(@"Adding %@", readable);
+          CFStringRef readable = CTFontCopyDisplayName(ctFont);
+          if (![(NSString*)readable hasPrefix:@"."])
+          {
+            [fontNames addObject:(NSString*)readable];
+          }
           CFRelease(readable);
         }
-        free(buffer);
+        CFRelease(data);
       }
     }
   }
-  [fonts release];
   // Now let's add in any custom fonts added by the user.
   NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
   NSArray* userFonts = [defs objectForKey:ipaUserFontsKey];
