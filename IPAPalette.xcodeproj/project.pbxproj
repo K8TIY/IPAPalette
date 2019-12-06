@@ -6,23 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		32DC629B10D2FF87008B5B1B /* All */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 32DC629E10D2FFA5008B5B1B /* Build configuration list for PBXAggregateTarget "All" */;
-			buildPhases = (
-			);
-			dependencies = (
-				32DC62A010D2FFAB008B5B1B /* PBXTargetDependency */,
-				32DC62A810D2FFAB008B5B1B /* PBXTargetDependency */,
-				32D4CDA8147AE044008973BD /* PBXTargetDependency */,
-				321F611217739386005B3255 /* PBXTargetDependency */,
-			);
-			name = All;
-			productName = All;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		320EDD5C14884D2400B191B0 /* Keyboard.plist in Resources */ = {isa = PBXBuildFile; fileRef = 320EDD5B14884D2400B191B0 /* Keyboard.plist */; };
 		321F611E1773A0AA005B3255 /* IPAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F611B1773A0AA005B3255 /* IPAManager.m */; };
@@ -82,7 +65,7 @@
 		32DCEB1915EFDBC900D3B33A /* HackedDoulosF-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32DCEB1815EFDBC900D3B33A /* HackedDoulosF-Regular.ttf */; };
 		32E729E11444EC3700E2B07B /* IPAIconTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 32E729E01444EC3700E2B07B /* IPAIconTemplate.pdf */; };
 		32EB0F2520A0EE8F00E31FC5 /* IPAPalette.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D1107320486CEB800E47090 /* IPAPalette.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		32EB0F3220A0F58400E31FC5 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 32EB0F3020A0F54A00E31FC5 /* Sparkle.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		32EB0F3220A0F58400E31FC5 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 32EB0F3020A0F54A00E31FC5 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		32EB974718D265900062A8FC /* Onizuka.strings in Resources */ = {isa = PBXBuildFile; fileRef = 32EB972818D265900062A8FC /* Onizuka.strings */; };
 		32EC6C991125CE6E00FABAC9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		32F57E4B148944C30032B77E /* KeylayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4CECA147AF8B2008973BD /* KeylayoutParser.m */; };
@@ -93,40 +76,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		321F611117739386005B3255 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 321F610A17739315005B3255;
-			remoteInfo = IPAManager;
-		};
 		321F613F1773B824005B3255 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8D1107260486CEB800E47090;
 			remoteInfo = IPAPalette;
-		};
-		32D4CDA7147AE044008973BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 32D4CDA2147AE00C008973BD;
-			remoteInfo = KeyboardParser;
-		};
-		32DC629F10D2FFAB008B5B1B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D1107260486CEB800E47090;
-			remoteInfo = IPAPaletteIM;
-		};
-		32DC62A710D2FFAB008B5B1B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3241E2F010727BC500144CE0;
-			remoteInfo = ImageMapGen;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -590,6 +545,16 @@
 			attributes = {
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = blugs.com;
+				TargetAttributes = {
+					321F610A17739315005B3255 = {
+						DevelopmentTeam = 2X36V2JWP4;
+						ProvisioningStyle = Manual;
+					};
+					8D1107260486CEB800E47090 = {
+						DevelopmentTeam = 2X36V2JWP4;
+						ProvisioningStyle = Manual;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "IPAPalette" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -640,7 +605,6 @@
 				3241E2F010727BC500144CE0 /* ImageMapGen */,
 				32D4CDA2147AE00C008973BD /* KeyboardParser */,
 				321F610A17739315005B3255 /* IPAManager */,
-				32DC629B10D2FF87008B5B1B /* All */,
 			);
 		};
 /* End PBXProject section */
@@ -768,30 +732,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		321F611217739386005B3255 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 321F610A17739315005B3255 /* IPAManager */;
-			targetProxy = 321F611117739386005B3255 /* PBXContainerItemProxy */;
-		};
 		321F61401773B824005B3255 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8D1107260486CEB800E47090 /* IPAPalette */;
 			targetProxy = 321F613F1773B824005B3255 /* PBXContainerItemProxy */;
-		};
-		32D4CDA8147AE044008973BD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 32D4CDA2147AE00C008973BD /* KeyboardParser */;
-			targetProxy = 32D4CDA7147AE044008973BD /* PBXContainerItemProxy */;
-		};
-		32DC62A010D2FFAB008B5B1B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8D1107260486CEB800E47090 /* IPAPalette */;
-			targetProxy = 32DC629F10D2FFAB008B5B1B /* PBXContainerItemProxy */;
-		};
-		32DC62A810D2FFAB008B5B1B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3241E2F010727BC500144CE0 /* ImageMapGen */;
-			targetProxy = 32DC62A710D2FFAB008B5B1B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -863,8 +807,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 2X36V2JWP4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Sparkle-1.22.0",
@@ -879,12 +826,13 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/Sparkle-1.22.0/Sparkle.framework/Versions/A/Headers/**";
 				INFOPLIST_FILE = IPAManager/Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
+				INSTALL_PATH = Applications;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.blugs.IPAManager;
 				PRODUCT_NAME = "IPA Manager";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -893,9 +841,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2X36V2JWP4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Sparkle-1.22.0",
@@ -912,12 +863,13 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/Sparkle-1.22.0/Sparkle.framework/Versions/A/Headers/**";
 				INFOPLIST_FILE = IPAManager/Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
+				INSTALL_PATH = Applications;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.blugs.IPAManager;
 				PRODUCT_NAME = "IPA Manager";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -926,6 +878,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -953,6 +906,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -980,6 +934,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
@@ -1003,6 +958,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
@@ -1023,33 +979,14 @@
 			};
 			name = Release;
 		};
-		32DC629C10D2FF87008B5B1B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = All;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		32DC629D10D2FF87008B5B1B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				PRODUCT_NAME = All;
-				SDKROOT = macosx;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 2X36V2JWP4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Sparkle-1.22.0/Sparkle.framework/Versions/A/Headers/**",
@@ -1082,7 +1019,9 @@
 				OTHER_CFLAGS = "-DXCODE_DEBUG_CONFIGURATION_DEBUG=1";
 				PRODUCT_BUNDLE_IDENTIFIER = com.blugs.inputmethod.IPAPalette;
 				PRODUCT_NAME = IPAPalette;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-16";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1091,8 +1030,11 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2X36V2JWP4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Sparkle-1.22.0/Sparkle.framework/Versions/A/Headers/**",
@@ -1124,7 +1066,9 @@
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.blugs.inputmethod.IPAPalette;
 				PRODUCT_NAME = IPAPalette;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-16";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1155,6 +1099,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -1199,6 +1145,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1242,15 +1190,6 @@
 			buildConfigurations = (
 				32D4CDA5147AE00D008973BD /* Debug */,
 				32D4CDA6147AE00D008973BD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		32DC629E10D2FFA5008B5B1B /* Build configuration list for PBXAggregateTarget "All" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				32DC629C10D2FF87008B5B1B /* Debug */,
-				32DC629D10D2FF87008B5B1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
