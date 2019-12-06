@@ -28,5 +28,7 @@
 	<string>IPAManager.icns</string>
 	<key>SUFeedURL</key>
 	<string>https://www.blugs.com/Appcasts/IPAPalette.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>3ur84Rg4AXD6prlgGE4AIuT59x4r9ucYkxpjH0Qs//s=</string>
 </dict>
 </plist>
