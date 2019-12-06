@@ -27,42 +27,50 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 @end
 
 static NSUInteger local_CurrentModifiers(void);
-static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void* refcon);
-
-
 
 @implementation PDFImageMap
-static CFMachPortRef gTap = NULL;  // Quartz event tap for tracking rects
 static NSMapTable*   gObservers;
+static id gEventMonitor = NULL;
 
 +(void)registerForEvents:(id)target action:(SEL)action
 {
-  if (!gTap)
+  if (action && !gEventMonitor)
   {
-    gTap = CGEventTapCreate(kCGHIDEventTap, kCGHeadInsertEventTap, kCGEventTapOptionListenOnly,
-                            CGEventMaskBit(kCGEventMouseMoved) | CGEventMaskBit(kCGEventFlagsChanged),
-                            local_TapCallback, nil);
-    if (gTap)
+    if (!gEventMonitor)
     {
-      CFRunLoopSourceRef src = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, gTap, 0);
-      CFRunLoopAddSource(CFRunLoopGetMain(), src, kCFRunLoopCommonModes);
-      CFRelease(src);
-      CGEventTapEnable(gTap, false);
+      NSEventMask mask = NSEventMaskMouseMoved | NSEventMaskFlagsChanged;
+      gEventMonitor = [NSEvent addGlobalMonitorForEventsMatchingMask:mask
+             handler:^(NSEvent* event)
+             {
+               #pragma unused (event)
+               if (gObservers)
+               {
+                 for (id target2 in NSAllMapTableKeys(gObservers))
+                 {
+                   NSValue* val = NSMapGet(gObservers, target2);
+                   SEL action2 = [val pointerValue];
+                   if (action2 && [target2 respondsToSelector:action2])
+                     [target2 performSelector:action2];
+                 }
+               }
+             }];
     }
+  }
+  else
+  {
+    [NSEvent removeMonitor:gEventMonitor];
+    gEventMonitor = NULL;
   }
   if (action)
   {
     if (!gObservers)
       gObservers = [[NSMapTable alloc] initWithKeyOptions:NSMapTableStrongMemory valueOptions:NSMapTableStrongMemory capacity:1];
     (void)NSMapInsert(gObservers, target, [NSValue valueWithPointer:action]);
-    //[gObservers setObject:[NSValue valueWithPointer:action] forKey:target];
   }
   else
   {
     if (gObservers) NSMapRemove(gObservers, target);
   }
-  //NSLog(@"Observers: %@", gObservers);
-  if (gTap) CGEventTapEnable(gTap, (gObservers && [gObservers count] > 0));
 }
 
 -(id)initWithFrame:(NSRect)frameRect
@@ -193,7 +201,6 @@ static NSMapTable*   gObservers;
 
 -(void)stopTracking
 {
-  //NSLog(@"stopTracking: removing %X", _trackingRect);
   [self removeTrackingRect:_trackingRect];
   _trackingRect = 0;
 }
@@ -541,6 +548,7 @@ static NSMapTable*   gObservers;
 
 -(void)mouseEntered:(NSEvent*)evt
 {
+  //NSLog(@"Entered");
   if ([evt trackingNumber] != _trackingRect) return;
   [[self class] registerForEvents:self action:@selector(_checkMouse)];
   //if (_tap) CGEventTapEnable(_tap, true);
@@ -548,6 +556,7 @@ static NSMapTable*   gObservers;
 
 -(void)mouseExited:(NSEvent*)evt
 {
+  //NSLog(@"Exited");
   if ([evt trackingNumber] != _trackingRect) return;
   [[self class] registerForEvents:self action:nil];
   //if (_tap) CGEventTapEnable(_tap, false);
@@ -646,20 +655,4 @@ static NSUInteger local_CurrentModifiers(void)
   return mods;
 }
 
-static CGEventRef local_TapCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void* refcon)
-{
-  #pragma unused (proxy,type,refcon)
-  if (gObservers)
-  {
-    for (id target in NSAllMapTableKeys(gObservers))
-    {
-      NSValue* val = NSMapGet(gObservers, target);
-      SEL action = [val pointerValue];
-      //NSLog(@"%@ has %s", target, action);
-      if (action && [target respondsToSelector:action])
-        [target performSelector:action];
-    }
-  }
-  return event;
-}
 
