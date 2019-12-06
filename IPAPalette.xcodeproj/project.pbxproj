@@ -69,12 +69,12 @@
 		3293A95317C407C100F07188 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3293A95217C407C100F07188 /* Security.framework */; };
 		3299F3E1143E65B9009191BC /* HackedDoulos-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3299F3E0143E65B9009191BC /* HackedDoulos-Regular.ttf */; };
 		32A854E714F55E4A007CCF53 /* AuxNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = 32A854E614F55E4A007CCF53 /* AuxNames.strings */; };
+		32AE8D0A239AD47700AAB1F3 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32EB0F3020A0F54A00E31FC5 /* Sparkle.framework */; };
 		32B0660A13BA7DEB00EB242B /* Pal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 32B0660813BA7DEB00EB242B /* Pal.pdf */; };
 		32B0660B13BA7DEB00EB242B /* Retro.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 32B0660913BA7DEB00EB242B /* Retro.pdf */; };
 		32B0661013BA7E1100EB242B /* VPh.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 32B0660F13BA7E1100EB242B /* VPh.pdf */; };
 		32B0662B13BA815800EB242B /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B0662A13BA815800EB242B /* MAAttachedWindow.m */; };
 		32C5DA02180DA88E00614A06 /* IPAManager.icns in Resources */ = {isa = PBXBuildFile; fileRef = 32C5DA01180DA88E00614A06 /* IPAManager.icns */; };
-		32CC7422180F2504001F2F9A /* IPAPalette_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 32CC7421180F2504001F2F9A /* IPAPalette_pub.pem */; };
 		32D4CDB4147AE0C5008973BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4CDB3147AE0C5008973BD /* main.m */; };
 		32D4CEA5147AE9C0008973BD /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327FE565106D53E9003FEB34 /* Carbon.framework */; };
 		32D4CECB147AF8B2008973BD /* KeylayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4CECA147AF8B2008973BD /* KeylayoutParser.m */; };
@@ -82,7 +82,6 @@
 		32DCEB1915EFDBC900D3B33A /* HackedDoulosF-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32DCEB1815EFDBC900D3B33A /* HackedDoulosF-Regular.ttf */; };
 		32E729E11444EC3700E2B07B /* IPAIconTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 32E729E01444EC3700E2B07B /* IPAIconTemplate.pdf */; };
 		32EB0F2520A0EE8F00E31FC5 /* IPAPalette.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D1107320486CEB800E47090 /* IPAPalette.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		32EB0F3120A0F55600E31FC5 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32EB0F3020A0F54A00E31FC5 /* Sparkle.framework */; };
 		32EB0F3220A0F58400E31FC5 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 32EB0F3020A0F54A00E31FC5 /* Sparkle.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		32EB974718D265900062A8FC /* Onizuka.strings in Resources */ = {isa = PBXBuildFile; fileRef = 32EB972818D265900062A8FC /* Onizuka.strings */; };
 		32EC6C991125CE6E00FABAC9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -238,7 +237,6 @@
 		32BC62321113697F00B4E065 /* UserGlyphsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserGlyphsController.m; path = Palette/UserGlyphsController.m; sourceTree = SOURCE_ROOT; };
 		32C5DA01180DA88E00614A06 /* IPAManager.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = IPAManager.icns; path = IPAManager/IPAManager.icns; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* IPAPalette_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAPalette_Prefix.pch; sourceTree = SOURCE_ROOT; };
-		32CC7421180F2504001F2F9A /* IPAPalette_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = IPAPalette_pub.pem; path = IPAManager/IPAPalette_pub.pem; sourceTree = "<group>"; };
 		32CC75461810552F001F2F9A /* ActivatePrefs.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = ActivatePrefs.applescript; path = IPAManager/ActivatePrefs.applescript; sourceTree = "<group>"; };
 		32D0964A135DED4C00D86037 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = SOURCE_ROOT; };
 		32D4CD92147ADF39008973BD /* KeyboardParser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KeyboardParser-Info.plist"; path = "KeyboardParser/KeyboardParser-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -253,7 +251,7 @@
 		32DCEB1815EFDBC900D3B33A /* HackedDoulosF-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HackedDoulosF-Regular.ttf"; path = "ImageMapGen/HackedDoulosF-Regular.ttf"; sourceTree = "<group>"; };
 		32E102081110BFC100B1F030 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = Localization/fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32E729E01444EC3700E2B07B /* IPAIconTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = IPAIconTemplate.pdf; path = Palette/IPAIconTemplate.pdf; sourceTree = SOURCE_ROOT; };
-		32EB0F3020A0F54A00E31FC5 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Sparkle/DerivedData/Sparkle/Build/Products/Release/Sparkle.framework; sourceTree = "<group>"; };
+		32EB0F3020A0F54A00E31FC5 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "Sparkle-1.22.0/Sparkle.framework"; sourceTree = "<group>"; };
 		32EB972918D265900062A8FC /* ar */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Onizuka.strings; sourceTree = "<group>"; };
 		32EB972A18D265900062A8FC /* ca */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Onizuka.strings; sourceTree = "<group>"; };
 		32EB972B18D265900062A8FC /* cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Onizuka.strings; sourceTree = "<group>"; };
@@ -301,9 +299,9 @@
 			files = (
 				32463289209D05FC00FB3D64 /* Foundation.framework in Frameworks */,
 				32463287209D05D800FB3D64 /* AppKit.framework in Frameworks */,
-				32EB0F3120A0F55600E31FC5 /* Sparkle.framework in Frameworks */,
 				3293A86117C3EC1E00F07188 /* Carbon.framework in Frameworks */,
 				3293A95317C407C100F07188 /* Security.framework in Frameworks */,
+				32AE8D0A239AD47700AAB1F3 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +440,6 @@
 				328D79661B8D0BFD00F3FC0B /* ActivatePrefs.scpt */,
 				32C5DA01180DA88E00614A06 /* IPAManager.icns */,
 				321F610D17739315005B3255 /* Info.plist */,
-				32CC7421180F2504001F2F9A /* IPAPalette_pub.pem */,
 			);
 			name = IPAManager;
 			sourceTree = "<group>";
@@ -656,7 +653,6 @@
 				321F61201773A0AA005B3255 /* MainMenu.xib in Resources */,
 				321F61351773B775005B3255 /* Localizable.strings in Resources */,
 				32C5DA02180DA88E00614A06 /* IPAManager.icns in Resources */,
-				32CC7422180F2504001F2F9A /* IPAPalette_pub.pem in Resources */,
 				32EB974718D265900062A8FC /* Onizuka.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -870,8 +866,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Sparkle/DerivedData/Sparkle/Build/Products/Release",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Sparkle-1.22.0",
 				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
@@ -881,7 +877,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Sparkle/DerivedData/Sparkle/Build/Products/Release/Sparkle.framework\"/**";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Sparkle-1.22.0/Sparkle.framework/Versions/A/Headers/**";
 				INFOPLIST_FILE = IPAManager/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
@@ -901,8 +897,8 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Sparkle/DerivedData/Sparkle/Build/Products/Release",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Sparkle-1.22.0",
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -914,7 +910,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Sparkle/DerivedData/Sparkle/Build/Products/Release/Sparkle.framework\"/**";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Sparkle-1.22.0/Sparkle.framework/Versions/A/Headers/**";
 				INFOPLIST_FILE = IPAManager/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
@@ -1056,8 +1052,7 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/moseshll/Development/IPAPalette/Sparkle/DerivedData/Sparkle/Build/Products/Release,
-					"$(PROJECT_DIR)/Sparkle/DerivedData/Sparkle/Build/Products/Release",
+					"$(SRCROOT)/Sparkle-1.22.0/Sparkle.framework/Versions/A/Headers/**",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_PASCAL_STRINGS = NO;
@@ -1100,8 +1095,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/moseshll/Development/IPAPalette/Sparkle/DerivedData/Sparkle/Build/Products/Release,
-					"$(PROJECT_DIR)/Sparkle/DerivedData/Sparkle/Build/Products/Release",
+					"$(SRCROOT)/Sparkle-1.22.0/Sparkle.framework/Versions/A/Headers/**",
 				);
 				GCC_ENABLE_PASCAL_STRINGS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;

@@ -27,8 +27,6 @@
 	<key>CFBundleIconFile</key>
 	<string>IPAManager.icns</string>
 	<key>SUFeedURL</key>
-	<string>http://www.blugs.com/Appcasts/IPAPalette.xml</string>
-	<key>SUPublicDSAKeyFile</key>
-	<string>IPAPalette_pub.pem</string>
+	<string>https://www.blugs.com/Appcasts/IPAPalette.xml</string>
 </dict>
 </plist>
