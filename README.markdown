@@ -43,6 +43,10 @@ Requires my Onizuka localizer from <https://github.com/K8TIY/Onizuka>.
 It's set up as a git submodule, so just do the usual git submodule
 magic to get it set up (`git submodule init` followed by `git submodule update`).
 
+IPA Manager relies on the Sparkle Framework for auto-update functionality.
+Download that and extract in the `IPAPalette` directory
+so that there is a path `IPAPalette/Sparkle-1.22.0`.
+
 If you change any localizations (they're all in Localization/chardata.txt),
 run `./translator.py -s` to regenerate the *.strings files.
 
