@@ -132,6 +132,7 @@ static OSStatus local_CoreTR(CGContextRef ctx, CGRect r, CFStringRef string,
                                    1L, &kCFTypeDictionaryKeyCallBacks,
                                    &kCFTypeDictionaryValueCallBacks);
   CFDictionarySetValue(attrs, kCTFontAttributeName, font);
+  CFDictionarySetValue(attrs, kCTForegroundColorFromContextAttributeName, kCFBooleanTrue);
   CFAttributedStringRef attrStr = CFAttributedStringCreate(kCFAllocatorDefault,
                                                            string, attrs);
   CFRelease(attrs);
