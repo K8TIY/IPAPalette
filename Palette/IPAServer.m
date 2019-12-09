@@ -23,6 +23,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #import "PDFImageMapCreator.h"
 #import "KeylayoutParser.h"
 #import "NSView+Spinny.h"
+#import "NSApplication+DarkMode.h"
 
 @interface NSArray (IPAPalette)
 -(NSArray*)slice:(unsigned)size;
@@ -147,6 +148,7 @@ static void local_KeyboardChanged(CFNotificationCenterRef center,
 @end
 
 @interface IPAServer (Private)
+-(void)updateAppearance;
 -(void)addIPAFonts:(id)me;
 -(void)finishIPAFonts:(id)sender;
 -(void)runFontAlert;
@@ -321,6 +323,30 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
   [self syncAuxiliariesFromDefaults];
   // So we can call start tracking on it.
   [self tabView:_tabs didSelectTabViewItem:[_tabs selectedTabViewItem]];
+  [self updateAppearance];
+}
+
+-(void)updateAppearance
+{
+  BOOL dark = [NSApplication isDarkMode];
+  NSString* imageName = [PDFImageMapCreator copyPDFFileNameForName:@"Vow" dark:dark];
+  [_vowels setImage:[NSImage imageNamed:imageName]];
+  [imageName release];
+  imageName = [PDFImageMapCreator copyPDFFileNameForName:@"Cons" dark:dark];
+  [_consonants setImage:[NSImage imageNamed:imageName]];
+  [imageName release];
+  imageName = [PDFImageMapCreator copyPDFFileNameForName:@"SupraTone" dark:dark];
+  [_supra setImage:[NSImage imageNamed:imageName]];
+  [imageName release];
+  imageName = [PDFImageMapCreator copyPDFFileNameForName:@"Diacritic" dark:dark];
+  [_diacritic setImage:[NSImage imageNamed:imageName]];
+  [imageName release];
+  imageName = [PDFImageMapCreator copyPDFFileNameForName:@"Other" dark:dark];
+  [_other setImage:[NSImage imageNamed:imageName]];
+  [imageName release];
+  imageName = [PDFImageMapCreator copyPDFFileNameForName:@"ExtIPA" dark:dark];
+  [_extipa setImage:[NSImage imageNamed:imageName]];
+  [imageName release];
 }
 
 #define kLezh 0x026E // LZh digraph U+026E
@@ -484,7 +510,8 @@ NS_ENDHANDLER
       [_userGlyphsTab release];
     }
     NSArray* data = [glyphs slice:6];
-    [PDFImageMapCreator setPDFImageMap:_user toData:data ofType:PDFImageMapColumnar];
+    [PDFImageMapCreator setPDFImageMap:_user toData:data
+                        ofType:PDFImageMapColumnar dark:[NSApplication isDarkMode]];
     if ([_tabs selectedTabViewItem] == _userGlyphsTab) [_user startTracking];
     [self keyboardChanged];
   }
@@ -1186,12 +1213,15 @@ NS_ENDHANDLER
     if ([glyphs count])
     {
       NSArray* data = [glyphs slice:6];
-      [PDFImageMapCreator setPDFImageMap:newMap toData:data ofType:PDFImageMapColumnar];
+      [PDFImageMapCreator setPDFImageMap:newMap toData:data
+                          ofType:PDFImageMapColumnar dark:[NSApplication isDarkMode]];
     }
   }
   else
   {
-    [newMap setImage:[NSImage imageNamed:[NSString stringWithFormat:@"%@.pdf", name]]];
+    NSString* imageName = [PDFImageMapCreator copyPDFFileNameForName:name
+                                              dark:[NSApplication isDarkMode]];
+    [newMap setImage:[NSImage imageNamed:imageName]];
     NSString* path = [[NSBundle mainBundle] pathForResource:@"MapData" ofType:@"plist"];
     [newMap loadDataFromFile:path withName:name];
   }

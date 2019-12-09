@@ -60,7 +60,7 @@ typedef enum _MAWindowPosition {
     BOOL drawsRoundCornerBesideArrow;
     
     @private
-    NSColor *_MABackgroundColor;
+    //NSColor *_MABackgroundColor;
     NSView *_view;
     NSWindow *_window;
     NSPoint _point;
@@ -138,9 +138,9 @@ typedef enum _MAWindowPosition {
 - (void)setCornerRadius:(float)value;                  // See note 2 below.
 - (float)drawsRoundCornerBesideArrow;                  // See note 3 below.
 - (void)setDrawsRoundCornerBesideArrow:(float)value;   // See note 2 below.
-- (void)setBackgroundImage:(NSImage *)value;
-- (NSColor *)windowBackgroundColor;                    // See note 4 below.
-- (void)setBackgroundColor:(NSColor *)value;
+//- (void)setBackgroundImage:(NSImage *)value;
+//- (NSColor *)windowBackgroundColor;                    // See note 4 below.
+//- (void)setBackgroundColor:(NSColor *)value;
 
 /*
  Notes regarding accessor methods:

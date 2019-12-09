@@ -16,6 +16,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #import "GlyphView.h"
 #import <Carbon/Carbon.h>
 #import "Onizuka.h"
+#import "NSApplication+DarkMode.h"
 
 /* Note: in order to work around a Core Text cacheing bug in Snow Leopard,
    the TextRenderer routines must work on a copy of our mutable string,
@@ -80,6 +81,8 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
     r = NSInsetRect(bounds, GlyphViewBevelInset, GlyphViewBevelInset);
     CGRect cgr = CGRectMake(r.origin.x, r.origin.y, r.size.width, r.size.height);
     CGContextClipToRect(ctx, cgr);
+    if ([NSApplication isDarkMode]) CGContextSetRGBFillColor(ctx, 1.0f, 1.0f, 1.0f, 1.0f);
+    else CGContextSetRGBFillColor(ctx, 0.0f, 0.0f, 0.0f, 1.0f);
     NSString* tmp = [_font copy];
     OSStatus err = TRRenderText(ctx, cgr, (CFStringRef)_stringValue,
                                 (CFStringRef)tmp, _fontSize,

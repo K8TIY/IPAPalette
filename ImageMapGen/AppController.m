@@ -25,21 +25,21 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 -(void)makeConsonantChartWithXML:(NSMutableString*)xml
        inDirectory:(NSString*)dir writing:(BOOL)writing;
 -(void)makeVowelChartWithFrame:(BOOL)frame withXML:(NSMutableString*)xml
-       inDirectory:(NSString*)dir writing:(BOOL)writing;
+                   inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark;
 -(void)makeSupraToneChartWithXML:(NSMutableString*)xml
-       inDirectory:(NSString*)dir writing:(BOOL)writing;
+       inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark;
 -(void)makeDiacriticChartWithXML:(NSMutableString*)xml
-       inDirectory:(NSString*)dir writing:(BOOL)writing;
+       inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark;
 -(void)makeOtherChartWithXML:(NSMutableString*)xml
-       inDirectory:(NSString*)dir writing:(BOOL)writing;
+       inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark;
 -(void)makeExtIPAChartWithXML:(NSMutableString*)xml
-       inDirectory:(NSString*)dir writing:(BOOL)writing;
+       inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark;
 -(void)makeVPhChartWithXML:(NSMutableString*)xml
-       inDirectory:(NSString*)dir writing:(BOOL)writing;
+       inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark;
 -(void)makePalChartWithXML:(NSMutableString*)xml
-       inDirectory:(NSString*)dir writing:(BOOL)writing;
+       inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark;
 -(void)makeRetroChartWithXML:(NSMutableString*)xml
-       inDirectory:(NSString*)dir writing:(BOOL)writing;
+       inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark;
 @end
 
 #define kStandardFontSize (26.0)
@@ -78,7 +78,8 @@ typedef struct
   NSInteger result = [panel runModal];
   if (result == NSOKButton)
   {
-    NSString* dir = [[[panel URL] absoluteString] stringByDeletingLastPathComponent];
+    NSString* dir = [[panel URL] path];
+    //NSLog(@"Target dir %@", dir);
     [_info setHidden:NO];
     [_spinny setHidden:NO];
     [_spinny setIndeterminate:YES];
@@ -100,25 +101,49 @@ typedef struct
   [xml appendString:@"  \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n"];
   [xml appendString:@"<plist version=\"1.0\">\n<array>"];
   [self makeConsonantChartWithXML:xml inDirectory:dir
-    writing:NSOnState == [_consButton state]];
+        writing:NSOnState == [_consButton state] dark:NO];
+  [self makeConsonantChartWithXML:xml inDirectory:dir
+        writing:NSOnState == [_consButton state] dark:YES];
   [self makeVowelChartWithFrame:YES withXML:xml inDirectory:dir
-    writing:NSOnState == [_vowButton state]];
+        writing:NSOnState == [_vowButton state] dark:NO];
+  [self makeVowelChartWithFrame:YES withXML:xml inDirectory:dir
+        writing:NSOnState == [_vowButton state] dark:YES];
   [self makeVowelChartWithFrame:NO withXML:xml inDirectory:dir
-    writing:NSOnState == [_vowDragButton state]];
+        writing:NSOnState == [_vowDragButton state] dark:NO];
+  [self makeVowelChartWithFrame:NO withXML:xml inDirectory:dir
+        writing:NSOnState == [_vowDragButton state] dark:YES];
   [self makeSupraToneChartWithXML:xml inDirectory:dir
-    writing:NSOnState == [_supraToneButton state]];
+        writing:NSOnState == [_supraToneButton state] dark:NO];
+  [self makeSupraToneChartWithXML:xml inDirectory:dir
+        writing:NSOnState == [_supraToneButton state] dark:YES];
   [self makeDiacriticChartWithXML:xml inDirectory:dir
-    writing:NSOnState == [_diacriticButton state]];
+        writing:NSOnState == [_diacriticButton state] dark:NO];
+  [self makeDiacriticChartWithXML:xml inDirectory:dir
+        writing:NSOnState == [_diacriticButton state] dark:YES];
   [self makeOtherChartWithXML:xml inDirectory:dir
-    writing:NSOnState == [_otherButton state]];
+        writing:NSOnState == [_otherButton state] dark:NO];
+  [self makeOtherChartWithXML:xml inDirectory:dir
+        writing:NSOnState == [_otherButton state] dark:YES];
+  [self makeOtherChartWithXML:xml inDirectory:dir
+        writing:NSOnState == [_otherButton state] dark:NO];
+  [self makeOtherChartWithXML:xml inDirectory:dir
+        writing:NSOnState == [_otherButton state] dark:YES];
   [self makeExtIPAChartWithXML:xml inDirectory:dir
-    writing:NSOnState == [_extIPAButton state]];
+        writing:NSOnState == [_extIPAButton state] dark:NO];
+  [self makeExtIPAChartWithXML:xml inDirectory:dir
+        writing:NSOnState == [_extIPAButton state] dark:YES];
   [self makeVPhChartWithXML:xml inDirectory:dir
-    writing:NSOnState == [_vPhButton state]];
+        writing:NSOnState == [_vPhButton state] dark:NO];
+  [self makeVPhChartWithXML:xml inDirectory:dir
+        writing:NSOnState == [_vPhButton state] dark:YES];
   [self makePalChartWithXML:xml inDirectory:dir
-    writing:NSOnState == [_palButton state]];
+        writing:NSOnState == [_palButton state] dark:NO];
+  [self makePalChartWithXML:xml inDirectory:dir
+        writing:NSOnState == [_palButton state] dark:YES];
   [self makeRetroChartWithXML:xml inDirectory:dir
-    writing:NSOnState == [_retroButton state]];
+        writing:NSOnState == [_retroButton state] dark:NO];
+  [self makeRetroChartWithXML:xml inDirectory:dir
+        writing:NSOnState == [_retroButton state] dark:YES];
   [xml appendString:@"</array>\n</plist>\n"];
   NSString* path = [dir stringByAppendingPathComponent:@"MapData.plist"];
   NSURL* url = [NSURL fileURLWithPath:path];
@@ -134,6 +159,7 @@ NSString* plistEnd = @"</array>\n</plist>\n";
                                       writing:(BOOL)writing
 {
   NSString* path = [dir stringByAppendingPathComponent:file];
+  //NSLog(@"outputLocationInDirectory: %@", path);
   if (!writing)
   {
     NSString *tempFileTemplate =
@@ -157,15 +183,18 @@ NSString* plistEnd = @"</array>\n</plist>\n";
 #define kConsonantMargin         (0.0)
 #define kConsonantFontSize       (26.0)
 -(void)makeConsonantChartWithXML:(NSMutableString*)xml
-       inDirectory:(NSString*)dir writing:(BOOL)writing
+       inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark
 {
   CGFloat width = kConsonantWidthPerHeight*kImgHeight;
   CGRect imgRect = CGRectMake(0, 0, width+(2.0*kConsonantMargin), kImgHeight+(2.0*kConsonantMargin));
-  NSString* path = [self outputLocationInDirectory:dir file:@"Cons.pdf" writing:writing];
-  NSURL* url = [NSURL fileURLWithPath:path];
+  NSString* fileName = [PDFImageMapCreator copyPDFFileNameForName:@"Cons" dark:dark];
+  NSString* path = [self outputLocationInDirectory:dir file:fileName writing:writing];
+  [fileName release];
+  NSURL* url = [NSURL fileURLWithPath:path isDirectory:NO];
   CGContextRef ctx = CGPDFContextCreateWithURL((CFURLRef)url, &imgRect, NULL);
   PDFImageMapCreator* creator = [[PDFImageMapCreator alloc] initWithContext:ctx rect:imgRect data:nil];
   [creator setFontSize:kConsonantFontSize];
+  creator.darkMode = dark;
   [creator makeImageMapOfType:PDFImageMapConsonant named:@"Cons"];
   CGContextRelease(ctx);
   [xml appendString:[creator xmlWithContainer:NO]];
@@ -181,14 +210,18 @@ NSString* plistEnd = @"</array>\n</plist>\n";
 // If not frame, this is the dragging-source-only supplementary image.
 // Nothing is done to XML, and lines/dots are not drawn
 -(void)makeVowelChartWithFrame:(BOOL)frame withXML:(NSMutableString*)xml
-       inDirectory:(NSString*)dir writing:(BOOL)writing
+                   inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark
 {
   CGFloat width = kVowelWidthPerHeight*kImgHeight;
   CGRect imgRect = CGRectMake(0, 0, width, kImgHeight);
-  NSString* path = [self outputLocationInDirectory:dir file:(frame)? @"Vow.pdf":@"VowDrag.pdf" writing:writing];
+  NSString* basename = (frame)? @"Vow" : @"VowDrag";
+  NSString* fileName = [PDFImageMapCreator copyPDFFileNameForName:basename dark:dark];
+  NSString* path = [self outputLocationInDirectory:dir file:fileName writing:writing];
+  [fileName release];
   NSURL* url = [NSURL fileURLWithPath:path];
   CGContextRef ctx = CGPDFContextCreateWithURL((CFURLRef)url, &imgRect, NULL);
   PDFImageMapCreator* creator = [[PDFImageMapCreator alloc] initWithContext:ctx rect:imgRect data:nil];
+  creator.darkMode = dark;
   [creator makeImageMapOfType:(frame)?PDFImageMapVowel:PDFImageMapFramelessVowel named:@"Vow"];
   CGContextRelease(ctx);
   if (frame) [xml appendString:[creator xmlWithContainer:NO]];
@@ -202,11 +235,12 @@ NSString* plistEnd = @"</array>\n</plist>\n";
 //#define kDottedCircle (0x25CC)
 #define SupraToneDrawLines 0
 -(void)makeSupraToneChartWithXML:(NSMutableString*)xml
-       inDirectory:(NSString*)dir writing:(BOOL)writing;
+       inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark
 {
   double width = kSupraToneWidthPerHeight*kImgHeight;
   CGRect imgRect = CGRectMake(0, 0, width+(2.0*kSupraToneMargin), kImgHeight+(2.0*kSupraToneMargin));
-  NSString* path = [self outputLocationInDirectory:dir file:@"SupraTone.pdf" writing:writing];
+  NSString* fileName = [PDFImageMapCreator copyPDFFileNameForName:@"SupraTone" dark:dark];
+  NSString* path = [self outputLocationInDirectory:dir file:fileName writing:writing];
   NSURL* url = [NSURL fileURLWithPath:path];
   CGContextRef ctx = CGPDFContextCreateWithURL((CFURLRef)url, &imgRect, NULL);
   NSArray* glyphs = [NSArray arrayWithObjects:@"\xCC\x8B", @"\xCC\x81", @"\xCC\x84", @"\xCC\x80", @"\xCC\x8F", @"\xEA\x9C\x9B", @"\xEA\x9C\x9C", @"",
@@ -216,6 +250,7 @@ NSString* plistEnd = @"</array>\n</plist>\n";
   NSArray* data = [glyphs slice:8];
   PDFImageMapCreator* creator = [[PDFImageMapCreator alloc] initWithContext:ctx rect:imgRect data:data];
   [creator setFontSize:kStandardFontSize];
+  creator.darkMode = dark;
   [creator makeImageMapOfType:PDFImageMapColumnar named:@"SupraTone"];
   CGContextRelease(ctx);
   [xml appendString:[creator xmlWithContainer:NO]];
@@ -233,11 +268,12 @@ unichar diacritics[4][8] = {
   };
 
 -(void)makeDiacriticChartWithXML:(NSMutableString*)xml
-       inDirectory:(NSString*)dir writing:(BOOL)writing
+       inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark
 {
   double width = kDiacriticWidthPerHeight*kImgHeight;
   CGRect imgRect = CGRectMake(0, 0, width+(2.0*kDiacriticMargin), kImgHeight+(2.0*kDiacriticMargin));
-  NSString* path = [self outputLocationInDirectory:dir file:@"Diacritic.pdf" writing:writing];
+  NSString* fileName = [PDFImageMapCreator copyPDFFileNameForName:@"Diacritic" dark:dark];
+  NSString* path = [self outputLocationInDirectory:dir file:fileName writing:writing];
   NSURL* url = [NSURL fileURLWithPath:path];
   CGContextRef ctx = CGPDFContextCreateWithURL((CFURLRef)url, &imgRect, NULL);
   NSArray* glyphs = [NSArray arrayWithObjects:@"\xCC\xA5", @"\xCC\xAC", @"\xCC\xB9", @"\xCC\x9C", @"\xCC\x9F", @"\xCC\xA0", @"\xCC\x88", @"\xCC\xBD",
@@ -256,6 +292,7 @@ unichar diacritics[4][8] = {
   [creator setOverridePlaceholder:@"c" forString:@"\xCC\xA1"];
   [creator setOverridePlaceholder:@"c" forString:@"\xCC\xA2"];
   [creator setFontSize:kStandardFontSize];
+  creator.darkMode = dark;
   [creator makeImageMapOfType:PDFImageMapColumnar named:@"Diacritic"];
   CGContextRelease(ctx);
   [xml appendString:[creator xmlWithContainer:NO]];
@@ -263,11 +300,13 @@ unichar diacritics[4][8] = {
 }
 
 -(void)makeOtherChartWithXML:(NSMutableString*)xml
-       inDirectory:(NSString*)dir writing:(BOOL)writing
+       inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark
 {
   double width = kDiacriticWidthPerHeight*kImgHeight;
   CGRect imgRect = CGRectMake(0, 0, width+(2.0*kDiacriticMargin), kImgHeight+(2.0*kDiacriticMargin));
-  NSString* path = [self outputLocationInDirectory:dir file:@"Other.pdf" writing:writing];
+  NSString* fileName = [PDFImageMapCreator copyPDFFileNameForName:@"Other" dark:dark];
+  NSString* path = [self outputLocationInDirectory:dir file:fileName writing:writing];
+  [fileName release];
   NSURL* url = [NSURL fileURLWithPath:path];
   CGContextRef ctx = CGPDFContextCreateWithURL((CFURLRef)url, &imgRect, NULL);
   NSArray* glyphs = [NSArray arrayWithObjects:@"\xCA\x98", @"\xC7\x80", @"\xC7\x83", @"\xC7\x82", @"\xC7\x81", @"", @"", @"",
@@ -277,6 +316,7 @@ unichar diacritics[4][8] = {
   NSArray* data = [glyphs slice:8];
   PDFImageMapCreator* creator = [[PDFImageMapCreator alloc] initWithContext:ctx rect:imgRect data:data];
   [creator setFontSize:kStandardFontSize];
+  creator.darkMode = dark;
   [creator makeImageMapOfType:PDFImageMapColumnar named:@"Other"];
   CGContextRelease(ctx);
   [xml appendString:[creator xmlWithContainer:NO]];
@@ -284,11 +324,13 @@ unichar diacritics[4][8] = {
 }
 
 -(void)makeExtIPAChartWithXML:(NSMutableString*)xml
-       inDirectory:(NSString*)dir writing:(BOOL)writing
+                  inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark
 {
   double width = kDiacriticWidthPerHeight*kImgHeight;
   CGRect imgRect = CGRectMake(0, 0, width+(2.0*kDiacriticMargin), kImgHeight+(2.0*kDiacriticMargin));
-  NSString* path = [self outputLocationInDirectory:dir file:@"ExtIPA.pdf" writing:writing];
+  NSString* fileName = [PDFImageMapCreator copyPDFFileNameForName:@"ExtIPA" dark:dark];
+  NSString* path = [self outputLocationInDirectory:dir file:fileName writing:writing];
+  [fileName release];
   NSURL* url = [NSURL fileURLWithPath:path];
   CGContextRef ctx = CGPDFContextCreateWithURL((CFURLRef)url, &imgRect, NULL);
   NSArray* glyphs = [NSArray arrayWithObjects:@"\xCA\xAC", @"\xCA\xAD", @"\xCA\xAA", @"\xCA\xAB", @"\xCA\xA9", @"\xC2\xA1", @"\xC7\x83\xC2\xA1", @"\xE2\x80\xBC",
@@ -303,6 +345,7 @@ unichar diacritics[4][8] = {
   // FIXME: get rid of this when Doulos supports A7F8
   [creator setOverrideFont:@"HackedDoulosF" forString:@"\xEA\x9F\xB8"];
   [creator setOverridePlaceholder:@"\xEA\x9F\xB9" forString:@"\xEA\x9F\xB8"];
+  creator.darkMode = dark;
   [creator makeImageMapOfType:PDFImageMapColumnar named:@"ExtIPA"];
   CGContextRelease(ctx);
   [xml appendString:[creator xmlWithContainer:NO]];
@@ -311,11 +354,13 @@ unichar diacritics[4][8] = {
 
 #define kVPhWidthPerHeight (0.35)
 -(void)makeVPhChartWithXML:(NSMutableString*)xml
-       inDirectory:(NSString*)dir writing:(BOOL)writing
+               inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark
 {
   double width = kVPhWidthPerHeight*kImgHeight;
   CGRect imgRect = CGRectMake(0, 0, width+(2.0*kDiacriticMargin), kImgHeight+(2.0*kDiacriticMargin));
-  NSString* path = [self outputLocationInDirectory:dir file:@"VPh.pdf" writing:writing];
+  NSString* fileName = [PDFImageMapCreator copyPDFFileNameForName:@"VPh" dark:dark];
+  NSString* path = [self outputLocationInDirectory:dir file:fileName writing:writing];
+  [fileName release];
   NSURL* url = [NSURL fileURLWithPath:path];
   CGContextRef ctx = CGPDFContextCreateWithURL((CFURLRef)url, &imgRect, NULL);
   NSArray* glyphs = [NSArray arrayWithObjects:@"\xC9\xAB", @"\xE1\xB5\xAC", @"\xE1\xB5\xAD", @"\xE1\xB5\xAE", @"\xE1\xB5\xAF",
@@ -324,6 +369,7 @@ unichar diacritics[4][8] = {
   NSArray* data = [glyphs slice:6];
   PDFImageMapCreator* creator = [[PDFImageMapCreator alloc] initWithContext:ctx rect:imgRect data:data];
   [creator setFontSize:kSubviewFontSize];
+  creator.darkMode = dark;
   [creator makeImageMapOfType:PDFImageMapColumnar named:@"VPh"];
   CGContextRelease(ctx);
   [xml appendString:[creator xmlWithContainer:NO]];
@@ -332,11 +378,13 @@ unichar diacritics[4][8] = {
 
 #define kPalWidthPerHeight (0.35)
 -(void)makePalChartWithXML:(NSMutableString*)xml
-       inDirectory:(NSString*)dir writing:(BOOL)writing
+               inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark
 {
   double width = kPalWidthPerHeight*kImgHeight;
   CGRect imgRect = CGRectMake(0, 0, width+(2.0*kDiacriticMargin), kImgHeight+(2.0*kDiacriticMargin));
-  NSString* path = [self outputLocationInDirectory:dir file:@"Pal.pdf" writing:writing];
+  NSString* fileName = [PDFImageMapCreator copyPDFFileNameForName:@"Pal" dark:dark];
+  NSString* path = [self outputLocationInDirectory:dir file:fileName writing:writing];
+  [fileName release];
   NSURL* url = [NSURL fileURLWithPath:path];
   CGContextRef ctx = CGPDFContextCreateWithURL((CFURLRef)url, &imgRect, NULL);
   NSArray* glyphs = [NSArray arrayWithObjects:@"\xC6\xAB", @"\xE1\xB6\x80", @"\xE1\xB6\x81", @"\xE1\xB6\x82", @"\xE1\xB6\x83",
@@ -346,6 +394,7 @@ unichar diacritics[4][8] = {
   NSArray* data = [glyphs slice:6];
   PDFImageMapCreator* creator = [[PDFImageMapCreator alloc] initWithContext:ctx rect:imgRect data:data];
   [creator setFontSize:kSubviewFontSize];
+  creator.darkMode = dark;
   [creator makeImageMapOfType:PDFImageMapColumnar named:@"Pal"];
   CGContextRelease(ctx);
   [xml appendString:[creator xmlWithContainer:NO]];
@@ -354,11 +403,13 @@ unichar diacritics[4][8] = {
 
 #define kRetroWidthPerHeight (0.35)
 -(void)makeRetroChartWithXML:(NSMutableString*)xml
-       inDirectory:(NSString*)dir writing:(BOOL)writing
+                 inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark
 {
   double width = kPalWidthPerHeight*kImgHeight;
   CGRect imgRect = CGRectMake(0, 0, width+(2.0*kDiacriticMargin), kImgHeight+(2.0*kDiacriticMargin));
-  NSString* path = [self outputLocationInDirectory:dir file:@"Retro.pdf" writing:writing];
+  NSString* fileName = [PDFImageMapCreator copyPDFFileNameForName:@"Retro" dark:dark];
+  NSString* path = [self outputLocationInDirectory:dir file:fileName writing:writing];
+  [fileName release];
   NSURL* url = [NSURL fileURLWithPath:path];
   CGContextRef ctx = CGPDFContextCreateWithURL((CFURLRef)url, &imgRect, NULL);
   NSArray* glyphs = [NSArray arrayWithObjects:@"\xE1\xB6\x8F", @"\xE1\xB6\x91", @"\xE1\xB6\x92", @"\xE1\xB6\x93", @"\xE1\xB6\x94",
@@ -367,6 +418,7 @@ unichar diacritics[4][8] = {
   NSArray* data = [glyphs slice:6];
   PDFImageMapCreator* creator = [[PDFImageMapCreator alloc] initWithContext:ctx rect:imgRect data:data];
   [creator setFontSize:kSubviewFontSize];
+  creator.darkMode = dark;
   [creator makeImageMapOfType:PDFImageMapColumnar named:@"Retro"];
   CGContextRelease(ctx);
   [xml appendString:[creator xmlWithContainer:NO]];

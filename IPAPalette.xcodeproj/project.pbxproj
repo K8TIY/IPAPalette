@@ -71,6 +71,17 @@
 		32F57E4B148944C30032B77E /* KeylayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4CECA147AF8B2008973BD /* KeylayoutParser.m */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		A6591F7B239B423500270422 /* ExtIPA_dk.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A6591F71239B423400270422 /* ExtIPA_dk.pdf */; };
+		A6591F7C239B423500270422 /* VowDrag_dk.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A6591F72239B423400270422 /* VowDrag_dk.pdf */; };
+		A6591F7D239B423500270422 /* Diacritic_dk.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A6591F73239B423400270422 /* Diacritic_dk.pdf */; };
+		A6591F7E239B423500270422 /* Cons_dk.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A6591F74239B423400270422 /* Cons_dk.pdf */; };
+		A6591F7F239B423500270422 /* VPh_dk.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A6591F75239B423400270422 /* VPh_dk.pdf */; };
+		A6591F80239B423500270422 /* Retro_dk.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A6591F76239B423400270422 /* Retro_dk.pdf */; };
+		A6591F81239B423500270422 /* Pal_dk.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A6591F77239B423400270422 /* Pal_dk.pdf */; };
+		A6591F82239B423500270422 /* Vow_dk.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A6591F78239B423500270422 /* Vow_dk.pdf */; };
+		A6591F83239B423500270422 /* SupraTone_dk.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A6591F79239B423500270422 /* SupraTone_dk.pdf */; };
+		A6591F84239B423500270422 /* Other_dk.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A6591F7A239B423500270422 /* Other_dk.pdf */; };
+		A6591F87239B54C100270422 /* NSApplication+DarkMode.m in Sources */ = {isa = PBXBuildFile; fileRef = A6591F86239B54C100270422 /* NSApplication+DarkMode.m */; };
 		E93074B70A5C264700470842 /* InputMethodKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93074B60A5C264700470842 /* InputMethodKit.framework */; };
 		E93074E20A5C2F1200470842 /* IPAInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93074E10A5C2F1200470842 /* IPAInputController.m */; };
 /* End PBXBuildFile section */
@@ -242,6 +253,18 @@
 		32FE85E611629A0700E64D62 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = Localization/nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Palette/Info.plist; sourceTree = SOURCE_ROOT; };
 		8D1107320486CEB800E47090 /* IPAPalette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPAPalette.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6591F71239B423400270422 /* ExtIPA_dk.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ExtIPA_dk.pdf; sourceTree = "<group>"; };
+		A6591F72239B423400270422 /* VowDrag_dk.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = VowDrag_dk.pdf; sourceTree = "<group>"; };
+		A6591F73239B423400270422 /* Diacritic_dk.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Diacritic_dk.pdf; sourceTree = "<group>"; };
+		A6591F74239B423400270422 /* Cons_dk.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Cons_dk.pdf; sourceTree = "<group>"; };
+		A6591F75239B423400270422 /* VPh_dk.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = VPh_dk.pdf; sourceTree = "<group>"; };
+		A6591F76239B423400270422 /* Retro_dk.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Retro_dk.pdf; sourceTree = "<group>"; };
+		A6591F77239B423400270422 /* Pal_dk.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Pal_dk.pdf; sourceTree = "<group>"; };
+		A6591F78239B423500270422 /* Vow_dk.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Vow_dk.pdf; sourceTree = "<group>"; };
+		A6591F79239B423500270422 /* SupraTone_dk.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = SupraTone_dk.pdf; sourceTree = "<group>"; };
+		A6591F7A239B423500270422 /* Other_dk.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Other_dk.pdf; sourceTree = "<group>"; };
+		A6591F85239B54C100270422 /* NSApplication+DarkMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSApplication+DarkMode.h"; sourceTree = "<group>"; };
+		A6591F86239B54C100270422 /* NSApplication+DarkMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+DarkMode.m"; sourceTree = "<group>"; };
 		E93074B60A5C264700470842 /* InputMethodKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputMethodKit.framework; path = /System/Library/Frameworks/InputMethodKit.framework; sourceTree = "<absolute>"; };
 		E93074E00A5C2F1200470842 /* IPAInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPAInputController.h; path = Palette/IPAInputController.h; sourceTree = SOURCE_ROOT; };
 		E93074E10A5C2F1200470842 /* IPAInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPAInputController.m; path = Palette/IPAInputController.m; sourceTree = SOURCE_ROOT; };
@@ -336,6 +359,8 @@
 				325554FD105AF4AD007222C6 /* GlyphView.m */,
 				32DB949714ED9B5A008A805A /* NSView+Spinny.h */,
 				32DB949814ED9B5A008A805A /* NSView+Spinny.m */,
+				A6591F85239B54C100270422 /* NSApplication+DarkMode.h */,
+				A6591F86239B54C100270422 /* NSApplication+DarkMode.m */,
 				325554F8105AF4AD007222C6 /* CMAPParser.h */,
 				325554F7105AF4AD007222C6 /* CMAPParser.c */,
 				32555507105AF4AD007222C6 /* PDFImageMap.h */,
@@ -412,6 +437,16 @@
 				3237888A1072812C00149CCD /* Vow.pdf */,
 				323788891072812C00149CCD /* VowDrag.pdf */,
 				32B0660F13BA7E1100EB242B /* VPh.pdf */,
+				A6591F74239B423400270422 /* Cons_dk.pdf */,
+				A6591F73239B423400270422 /* Diacritic_dk.pdf */,
+				A6591F71239B423400270422 /* ExtIPA_dk.pdf */,
+				A6591F7A239B423500270422 /* Other_dk.pdf */,
+				A6591F77239B423400270422 /* Pal_dk.pdf */,
+				A6591F76239B423400270422 /* Retro_dk.pdf */,
+				A6591F79239B423500270422 /* SupraTone_dk.pdf */,
+				A6591F78239B423500270422 /* Vow_dk.pdf */,
+				A6591F72239B423400270422 /* VowDrag_dk.pdf */,
+				A6591F75239B423400270422 /* VPh_dk.pdf */,
 				32555503105AF4AD007222C6 /* MapData.plist */,
 			);
 			path = ImageMaps;
@@ -595,6 +630,7 @@
 				sv,
 				tr,
 				uk,
+				"en-GB",
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* NumberInput */;
 			productRefGroup = 19C28FACFE9D520D11CA2CBB /* Products */;
@@ -635,17 +671,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6591F7F239B423500270422 /* VPh_dk.pdf in Resources */,
 				3247FE961051B3B70013F223 /* IPAIcon.tif in Resources */,
+				A6591F81239B423500270422 /* Pal_dk.pdf in Resources */,
+				A6591F80239B423500270422 /* Retro_dk.pdf in Resources */,
 				3229611713846B22008157E9 /* MainMenu.xib in Resources */,
 				3229612413846B61008157E9 /* Cons.pdf in Resources */,
 				3229612513846B61008157E9 /* Vow.pdf in Resources */,
 				3229612613846B61008157E9 /* VowDrag.pdf in Resources */,
+				A6591F82239B423500270422 /* Vow_dk.pdf in Resources */,
 				3229612713846B61008157E9 /* SupraTone.pdf in Resources */,
+				A6591F83239B423500270422 /* SupraTone_dk.pdf in Resources */,
 				3229612813846B61008157E9 /* Diacritic.pdf in Resources */,
 				3229612913846B61008157E9 /* ExtIPA.pdf in Resources */,
+				A6591F7D239B423500270422 /* Diacritic_dk.pdf in Resources */,
+				A6591F7C239B423500270422 /* VowDrag_dk.pdf in Resources */,
 				3229612A13846B61008157E9 /* Other.pdf in Resources */,
 				3229612E13846B6D008157E9 /* plus.icns in Resources */,
+				A6591F7E239B423500270422 /* Cons_dk.pdf in Resources */,
+				A6591F84239B423500270422 /* Other_dk.pdf in Resources */,
 				3229612F13846B6D008157E9 /* Localizable.strings in Resources */,
+				A6591F7B239B423500270422 /* ExtIPA_dk.pdf in Resources */,
 				3229613013846B6D008157E9 /* MapData.plist in Resources */,
 				3229613113846B6D008157E9 /* Alts.strings in Resources */,
 				32B0660A13BA7DEB00EB242B /* Pal.pdf in Resources */,
@@ -718,6 +764,7 @@
 				3229611B13846B4C008157E9 /* GlyphView.m in Sources */,
 				3229611C13846B4C008157E9 /* IPAServer.m in Sources */,
 				3229611D13846B4D008157E9 /* PDFImageMap.m in Sources */,
+				A6591F87239B54C100270422 /* NSApplication+DarkMode.m in Sources */,
 				3229611E13846B4E008157E9 /* PDFImageMapCreator.m in Sources */,
 				3229611F13846B4E008157E9 /* Placeholder.c in Sources */,
 				3229612013846B50008157E9 /* TextRenderer.c in Sources */,
@@ -829,6 +876,7 @@
 				INSTALL_PATH = Applications;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MARKETING_VERSION = 2.3;
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.blugs.IPAManager;
 				PRODUCT_NAME = "IPA Manager";
@@ -866,6 +914,7 @@
 				INSTALL_PATH = Applications;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MARKETING_VERSION = 2.3;
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.blugs.IPAManager;
 				PRODUCT_NAME = "IPA Manager";

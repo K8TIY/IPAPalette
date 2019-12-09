@@ -16,6 +16,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #import "PDFImageMap.h"
 #import <Carbon/Carbon.h>
 #import "PDFImageMapCreator.h"
+#import "NSApplication+DarkMode.h"
 
 @interface PDFImageMap (Private)
 -(void)_coreInit;
@@ -156,7 +157,10 @@ static id gEventMonitor = NULL;
     if (submapName)
     {
       if (!_submaps) _submaps = [[NSMutableDictionary alloc] initWithCapacity:1];
-      NSImage* image = [NSImage imageNamed:submapName];
+      NSString* submapPDF = [PDFImageMapCreator copyPDFFileNameForName:submapName
+                                                dark:[NSApplication isDarkMode]];
+      NSImage* image = [NSImage imageNamed:submapPDF];
+      [submapPDF release];
       NSRect frame = NSZeroRect;
       frame.size = [image size];
       PDFImageMap* submap = [[PDFImageMap alloc] initWithFrame:frame];
@@ -375,7 +379,8 @@ static id gEventMonitor = NULL;
           [drag setDraggingFrame:r contents:draggingImage];
           NSArray* drags = [[NSArray alloc] initWithObjects:drag, NULL];
           [drag release];
-          (void)[self beginDraggingSessionWithItems:drags event:evt source:self];
+          NSDraggingSession* session = [self beginDraggingSessionWithItems:drags event:evt source:self];
+          if (!_draggingSymbol) session.animatesToStartingPositionsOnCancelOrFail = NO;
           [drags release];
           [draggingImage release];
           _dragging = NO;

@@ -8,7 +8,7 @@
 #import "MAAttachedWindow.h"
 
 //#define MAATTACHEDWINDOW_DEFAULT_BACKGROUND_COLOR [NSColor colorWithCalibratedWhite:0.1 alpha:0.75]
-#define MAATTACHEDWINDOW_DEFAULT_BACKGROUND_COLOR [NSColor colorWithCalibratedWhite:0.9f alpha:0.90f]
+//#define MAATTACHEDWINDOW_DEFAULT_BACKGROUND_COLOR [NSColor colorWithCalibratedWhite:0.9f alpha:0.90f]
 #define MAATTACHEDWINDOW_DEFAULT_BORDER_COLOR [NSColor whiteColor]
 //#define MAATTACHEDWINDOW_SCALE_FACTOR [[NSScreen mainScreen] backingScaleFactor]
 #define MAATTACHEDWINDOW_SCALE_FACTOR (1)
@@ -22,7 +22,7 @@
 
 // Drawing
 - (void)_updateBackground;
-- (NSColor *)_backgroundColorPatternImage;
+//- (NSColor *)_backgroundColorPatternImage;
 - (NSBezierPath *)_backgroundPath;
 - (void)_appendArrowToPath:(NSBezierPath *)path;
 - (void)_redisplay;
@@ -60,7 +60,7 @@
         _distance = distance;
         
         // Configure window characteristics.
-        [super setBackgroundColor:[NSColor clearColor]];
+        //[super setBackgroundColor:[NSColor clearColor]];
         [self setMovableByWindowBackground:NO];
         [self setExcludedFromWindowsMenu:YES];
         [self setAlphaValue:1.0f];
@@ -69,7 +69,7 @@
         [self useOptimizedDrawing:YES];
         
         // Set up some sensible defaults for display.
-        _MABackgroundColor = [MAATTACHEDWINDOW_DEFAULT_BACKGROUND_COLOR copy];
+        //_MABackgroundColor = [MAATTACHEDWINDOW_DEFAULT_BACKGROUND_COLOR copy];
         borderColor = [MAATTACHEDWINDOW_DEFAULT_BORDER_COLOR copy];
         borderWidth = 2.0f;
         viewMargin = 2.0f;
@@ -169,7 +169,7 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [borderColor release];
-    [_MABackgroundColor release];
+    //[_MABackgroundColor release];
     
     [super dealloc];
 }
@@ -434,7 +434,7 @@
     // it in this class to let us set the entire background image of the window 
     // as an NSColor patternImage.
     NSDisableScreenUpdates();
-    [super setBackgroundColor:[self _backgroundColorPatternImage]];
+    //[super setBackgroundColor:[self _backgroundColorPatternImage]];
     if ([self isVisible]) {
         [self display];
         [self invalidateShadow];
@@ -442,7 +442,7 @@
     NSEnableScreenUpdates();
 }
 
-
+/*
 - (NSColor *)_backgroundColorPatternImage
 {
     NSImage *bg = [[NSImage alloc] initWithSize:[self frame].size];
@@ -455,8 +455,8 @@
     [bgPath addClip];
     
     // Draw background.
-    [_MABackgroundColor set];
-    [bgPath fill];
+    //[_MABackgroundColor set];
+    //[bgPath fill];
     
     // Draw border if appropriate.
     if (borderWidth > 0) {
@@ -471,7 +471,7 @@
     
     return [NSColor colorWithPatternImage:[bg autorelease]];
 }
-
+*/
 
 - (NSBezierPath *)_backgroundPath
 {
@@ -802,7 +802,7 @@
 	NSEnableScreenUpdates();
 }
 
-
+/*
 - (NSColor *)windowBackgroundColor {
     return [[_MABackgroundColor retain] autorelease];
 }
@@ -816,7 +816,7 @@
         [self _updateBackground];
     }
 }
-
+*/
 
 - (NSColor *)borderColor {
     return [[borderColor retain] autorelease];
@@ -949,13 +949,13 @@
     }
 }
 
-
+/*
 - (void)setBackgroundImage:(NSImage *)value
 {
     if (value) {
         [self setBackgroundColor:[NSColor colorWithPatternImage:value]];
     }
 }
-
+*/
 
 @end

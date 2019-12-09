@@ -68,7 +68,16 @@ static void local_ReleaseInfoCB(void* info);
 @end
 
 @implementation PDFImageMapCreator
-+(void)setPDFImageMap:(PDFImageMap*)map toData:(NSArray*)data ofType:(PDFImageMapType)type
+@synthesize darkMode=_darkMode;
+
++(NSString*)copyPDFFileNameForName:(NSString*)name dark:(BOOL)dark
+{
+  return [[NSString alloc] initWithFormat:@"%@%@.pdf", name,
+                           (dark)? @"_dk" : @""];
+}
+
++(void)setPDFImageMap:(PDFImageMap*)map toData:(NSArray*)data
+       ofType:(PDFImageMapType)type dark:(BOOL)dark
 {
   NSSize imgSize = [map bounds].size;
   NSUInteger slices = [data count];
@@ -84,6 +93,7 @@ static void local_ReleaseInfoCB(void* info);
   CGDataConsumerRef consumer = CGDataConsumerCreate(pdfData, &cbs);
   CGContextRef ctx = CGPDFContextCreate(consumer, &imgRect, nil);
   PDFImageMapCreator* creator = [[PDFImageMapCreator alloc] initWithContext:ctx rect:imgRect data:data];
+  creator.darkMode = dark;
   [creator makeImageMapOfType:type named:@"Custom"];
   NSArray* dat = (NSArray*)[[creator xmlWithContainer:YES] propertyList];
   [creator release];
@@ -133,10 +143,12 @@ static void local_ReleaseInfoCB(void* info);
 
 #if !__PDFIMC_RUNTIME_ONLY__
 +(void)drawSubmapIndicatorInRect:(CGRect)rect context:(CGContextRef)ctx
+       dark:(BOOL)dark
 {
   CGContextSaveGState(ctx);
   CGMutablePathRef path = [PDFImageMapCreator newSubmapIndicatorQuartzInRect:rect];
-  CGContextSetRGBFillColor(ctx, 0.1f, 0.1f, 0.9f, 0.75f);
+  if (dark) CGContextSetRGBFillColor(ctx, 0.7f, 0.7f, 0.9f, 0.75f);
+  else CGContextSetRGBFillColor(ctx, 0.1f, 0.1f, 0.9f, 0.75f);
   CGContextAddPath(ctx, path);
   CGContextSetShadow(ctx, CGSizeMake(2.0f, -2.0f), 4.0);
   CGContextFillPath(ctx);
@@ -236,8 +248,16 @@ const CGFloat PDFImageMapVowelQuadOverhang   = 0.4L; // Fraction of width
 {
   CGPDFContextBeginPage(_ctx, NULL);
   CGContextSetLineJoin(_ctx, kCGLineJoinMiter);
-  CGContextSetRGBStrokeColor(_ctx, 0.0f, 0.0f, 0.0f, 1.0f);
-  CGContextSetRGBFillColor(_ctx, 0.0f, 0.0f, 0.0f, 1.0f);
+  if (_darkMode)
+  {
+    CGContextSetRGBStrokeColor(_ctx, 1.0f, 1.0f, 1.0f, 1.0f);
+    CGContextSetRGBFillColor(_ctx, 1.0f, 1.0f, 1.0f, 1.0f);
+  }
+  else
+  {
+    CGContextSetRGBStrokeColor(_ctx, 0.0f, 0.0f, 0.0f, 1.0f);
+    CGContextSetRGBFillColor(_ctx, 0.0f, 0.0f, 0.0f, 1.0f);
+  }
   CGRect imgRect = CGRectMake(0.0f, 0.0f, _rect.size.width, _rect.size.height);
   imgRect.size.width = imgRect.size.height*PDFImageMapVowelWidthPerHeight;
   if (imgRect.size.width > _rect.size.width)
@@ -441,7 +461,8 @@ CGFloat PDFImageMapConsonantWidthPerHeight = 2.9f;
 {
   CGPDFContextBeginPage(_ctx, NULL);
   CGContextSetLineJoin(_ctx, kCGLineJoinMiter);
-  CGContextSetRGBStrokeColor(_ctx, 0.0f, 0.0f, 0.0f, 1.0f);
+  if (_darkMode) CGContextSetRGBStrokeColor(_ctx, 1.0f, 1.0f, 1.0f, 1.0f);
+  else CGContextSetRGBStrokeColor(_ctx, 0.0f, 0.0f, 0.0f, 1.0f);
   CGContextSetRGBFillColor(_ctx, 0.0f, 0.0f, 0.0f, 1.0f);
   CGRect imgRect = CGRectMake(0.0f, 0.0f, _rect.size.width, _rect.size.height);
   imgRect.size.width = imgRect.size.height*PDFImageMapConsonantWidthPerHeight;
@@ -498,19 +519,19 @@ CGFloat PDFImageMapConsonantWidthPerHeight = 2.9f;
       //CGFloat x2 = x + dx;
       //NSLog(@"y %f y2 %f x %f x2 %f", y, y2, x, x2);
       ConsInfo info = cinfo[row][col];
-      prect = CGRectMake(x,y,dx,dy);
+      prect = CGRectMake(x, y, dx, dy);
       CGRect chrect = prect;
       if (info.possibility > 0)
       {
         if (info.possibility == 1) chrect.origin.x += halfdx;
         if (info.possibility < 3) chrect.size.width = halfdx;
-        CGContextSetRGBFillColor(_ctx,0.78f,0.78f,0.78f,1.0f);
+        CGContextSetRGBFillColor(_ctx, 0.78f, 0.78f, 0.78f, 1.0f);
         CGContextFillRect(_ctx, chrect);
         if (info.possibility < 3)
         {
           CGContextBeginPath(_ctx);
-          CGContextMoveToPoint(_ctx,x+halfdx,y);
-          CGContextAddLineToPoint(_ctx,x+halfdx,y2);
+          CGContextMoveToPoint(_ctx, x+halfdx, y);
+          CGContextAddLineToPoint(_ctx, x+halfdx, y2);
           CGContextStrokePath(_ctx);
         }
       }
@@ -521,6 +542,8 @@ CGFloat PDFImageMapConsonantWidthPerHeight = 2.9f;
         chrect = prect;
         chrect.size.width = halfdx;
         str = [[NSString alloc] initWithCharacters:&(info.voiceless) length:1L];
+        if (_darkMode) CGContextSetRGBFillColor(_ctx, 1.0f, 1.0f, 1.0f, 1.0f);
+        else CGContextSetRGBFillColor(_ctx, 0.0f, 0.0f, 0.0f, 1.0f);
         (void)TRRenderText(_ctx, chrect, (CFStringRef)str, (CFStringRef)_preferredFont, _fontSize, TRSubstituteFallbackBehavior, baseline);
         pctRect = NSMakeRect((chrect.origin.x-_rect.origin.x)/_rect.size.width,
                              (chrect.origin.y-_rect.origin.y)/_rect.size.height,
@@ -537,6 +560,8 @@ CGFloat PDFImageMapConsonantWidthPerHeight = 2.9f;
         chrect.origin.x += halfdx;
         chrect.size.width = halfdx;
         str = [[NSString alloc] initWithCharacters:&(info.voiced) length:1L];
+        if (_darkMode) CGContextSetRGBFillColor(_ctx, 1.0f, 1.0f, 1.0f, 1.0f);
+        else CGContextSetRGBFillColor(_ctx, 0.0f, 0.0f, 0.0f, 1.0f);
         (void)TRRenderText(_ctx, chrect, (CFStringRef)str, (CFStringRef)_preferredFont, _fontSize, TRSubstituteFallbackBehavior, baseline);
         pctRect = NSMakeRect((chrect.origin.x-_rect.origin.x)/_rect.size.width,
                              (chrect.origin.y-_rect.origin.y)/_rect.size.height,
@@ -586,8 +611,16 @@ CGFloat PDFImageMapConsonantWidthPerHeight = 2.9f;
 {
   CGPDFContextBeginPage(_ctx, NULL);
   CGContextSetLineJoin(_ctx, kCGLineJoinMiter);
-  CGContextSetRGBStrokeColor(_ctx, 0.0f, 0.0f, 0.0f, 1.0f);
-  CGContextSetRGBFillColor(_ctx, 0.0f, 0.0f, 0.0f, 1.0f);
+  if (_darkMode)
+  {
+    CGContextSetRGBStrokeColor(_ctx, 1.0f, 1.0f, 1.0f, 1.0f);
+    CGContextSetRGBFillColor(_ctx, 1.0f, 1.0f, 1.0f, 1.0f);
+  }
+  else
+  {
+    CGContextSetRGBStrokeColor(_ctx, 0.0f, 0.0f, 0.0f, 1.0f);
+    CGContextSetRGBFillColor(_ctx, 0.0f, 0.0f, 0.0f, 1.0f);
+  }
   CGRect r = _rect;
   NSUInteger cols = [_data count];
   NSUInteger rows = 1;
@@ -602,7 +635,7 @@ CGFloat PDFImageMapConsonantWidthPerHeight = 2.9f;
   CGFloat dx = r.size.width/cols;
   CGFloat dy = r.size.height/rows;
   NSUInteger row, col;
-  CGRect chrect = CGRectMake(0.0f,0.0f,dx,dy);
+  CGRect chrect = CGRectMake(0.0f, 0.0f, dx, dy);
   CGFloat baseline = 0.0f;
   CGFloat strSize;
   if (!_fontSize)
@@ -660,7 +693,8 @@ CGFloat PDFImageMapConsonantWidthPerHeight = 2.9f;
   }
   CGContextSetRGBStrokeColor(_ctx, 1.0f, 0.0f, 0.0f, 0.5f);
   CGContextStrokePath(_ctx);
-  CGContextSetRGBStrokeColor(_ctx, 0.0f, 0.0f, 0.0f, 1.0f);
+  if (_darkMode) CGContextSetRGBStrokeColor(_ctx, 1.0f, 1.0f, 1.0f, 1.0f);
+  else CGContextSetRGBStrokeColor(_ctx, 0.0f, 0.0f, 0.0f, 1.0f);
   // Draw the vertical lines
   CGContextBeginPath(_ctx);
   for (col = 1; col < cols; col++)
@@ -698,8 +732,11 @@ CGFloat PDFImageMapConsonantWidthPerHeight = 2.9f;
       }
       chrect.origin.y = r.origin.y + ((rows-row-1)*dy);
     #if !__PDFIMC_RUNTIME_ONLY__
-      if (submap) [PDFImageMapCreator drawSubmapIndicatorInRect:chrect context:_ctx];
+      if (submap) [PDFImageMapCreator drawSubmapIndicatorInRect:chrect
+                                      context:_ctx dark:_darkMode];
     #endif
+      if (_darkMode) CGContextSetRGBFillColor(_ctx, 1.0f, 1.0f, 1.0f, 1.0f);
+      else CGContextSetRGBFillColor(_ctx, 0.0f, 0.0f, 0.0f, 1.0f);
       OSStatus err = TRRenderText(_ctx, chrect, (CFStringRef)toDraw, (CFStringRef)useFont, _fontSize, TRSubstituteFallbackBehavior, baseline);
       if (err) NSLog(@"Error: %ld drawing %@", (long)err, toDraw);
       //NSLog(@"%@ in %@ at %f baseline %f (%d) (%@)", toDraw, NSStringFromRect(*(NSRect*)&chrect), _fontSize, baseline, err, useFont);

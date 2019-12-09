@@ -45,12 +45,18 @@ typedef enum
   NSMutableDictionary* _stringOverrides;
   NSMutableDictionary* _placeholderOverrides;
   CGFloat              _fontSize;
+  BOOL                 _darkMode;
 }
-+(void)setPDFImageMap:(PDFImageMap*)map toData:(NSArray*)data ofType:(PDFImageMapType)type;
+
+@property (nonatomic, assign) BOOL darkMode;
++(NSString*)copyPDFFileNameForName:(NSString*)name dark:(BOOL)dark;
++(void)setPDFImageMap:(PDFImageMap*)map toData:(NSArray*)data
+       ofType:(PDFImageMapType)type dark:(BOOL)dark;
 +(CGMutablePathRef)newSubmapIndicatorQuartzInRect:(CGRect)rect;
 +(NSBezierPath*)newSubmapIndicatorCocoaInRect:(NSRect)rect;
 #if !__PDFIMC_RUNTIME_ONLY__
-+(void)drawSubmapIndicatorInRect:(CGRect)rect context:(CGContextRef)ctx;
++(void)drawSubmapIndicatorInRect:(CGRect)rect context:(CGContextRef)ctx
+       dark:(BOOL)dark;
 #endif
 -(id)initWithContext:(void*)ctx rect:(CGRect)rect data:(NSArray*)data;
 -(void)setFontSize:(CGFloat)size;
