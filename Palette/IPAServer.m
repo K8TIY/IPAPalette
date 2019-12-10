@@ -1155,6 +1155,8 @@ NS_ENDHANDLER
   [style setAlignment:NSTextAlignmentCenter];
   NSMutableAttributedString* seq2 = [[NSMutableAttributedString alloc] initWithString:seq];
   NSColor* col = [NSColor colorWithCalibratedRed:0.75 green:0.1 blue:0.1 alpha:1.0];
+  if ([NSApplication isDarkMode])
+    col = [NSColor colorWithCalibratedRed:1.0 green:0.55 blue:0.55 alpha:1.0];
   unsigned i;
   for (i = 0; i < [seq length]; i++)
   {
