@@ -32,7 +32,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   HackedProgressIndicator* spinny = [self viewWithTag:0xABCDEF];
   if (spinny) return;
   spinny = [[HackedProgressIndicator alloc] init];
-  [spinny setControlSize:NSRegularControlSize];
+  [spinny setControlSize:NSControlSizeRegular]; // aka NSRegularControlSize
   [spinny setStyle:NSProgressIndicatorSpinningStyle];
   NSRect bounds = [self bounds];
   NSRect piFrame = NSMakeRect(bounds.size.width / 2.0,

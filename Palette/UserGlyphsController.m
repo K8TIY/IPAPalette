@@ -284,8 +284,8 @@ static NSString* const IPASymbolListRows = @"IPASymbolListRows";
 	// We don't ever want to drop onto a row, only between rows.
 	if (op == NSTableViewDropOn)
 		[table setDropRow:(row+1) dropOperation:NSTableViewDropAbove];
-  NSUInteger modifiers = [[NSApp currentEvent] modifierFlags] & NSDeviceIndependentModifierFlagsMask;
-  if (modifiers == NSAlternateKeyMask) return NSDragOperationCopy;
+  NSUInteger modifiers = [[NSApp currentEvent] modifierFlags] & NSEventModifierFlagDeviceIndependentFlagsMask;
+  if (modifiers == NSEventModifierFlagOption) return NSDragOperationCopy;
   return NSDragOperationMove;
 }
 
@@ -390,7 +390,7 @@ static NSString* const IPASymbolListRows = @"IPASymbolListRows";
 -(BOOL)performKeyEquivalent:(NSEvent*)evt
 {
   BOOL handled = NO;
-  if ([evt modifierFlags] & NSCommandKeyMask)
+  if ([evt modifierFlags] & NSEventModifierFlagCommand)
   {
     handled = YES;
     NSString* chars = [evt charactersIgnoringModifiers];

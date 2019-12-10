@@ -195,7 +195,7 @@ static id gEventMonitor = NULL;
   NSPoint where = [[self window] mouseLocationOutsideOfEventStream];
   if (NSPointInRect(where, [self bounds]))
   {
-    NSEvent* evt = [NSEvent enterExitEventWithType:NSMouseEntered
+    NSEvent* evt = [NSEvent enterExitEventWithType:NSEventTypeMouseEntered
                     location:where modifierFlags:0 timestamp:0.0
                     windowNumber:0 context:[NSGraphicsContext currentContext]
                     eventNumber:0 trackingNumber:_trackingRect userData:NULL];
@@ -237,7 +237,7 @@ static id gEventMonitor = NULL;
     // Deprecated
     //[_copyImage compositeToPoint:ir.origin operation:NSCompositeSourceOver];
     [_copyImage drawInRect:ir fromRect:NSZeroRect
-                operation:NSCompositeSourceOver fraction:1.0];
+                operation:NSCompositingOperationSourceOver fraction:1.0];
   }
 }
 
@@ -335,10 +335,10 @@ static id gEventMonitor = NULL;
   }
   while (YES)
   {
-    evt = [[self window] nextEventMatchingMask:NSLeftMouseDraggedMask | NSLeftMouseUpMask];
+    evt = [[self window] nextEventMatchingMask:NSEventMaskLeftMouseDragged | NSEventMaskLeftMouseUp];
     if (evt)
     {
-      if ([evt type] == NSLeftMouseUp) break;
+      if ([evt type] == NSEventTypeLeftMouseUp) break;
       if (str || _canDragMap)
       {
         NSImage* img = _dragImage;
@@ -371,7 +371,7 @@ static id gEventMonitor = NULL;
           NSImage* draggingImage = [[NSImage alloc] initWithSize:r.size];
           [draggingImage lockFocus];
           [img drawInRect:destr fromRect:srcr
-               operation:NSCompositeSourceOver fraction:1.0L];
+               operation:NSCompositingOperationSourceOver fraction:1.0L];
           [draggingImage unlockFocus];
           _dragging = YES;
           NSDraggingItem* drag = [[NSDraggingItem alloc] initWithPasteboardWriter:str];
@@ -392,7 +392,7 @@ static id gEventMonitor = NULL;
   }
   if (_lastHot)
   {
-    [[self window] discardEventsMatchingMask:NSAnyEventMask beforeEvent:down];
+    [[self window] discardEventsMatchingMask:NSEventMaskAny beforeEvent:down];
     if (!wasDrag)
     {
       id target = [self target];
@@ -652,11 +652,11 @@ static NSUInteger local_CurrentModifiers(void)
 {
   UInt32 carbon = GetCurrentKeyModifiers();
   NSUInteger mods = 0;
-  if (carbon & alphaLock) mods |= NSAlphaShiftKeyMask;
-  if (carbon & shiftKey) mods |= NSShiftKeyMask;
-  if (carbon & controlKey) mods |= NSControlKeyMask;
-  if (carbon & optionKey) mods |= NSAlternateKeyMask;
-  if (carbon & cmdKey) mods |= NSCommandKeyMask;
+  if (carbon & alphaLock) mods |= NSEventModifierFlagCapsLock;
+  if (carbon & shiftKey) mods |= NSEventModifierFlagShift;
+  if (carbon & controlKey) mods |= NSEventModifierFlagControl;
+  if (carbon & optionKey) mods |= NSEventModifierFlagOption;
+  if (carbon & cmdKey) mods |= NSEventModifierFlagCommand;
   return mods;
 }
 

@@ -155,7 +155,7 @@ static const CGFloat GlyphViewBevelInset = 8.0L;
     textWhere.y = iconWhere.y;
   }
   [icon drawAtPoint:iconWhere fromRect:NSZeroRect
-        operation:NSCompositeSourceOver fraction:delta];
+        operation:NSCompositingOperationSourceOver fraction:delta];
   NSString* warning = [[Onizuka sharedOnizuka] copyLocalizedTitle:@"__FONT_WARNING__"];
   NSDictionary* attrs = [[NSDictionary alloc] initWithObjectsAndKeys:[NSColor redColor],
                                               NSForegroundColorAttributeName, 
