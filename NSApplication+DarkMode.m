@@ -11,17 +11,12 @@
 @implementation NSApplication (DarkMode)
 +(BOOL)isDarkMode
 {
-  if (NSAppKitVersionNumber >= NSAppKitVersionNumber10_14)
+  NSAppearance* appearance = [NSApp effectiveAppearance];
+  if (@available(macOS 10.14, *))
   {
-    NSAppearance* appearance = [NSApp effectiveAppearance];
-    //NSLog(@"current appearance %@", appearance.name);
-    //if (@available(macOS 10.14, *)) {
-      NSArray* names = @[NSAppearanceNameAqua, NSAppearanceNameDarkAqua];
-      NSAppearanceName name = [appearance bestMatchFromAppearancesWithNames:names];
-      return [name isEqualToString:NSAppearanceNameDarkAqua];
-    //} else {
-      // Fallback on earlier versions
-    //}
+    NSArray* names = @[NSAppearanceNameAqua, NSAppearanceNameDarkAqua];
+    NSAppearanceName name = [appearance bestMatchFromAppearancesWithNames:names];
+    return [name isEqualToString:NSAppearanceNameDarkAqua];
   }
   else
   {
