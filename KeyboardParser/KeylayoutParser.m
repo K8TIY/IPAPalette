@@ -430,11 +430,11 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   {
     [modString setString:@""];
     tableNum = [[NSNumber alloc] initWithUnsignedInt:uckmttn->tableNum[j]];
-    if (j & (1 << (cmdKeyBit - 8))) [modString appendFormat:@"%C", kCommandUnicode];
-    if (j & (1 << (shiftKeyBit - 8)) || j & (1 << (rightShiftKeyBit - 8))) [modString appendFormat:@"%C", kShiftUnicode];
+    if (j & (1 << (cmdKeyBit - 8))) [modString appendFormat:@"%C", (unichar)kCommandUnicode];
+    if (j & (1 << (shiftKeyBit - 8)) || j & (1 << (rightShiftKeyBit - 8))) [modString appendFormat:@"%C", (unichar)kShiftUnicode];
     if (j & (1 << (alphaLockBit - 8))) [modString appendFormat:@"%C", 0x21EA];
-    if (j & (1 << (optionKeyBit - 8)) || j & (1 << (rightOptionKeyBit - 8))) [modString appendFormat:@"%C", kOptionUnicode];
-    if (j & (1 << (controlKeyBit - 8)) || j & (1 << (rightControlKeyBit - 8))) [modString appendFormat:@"%C", kControlUnicode];
+    if (j & (1 << (optionKeyBit - 8)) || j & (1 << (rightOptionKeyBit - 8))) [modString appendFormat:@"%C", (unichar)kOptionUnicode];
+    if (j & (1 << (controlKeyBit - 8)) || j & (1 << (rightControlKeyBit - 8))) [modString appendFormat:@"%C", (unichar)kControlUnicode];
     //if (![modString length]) [modString setString:@"(no modifiers)"];
     //NSLog(@"    %d (0x%X, %@): table %d", j, j, modString, uckmttn->tableNum[j]);
     NSString* existing = [_modMap objectForKey:tableNum];
