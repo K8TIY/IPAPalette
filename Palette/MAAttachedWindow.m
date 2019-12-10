@@ -50,9 +50,9 @@
     NSRect contentRect = NSZeroRect;
     contentRect.size = [view frame].size;
     if ((self = [super initWithContentRect:contentRect 
-                                styleMask:NSBorderlessWindowMask 
-                                  backing:NSBackingStoreBuffered 
-                                    defer:NO])) {
+                                 styleMask:NSWindowStyleMaskBorderless
+                                   backing:NSBackingStoreBuffered
+                                     defer:NO])) {
         _view = view;
         _window = window;
         _point = point;
@@ -66,7 +66,7 @@
         [self setAlphaValue:1.0f];
         [self setOpaque:NO];
         [self setHasShadow:YES];
-        [self useOptimizedDrawing:YES];
+        //[self useOptimizedDrawing:YES];
         
         // Set up some sensible defaults for display.
         //_MABackgroundColor = [MAATTACHEDWINDOW_DEFAULT_BACKGROUND_COLOR copy];
@@ -433,13 +433,13 @@
     // Call NSWindow's implementation of -setBackgroundColor: because we override 
     // it in this class to let us set the entire background image of the window 
     // as an NSColor patternImage.
-    NSDisableScreenUpdates();
+    //NSDisableScreenUpdates();
     //[super setBackgroundColor:[self _backgroundColorPatternImage]];
     if ([self isVisible]) {
         [self display];
         [self invalidateShadow];
     }
-    NSEnableScreenUpdates();
+    //NSEnableScreenUpdates();
 }
 
 /*
@@ -730,10 +730,10 @@
     }
     
     _resizing = YES;
-    NSDisableScreenUpdates();
+    //NSDisableScreenUpdates();
     [self _updateGeometry];
     [self _updateBackground];
-    NSEnableScreenUpdates();
+    //NSEnableScreenUpdates();
     _resizing = NO;
 }
 
@@ -796,10 +796,10 @@
 	// Thanks to Martin Redington.
 	_point = point;
 	_side = side;
-	NSDisableScreenUpdates();
+	//NSDisableScreenUpdates();
 	[self _updateGeometry];
 	[self _updateBackground];
-	NSEnableScreenUpdates();
+	//NSEnableScreenUpdates();
 }
 
 /*
