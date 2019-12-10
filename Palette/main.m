@@ -26,8 +26,17 @@ int main(int argc, char *argv[])
   local_CheckPrefs();
   NSString* identifier = [[NSBundle mainBundle] bundleIdentifier];
   IMKServer* server = [[IMKServer alloc] initWithName:@"IPAPalette_1_Connection" bundleIdentifier:identifier];
-  //load the bundle explicitly because in this case the input method is a background only application 
-  [NSBundle loadNibNamed:@"MainMenu" owner:[NSApplication sharedApplication]];
+  //load the bundle explicitly because in this case the input method is a background only application
+  if (@available(macOS 10.8, *))
+  {
+    NSArray* objs;
+    [[NSBundle mainBundle] loadNibNamed:@"MainMenu" owner:[NSApplication sharedApplication]
+                           topLevelObjects:&objs];
+  }
+  else
+  {
+    [NSBundle loadNibNamed:@"MainMenu" owner:[NSApplication sharedApplication]];
+  }
   [[NSApplication sharedApplication] run];
   [server release];
   [arp release];
