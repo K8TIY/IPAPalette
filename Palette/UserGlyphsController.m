@@ -135,12 +135,12 @@ static NSString* const IPASymbolListRows = @"IPASymbolListRows";
 -(IBAction)acceptSheet:(id)sender
 {
   [[sender window] makeFirstResponder:[sender window]];
-  [NSApp endSheet:[sender window] returnCode:NSAlertDefaultReturn];
+  [NSApp endSheet:[sender window] returnCode:NSModalResponseOK];
 }
 
 -(IBAction)cancelSheet:(id)sender
 {
-  [NSApp endSheet:[sender window] returnCode:NSAlertAlternateReturn];
+  [NSApp endSheet:[sender window] returnCode:NSModalResponseCancel];
 }
 
 -(IBAction)addAction:(id)sender
@@ -160,7 +160,7 @@ static NSString* const IPASymbolListRows = @"IPASymbolListRows";
 -(void)_sheetDidEnd:(NSWindow*)sheet returnCode:(int)code contextInfo:(void*)ctx
 {
   [sheet orderOut:self];
-  if (code != NSAlertDefaultReturn) return;
+  if (code != NSModalResponseOK) return;
   NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
   if ([(NSString*)ctx isEqualToString:@"EDIT"])
   {
