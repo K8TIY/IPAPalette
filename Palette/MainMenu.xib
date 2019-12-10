@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment version="1060" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication"/>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application">
+        <customObject id="-3" userLabel="Application" customClass="NSObject">
             <connections>
                 <outlet property="delegate" destination="199" id="1261"/>
             </connections>
@@ -30,7 +30,6 @@
                 <outlet property="_supra" destination="1163" id="1166"/>
                 <outlet property="_tabs" destination="305" id="728"/>
                 <outlet property="_unicodeText" destination="965" id="966"/>
-                <outlet property="_updateResults" destination="1675" id="1678"/>
                 <outlet property="_user" destination="1335" id="1337"/>
                 <outlet property="_userGlyphsController" destination="1494" id="1503"/>
                 <outlet property="_vowels" destination="1162" id="1165"/>
@@ -45,11 +44,11 @@
                 <outlet property="delegate" destination="199" id="1501"/>
             </connections>
         </customObject>
-        <window title="__IPA_PALETTE__" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="209" userLabel="Panel" customClass="IPAPanel">
+        <window title="__IPA_PALETTE__" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="209" userLabel="Panel" customClass="IPAPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES" nonactivatingPanel="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="1231" y="2" width="689" height="286"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2048" height="1129"/>
             <value key="minSize" type="size" width="680" height="270"/>
             <view key="contentView" id="210">
                 <rect key="frame" x="0.0" y="0.0" width="689" height="286"/>
@@ -63,24 +62,24 @@
                             <tabViewItem label="__VOWEL__" identifier="Vowel" id="306">
                                 <view key="view" id="308">
                                     <rect key="frame" x="10" y="19" width="489" height="224"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <splitView vertical="YES" id="1164">
                                             <rect key="frame" x="2" y="2" width="485" height="217"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <imageView id="1162" customClass="PDFImageMap">
-                                                    <rect key="frame" x="0.0" y="0.0" width="291" height="217"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <imageView fixedFrame="YES" id="1162" customClass="PDFImageMap">
+                                                    <rect key="frame" x="-3" y="-3" width="298" height="223"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="Vow.pdf" id="1555"/>
                                                     <connections>
                                                         <action selector="imageAction:" target="199" id="1203"/>
                                                         <outlet property="delegate" destination="199" id="1197"/>
                                                     </connections>
                                                 </imageView>
-                                                <imageView id="1163" customClass="PDFImageMap">
-                                                    <rect key="frame" x="300" y="0.0" width="185" height="217"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <imageView fixedFrame="YES" id="1163" customClass="PDFImageMap">
+                                                    <rect key="frame" x="298" y="-3" width="190" height="223"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="SupraTone.pdf" id="1556"/>
                                                     <connections>
                                                         <action selector="imageAction:" target="199" id="1204"/>
@@ -99,7 +98,7 @@
                             <tabViewItem label="__CONS__" identifier="Consonant" id="307">
                                 <view key="view" id="309">
                                     <rect key="frame" x="10" y="19" width="489" height="224"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView id="1167" customClass="PDFImageMap">
                                             <rect key="frame" x="1" y="1" width="488" height="223"/>
@@ -116,14 +115,14 @@
                             <tabViewItem label="__OTHER__" identifier="Diacritic" id="808">
                                 <view key="view" id="796">
                                     <rect key="frame" x="10" y="19" width="489" height="224"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <splitView vertical="YES" id="1168">
                                             <rect key="frame" x="1" y="1" width="487" height="213"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <imageView id="1170" customClass="PDFImageMap">
-                                                    <rect key="frame" x="0.0" y="0.0" width="238" height="213"/>
+                                                <imageView fixedFrame="YES" id="1170" customClass="PDFImageMap">
+                                                    <rect key="frame" x="-3" y="-3" width="244" height="219"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="Diacritic.pdf" id="1560"/>
                                                     <connections>
@@ -131,8 +130,8 @@
                                                         <outlet property="delegate" destination="199" id="1200"/>
                                                     </connections>
                                                 </imageView>
-                                                <imageView id="1169" customClass="PDFImageMap">
-                                                    <rect key="frame" x="247" y="0.0" width="240" height="213"/>
+                                                <imageView fixedFrame="YES" id="1169" customClass="PDFImageMap">
+                                                    <rect key="frame" x="244" y="-3" width="246" height="219"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="Other.pdf" id="1559"/>
                                                     <connections>
@@ -152,7 +151,7 @@
                             <tabViewItem label="__EXTIPA__" identifier="extIPA" id="310">
                                 <view key="view" id="311">
                                     <rect key="frame" x="10" y="19" width="489" height="224"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView id="1171" customClass="PDFImageMap">
                                             <rect key="frame" x="1" y="1" width="487" height="218"/>
@@ -169,7 +168,7 @@
                             <tabViewItem label="__USER_GLYPHS_TAB__" identifier="User" id="1333">
                                 <view key="view" id="1334">
                                     <rect key="frame" x="10" y="19" width="489" height="224"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView id="1335" customClass="PDFImageMap">
                                             <rect key="frame" x="0.0" y="0.0" width="488" height="223"/>
@@ -186,18 +185,18 @@
                             <tabViewItem label="__SRCH__" identifier="Search" id="1117">
                                 <view key="view" id="1118">
                                     <rect key="frame" x="10" y="19" width="489" height="224"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="1119">
                                             <rect key="frame" x="17" y="33" width="452" height="171"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <clipView key="contentView" id="vV2-7r-S2F">
-                                                <rect key="frame" x="1" y="23" width="450" height="147"/>
-                                                <autoresizingMask key="autoresizingMask"/>
+                                                <rect key="frame" x="1" y="0.0" width="450" height="170"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" headerView="1592" id="1120" customClass="IPASearchResults">
                                                         <rect key="frame" x="0.0" y="0.0" width="450" height="147"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <tableViewGridLines key="gridStyleMask" vertical="YES"/>
@@ -205,7 +204,7 @@
                                                         <tableColumns>
                                                             <tableColumn identifier="0" editable="NO" width="59" minWidth="40" maxWidth="1000" id="1121">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="__GLYPH__">
-                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <font key="font" metaFont="label" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </tableHeaderCell>
@@ -216,9 +215,9 @@
                                                                 </textFieldCell>
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             </tableColumn>
-                                                            <tableColumn identifier="1" editable="NO" width="384.7373" minWidth="40" maxWidth="1000" id="1122">
+                                                            <tableColumn identifier="1" editable="NO" width="385.2373" minWidth="40" maxWidth="1000" id="1122">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="__DESCRIPTION__">
-                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <font key="font" metaFont="label" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </tableHeaderCell>
@@ -254,7 +253,7 @@
                                             <rect key="frame" x="17" y="6" width="447" height="19"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <searchFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" bezelStyle="round" id="1689">
-                                                <font key="font" metaFont="smallSystem"/>
+                                                <font key="font" metaFont="label" size="11"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </searchFieldCell>
@@ -316,7 +315,7 @@
                                                 </menu>
                                             </popUpButtonCell>
                                         </popUpButton>
-                                        <textField verticalHuggingPriority="750" id="1219">
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="148" id="1219">
                                             <rect key="frame" x="194" y="42" width="152" height="11"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                             <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="right" title="__MISSING_SYMBOLS__" id="1567">
@@ -325,7 +324,7 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" id="1612">
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="148" id="1612">
                                             <rect key="frame" x="194" y="19" width="152" height="11"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                             <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="right" title="__DEBUGGING__" id="1629">
@@ -356,20 +355,22 @@
                                         <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" id="1633">
                                             <rect key="frame" x="17" y="17" width="172" height="196"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <clipView key="contentView" id="pYZ-PJ-Vha">
+                                            <clipView key="contentView" drawsBackground="NO" id="pYZ-PJ-Vha">
                                                 <rect key="frame" x="1" y="1" width="170" height="194"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" id="1636">
+                                                    <textView importsGraphics="NO" verticallyResizable="YES" id="1636">
                                                         <rect key="frame" x="0.0" y="0.0" width="170" height="194"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <size key="minSize" width="170" height="194"/>
                                                         <size key="maxSize" width="463" height="10000000"/>
                                                         <attributedString key="textStorage">
                                                             <fragment>
-                                                                <string key="content">__IPA_PALETTE__ __VERSION__ (__LONG_VERSION__)
+                                                                <string key="content">
+
+__IPA_PALETTE__ __VERSION__ (__LONG_VERSION__)
 
 __ME_ME_ME__
 http://www.blugs.com
@@ -378,7 +379,7 @@ __CHARTS__ © 2005 IPA
 
 Includes MAAttachedWindow code by </string>
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <font key="NSFont" size="9" name="LucidaGrande"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                                         <tabStops>
@@ -424,7 +425,7 @@ Includes MAAttachedWindow code by </string>
                                                             </fragment>
                                                             <fragment content="Matt Gemmell">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <font key="NSFont" size="9" name="LucidaGrande"/>
                                                                     <integer key="NSLigature" value="0"/>
                                                                     <url key="NSLink" string="http://mattgemmell.com"/>
@@ -475,7 +476,7 @@ Includes MAAttachedWindow code by </string>
 Cg
 </string>
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <font key="NSFont" size="9" name="LucidaGrande"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                                         <tabStops>
@@ -523,7 +524,6 @@ Cg
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     </textView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </clipView>
                                             <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="1635">
                                                 <rect key="frame" x="-100" y="-100" width="87" height="18"/>
@@ -534,15 +534,6 @@ Cg
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                         </scrollView>
-                                        <textField verticalHuggingPriority="750" id="1675">
-                                            <rect key="frame" x="432" y="52" width="127" height="66"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
-                                            <textFieldCell key="cell" controlSize="mini" selectable="YES" sendsActionOnEndEditing="YES" id="1676">
-                                                <font key="font" metaFont="miniSystem"/>
-                                                <color key="textColor" red="0.60000001999999997" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
                                         <button id="1692">
                                             <rect key="frame" x="193" y="83" width="281" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
@@ -588,7 +579,7 @@ Cg
                         <rect key="frame" x="517" y="20" width="155" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES"/>
                         <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" title="U+Whatever" id="1575">
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" metaFont="label" size="11"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -597,7 +588,7 @@ Cg
                         <rect key="frame" x="516" y="4" width="155" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES"/>
                         <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" title="Keyboard shortcut" allowsEditingTextAttributes="YES" id="1686">
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" metaFont="label" size="11"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -606,12 +597,12 @@ Cg
                         <rect key="frame" x="14" y="4" width="501" height="14"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="Voiceless glottalized prenasalized epiglottal trill with nasal release" id="1576">
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" metaFont="label" size="11"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="1229">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="147" id="1229">
                         <rect key="frame" x="519" y="252" width="151" height="11"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="left" title="__LOOKING__" id="1577">
@@ -625,12 +616,13 @@ Cg
             <connections>
                 <outlet property="delegate" destination="199" id="225"/>
             </connections>
+            <point key="canvasLocation" x="139" y="147"/>
         </window>
         <window title="Panel" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="1467" userLabel="Add Symbols" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="361" y="364" width="492" height="251"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2048" height="1129"/>
             <value key="minSize" type="size" width="213" height="107"/>
             <view key="contentView" id="1468">
                 <rect key="frame" x="0.0" y="0.0" width="492" height="251"/>
@@ -668,12 +660,12 @@ Gw
                         <rect key="frame" x="20" y="60" width="452" height="171"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="kes-hH-oiZ">
-                            <rect key="frame" x="1" y="23" width="450" height="147"/>
-                            <autoresizingMask key="autoresizingMask"/>
+                            <rect key="frame" x="1" y="0.0" width="450" height="170"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" autosaveColumns="NO" headerView="1595" id="1485" customClass="UserGlyphsTable">
                                     <rect key="frame" x="0.0" y="0.0" width="450" height="147"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <tableViewGridLines key="gridStyleMask" vertical="YES"/>
@@ -681,7 +673,7 @@ Gw
                                     <tableColumns>
                                         <tableColumn identifier="0" width="59" minWidth="40" maxWidth="1000" id="1487">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="__GLYPH__">
-                                                <font key="font" metaFont="smallSystem"/>
+                                                <font key="font" metaFont="label" size="11"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
                                             </tableHeaderCell>
@@ -692,9 +684,9 @@ Gw
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
-                                        <tableColumn identifier="1" width="384.7373" minWidth="40" maxWidth="1000" id="1486">
+                                        <tableColumn identifier="1" width="385.2373" minWidth="40" maxWidth="1000" id="1486">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="__DESCRIPTION__">
-                                                <font key="font" metaFont="smallSystem"/>
+                                                <font key="font" metaFont="label" size="11"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
                                             </tableHeaderCell>
@@ -729,7 +721,7 @@ Gw
                     <button id="1492">
                         <rect key="frame" x="20" y="20" width="20" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="plus.icns" imagePosition="only" alignment="center" borderStyle="border" inset="2" id="1585">
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAddTemplate" imagePosition="only" alignment="center" borderStyle="border" inset="2" id="1585">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -739,15 +731,16 @@ Gw
                     </button>
                 </subviews>
             </view>
+            <point key="canvasLocation" x="139" y="514"/>
         </window>
     </objects>
     <resources>
         <image name="Cons.pdf" width="128" height="128"/>
         <image name="Diacritic.pdf" width="128" height="128"/>
         <image name="ExtIPA.pdf" width="128" height="128"/>
+        <image name="NSAddTemplate" width="11" height="11"/>
         <image name="Other.pdf" width="128" height="128"/>
         <image name="SupraTone.pdf" width="128" height="128"/>
         <image name="Vow.pdf" width="128" height="128"/>
-        <image name="plus.icns" width="128" height="128"/>
     </resources>
 </document>
