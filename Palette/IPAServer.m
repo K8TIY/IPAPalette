@@ -25,28 +25,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #import "NSView+Spinny.h"
 #import "NSApplication+DarkMode.h"
 
-@interface NSArray (IPAPalette)
--(NSArray*)slice:(unsigned)size;
-@end
-
-@implementation NSArray (IPAPalette)
--(NSArray*)slice:(unsigned)size
-{
-  NSUInteger ct = [self count];
-  NSUInteger slices = (ct/size) + ((ct%size)? 1:0);
-  NSMutableArray* ary = [NSMutableArray arrayWithCapacity:slices];
-  NSUInteger n = 1;
-  NSUInteger offset = 0;
-  while (n <= slices)
-  {
-    NSUInteger rest = (n==slices)? (ct-(size*(n-1))):size;
-    [ary addObject:[self subarrayWithRange:NSMakeRange(offset, rest)]];
-    n++;
-    offset += rest;
-  }
-  return ary;
-}
-@end
 
 /*#ifdef __IPA_APPSTORE__
 @interface NSString (IPAPalette)
