@@ -15,16 +15,13 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 #import <Cocoa/Cocoa.h>
 #import <Carbon/Carbon.h>
-#import <Security/Security.h>
+//#import <Security/Security.h>
 
 typedef enum
 {
-  kIPAInstallStatusInstalledInWrongLocation = 0,
-  kIPAInstallStatusNotInstalled = 1,
-  kIPAInstallStatusOutdatedWithAnotherInWrongLocation = 2,
-  kIPAInstallStatusOutdated = 3,
-  kIPAInstallStatusInstalledInBothLocations = 4,
-  kIPAInstallStatusInstalled = 5
+  kIPAInstallStatusNotInstalled,
+  kIPAInstallStatusOutdated,
+  kIPAInstallStatusInstalled
 } IPAInstallStatus;
 
 @interface IPAManager : NSObject
@@ -33,15 +30,17 @@ typedef enum
   IBOutlet NSTextField* _info;
   IBOutlet NSTextField* _version;
   IBOutlet NSButton*    _installButton;
-  IBOutlet NSButton*    _allUsersButton;
-  IPAInstallStatus      installStatus;
+  IBOutlet NSImageView* _vowelChart;
+  //IBOutlet NSButton*    _allUsersButton;
+  //IPAInstallStatus      installStatus;
   NSString*             _installedVersion;
   NSString*             _installedVersionHR;
   double                _osVersion;
-  BOOL                  _userInstalled;
+  //BOOL                  _userInstalled;
   BOOL                  _wasSelected;
-  AuthorizationRef      auth;
+  //AuthorizationRef      auth;
   NSString*             errorString;
+  //NSURL*                _inputMethodsURL;
 }
 
 -(IBAction)installUninstall:(id)sender;

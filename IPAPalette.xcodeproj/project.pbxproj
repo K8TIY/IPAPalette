@@ -35,6 +35,8 @@
 		3229612F13846B6D008157E9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3226A32A10863DCC000AD993 /* Localizable.strings */; };
 		3229613013846B6D008157E9 /* MapData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32555503105AF4AD007222C6 /* MapData.plist */; };
 		3229613113846B6D008157E9 /* Alts.strings in Resources */ = {isa = PBXBuildFile; fileRef = 328D1C8B122C08ED00FE6E3C /* Alts.strings */; };
+		32319E36239F01DD001EB1DE /* NSApplication+DarkMode.m in Sources */ = {isa = PBXBuildFile; fileRef = A6591F86239B54C100270422 /* NSApplication+DarkMode.m */; };
+		32319E37239F02F2001EB1DE /* Vow_dk.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A6591F78239B423500270422 /* Vow_dk.pdf */; };
 		3241E31910727C8200144CE0 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3241E31410727C8200144CE0 /* AppController.m */; };
 		3241E32D10727CFC00144CE0 /* Placeholder.c in Sources */ = {isa = PBXBuildFile; fileRef = 32555509105AF4AD007222C6 /* Placeholder.c */; };
 		3241E32F10727D1100144CE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32555501105AF4AD007222C6 /* main.m */; };
@@ -651,6 +653,7 @@
 			files = (
 				321F61201773A0AA005B3255 /* MainMenu.xib in Resources */,
 				321F61351773B775005B3255 /* Localizable.strings in Resources */,
+				32319E37239F02F2001EB1DE /* Vow_dk.pdf in Resources */,
 				32C5DA02180DA88E00614A06 /* IPAManager.icns in Resources */,
 				32EB974718D265900062A8FC /* Onizuka.strings in Resources */,
 			);
@@ -728,6 +731,7 @@
 			files = (
 				321F611E1773A0AA005B3255 /* IPAManager.m in Sources */,
 				321F611F1773A0AA005B3255 /* main.m in Sources */,
+				32319E36239F01DD001EB1DE /* NSApplication+DarkMode.m in Sources */,
 				321F61311773B58D005B3255 /* Onizuka.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -853,6 +857,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -874,7 +879,7 @@
 				INFOPLIST_FILE = IPAManager/Info.plist;
 				INSTALL_PATH = Applications;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MARKETING_VERSION = 2.3;
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.blugs.IPAManager;
@@ -888,6 +893,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -898,7 +904,6 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Sparkle-1.22.0",
 				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
@@ -912,7 +917,7 @@
 				INFOPLIST_FILE = IPAManager/Info.plist;
 				INSTALL_PATH = Applications;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MARKETING_VERSION = 2.3;
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.blugs.IPAManager;
@@ -1063,7 +1068,7 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				INFOPLIST_FILE = Palette/Info.plist;
 				INSTALL_PATH = "\"$(LOCAL_LIBRARY_DIR)/Input Methods/\"";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "-DXCODE_DEBUG_CONFIGURATION_DEBUG=1";
 				PRODUCT_BUNDLE_IDENTIFIER = com.blugs.inputmethod.IPAPalette;
 				PRODUCT_NAME = IPAPalette;
@@ -1110,7 +1115,7 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				INFOPLIST_FILE = Palette/Info.plist;
 				INSTALL_PATH = "\"$(LOCAL_LIBRARY_DIR)/Input Methods/\"";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.blugs.inputmethod.IPAPalette;
 				PRODUCT_NAME = IPAPalette;
@@ -1161,7 +1166,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACH_O_TYPE = mh_execute;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-16";
@@ -1206,7 +1211,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACH_O_TYPE = mh_execute;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-16";
 			};

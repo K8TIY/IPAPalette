@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication"/>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="207" id="TSJ-dj-6zt"/>
+            </connections>
+        </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <menu title="MainMenu" systemMenu="main" id="362" userLabel="MainMenu">
             <items>
                 <menuItem title="__APPNAME__" id="366">
@@ -140,13 +144,14 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="132" y="377"/>
         </menu>
         <customObject id="207" userLabel="IPAManager" customClass="IPAManager">
             <connections>
-                <outlet property="_allUsersButton" destination="356" id="358"/>
                 <outlet property="_info" destination="311" id="355"/>
                 <outlet property="_installButton" destination="309" id="353"/>
                 <outlet property="_version" destination="429" id="431"/>
+                <outlet property="_vowelChart" destination="43u-AL-xub" id="3td-By-wtu"/>
                 <outlet property="_window" destination="246" id="347"/>
             </connections>
         </customObject>
@@ -154,7 +159,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="305" y="322" width="548" height="195"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2048" height="1129"/>
             <value key="minSize" type="size" width="213" height="107"/>
             <view key="contentView" id="247">
                 <rect key="frame" x="0.0" y="0.0" width="548" height="195"/>
@@ -171,16 +176,8 @@
                             <action selector="installUninstall:" target="207" id="354"/>
                         </connections>
                     </button>
-                    <button imageHugsTitle="YES" id="356">
-                        <rect key="frame" x="18" y="21" width="362" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="__INSTALL_ALL_USERS__" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="357">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                    </button>
-                    <textField verticalHuggingPriority="750" id="311">
-                        <rect key="frame" x="20" y="70" width="508" height="105"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="311">
+                        <rect key="frame" x="20" y="70" width="358" height="105"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" id="312">
                             <font key="font" metaFont="system"/>
@@ -192,7 +189,7 @@
                         <rect key="frame" x="17" y="48" width="169" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="__INSTALLED_VERSION__" id="428">
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" metaFont="message" size="11"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -201,13 +198,19 @@
                         <rect key="frame" x="188" y="48" width="343" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="VERSION" id="430">
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" metaFont="message" size="11"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="43u-AL-xub">
+                        <rect key="frame" x="386" y="70" width="142" height="105"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Vow" id="9de-yr-tvV"/>
+                    </imageView>
                 </subviews>
             </view>
+            <point key="canvasLocation" x="132" y="161.5"/>
         </window>
         <customObject id="361" userLabel="Updater" customClass="SUUpdater">
             <connections>
@@ -215,4 +218,7 @@
             </connections>
         </customObject>
     </objects>
+    <resources>
+        <image name="Vow" width="374" height="256"/>
+    </resources>
 </document>
