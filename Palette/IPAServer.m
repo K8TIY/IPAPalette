@@ -111,7 +111,7 @@ static void local_KeyboardChanged(CFNotificationCenterRef center,
 -(BOOL)performKeyEquivalent:(NSEvent*)evt
 {
   BOOL handled = NO;
-  if ([evt modifierFlags] & NSCommandKeyMask)
+  if ([evt modifierFlags] & NSEventModifierFlagCommand)
   {
     handled = YES;
     NSString* chars = [evt charactersIgnoringModifiers];
@@ -572,7 +572,7 @@ NS_ENDHANDLER
       NSString* primary = ipa;
       NSString* secondary = nil;
       d = [NSMutableDictionary dictionary];
-      if (modifiers & NSShiftKeyMask || modifiers & NSAlternateKeyMask)
+      if (modifiers & NSEventModifierFlagShift || modifiers & NSEventModifierFlagOption)
       {
         NSString* alt = [_alts objectForKey:ipa];
         if (alt)
@@ -651,7 +651,7 @@ NS_ENDHANDLER
     if (toSend && _inputController)
     {
       NSString* fontName = nil;
-      if (modifiers & NSControlKeyMask)
+      if (modifiers & NSEventModifierFlagControl)
         fontName = [[_fontMenu selectedItem] title];
       [_inputController receiveText:toSend font:fontName];
     }
@@ -1184,7 +1184,7 @@ NS_ENDHANDLER
 -(NSAttributedString*)attributedStringForKeyboardShortcut:(NSString*)seq
 {
   NSMutableParagraphStyle* style = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
-  [style setAlignment:NSCenterTextAlignment];
+  [style setAlignment:NSTextAlignmentCenter];
   NSMutableAttributedString* seq2 = [[NSMutableAttributedString alloc] initWithString:seq];
   NSColor* col = [NSColor colorWithCalibratedRed:0.75 green:0.1 blue:0.1 alpha:1.0];
   unsigned i;
@@ -1225,9 +1225,9 @@ NS_ENDHANDLER
     NSString* path = [[NSBundle mainBundle] pathForResource:@"MapData" ofType:@"plist"];
     [newMap loadDataFromFile:path withName:name];
   }
-  unsigned flags = NSTitledWindowMask | NSClosableWindowMask |
-                   NSMiniaturizableWindowMask | NSResizableWindowMask |
-                   NSUtilityWindowMask;
+  NSWindowStyleMask flags = NSWindowStyleMaskTitled | NSWindowStyleMaskClosable |
+                            NSWindowStyleMaskMiniaturizable | NSWindowStyleMaskResizable |
+                            NSWindowStyleMaskUtilityWindow;
   IPAPanel* aux = [[IPAPanel alloc] initWithContentRect:frame styleMask:flags
                                     backing:NSBackingStoreBuffered defer:NO];
   if (!_auxiliaries) _auxiliaries = [[NSMutableSet alloc] init];
