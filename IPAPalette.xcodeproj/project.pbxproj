@@ -37,6 +37,7 @@
 		3229613113846B6D008157E9 /* Alts.strings in Resources */ = {isa = PBXBuildFile; fileRef = 328D1C8B122C08ED00FE6E3C /* Alts.strings */; };
 		32319E36239F01DD001EB1DE /* NSApplication+DarkMode.m in Sources */ = {isa = PBXBuildFile; fileRef = A6591F86239B54C100270422 /* NSApplication+DarkMode.m */; };
 		32319E37239F02F2001EB1DE /* Vow_dk.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A6591F78239B423500270422 /* Vow_dk.pdf */; };
+		32319E3C23A05481001EB1DE /* Vow.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3237888A1072812C00149CCD /* Vow.pdf */; };
 		3241E31910727C8200144CE0 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3241E31410727C8200144CE0 /* AppController.m */; };
 		3241E32D10727CFC00144CE0 /* Placeholder.c in Sources */ = {isa = PBXBuildFile; fileRef = 32555509105AF4AD007222C6 /* Placeholder.c */; };
 		3241E32F10727D1100144CE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32555501105AF4AD007222C6 /* main.m */; };
@@ -654,6 +655,7 @@
 				321F61201773A0AA005B3255 /* MainMenu.xib in Resources */,
 				321F61351773B775005B3255 /* Localizable.strings in Resources */,
 				32319E37239F02F2001EB1DE /* Vow_dk.pdf in Resources */,
+				32319E3C23A05481001EB1DE /* Vow.pdf in Resources */,
 				32C5DA02180DA88E00614A06 /* IPAManager.icns in Resources */,
 				32EB974718D265900062A8FC /* Onizuka.strings in Resources */,
 			);
