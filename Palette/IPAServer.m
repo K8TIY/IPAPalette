@@ -462,17 +462,14 @@ NS_ENDHANDLER
 
 -(void)runFontAlert
 {
-  NSString* msg1 = [[Onizuka sharedOnizuka] copyLocalizedTitle:@"__NO_FONTS__"];
-  NSString* msg2 = [[Onizuka sharedOnizuka] copyLocalizedTitle:@"__PREVIEW_BAD__"];
-  NSAlert* alert = [NSAlert alertWithMessageText:msg1 defaultButton:nil
-                            alternateButton:nil otherButton:nil
-                            informativeTextWithFormat:@"%@", msg2];
-  [msg1 release];
-  [msg2 release];
+  NSDictionary* userInfo = @{
+    NSLocalizedDescriptionKey: [[Onizuka sharedOnizuka] copyLocalizedTitle:@"__NO_FONTS__"],
+    NSLocalizedRecoverySuggestionErrorKey: [[Onizuka sharedOnizuka] copyLocalizedTitle:@"__PREVIEW_BAD__"]
+  };
+  NSError* err = [NSError errorWithDomain:[[NSBundle mainBundle] bundleIdentifier]
+                          code:-1 userInfo:userInfo];
+  NSAlert* alert = [NSAlert alertWithError:err];
   [alert setShowsSuppressionButton:YES];
-  /*[alert beginSheetModalForWindow:_window modalDelegate:self
-             didEndSelector:@selector(endAlert:returnCode:contextInfo:)
-             contextInfo:nil];*/
   [alert beginSheetModalForWindow:_window
          completionHandler:^(NSModalResponse result)
   {
@@ -483,13 +480,6 @@ NS_ENDHANDLER
     }
   }];
 }
-
-/*-(void)endAlert:(NSAlert*)alert returnCode:(int)code contextInfo:(void*)ctx
-{
-  #pragma unused (code,ctx)
-  if ([[alert suppressionButton] state] == NSOnState)
-    [[NSUserDefaults standardUserDefaults] setInteger:1L forKey:ipaDontShowAgainKey];
-}*/
 
 -(void)userGlyphsChanged:(id)sender
 {
