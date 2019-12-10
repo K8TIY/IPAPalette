@@ -57,8 +57,6 @@ enum
   IBOutlet NSTextField* _descriptionText;
   IBOutlet IPASearchResults* _searchResultsTable;
   IBOutlet IPASearchField* _searchText;
-  IBOutlet NSButton* _updateButton;
-  IBOutlet NSTextField* _updateResults;
   IBOutlet UserGlyphsController* _userGlyphsController;
   IPAInputController* _inputController;
   NSTabViewItem* _userGlyphsTab;
