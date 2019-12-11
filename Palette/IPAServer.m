@@ -327,12 +327,12 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
   [imageName release];
 }
 
-#define kLezh 0x026E // LZh digraph U+026E
-#define kBeta 0x03B2 // Greek small letter beta
 -(void)addIPAFonts:(id)ignore
 {
   #pragma unused (ignore)
   NSMutableArray* fontNames = [[NSMutableArray alloc] init];
+  NSMutableSet* goodFonts = [[NSMutableSet alloc] init];
+  NSMutableSet* okFonts = [[NSMutableSet alloc] init];
   NSArray* fonts = [[NSFontManager sharedFontManager] availableFonts];
   for (NSString* font in fonts)
   {
@@ -349,13 +349,16 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
       if (!data) NSLog(@"CTFontCopyTable '%@' failed", font);
       else
       {
-        if (CMAPHasChar((char*)CFDataGetBytePtr(data), kLezh) &&
-            CMAPHasChar((char*)CFDataGetBytePtr(data), kBeta))
+        char* bytes = (char*)CFDataGetBytePtr(data);
+        float rating = [self rateFontCoverage:bytes];
+        if (rating > 0.0)
         {
           CFStringRef readable = CTFontCopyDisplayName(ctFont);
           if (![(NSString*)readable hasPrefix:@"."])
           {
-            [fontNames addObject:(NSString*)readable];
+            if (rating > 0.0) [fontNames addObject:(NSString*)readable];
+            if (rating >= 0.9) [goodFonts addObject:(NSString*)readable];
+            else if (rating >= 0.5) [okFonts addObject:(NSString*)readable];
           }
           CFRelease(readable);
         }
@@ -375,10 +378,19 @@ NS_HANDLER
   NSLog(@"ERROR: had problem loading user fonts: %@", [localException reason]);
 NS_ENDHANDLER
   [fontNames sortUsingSelector: @selector(compare:)];
+  NSImage* goodImage = [NSImage imageNamed:NSImageNameStatusAvailable];
+  NSImage* okImage = [NSImage imageNamed:NSImageNameStatusPartiallyAvailable];
   for (NSString* fontName in fontNames)
   {
     NSMenuItem* item = [[NSMenuItem alloc] initWithTitle:fontName action:nil keyEquivalent:@""];
-    //[[_fontMenu menu] addItem:item];
+    if ([goodFonts containsObject:fontName])
+    {
+      [item setImage:goodImage];
+    }
+    else if ([okFonts containsObject:fontName])
+    {
+      [item setImage:okImage];
+    }
     [self performSelectorOnMainThread:@selector(addToFontMenu:) withObject:item
         waitUntilDone:YES];
     [item release];
@@ -416,8 +428,30 @@ NS_ENDHANDLER
     }
   }
   [fontNames release];
+  [goodFonts release];
+  [okFonts release];
   [self performSelectorOnMainThread:@selector(finishIPAFonts:) withObject:self
         waitUntilDone:NO];
+}
+
+#define kSchwa 0x0259 // LATIN SMALL LETTER SCHWA
+#define kLezh 0x026E // LATIN SMALL LETTER LEZH
+#define kTurnedHookR 0x027B // LATIN SMALL LETTER TURNED R WITH HOOK
+#define kBeta 0x03B2 // GREEK SMALL LETTER BETA
+#define kHeng 0x0267 // LATIN SMALL LETTER HENG WITH HOOK
+#define kRetroSchwa 0x1D95 // LATIN SMALL LETTER SCHWA WITH RETROFLEX HOOK
+#define kBilabialPercussive 0x02AC // LATIN LETTER BILABIAL PERCUSSIVE
+-(double)rateFontCoverage:(char*)data
+{
+  unsigned n = 0, of = 7;
+  if (CMAPHasChar(data, kSchwa)) n++;
+  if (CMAPHasChar(data, kLezh)) n++;
+  if (CMAPHasChar(data, kTurnedHookR)) n++;
+  if (CMAPHasChar(data, kBeta)) n++;
+  if (CMAPHasChar(data, kHeng)) n++;
+  if (CMAPHasChar(data, kRetroSchwa)) n++;
+  if (CMAPHasChar(data, kBilabialPercussive)) n++;
+  return (double)n / (double)of;
 }
 
 // Call on main thread.
@@ -440,9 +474,11 @@ NS_ENDHANDLER
 
 -(void)runFontAlert
 {
+  NSString* desc = [[Onizuka sharedOnizuka] copyLocalizedTitle:@"__NO_FONTS__"];
+  NSString* sugg = [[Onizuka sharedOnizuka] copyLocalizedTitle:@"__PREVIEW_BAD__"];
   NSDictionary* userInfo = @{
-    NSLocalizedDescriptionKey: [[Onizuka sharedOnizuka] copyLocalizedTitle:@"__NO_FONTS__"],
-    NSLocalizedRecoverySuggestionErrorKey: [[Onizuka sharedOnizuka] copyLocalizedTitle:@"__PREVIEW_BAD__"]
+    NSLocalizedDescriptionKey: desc,
+    NSLocalizedRecoverySuggestionErrorKey: sugg
   };
   NSError* err = [NSError errorWithDomain:[[NSBundle mainBundle] bundleIdentifier]
                           code:-1 userInfo:userInfo];
@@ -457,6 +493,8 @@ NS_ENDHANDLER
       [[NSUserDefaults standardUserDefaults] setInteger:1L forKey:ipaDontShowAgainKey];
     }
   }];
+  [desc release];
+  [sugg release];
 }
 
 -(void)userGlyphsChanged:(id)sender
@@ -1168,6 +1206,7 @@ NS_ENDHANDLER
   return [seq2 autorelease];
 }
 
+
 #pragma mark Auxiliary Windows
 -(void)createAuxiliaryPanelForName:(NSString*)name withFrame:(NSRect)frame
        syncToDefaults:(BOOL)flag
@@ -1192,6 +1231,7 @@ NS_ENDHANDLER
     NSString* imageName = [PDFImageMapCreator copyPDFFileNameForName:name
                                               dark:[NSApplication isDarkMode]];
     [newMap setImage:[NSImage imageNamed:imageName]];
+    [imageName release];
     NSString* path = [[NSBundle mainBundle] pathForResource:@"MapData" ofType:@"plist"];
     [newMap loadDataFromFile:path withName:name];
   }
