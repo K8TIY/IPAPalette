@@ -338,7 +338,11 @@ static NSString*  ipaFrameKey = @"PaletteFrame";
   {
     // Ignore some System-private fonts that spam the logs with douchey
     // warnings like "All system UI font access should be through proper APIs…"
-    if (![font isEqualToString:@"LastResort"] && ![font hasPrefix:@"."])
+    // The LTMM suffix seems to be some kind of Multiple Master lurking in the
+    // bowels of the system.
+    if (![font isEqualToString:@"LastResort"] &&
+        ![font hasPrefix:@"."] &&
+        ![font hasSuffix:@"LTMM"])
     {
       CFDataRef data = nil;
       CTFontRef ctFont = CTFontCreateWithName((CFStringRef)font, 0.0, NULL);
@@ -380,6 +384,8 @@ NS_ENDHANDLER
   [fontNames sortUsingSelector: @selector(compare:)];
   NSImage* goodImage = [NSImage imageNamed:NSImageNameStatusAvailable];
   NSImage* okImage = [NSImage imageNamed:NSImageNameStatusPartiallyAvailable];
+  goodImage.size = NSMakeSize(12, 12);
+  okImage.size = NSMakeSize(12, 12);
   for (NSString* fontName in fontNames)
   {
     NSMenuItem* item = [[NSMenuItem alloc] initWithTitle:fontName action:nil keyEquivalent:@""];
