@@ -46,7 +46,7 @@ stolen from an older version of Sparkle.
 -(void)_installComplete:(id)sender;
 -(void)_register:(NSString*)path;
 -(void)_setPaletteEnabled:(CFBooleanRef)flag;
--(BOOL)_isFlagMenuEnabled;
+//-(BOOL)_isFlagMenuEnabled;
 @end
 
 @implementation IPAManager
@@ -298,16 +298,6 @@ NSString* RealHomeDirectory(void)
   [self performSelectorOnMainThread:@selector(_register:)
         withObject:path waitUntilDone:YES];
   [self performSelectorOnMainThread:@selector(_installComplete:) withObject:nil waitUntilDone:NO];
-  NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
-  if (_osVersion < 10.9 && ![defs boolForKey:@"IPAMHaveOpenedPrefs"] &&
-      ![self _isFlagMenuEnabled])
-  {
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"ActivatePrefs" ofType:@"scpt"];
-    NSString* cmd = [NSString stringWithFormat:@"osascript \"%@\" > /dev/null 2>&1", path];
-    //NSLog(@"Command: >>>%@<<<", cmd);
-    system([cmd UTF8String]);
-    [defs setBool:YES forKey:@"IPAMHaveOpenedPrefs"];
-  }
   [arp release];
 }
 
@@ -412,7 +402,7 @@ NSString* RealHomeDirectory(void)
   [list release];
 }
 
--(BOOL)_isFlagMenuEnabled
+/*-(BOOL)_isFlagMenuEnabled
 {
   BOOL flagMenu = NO;
   CFPropertyListRef sdefs =  CFPreferencesCopyAppValue(CFSTR("menuExtras"), CFSTR("com.apple.systemuiserver"));
@@ -428,7 +418,7 @@ NSString* RealHomeDirectory(void)
     }
   }
   return flagMenu;
-}
+}*/
 
 #pragma mark SUUpdater Delegate
 -(void)updaterWillRelaunchApplication:(SUUpdater*)updater
