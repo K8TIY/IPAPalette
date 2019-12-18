@@ -119,12 +119,23 @@ else
   print GREEN "$output\n";
 }
 
-#mkdir tmp
-#rm -f IPAPalette.dmg
-#cp -r ../build/Release/IPA\ Manager.app tmp
-#create-dmg --volname "IPA Palette" --background VowLight.png --window-size 500 360 --volicon DMG.icns --icon "IPA\ Manager.app" 60 240 --app-drop-link 380 240 --icon-size 64 IPAPalette.dmg tmp
-#rm -rf tmp
-# Put a copy of your .app (with the same name as the version it’s replacing) in a .zip, .tar.gz, or .tar.bz2.
-# If you distribute your .app in a .dmg, do not zip up the .dmg.
-#ruby ../Sparkle/sign_update.rb IPAPalette.dmg /Volumes/Books/DevKeys/IPAPalette_priv.pem
 
+#  Copyright © 2005-2019 Brian S. Hall, BLUGS.COM LLC
+#
+#  Permission is hereby granted, free of charge, to any person obtaining a copy
+#  of this software and associated documentation files (the "Software"), to deal
+#  in the Software without restriction, including without limitation the rights
+#  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#  copies of the Software, and to permit persons to whom the Software is
+#  furnished to do so, subject to the following conditions:
+#
+#  The above copyright notice and this permission notice shall be included in
+#  all copies or substantial portions of the Software.
+#
+#  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+#  THE SOFTWARE.
