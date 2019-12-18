@@ -31,7 +31,6 @@
 		3229612813846B61008157E9 /* Diacritic.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 323788881072812C00149CCD /* Diacritic.pdf */; };
 		3229612913846B61008157E9 /* ExtIPA.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 323788851072812C00149CCD /* ExtIPA.pdf */; };
 		3229612A13846B61008157E9 /* Other.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 323788871072812C00149CCD /* Other.pdf */; };
-		3229612E13846B6D008157E9 /* plus.icns in Resources */ = {isa = PBXBuildFile; fileRef = 320F3D3411175DB400079629 /* plus.icns */; };
 		3229612F13846B6D008157E9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3226A32A10863DCC000AD993 /* Localizable.strings */; };
 		3229613013846B6D008157E9 /* MapData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32555503105AF4AD007222C6 /* MapData.plist */; };
 		3229613113846B6D008157E9 /* Alts.strings in Resources */ = {isa = PBXBuildFile; fileRef = 328D1C8B122C08ED00FE6E3C /* Alts.strings */; };
@@ -129,7 +128,6 @@
 		32022D7C11D16A8F000BFE8F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Localization/es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32022D7D11D16A99000BFE8F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = Localization/it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		320EDD5B14884D2400B191B0 /* Keyboard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Keyboard.plist; path = Palette/Keyboard.plist; sourceTree = SOURCE_ROOT; };
-		320F3D3411175DB400079629 /* plus.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = plus.icns; path = Palette/plus.icns; sourceTree = SOURCE_ROOT; };
 		321F610B17739315005B3255 /* IPA Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IPA Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		321F610D17739315005B3255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = IPAManager/Info.plist; sourceTree = "<group>"; };
 		321F611A1773A0AA005B3255 /* IPAManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPAManager.h; path = IPAManager/IPAManager.h; sourceTree = "<group>"; };
@@ -366,7 +364,6 @@
 				29B97316FDCFA39411CA2CEA /* main.m */,
 				32555504105AF4AD007222C6 /* Onizuka */,
 				3237887D1072811600149CCD /* ImageMaps */,
-				320F3D3411175DB400079629 /* plus.icns */,
 				3226A32A10863DCC000AD993 /* Localizable.strings */,
 				32A8551E14F562AA007CCF53 /* chardata.txt */,
 				32A8551F14F562B6007CCF53 /* translator.py */,
@@ -674,7 +671,6 @@
 				A6591F7D239B423500270422 /* Diacritic_dk.pdf in Resources */,
 				A6591F7C239B423500270422 /* VowDrag_dk.pdf in Resources */,
 				3229612A13846B61008157E9 /* Other.pdf in Resources */,
-				3229612E13846B6D008157E9 /* plus.icns in Resources */,
 				A6591F7E239B423500270422 /* Cons_dk.pdf in Resources */,
 				A6591F84239B423500270422 /* Other_dk.pdf in Resources */,
 				3229612F13846B6D008157E9 /* Localizable.strings in Resources */,
