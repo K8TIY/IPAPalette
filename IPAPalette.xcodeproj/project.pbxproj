@@ -239,7 +239,6 @@
 		32EB974518D265900062A8FC /* zh_CN */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/Onizuka.strings; sourceTree = "<group>"; };
 		32EB974618D265900062A8FC /* zh_TW */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/Onizuka.strings; sourceTree = "<group>"; };
 		32EB979418D372C50062A8FC /* IPAPalette.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = IPAPalette.xml; path = Installer/IPAPalette.xml; sourceTree = "<group>"; };
-		32EB979518D3761C0062A8FC /* builddmg.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = builddmg.sh; path = Installer/builddmg.sh; sourceTree = "<group>"; };
 		32FE85E611629A0700E64D62 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = Localization/nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Palette/Info.plist; sourceTree = SOURCE_ROOT; };
 		8D1107320486CEB800E47090 /* IPAPalette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPAPalette.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +254,7 @@
 		A6591F7A239B423500270422 /* Other_dk.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Other_dk.pdf; sourceTree = "<group>"; };
 		A6591F85239B54C100270422 /* NSApplication+DarkMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSApplication+DarkMode.h"; sourceTree = "<group>"; };
 		A6591F86239B54C100270422 /* NSApplication+DarkMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+DarkMode.m"; sourceTree = "<group>"; };
+		A67322CA23A8798B00164DF6 /* build.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; name = build.pl; path = Installer/build.pl; sourceTree = "<group>"; };
 		E93074B60A5C264700470842 /* InputMethodKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputMethodKit.framework; path = /System/Library/Frameworks/InputMethodKit.framework; sourceTree = "<absolute>"; };
 		E93074E00A5C2F1200470842 /* IPAInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPAInputController.h; path = Palette/IPAInputController.h; sourceTree = SOURCE_ROOT; };
 		E93074E10A5C2F1200470842 /* IPAInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPAInputController.m; path = Palette/IPAInputController.m; sourceTree = SOURCE_ROOT; };
@@ -468,7 +468,7 @@
 			isa = PBXGroup;
 			children = (
 				32EB979418D372C50062A8FC /* IPAPalette.xml */,
-				32EB979518D3761C0062A8FC /* builddmg.sh */,
+				A67322CA23A8798B00164DF6 /* build.pl */,
 			);
 			name = Deliverable;
 			sourceTree = SOURCE_ROOT;
@@ -831,6 +831,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2019.12.17;
 				DEVELOPMENT_TEAM = 2X36V2JWP4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
@@ -867,6 +868,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 2019.12.17;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 2X36V2JWP4;
 				FRAMEWORK_SEARCH_PATHS = (

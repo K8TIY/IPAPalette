@@ -1,12 +1,22 @@
-<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"
-     xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
   <channel>
-    <title>IPA Palette Changelog</title>
-    <link>http://www.blugs.com/Appcasts/IPAPaletteTest.xml</link>
-    <description>Most recent changes with links to updates.</description>
-    <language>en</language>
+    <title>IPA Palette</title>
+    <link>https://www.blugs.com/Appcasts/IPAPalette.xml</link>
     <item>
-      <title></title>
+      <title>2.3</title>
+      <pubDate>Tue, 17 Dec 2019 21:06:16 -0500</pubDate>
+      <sparkle:minimumSystemVersion>10.6</sparkle:minimumSystemVersion>
+      <enclosure url="https://www.blugs.com/Appcasts/IPAPalette.dmg"
+                 sparkle:version="2019.12.17"
+                 sparkle:shortVersionString="2.3"
+                 length="2151803"
+                 type="application/octet-stream"
+                 sparkle:edSignature="3JeaicPd+HRN52Xc6DXmVezCtSDuzSMOELcX9RWkwoiL2qoyTMpRPXfRdQoqujFKdUzPfNuNVWRjQQ76XUMOBQ=="
+      />
+    </item>
+    <item>
+      <title>2.2.1</title>
       <description><![CDATA[
         <h2>Version 2.2.1 Official Release</h2>
         This is the fully localized, supported version of IPA Palette/IPA
@@ -14,7 +24,7 @@
     ]]>
       </description>
       <pubDate>Mon, 6 Jun 2014 12:30:00 +0000</pubDate>
-      <enclosure url="http://www.blugs.com/Downloads/IPAPalette.dmg"
+      <enclosure url="http://www.blugs.com/Downloads/IPAPalette.dmg" <<--- FIXME: put version number on old file
                  sparkle:version="2014.06.09"
                  sparkle:shortVersionString="2.2.1"
                  length="3170627"
@@ -23,3 +33,4 @@
     </item>
   </channel>
 </rss>
+
