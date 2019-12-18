@@ -253,6 +253,7 @@
 		A6591F85239B54C100270422 /* NSApplication+DarkMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSApplication+DarkMode.h"; sourceTree = "<group>"; };
 		A6591F86239B54C100270422 /* NSApplication+DarkMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+DarkMode.m"; sourceTree = "<group>"; };
 		A67322CA23A8798B00164DF6 /* build.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; name = build.pl; path = Installer/build.pl; sourceTree = "<group>"; };
+		A6A7B63223A9D5C7007A39CF /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		E93074B60A5C264700470842 /* InputMethodKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputMethodKit.framework; path = /System/Library/Frameworks/InputMethodKit.framework; sourceTree = "<absolute>"; };
 		E93074E00A5C2F1200470842 /* IPAInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPAInputController.h; path = Palette/IPAInputController.h; sourceTree = SOURCE_ROOT; };
 		E93074E10A5C2F1200470842 /* IPAInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPAInputController.m; path = Palette/IPAInputController.m; sourceTree = SOURCE_ROOT; };
@@ -377,6 +378,7 @@
 				32A854E614F55E4A007CCF53 /* AuxNames.strings */,
 				32CA4F630368D1EE00C91783 /* IPAPalette_Prefix.pch */,
 				32D0964A135DED4C00D86037 /* README.markdown */,
+				A6A7B63223A9D5C7007A39CF /* LICENSE.txt */,
 				321F611817739FB2005B3255 /* IPAManager */,
 				3241E30810727C5F00144CE0 /* ImageMapGen */,
 				32D4CDB5147AE0DB008973BD /* KeyboadParser */,
