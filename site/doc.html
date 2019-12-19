@@ -1,79 +1,83 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<style type="text/css">
-/*<![CDATA[*/
- div.p {margin-top: 7pt;}
-/*]]>*/
-</style>
-
-<style type="text/css">
-/*<![CDATA[*/
-<!--
- td div.comp {margin-top: -0.6ex; margin-bottom: -1ex;}
- td div.comb {margin-top: -0.6ex; margin-bottom: -.6ex;}
- td div.hrcomp {line-height: 0.9; margin-top: -0.8ex; margin-bottom: -1ex;}
- td div.norm {line-height:normal;}
- span.overacc2 {position: relative;  left: .8em; top: -1.2ex;}
- span.overacc1 {position: relative;  left: .6em; top: -1.2ex;} -->
-/*]]>*/
-</style>
-<title>User's Guide for IPA Palette v2.1</title>
-
-<style type="text/css">
-/*<![CDATA[*/
- span.c4 {font-size: 64%}
- table.c3 {width:70%}
- h3.c2 {text-align: center}
- h1.c1 {text-align: center}
-/*]]>*/
-</style>
+  <meta charset="UTF-8">
+  <style type="text/css">
+   div.p {margin-top: 7pt;}
+   td div.comp {margin-top: -0.6ex; margin-bottom: -1ex;}
+   td div.comb {margin-top: -0.6ex; margin-bottom: -.6ex;}
+   td div.hrcomp {line-height: 0.9; margin-top: -0.8ex; margin-bottom: -1ex;}
+   td div.norm {line-height:normal;}
+   span.overacc2 {position: relative;  left: .8em; top: -1.2ex;}
+   span.overacc1 {position: relative;  left: .6em; top: -1.2ex;}
+   span.c4 {font-size: 64%}
+   table.c3 {width: 70%}
+   h3.c2 {text-align: center}
+   h1.c1 {text-align: center}
+   .ipa {font-family: "Times New Roman","Arial Unicode MS", serif;}
+  </style>
+  <title>User's Guide for IPA Palette v2.3</title>
 </head>
 <body>
 <div>
-<h1 class="c1">User's Guide<br/>
+<h1 class="c1 ipa">User's Guide<br/>
 for<br/>
-IPA Palette v2.0<br/>
-/ʔa͜ɪ.pʰi'ɛ͜ɪ.pʰə'lɛʔ/</h1>
-<h3 class="c2">Brian S. "Moses" Hall</h3>
+IPA Palette v2.3<br/>
+/ʔa͜ɪ.pʰi'ɛ͜ɪ.pʰə'lɛt/</h1>
+<h3 class="c2">Brian S. "Moses" Hall<br/>BLUGS.COM LLC</h3>
 <h2>In a Nutshell</h2>
-IPA Palette is a Unicode input method for the Mac. It allows users of OS X 10.5
+IPA Palette is a Unicode input method for the Mac. It allows users of macOS 10.6
 and later to insert International Phonetic Alphabet symbols in any
 Unicode-enabled text field or editor.
-<h2>How to Install</h2>
-Use the supplied installer and you should have no trouble. The installer tries
-to notify Mac OS that a new Input Method has been added or modified, and it also
-tries to terminate any currently-running instances of the input method.
-If you are unable to activate/use the Palette immediately, restart the machine.
-While inconvenient, it is the best way to get a reluctant system to "see" the
-new software.
+
 <h2>How to Enable</h2>
 <table class="c3">
-<tr>
-<td><b>As of version 2.2, it should no longer be necessary to enable the input
-method; the installer will try to do it for you. But, you still should check the
-"Show Input menu in menu bar" checkbox if you have not already.
-</b><br/>Go to System Preferences → Language &amp; Text → Input Sources.
-(On Leopard it is System Preferences → International → Input Menu.)
-IPA Palette should show up near the top of the list of input methods, allong
-with the built-in Character and Keyboard Viewers.
-Put a check mark in the box to enable it, and also make sure the check box at
-the bottom of the window ("Show Input menu in menu bar") is checked also.
-This enables the Input Menu.</td>
-<td><img src="International.jpg" alt="The International Panel" /><br/></td>
-</tr>
+  <tr>
+    <td>
+      First of all, you <i>may</i> need to enable "App Store and identified developers" in the
+      Security &amp; Privacy System Preferences panel.
+      Download and open the installer disk image. Drag the IPA Manager app to the Applications link.
+      IPA Manager is the all-in-one installer and updater for IPA Palette.
+    </td>
+    <td>
+      <img src="DMGContents.png" alt="The Keyboard Preferences Panel" width="612" height="472"/>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      IPA Manager has a pretty self-explanatory user interface. When you select "Install",
+      it installs the actual IPA Palette app in your system, and notifies macOS that there
+      is a new (or updated) input method that needs to be activated. At this stage there
+      may be one more thing you need to do…
+    </td>
+    <td>
+      <img src="IPAManager.png" alt="The IPA Manager UI" width="760" height="329"/>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      If your Input Sources "flag" menu is not enabled,
+      got to System Preferences → Keyboard → Keyboard.
+      Make sure the "Show keyboards and emoji viewers in menu bar" check box at
+      the bottom of the window is checked.
+      This enables the Input Menu.
+    </td>
+    <td>
+      <img src="KeyboardPrefs.png" alt="The Keyboard Preferences Panel" width="640" height="568"/>
+    </td>
+  </tr>
 </table>
+
 <h2>How To Use</h2>
 Select the Input Menu item "Show IPA Palette". The IPA Palette main window
 should then open as pictured below.<br/>
 <br/>
 <table class="c3">
 <tr>
-<td><img src="IMMenu.jpg" alt="The Input Menu" /></td>
-<td><img src="IPAPalette.jpg" alt="The Palette" /></td>
+<td><img src="IMMenu.png" alt="The Input Menu" width="256" height="320"/></td>
+<td><img src="Palette.png" alt="The Palette" width="640" height="303"/></td>
 </tr>
 </table>
 <br/>
@@ -90,7 +94,7 @@ To enter text, you click on the desired IPA symbol. The preview pane on the righ
 </table>
 Find an area of an image map that doesn't have any symbols on it (for example,
 one of the "impossible" consonant slots, between vowels, or the bottom of the
-ExtIPA chart -- anywhere that doesn't highlight under your cursor). Then drag
+ExtIPA chart &mdash; anywhere that doesn't highlight under your cursor). Then drag
 the whole image somewhere on your screen. Now you have an auxiliary window with
 just that portion of the chart. You can set up your preferred arrangement of
 windows with just the symbols you need, no more constant clicking back and
@@ -154,7 +158,7 @@ it in the <code>Search</code> tab.<br/>
 <br/>
 The <code>Custom</code> tab pane is updated every time you edit your list. (If you remove all of them, or don't have any, the <code>Custom</code> pane will not be displayed in the Palette.) Custom symbols and their descriptions are saved in your preferences, so you only have to define them once.<br/>
 <br/>
-<em>Note: if a glyph is a diacritic, IPA Palette will (should -- there may be some nonspacing characters it does not know about -- let me know if there is one it misses) add the normal dotted circle (<code>U+25CC</code>) as a placeholder in the table and the image map. You don't need to (and should not) add it manually.</em><br/>
+<em>Note: if a glyph is a diacritic, IPA Palette will (should &mdash; there may be some nonspacing characters it does not know about &mdash; let me know if there is one it misses) add the normal dotted circle (<code>U+25CC</code>) as a placeholder in the table and the image map. You don't need to (and should not) add it manually.</em><br/>
 <br/>
 <table>
 <tr>
@@ -163,61 +167,38 @@ The <code>Custom</code> tab pane is updated every time you edit your list. (If y
 </tr>
 </table>
 <h2>Font Support</h2>
-Although OS X has always had decent IPA support, I am assuming that most IPA Palette users will want something better than decent. I recommend Doulos SIL or Charis SIL, both high-quality free fonts from <a href="www.sil.org">SIL International</a>. They are the de facto standard IPA fonts, and I have designed IPA Palette with them in mind. The SIL font designers have made Doulos/Charis "smart" using OpenType and AAT (Apple Advanced Typography) properties. Take as an example the IPA tone symbols <tt>U+02E5</tt> through <tt>U+02E9</tt>. While fonts in the Hiragino family can render them, Doulos can form elegant ligatures:<br/>
+Although OS X has always had decent IPA support, I am assuming that most IPA Palette
+users will want something better than decent. I recommend Doulos SIL or Charis SIL,
+both high-quality free fonts from <a href="www.sil.org">SIL International</a>.
+They are the de facto standard IPA fonts, and I have designed IPA Palette with them in mind.
+
+Take as an example the IPA tone symbols <tt>U+02E5</tt> through <tt>U+02E9</tt>. While fonts in the Hiragino family can render them, Doulos can form elegant ligatures:<br/>
 <img src="Doulos.png" alt="Doulos vs Hiragino" /><br/>
-<em>Note: please use Doulos or Charis SIL version 4.110; some earlier versions were buggy and would cause weird warning messages under Snow Leopard. I think the bugs were resolved with 4.110 or one of its immediate predecessors.</em>
+
 <h3>Font "Synchronization"</h3>
 To insert a symbol in the current open document in the font that you have selected for the font preview, hold down the Control key when you click on it.<br/>
 <br/>
 <em>Note: anything you type subsequently will be in the font that was selected before. Only the inserted symbol will be in the preview font.</em> <em>Note: not all target programs support this. Microsoft Word 2008, for example, suffers from this defect. (Actually its users suffer, but hasn't that always been the case?)</em>
 <h3>User-Defined Fonts</h3>
-IPA Palette tries to show only IPA fonts in its popup menu. To be specific, it searches every installed font for those which contain /ɮ/, <span class="c4">LATIN SMALL LETTER LEZH</span>. If you want the menu to show additional fonts, you can do so, but you must modify your preferences using the Terminal or with Property List Editor (part of Apple's XCode developer tool suite). (<em>Note: most users will not need or wish to do this.</em>)
+IPA Palette tries to show only IPA fonts in its popup menu. To be specific, it searches every installed font for those which contain, for example, /ɮ/, <span class="c4">LATIN SMALL LETTER LEZH</span> and other symbols typical of IPA, giving fonts with better coverage an orange or green button image in the menu.
+(The font coverage rating is derived in <a href="https://github.com/K8TIY/IPAPalette/blob/01c65899e89241925415c077f3554e72fcb73cf3/Palette/IPAServer.m#L435">this portion</a>
+of the IPA Palette source code.)
+<br/>
+If you want the menu to show additional fonts, you can do so, but you must modify your preferences using the Terminal or with Property List Editor (part of Apple's XCode developer tool suite). (<em>Note: most users will not need or wish to do this.</em>)
 <pre>
 defaults write com.blugs.inputmethod.IPAPalette UserFonts '("Arial Narrow","Papyrus")'
 </pre>
 The font names are a combination of "Family" (like "Hiragino Maru Gothic"), and "Typeface" (like "Regular", "W4", or "Bold"). You can omit "Regular", as in the example above for the Papyrus typeface. You can find these names using Font Book or the standard font panel.
 <h2>How to Report Bugs or Feature Requests</h2>
-<tt>moses@blugs.com</tt> (that's me)<br/>
-<br/>
-If you have a crash, try to send a CrashReporter log with your report.
-Also, turn on "Debugging" via the "Settings" pane of the IPA Palette window itself;
-a higher debug level sends more status message to the System logger.
-You can monitor this using <tt>/Applications/Utilities/Console</tt> while IPA Palette is running.
-It's not perfect, but it may give us some clues about what has happened.<br/>
-<br/>
-<strong>Please</strong> try to be as complete as possible in your description. "IPA Palette doesn't work on my computer" is a waste of my time and yours.
-<h2>FAQ and Potential FAQ Section</h2>
-<p><strong>Q: Can I use the palette in Microsoft Office?</strong><br/>
-<strong>A: Maybe.</strong></p>
 <ul>
-<li>Old versions (Office X and earler) do not speak Unicode at all. Forget it.</li>
-<li>In Word 2004, diacritics are not positioned correctly. <em>Microsoft engineer: "Die a critic? Huh??"</em></li>
-<li>Word 2008 and 2011 actually seem to almost work sometimes! <em>Wow guys, it only took you 8 years?</em></li>
+  <li>A pull request on <a href="https://github.com/K8TIY/IPAPalette">GitHub</a>
+  <li>Send a CrashReporter log.
+  <li><tt>moses@blugs.com</tt> (that's me)
 </ul>
-<p><strong>Q: Does IPA Palette work with Application XYZ?</strong><br/>
-<strong>A: Maybe.</strong></p>
-<ul>
-<li>In general, if the software works with Character Viewer (née Character Palette),
-    it will almost certainly work with IPA Palette.</li>
-<li>It depends on how well application XYZ supports Unicode. Carbon (C-language programs
-    that may or may not work with Mac OS 9) software, especially software written with legacy
-    QuickDraw text APIs, is particularly vulnerable to this kind of incompatibility, as the old
-    Mac Toolbox was written way back in the Late Mesozoic period before Unicode.</li>
-<li>Cocoa (Objective-C programs that require OS X) software is automatically Unicode-savvy, so no worries there. I would be shocked to find a Cocoa application that causes problems for IPA Palette.</li>
-<li>OpenOffice, X11 software, Java programs, and any other miscellaneous categories may perform arbitrarily well or poorly, depending on the implementation language and the phase of the moon.</li>
-</ul>
-<p><strong>Q: My Linguistics class is over. How do I uninstall the Palette?</strong><br/>
-<strong>A: Manually.</strong><br/></p>
-<ul>
-<li>The software is in <tt>/Library/Input Methods</tt> or <tt>~/Library/Input Methods</tt>, depending on how you installed it. In either case, just drag the software to the Trash or the desktop. The next time you log in, the software will be completely inactivated, and then you can empty the Trash.</li>
-</ul>
-<p><strong>Q: Is IPA Palette available on the Mac App Store?</strong><br/>
-<strong>A: No, and it probably never will be.</strong><br/></p>
-<ul>
-<li>Until Apple cleans up its act and makes the App Store more compatible with open source software, this is not going to happen.</li>
-<li>I'm not sure I am terribly keen on the idea of paying Apple for the privilege of giving away my free software.</li>
-<li>I think readers know by now how I feel about the Mac App Store.</li>
-</ul>
+
+
+
+
 <h2>Thanks to...</h2>
 <ul>
 <li>Matt Gemmell for permission to use his <code>MAAttachedWindow</code> code under GPL 2+ license</li>
