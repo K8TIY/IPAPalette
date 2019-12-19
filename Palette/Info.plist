@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>IPA!</string>
 	<key>CFBundleVersion</key>
-	<string>2019.12.06</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>InputMethodConnectionName</key>
 	<string>IPAPalette_1_Connection</string>
 	<key>InputMethodServerControllerClass</key>
