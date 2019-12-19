@@ -13,6 +13,7 @@ shamelessly stolen from an older version of Sparkle.
 +(CFStringRef)managerID;
 +(CFStringRef)paletteID;
 -(NSString*)_installationBasePath;
+-(NSString*) _realHomeDirectory;
 -(NSString*)_inputMethodsPath;
 -(NSString*)_paletteAppPath;
 -(NSString*)_archiveAppPath;
@@ -104,7 +105,7 @@ shamelessly stolen from an older version of Sparkle.
 #include <pwd.h>
 #include <assert.h>
 
-NSString* RealHomeDirectory(void)
+-(NSString*) _realHomeDirectory
 {
   struct passwd* pw = getpwuid(getuid());
   assert(pw);
@@ -113,14 +114,14 @@ NSString* RealHomeDirectory(void)
 
 -(NSString*)_inputMethodsPath
 {
-  return [RealHomeDirectory()
-             stringByAppendingPathComponent:@"Library/Input Methods"];
+  return [[self _realHomeDirectory]
+                stringByAppendingPathComponent:@"Library/Input Methods"];
 }
 
 -(NSString*)_paletteAppPath
 {
   return [[self _inputMethodsPath]
-             stringByAppendingPathComponent:@"IPAPalette.app"];
+                stringByAppendingPathComponent:@"IPAPalette.app"];
 }
 
 -(NSString*)_archiveAppPath
