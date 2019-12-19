@@ -5,14 +5,14 @@
     <link>https://www.blugs.com/Appcasts/IPAPalette.xml</link>
     <item>
       <title>2.3</title>
-      <pubDate>Tue, 17 Dec 2019 21:06:16 -0500</pubDate>
+      <pubDate>Tue, 19 Dec 2019 21:06:16 -0500</pubDate>
       <sparkle:minimumSystemVersion>10.6</sparkle:minimumSystemVersion>
       <enclosure url="https://www.blugs.com/Appcasts/IPAPalette.dmg"
-                 sparkle:version="2019.12.17"
+                 sparkle:version="2019.12.19"
                  sparkle:shortVersionString="2.3"
-                 length="2151803"
                  type="application/octet-stream"
-                 sparkle:edSignature="3JeaicPd+HRN52Xc6DXmVezCtSDuzSMOELcX9RWkwoiL2qoyTMpRPXfRdQoqujFKdUzPfNuNVWRjQQ76XUMOBQ=="
+                 sparkle:edSignature="8NK3b4h+d5M54+kS2k3U9VFCNVrjzWMUKCIH/fueIe1h5gihWh+0chhSouHtnKIy9jwens8/XYv6ZZ5KideYAA=="
+                 length="2128013"
       />
     </item>
     <item>
