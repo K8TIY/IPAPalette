@@ -1,41 +1,11 @@
-## This is IPA Palette version 2.2
+## This is IPA Palette version 2.3
 <http://blugs.com/IPA>
 
 ### What can you do with this thing?
 
-IPA Palette is a palette-class input method for OS X 10.5 and later.
+IPA Palette is a palette-class input method for OS X 10.6 and later.
 It makes possible point-and-click input of International Phonetic
 Alphabet symbols into Unicode-savvy applications.
-
-### What's new in 2.2?
-
-* You can click in an unoccupied part of an image map (a part that has no
-  IPA symbol and thus doesn't hilite under your mouse) and drag it out into
-  a new mini-palette (I call them "auxiliaries").
-  This way you can have available whatever subset of the IPA you
-  use the most, without having to keep switching between tabs.
-  The auxiliary palettes hide when you hide the main one, and are saved to
-  your preferences.
-* New IPA Manager app handles installation and uninstallation, and updating.
-  It uses the popular Sparkle framework to check for updates.
-* Some optimizations to the PDF image map related to mouse tracking should
-  benefit performance and memory use.
-* Mouse tracking starts up before font scanning finishes, so you can have symbol
-  description information available earlier, even if you have many fonts
-  installed.
-* Made it possible to rearrange the custom symbols layout by dragging rows
-  in the table. (You can copy if you hold down the Option key.)
-
-### Fixed in 2.2
-
-* Restored the ExtIPA Nasal Escape symbol, which went missing somewhere
-  along the line, probably in the 2.0 transition.
-* Multicharacter symbols like /ǃ¡/ from ExtIPA can now have keyboard shortcuts
-  displayed (if you have a really good keyboard layout!).
-* Finally diagnosed the reason I could never seem to change the preview font in
-  Snow Leopard -- a Core Text bug or misfeature that was cacheing font data
-  based on the address of the string object I was passing in, instead of its
-  content (since I was reusing a mutable string).
 
 ### To Build
 
@@ -59,7 +29,6 @@ run `./translator.py -s` to regenerate the *.strings files.
 
 ### Not Todo
 
-* Make it work with Microsoft Word.
 * Sell it on the App Store.
 
 ### Bugs
@@ -73,4 +42,4 @@ run `./translator.py -s` to regenerate the *.strings files.
   IPA symbols are not found. Fixing this is not a high priority but
   may be done eventually.
 * You can't accept the Custom Symbols sheet by hitting return (at least not
-  on my Snow Lion systems). 
+  on my Snow Lion systems).
