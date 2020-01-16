@@ -3,9 +3,9 @@
 @implementation NSApplication (DarkMode)
 +(BOOL)isDarkMode
 {
-  NSAppearance* appearance = [NSApp effectiveAppearance];
   if (@available(macOS 10.14, *))
   {
+    NSAppearance* appearance = [NSApp effectiveAppearance];
     NSArray* names = @[NSAppearanceNameAqua, NSAppearanceNameDarkAqua];
     NSAppearanceName name = [appearance bestMatchFromAppearancesWithNames:names];
     return [name isEqualToString:NSAppearanceNameDarkAqua];
