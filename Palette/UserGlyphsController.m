@@ -408,7 +408,7 @@ static NSString* const IPASymbolListRows = @"IPASymbolListRows";
 @end
 
 /*
-Copyright © 2005-2019 Brian S. Hall, BLUGS.COM LLC
+Copyright © 2005-2020 Brian S. Hall, BLUGS.COM LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
