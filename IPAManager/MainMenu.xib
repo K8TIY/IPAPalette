@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -148,7 +148,8 @@
         </menu>
         <customObject id="207" userLabel="IPAManager" customClass="IPAManager">
             <connections>
-                <outlet property="_info" destination="311" id="355"/>
+                <outlet property="_errorField" destination="LAJ-Ga-tbm" id="7iH-Su-MiQ"/>
+                <outlet property="_infoField" destination="311" id="m6q-UI-VeS"/>
                 <outlet property="_installButton" destination="309" id="353"/>
                 <outlet property="_version" destination="429" id="431"/>
                 <outlet property="_vowelChart" destination="43u-AL-xub" id="3td-By-wtu"/>
@@ -159,7 +160,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="305" y="322" width="548" height="195"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2048" height="1129"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
             <value key="minSize" type="size" width="213" height="107"/>
             <view key="contentView" id="247">
                 <rect key="frame" x="0.0" y="0.0" width="548" height="195"/>
@@ -177,7 +178,7 @@
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="311">
-                        <rect key="frame" x="20" y="70" width="358" height="105"/>
+                        <rect key="frame" x="20" y="126" width="358" height="46"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" id="312">
                             <font key="font" metaFont="system"/>
@@ -208,6 +209,15 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Vow" id="9de-yr-tvV"/>
                     </imageView>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="LAJ-Ga-tbm">
+                        <rect key="frame" x="20" y="70" width="358" height="46"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" id="o7c-qd-Qub">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
             <point key="canvasLocation" x="132" y="161.5"/>

@@ -11,20 +11,16 @@ typedef enum
 @interface IPAManager : NSObject
 {
   IBOutlet NSWindow*    _window;
-  IBOutlet NSTextField* _info;
+  IBOutlet NSTextField* _infoField;
+  IBOutlet NSTextField* _errorField;
   IBOutlet NSTextField* _version;
   IBOutlet NSButton*    _installButton;
   IBOutlet NSImageView* _vowelChart;
-  //IBOutlet NSButton*    _allUsersButton;
-  //IPAInstallStatus      installStatus;
   NSString*             _installedVersion;
   NSString*             _installedVersionHR;
   double                _osVersion;
-  //BOOL                  _userInstalled;
   BOOL                  _wasSelected;
-  //AuthorizationRef      auth;
-  NSString*             errorString;
-  //NSURL*                _inputMethodsURL;
+  NSError*              _error;
 }
 
 -(IBAction)installUninstall:(id)sender;

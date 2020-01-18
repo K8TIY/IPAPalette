@@ -12,18 +12,12 @@ shamelessly stolen from an older version of Sparkle.
 @interface IPAManager (private)
 +(CFStringRef)managerID;
 +(CFStringRef)paletteID;
--(NSString*)_installationBasePath;
 -(NSString*) _realHomeDirectory;
 -(NSString*)_inputMethodsPath;
 -(NSString*)_paletteAppPath;
 -(NSString*)_archiveAppPath;
 -(IPAInstallStatus)_installStatus;
 -(void)_checkForInstallation;
--(BOOL)_extractArchivePath:(NSString*)archivePath
-       toDestination:(NSString*)destination finalPath:(NSString*)finalPath;
--(BOOL)_authenticatedExtractArchivePath:(NSString*)archivePath
-       toDestination:(NSString*)destination finalPath:(NSString*)finalPath;
--(BOOL)_authenticatedRemove:(NSString*)componentPath;
 -(BOOL)_installArchive;
 -(void)_install:(id)sender;
 -(void)_uninstall:(id)sender;
@@ -31,7 +25,6 @@ shamelessly stolen from an older version of Sparkle.
 -(void)_installComplete:(id)sender;
 -(void)_register:(NSString*)path;
 -(void)_setPaletteEnabled:(CFBooleanRef)flag;
-//-(BOOL)_isFlagMenuEnabled;
 @end
 
 @implementation IPAManager
@@ -55,12 +48,6 @@ shamelessly stolen from an older version of Sparkle.
 {
   if ((self = [super init]) != nil)
   {
-    //_userInstalled = YES;
-    //NSString* path = @"/Library/Input Methods/IPAPalette.app";
-    //if ([[NSFileManager defaultManager] fileExistsAtPath:path])
-    //{
-    //  _userInstalled = NO;
-    //}
     // On Snow Leopard and later we try to use IPAIconTemplate.pdf as the input
     // method icon. Revert the plist to IPAIcon.tif if Leopard is detected.
     SInt32 major = 0;
@@ -68,15 +55,13 @@ shamelessly stolen from an older version of Sparkle.
     Gestalt(gestaltSystemVersionMajor, &major);
     Gestalt(gestaltSystemVersionMinor, &minor);
     _osVersion = major + ((double)minor/10.0);
-    //NSLog(@"OS Version %f", _osVersion);
   }
   return self;
 }
 
 -(void)dealloc
 {
-  [errorString release];
-  //[_inputMethodsURL release];
+  if (_error) [_error release];
   [super dealloc];
 }
 
@@ -175,12 +160,12 @@ shamelessly stolen from an older version of Sparkle.
     key = @"__INSTALLED__";
     bkey = @"__UNINSTALL__";
   }
-  if (errorString)
+  if (_error)
   {
-    [_info setStringValue:[NSString stringWithFormat:@"Error: %@", errorString]];
+    [_errorField setStringValue:[_error localizedDescription]];
   }
   Onizuka* oz = [Onizuka sharedOnizuka];
-  if (key != nil) [oz localizeObject:_info withTitle:key];
+  if (key != nil) [oz localizeObject:_infoField withTitle:key];
   if (bkey != nil) [oz localizeObject:_installButton withTitle:bkey];
   NSString* ver = @"";
   if ([_installedVersionHR length] && [_installedVersion length])
@@ -190,84 +175,22 @@ shamelessly stolen from an older version of Sparkle.
 }
 
 #pragma mark Install/Uninstall
-
-/* Shamelessly ripped from Sparkle (and now different) */
--(BOOL)_extractArchivePath:(NSString*)archivePath
-       toDestination:(NSString*)destination finalPath:(NSString*)finalPath
-{
-  BOOL ret = NO, oldExist;
-  NSFileManager* defaultFileManager = [NSFileManager defaultManager];
-  char* cmd;
-  oldExist = [defaultFileManager fileExistsAtPath:finalPath];
-  if (oldExist)
-    cmd = "rm -rf \"$DST_COMPONENT\" && "
-    "mkdir -p \"$DST_COMPONENT\" && "
-    "ditto --rsrc \"$SRC_ARCHIVE\" \"$DST_COMPONENT\"";
-  else
-    cmd = "mkdir -p \"$DST_COMPONENT\" && "
-    "ditto --rsrc \"$SRC_ARCHIVE\" \"$DST_COMPONENT\"";
-  setenv("SRC_ARCHIVE", [archivePath fileSystemRepresentation], 1);
-  setenv("DST_PATH", [destination fileSystemRepresentation], 1);
-  setenv("DST_COMPONENT", [finalPath fileSystemRepresentation], 1);
-  int status = system(cmd);
-  if (WIFEXITED(status) && WEXITSTATUS(status) == 0)
-    ret = YES;
-  else
-    errorString = [[NSString alloc] initWithFormat:@"extraction of %@ failed\n",
-                                    [finalPath lastPathComponent]];
-  unsetenv("SRC_ARCHIVE");
-  unsetenv("DST_COMPONENT");
-  unsetenv("DST_PATH");
-  return ret;
-}
-
--(BOOL)_authenticatedExtractArchivePath:(NSString*)archivePath
-       toDestination:(NSString*)destination finalPath:(NSString*)finalPath
-{
-  BOOL ret = NO, oldExist;
-  NSFileManager* defaultFileManager = [NSFileManager defaultManager];
-  char* cmd;
-  oldExist = [defaultFileManager fileExistsAtPath:finalPath];
-  if (oldExist)
-    cmd = "rm -rf \"$DST_COMPONENT\" && "
-    "mkdir -p \"$DST_COMPONENT\" && "
-    "ditto --rsrc \"$SRC_ARCHIVE\" \"$DST_COMPONENT\"";
-  else
-    cmd = "mkdir -p \"$DST_COMPONENT\" && "
-    "ditto --rsrc \"$SRC_ARCHIVE\" \"$DST_COMPONENT\"";
-  setenv("SRC_ARCHIVE", [archivePath fileSystemRepresentation], 1);
-  setenv("DST_COMPONENT", [finalPath fileSystemRepresentation], 1);
-  setenv("DST_PATH", [destination fileSystemRepresentation], 1);
-  errorString = [[NSString stringWithFormat:@"authentication failed while extracting %@\n", [finalPath lastPathComponent]] retain];
-  unsetenv("SRC_ARCHIVE");
-  unsetenv("DST_COMPONENT");
-  unsetenv("DST_PATH");
-  return ret;
-}
-
--(BOOL)_authenticatedRemove:(NSString*)componentPath
-{
-  BOOL ret = NO;
-  NSFileManager* defaultFileManager = [NSFileManager defaultManager];
-  if (![defaultFileManager fileExistsAtPath:componentPath])
-    return YES; // No error, just forget it
-  setenv("COMP_PATH", [componentPath fileSystemRepresentation], 1);
-  errorString = [[NSString stringWithFormat:@"authentication failed while removing %@\n", [componentPath lastPathComponent]] retain];
-  unsetenv("COMP_PATH");
-  return ret;
-}
-
 -(BOOL)_installArchive
 {
-  NSString* archivePath = [self _archiveAppPath];
-  NSString* containingDir = [self _inputMethodsPath];
-  NSString* palette = [self _paletteAppPath];
   BOOL ret = YES;
   IPAInstallStatus status = [self _installStatus];
   if (status != kIPAInstallStatusInstalled)
   {
-    BOOL result = [self _extractArchivePath:archivePath toDestination:containingDir finalPath:palette];
-    if (result == NO) ret = NO;
+    NSError* err = nil;
+    NSString* archivePath = [self _archiveAppPath];
+    NSString* palette = [self _paletteAppPath];
+    NSFileManager* fm = [NSFileManager defaultManager];
+    ret = [fm copyItemAtPath:archivePath toPath:palette
+              error:&err];
+    if (!ret && err)
+    {
+      _error = [err retain];
+    }
   }
   return ret;
 }
@@ -276,13 +199,14 @@ shamelessly stolen from an older version of Sparkle.
 {
   #pragma unused (sender)
   NSAutoreleasePool* arp = [[NSAutoreleasePool alloc] init];
-  [errorString release];
-  errorString = nil;
-  [self _installArchive];
-  NSString* path = [self _paletteAppPath];
-  [self performSelectorOnMainThread:@selector(_register:)
-        withObject:path waitUntilDone:YES];
-  [self performSelectorOnMainThread:@selector(_installComplete:) withObject:nil waitUntilDone:NO];
+  if ([self _installArchive])
+  {
+    NSString* path = [self _paletteAppPath];
+    [self performSelectorOnMainThread:@selector(_register:)
+          withObject:path waitUntilDone:YES];
+  }
+  [self performSelectorOnMainThread:@selector(_installComplete:) withObject:nil
+        waitUntilDone:NO];
   [arp release];
 }
 
@@ -290,29 +214,24 @@ shamelessly stolen from an older version of Sparkle.
 {
   #pragma unused (sender)
   NSAutoreleasePool* arp = [[NSAutoreleasePool alloc] init];
-  NSFileManager* fileManager = [NSFileManager defaultManager];
+  NSFileManager* fm = [NSFileManager defaultManager];
   NSError* err = nil;
   [self performSelectorOnMainThread:@selector(_setPaletteEnabled:)
         withObject:(id)kCFBooleanFalse waitUntilDone:YES];
-  [errorString release];
-  errorString = nil;
   NSString* componentPath = [self _paletteAppPath];
-  BOOL ok = [fileManager removeItemAtPath:componentPath error:&err];
+  BOOL ok = [fm removeItemAtPath:componentPath error:&err];
   if (!ok && err)
   {
-    dispatch_async(dispatch_get_main_queue(), ^{
-      [_info setStringValue:[err localizedDescription]];
-    });
-    //[_info setStringValue:[err localizedDescription]];
+    _error = [err retain];
   }
   else
   {
     system("killall IPAServer > /dev/null 2>&1");
     system("killall IPAPalette > /dev/null 2>&1");
-    [self performSelectorOnMainThread:@selector(_installComplete:) withObject:nil
-          waitUntilDone:NO];
-    [arp release];
   }
+  [self performSelectorOnMainThread:@selector(_installComplete:) withObject:nil
+        waitUntilDone:NO];
+  [arp release];
 }
 
 -(void)_update:(id)sender
@@ -325,6 +244,7 @@ shamelessly stolen from an older version of Sparkle.
 -(void)_installComplete:(id)sender
 {
   #pragma unused (sender)
+  if (_error) [_errorField setStringValue:[_error localizedDescription]];
   [self _checkForInstallation];
 }
 
@@ -332,6 +252,11 @@ shamelessly stolen from an older version of Sparkle.
 -(IBAction)installUninstall:(id)sender
 {
   #pragma unused (sender)
+  if (_error)
+  {
+    [_error release];
+    _error = nil;
+  }
   IPAInstallStatus status = [self _installStatus];
   if (status == kIPAInstallStatusInstalled)
     [NSThread detachNewThreadSelector:@selector(_uninstall:) toTarget:self withObject:nil];
@@ -341,16 +266,22 @@ shamelessly stolen from an older version of Sparkle.
     [NSThread detachNewThreadSelector:@selector(_install:) toTarget:self withObject:nil];
 }
 
-#pragma TIS Functions
+#pragma mark TIS Functions
 -(void)_register:(NSString*)path
 {
-  CFURLRef url = CFURLCreateWithFileSystemPath(kCFAllocatorDefault, (CFStringRef)path, kCFURLPOSIXPathStyle, true);
+  NSURL* url = [[NSURL alloc] initWithString:path];
   OSStatus status = noErr;
   if (url)
   {
-    status = TISRegisterInputSource(url);
-    if (status) errorString = [[NSString alloc] initWithFormat:@"TISRegisterInputSource(%@): %ld", url, (long)status];
-    CFRelease(url);
+    status = TISRegisterInputSource((CFURLRef)url);
+    if (status != noErr)
+    {
+       NSDictionary* userInfo = @{NSLocalizedDescriptionKey:
+                                [NSString stringWithFormat:@"TISRegisterInputSource: error %ld", (long)status]};
+      _error = [[NSError alloc] initWithDomain:NSCocoaErrorDomain code:status
+                                userInfo:userInfo];
+    }
+    [url release];
     [self _setPaletteEnabled:kCFBooleanTrue];
   }
 }
@@ -364,12 +295,24 @@ shamelessly stolen from an older version of Sparkle.
   if ([list count])
   {
     OSStatus err = noErr;
+    NSString* fn = nil;
     TISInputSourceRef me = (TISInputSourceRef)[list objectAtIndex:0L];
     CFBooleanRef selected = TISGetInputSourceProperty(me, kTISPropertyInputSourceIsSelected);
     if (flag == kCFBooleanTrue)
     {
       err = TISEnableInputSource(me);
-      if (_wasSelected) err = TISSelectInputSource(me);
+      if (err == noErr)
+      {
+        if (_wasSelected)
+        {
+          err = TISSelectInputSource(me);
+          if (err != noErr) fn = @"TISSelectInputSource";
+        }
+      }
+      else
+      {
+        fn = @"TISEnableInputSource";
+      }
     }
     else
     {
@@ -377,12 +320,25 @@ shamelessly stolen from an older version of Sparkle.
       {
         _wasSelected = YES;
         err = TISDeselectInputSource(me);
-        if (err != noErr) NSLog(@"TISDeselectInputSource: error %d", (int)err);
+        if (err != noErr) fn = @"TISDeselectInputSource";
       }
       else _wasSelected = NO;
-      err = TISDisableInputSource(me);
+      if (err == noErr)
+      {
+        err = TISDisableInputSource(me);
+        if (err != noErr)
+        {
+          fn = @"TISDisableInputSource";
+        }
+      }
     }
-    if (err != noErr) NSLog(@"TIS*ableInputSource: error %d", (int)err);
+    if (err != noErr)
+    {
+       NSDictionary* userInfo = @{NSLocalizedDescriptionKey:
+                                [NSString stringWithFormat:@"%@: error %ld", fn, (long)err]};
+      _error = [[NSError alloc] initWithDomain:NSCocoaErrorDomain code:err
+                                userInfo:userInfo];
+    }
   }
   [list release];
 }
