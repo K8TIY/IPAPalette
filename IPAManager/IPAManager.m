@@ -38,11 +38,11 @@ shamelessly stolen from an older version of Sparkle.
   return CFSTR("com.blugs.inputmethod.IPAPalette");
 }
 
-+(NSString*)installationBasePath
+/*+(NSString*)installationBasePath
 {
   NSString* root = NSHomeDirectory();
   return [root stringByAppendingPathComponent:@"Input Methods"];
-}
+}*/
 
 -(id)init
 {
@@ -269,20 +269,29 @@ shamelessly stolen from an older version of Sparkle.
 #pragma mark TIS Functions
 -(void)_register:(NSString*)path
 {
-  NSURL* url = [[NSURL alloc] initWithString:path];
+  NSString* msg = nil;
   OSStatus status = noErr;
+  NSURL* url = [[NSURL alloc] initFileURLWithPath:path];
   if (url)
   {
     status = TISRegisterInputSource((CFURLRef)url);
     if (status != noErr)
     {
-       NSDictionary* userInfo = @{NSLocalizedDescriptionKey:
-                                [NSString stringWithFormat:@"TISRegisterInputSource: error %ld", (long)status]};
-      _error = [[NSError alloc] initWithDomain:NSCocoaErrorDomain code:status
-                                userInfo:userInfo];
+      msg = [NSString stringWithFormat:@"TISRegisterInputSource: error %ld", (long)status];
     }
     [url release];
     [self _setPaletteEnabled:kCFBooleanTrue];
+  }
+  else
+  {
+    msg = [NSString stringWithFormat:@"Error registering input source: can't create NSURL from %@", path];
+    status = NSFileNoSuchFileError;
+  }
+  if (msg)
+  {
+    NSDictionary* userInfo = @{NSLocalizedDescriptionKey: msg};
+    _error = [[NSError alloc] initWithDomain:NSCocoaErrorDomain code:status
+                              userInfo:userInfo];
   }
 }
 
