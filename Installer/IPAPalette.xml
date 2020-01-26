@@ -4,6 +4,26 @@
     <title>IPA Palette</title>
     <link>https://www.blugs.com/Appcasts/IPAPalette.xml</link>
     <item>
+      <title>2.3.2</title>
+      <description><![CDATA[
+          <h2>Version 2.3.2</h2>
+          <p>Fixes a bug causing IPA Manager to fail to register IPA Palette
+          with the OS as an input method, as a consequence of which the Palette
+          remains absent from the Input Sources Menu.</p>
+          <p>This update is recommended for all users.</p>
+      ]]>
+        </description>
+      <pubDate>Sun, 26 Jan 2020 00:00:00 -0500</pubDate>
+      <sparkle:minimumSystemVersion>10.6</sparkle:minimumSystemVersion>
+      <enclosure url="https://www.blugs.com/Downloads/IPAPalette_2.3.2.dmg"
+                 sparkle:version="2020.01.26"
+                 sparkle:shortVersionString="2.3.2"
+                 type="application/octet-stream"
+                 sparkle:edSignature="8yPleq0aocwxUnkAuAbAocIAkJxpKW2qaiI+p0/jUJ1mdnrl/+GCe3q3wjT49L1sYZx5DU67GBBhQEptkvh+AA=="
+                 length="2127677"
+      />
+    </item>
+    <item>
       <title>2.3.1</title>
       <description><![CDATA[
           <h2>Version 2.3.1</h2>
