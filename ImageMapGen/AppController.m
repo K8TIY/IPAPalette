@@ -245,12 +245,6 @@ NSString* plistEnd = @"</array>\n</plist>\n";
 
 #define kDiacriticWidthPerHeight (0.7)
 #define kDiacriticMargin (0.0)
-unichar diacritics[4][8] = {
-    {0x0325,0x032C,0x0339,0x031C,0x031F,0x0320,0x0308,0x033D},
-    {0x0329,0x032F,0x0324,0x0330,0x033C,0x02DE,0x0334,0x02BC},
-    {0x031D,0x02D4,0x031E,0x02D5,0x0318,0x0319,0x0321,0x0322},
-    {0x032A,0x033A,0x033B,0x0303,0x031A,0x0361,0x035C,0}
-  };
 
 -(void)makeDiacriticChartWithXML:(NSMutableString*)xml
        inDirectory:(NSString*)dir writing:(BOOL)writing dark:(BOOL)dark
@@ -321,15 +315,11 @@ unichar diacritics[4][8] = {
   NSArray* glyphs = [NSArray arrayWithObjects:@"\xCA\xAC", @"\xCA\xAD", @"\xCA\xAA", @"\xCA\xAB", @"\xCA\xA9", @"\xC2\xA1", @"\xC7\x83\xC2\xA1", @"\xE2\x80\xBC",
                                               @"\xCD\x8D", @"\xCD\x86", @"\xCD\x86\xCC\xAA", @"\xCD\x88", @"\xCD\x89", @"\xCD\x8E", @"\xCD\x8A", @"\xCD\x8B",
                                               @"\xCD\x8C", @"\xCD\x87", @"\xCD\xA2", @"\xCD\x94", @"\xCD\x95", @"\xEA\x9F\xB8", @"", @"",
-                                              //@"\xCD\x8C", @"\xCD\x87", @"\xCD\xA2", @"\xCD\x94", @"\xCD\x95", @"", @"", @"",
                                               @"\xCB\xAD", @"\xE2\x82\x8D", @"\xE2\x82\x8E", @"\xCB\xAC", @"\xE2\x86\x91", @"\xE2\x86\x93", @"", @"",
                                               @"\xC5\x92", @"\xD0\xAE", @"\xD0\x98", @"\xCE\x98", @"\xCC\xA3", @"\xE2\x9D\x8D", NULL];
   NSArray* data = [glyphs slice:8];
   PDFImageMapCreator* creator = [[PDFImageMapCreator alloc] initWithContext:ctx rect:imgRect data:data];
   [creator setFontSize:kStandardFontSize];
-  // FIXME: get rid of this when Doulos supports A7F8
-  [creator setOverrideFont:@"HackedDoulosF" forString:@"\xEA\x9F\xB8"];
-  [creator setOverridePlaceholder:@"\xEA\x9F\xB9" forString:@"\xEA\x9F\xB8"];
   creator.darkMode = dark;
   [creator makeImageMapOfType:PDFImageMapColumnar named:@"ExtIPA"];
   CGContextRelease(ctx);

@@ -63,7 +63,6 @@
 		32D4CEA5147AE9C0008973BD /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327FE565106D53E9003FEB34 /* Carbon.framework */; };
 		32D4CECB147AF8B2008973BD /* KeylayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4CECA147AF8B2008973BD /* KeylayoutParser.m */; };
 		32DB949914ED9B5A008A805A /* NSView+Spinny.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DB949814ED9B5A008A805A /* NSView+Spinny.m */; };
-		32DCEB1915EFDBC900D3B33A /* HackedDoulosF-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32DCEB1815EFDBC900D3B33A /* HackedDoulosF-Regular.ttf */; };
 		32E729E11444EC3700E2B07B /* IPAIconTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 32E729E01444EC3700E2B07B /* IPAIconTemplate.pdf */; };
 		32EB0F2520A0EE8F00E31FC5 /* IPAPalette.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D1107320486CEB800E47090 /* IPAPalette.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		32EB0F3220A0F58400E31FC5 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 32EB0F3020A0F54A00E31FC5 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -203,7 +202,6 @@
 		32DB949814ED9B5A008A805A /* NSView+Spinny.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSView+Spinny.m"; path = "Palette/NSView+Spinny.m"; sourceTree = "<group>"; };
 		32DC620E10D2EF6B008B5B1B /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = Localization/zh_TW.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32DCEA0F15E426CC00D3B33A /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = Localization/th.lproj/Localizable.strings; sourceTree = "<group>"; };
-		32DCEB1815EFDBC900D3B33A /* HackedDoulosF-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HackedDoulosF-Regular.ttf"; path = "ImageMapGen/HackedDoulosF-Regular.ttf"; sourceTree = "<group>"; };
 		32E102081110BFC100B1F030 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = Localization/fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32E729E01444EC3700E2B07B /* IPAIconTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = IPAIconTemplate.pdf; path = Palette/IPAIconTemplate.pdf; sourceTree = SOURCE_ROOT; };
 		32EB0F3020A0F54A00E31FC5 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "Sparkle-1.22.0/Sparkle.framework"; sourceTree = "<group>"; };
@@ -451,7 +449,6 @@
 				3241E31210727C8200144CE0 /* Info.plist */,
 				326E891A144616450063F34B /* MainMenu.xib */,
 				3299F3E0143E65B9009191BC /* HackedDoulos-Regular.ttf */,
-				32DCEB1815EFDBC900D3B33A /* HackedDoulosF-Regular.ttf */,
 			);
 			name = ImageMapGen;
 			sourceTree = SOURCE_ROOT;
@@ -652,7 +649,6 @@
 			files = (
 				3299F3E1143E65B9009191BC /* HackedDoulos-Regular.ttf in Resources */,
 				326E891B144616450063F34B /* MainMenu.xib in Resources */,
-				32DCEB1915EFDBC900D3B33A /* HackedDoulosF-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
