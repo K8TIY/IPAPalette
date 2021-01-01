@@ -266,6 +266,13 @@ shamelessly stolen from an older version of Sparkle.
     [NSThread detachNewThreadSelector:@selector(_install:) toTarget:self withObject:nil];
 }
 
+-(IBAction)showHelp:(id)sender
+{
+  #pragma unused (sender)
+  NSURL* url = [NSURL URLWithString:@"https://blugs.com/IPA/doc.html"];
+  [[NSWorkspace sharedWorkspace] openURL:url];
+}
+
 #pragma mark TIS Functions
 -(void)_register:(NSString*)path
 {
