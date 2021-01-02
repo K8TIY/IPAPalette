@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+
+<dictionary title="IPA Manager Terminology">
+  <suite name="IPA Manager Suite" code="IPAs" description="IPA Manager Scripts">
+      <command name="show_palette" code="IPAsSHOW" description="Show IPA Palette.">
+        <cocoa class="SelectIPACommand"/>
+      </command>
+      <command name="hide_palette" code="IPAsHIDE" description="Hide IPA Palette.">
+        <cocoa class="DeselectIPACommand"/>
+      </command>
+  </suite>
+</dictionary>

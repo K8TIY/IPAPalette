@@ -386,8 +386,53 @@ shamelessly stolen from an older version of Sparkle.
 }
 @end
 
+#pragma mark Scripting Support
+
+@implementation SelectIPACommand
+-(id)performDefaultImplementation
+{
+  NSMutableDictionary* filter = [[NSMutableDictionary alloc] init];
+  [filter setObject:(id)[IPAManager paletteID] forKey:(id)kTISPropertyBundleID];
+  NSArray* list = (NSArray*)TISCreateInputSourceList((CFDictionaryRef)filter, true);
+  [filter release];
+  if ([list count])
+  {
+    TISInputSourceRef me = (TISInputSourceRef)[list objectAtIndex:0L];
+    OSStatus err = TISSelectInputSource(me);
+    if (err != noErr)
+    {
+      [self setScriptErrorNumber:err];
+      [self setScriptErrorString:@"Failed to enable input source"];
+    }
+  }
+  return nil;
+}
+@end
+
+@implementation DeselectIPACommand
+-(id)performDefaultImplementation
+{
+  NSMutableDictionary* filter = [[NSMutableDictionary alloc] init];
+  [filter setObject:(id)[IPAManager paletteID] forKey:(id)kTISPropertyBundleID];
+  NSArray* list = (NSArray*)TISCreateInputSourceList((CFDictionaryRef)filter, true);
+  [filter release];
+  if ([list count])
+  {
+    TISInputSourceRef me = (TISInputSourceRef)[list objectAtIndex:0L];
+    OSStatus err = TISDeselectInputSource(me);
+    if (err != noErr)
+    {
+      [self setScriptErrorNumber:err];
+      [self setScriptErrorString:@"Failed to disable input source"];
+    }
+  }
+  return nil;
+}
+@end
+
+
 /*
-Copyright © 2005-2020 Brian S. Hall, BLUGS.COM LLC
+Copyright © 2005-2021 Brian S. Hall, BLUGS.COM LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

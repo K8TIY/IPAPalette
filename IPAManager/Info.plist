@@ -32,5 +32,9 @@
 	<string>https://www.blugs.com/Appcasts/IPAPalette.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>ijcOZJrLHy/rbnqvWBKrvWTZEGgcmsAJ+6jjoXs5scI=</string>
+	<key>NSAppleScriptEnabled</key>
+	<true/>
+	<key>OSAScriptingDefinition</key>
+	<string>IPAManager.sdef</string>
 </dict>
 </plist>
